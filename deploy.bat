@@ -1,0 +1,1 @@
+robocopy /E BalanceMod "%userprofile%\Documents\Endless Space\Modding\EndlessSpaceBalanced"
