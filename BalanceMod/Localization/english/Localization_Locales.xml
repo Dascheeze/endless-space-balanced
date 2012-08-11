@@ -3703,8 +3703,12 @@ SYSTEM</LocalizationPair>
   <LocalizationPair Name="%HeroAbilityCommon25Description">It is not an easy thing to master Dust, and to go even further into symbiosis with it offers rewards as great as its risks.</LocalizationPair>
   <LocalizationPair Name="%HeroAbilityCommon26Title">Dust Wielder 2</LocalizationPair>
   <LocalizationPair Name="%HeroAbilityCommon26Description">Unquestionably altered, and unafraid of perhaps becoming a new species, the Hero further improves their mastery over Dust.</LocalizationPair>
-  <LocalizationPair Name="%HeroAbilityAdministrator01Title">Civil Engineer</LocalizationPair>
+  <LocalizationPair Name="%HeroAbilityAdministrator01Title">Civil Engineer 1</LocalizationPair>
   <LocalizationPair Name="%HeroAbilityAdministrator01Description">Combining great vision and clear-headed project management, the Hero becomes capable of rapidly realizing vast projects.</LocalizationPair>
+  <LocalizationPair Name="%HeroAbilityAdministrator13Title">Civil Engineer 2</LocalizationPair>
+  <LocalizationPair Name="%HeroAbilityAdministrator13Description">Civil Engineer 2 description.</LocalizationPair>
+  <LocalizationPair Name="%HeroAbilityAdministrator14Title">Civil Engineer 3</LocalizationPair>
+  <LocalizationPair Name="%HeroAbilityAdministrator14Description">Civil Engineer 3 description.</LocalizationPair>
   <LocalizationPair Name="%HeroAbilityAdministrator02Title">Crop Geneticist 1</LocalizationPair>
   <LocalizationPair Name="%HeroAbilityAdministrator02Description">Leading teams that study of life sciences and phytology, the Hero greatly improves Food output.</LocalizationPair>
   <LocalizationPair Name="%HeroAbilityAdministrator03Title">Crop Geneticist 2</LocalizationPair>
