@@ -1,0 +1,3469 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- 
+  A little quick guide for shot.
+  A shot is a sequence of key that drive the camera. The sequence start at time = 0 and end at time = PreferedStart="0.51" MaxDuration.
+  The shot can define a "EventTime"0. The event time is the moment where the "shot's subject" must be at his climax.
+  The shot can define a "PreferedStart" to allow the realization director to cut down the sequence.
+  The shot can define a "PreferedEnd" to allow the realization director to cut down the sequence.
+  
+  By default, PreferedStart = 0 and PreferedEnd = MaxDuration. 
+  When a shot is selected, the director will use the start buffer to adjust the event time with the battle event timing.
+  
+     PreferedStart    EventTime          PreferedEnd
+  0        v              v                  v     MaxDuration
+  |===================================================|
+  |        |                                 |        |
+   <Buffer> <  Always Played when selected  > <Buffer>
+  -->
+
+  <Shot Name="Arrival" PreferedStart="0" MaxDuration="20">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="1" Y="0" Z="1.5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <Key Name="Key2" Time="7">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="7" Y="0" Z="2.5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <!--<Key Name="Key3" Time="10">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="0.7" Y="0.1" Z="0.51" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <Key Name="Key3" Time="9">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="-1" Y="0" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <Key Name="Key4" Time="11">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1.5" Y="-.2" Z="0.4" Space="Unit" />
+			</SetActorPosition>
+		  </Key>-->
+          <Key Name="Key3" Time="11">
+            <SetActorPosition ActorName="Fleet"> <!-- BUG: $Fleets ne marche pas pour le battle event ARRIVAL.-->
+              <Offset X="0.6" Y="0.35" Z="0.51" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0." Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <!--<Key Name="Key3" Time="10">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="-0.1" Z="0.3" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key3" Time="9">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0." Z="0.3" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key4" Time="11">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0." Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>-->
+          <Key Name="Key3" Time="11"><!-- TODO: trouver un moyen de faire une rotation de 90° trigo -->
+            <KeepLookAtActor ActorName="OtherFleet"> <!-- BUG: $Fleets ne marche pas pour le battle event ARRIVAL -->
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+          <Key Name="Key2" Time="7">
+            <SetFloat Value="55" />
+          </Key>
+		  <!--<Key Name="Key3" Time="10">
+            <SetFloat Value="30" />
+          </Key>
+		  <Key Name="Key3a" Time="10">
+            <SetFloat Value="30" />
+          </Key>
+		  <Key Name="Key3b" Time="10.3">
+            <SetFloat Value="5" />
+          </Key>
+          <Key Name="Key3" Time="9">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key4" Time="11">
+            <SetFloat Value="60" />
+          </Key>
+          <Key Name="Key4b" Time="13">
+            <SetFloat Value="15" />
+          </Key>-->
+          <Key Name="Key3" Time="11">
+            <SetFloat Value="45" />
+          </Key>
+	    </Keys>
+		<!--<Interpolators>
+          <Interpolator From="Key3a" To="Key3b" Type="" Curve="Linear" />
+        </Interpolators>-->
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="0626_Arrival" PreferedStart="0" MaxDuration="20">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="7" Y="0" Z="2.5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <!--<Key Name="Key3" Time="10">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="0.7" Y="0.1" Z="0.51" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <Key Name="Key3" Time="9">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="-1" Y="0" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <Key Name="Key4" Time="11">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1.5" Y="-.2" Z="0.4" Space="Unit" />
+			</SetActorPosition>
+		  </Key>-->
+          <Key Name="Key2" Time="10">
+            <SetActorPosition ActorName="Fleet"> <!-- BUG: $Fleets ne marche pas pour le battle event ARRIVAL.-->
+              <Offset X="0.6" Y="0.35" Z="0.51" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0." Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <!--<Key Name="Key3" Time="10">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="-0.1" Z="0.3" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key3" Time="9">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0." Z="0.3" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key4" Time="11">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0." Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>-->
+          <Key Name="Key2" Time="10"><!-- TODO: trouver un moyen de faire une rotation de 90° trigo -->
+            <KeepLookAtActor ActorName="OtherFleet"> <!-- BUG: $Fleets ne marche pas pour le battle event ARRIVAL -->
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="30" />
+          </Key>
+          <Key Name="Key2" Time="10">
+            <SetFloat Value="45" />
+          </Key>
+		  <!--<Key Name="Key3" Time="10">
+            <SetFloat Value="30" />
+          </Key>
+		  <Key Name="Key3a" Time="10">
+            <SetFloat Value="30" />
+          </Key>
+		  <Key Name="Key3b" Time="10.3">
+            <SetFloat Value="5" />
+          </Key>
+          <Key Name="Key3" Time="9">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key4" Time="11">
+            <SetFloat Value="60" />
+          </Key>
+          <Key Name="Key4b" Time="13">
+            <SetFloat Value="15" />
+          </Key>-->
+	    </Keys>
+		<!--<Interpolators>
+          <Interpolator From="Key3a" To="Key3b" Type="" Curve="Linear" />
+        </Interpolators>-->
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+
+  <Shot Name="Arrival_Attacker" PreferedStart="0" MaxDuration="20">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1.75" Y="0" Z="-.25" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+          <Key Name="Key2" Time="6">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1.75" Y="0" Z="-.25" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+<!--           <Key Name="Key3" Time="13">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1.75" Y="0.2" Z=".5" Space="Unit" />
+			</SetActorPosition>
+		  </Key> -->
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2" Time="6">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="-3" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+<!--           <Key Name="Key3" Time="13">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.45" Space="Unit" />
+			</KeepLookAtActor>
+          </Key> -->
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1a" Time="0">
+            <SetFloat Value="20" />
+          </Key>
+          <Key Name="Key1b" Time="6">
+            <SetFloat Value="30" />
+          </Key>
+          <Key Name="Key2" Time="6">
+            <SetFloat Value="50" />
+          </Key>
+<!--           <Key Name="Key3" Time="13">
+            <SetFloat Value="45" />
+          </Key> -->
+	    </Keys>
+		<Interpolators>
+          <Interpolator From="Key1a" To="Key1b" Type="" Curve="EaseIn" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+  
+    </Channels>
+  </Shot>
+
+  <Shot Name="Arrival2" MaxDuration="20">
+        <Actors>
+            <ActorProvider Name="Fleet" Path="$MyFleet" />
+            <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+            <ActorProvider Name="Fleets" Path="$Fleets" />
+        </Actors>
+        <Channels>
+            <Channel Name="Position" Type="Vector">
+                <Keys>
+                    <Key Name="Key1" Time="0">
+                        <KeepActorPosition ActorName="Fleet">
+                            <Offset X="-0.75" Y="0.25" Z="0" Space="Unit" />
+                        </KeepActorPosition>
+                    </Key>
+                    <Key Name="Key2" Time="3.5">
+                        <KeepActorPosition ActorName="Fleet">
+                            <Offset X="0" Y="0" Z="-0.51" Space="Unit" />
+                        </KeepActorPosition>
+                    </Key>
+                    <Key Name="Key3" Time="9">
+                        <KeepActorPosition ActorName="Fleet">
+                            <Offset X="0.75" Y="-0.25" Z="0" Space="Unit" />
+                        </KeepActorPosition>
+                    </Key>
+                    <Key Name="Key4" Time="9">
+                        <KeepActorPosition ActorName="Fleet">
+                            <Offset X="0.75" Y="-0.25" Z="0" Space="Unit" />
+                        </KeepActorPosition>
+                    </Key>
+                    <Key Name="Opposite" Time="11">
+                        <SetActorPosition ActorName="OtherFleet">
+                            <!-- BUG: $Fleets ne marche pas pour le battle event ARRIVAL.-->
+                            <Offset X="0.6" Y="0.35" Z="0.51" Space="Unit" />
+                        </SetActorPosition>
+                    </Key>
+                </Keys>
+                <Interpolators>
+                    <Interpolator From="Key1" To="Key3" Type="Orbital" Curve="EaseInOut"/>
+                </Interpolators>
+            </Channel>
+
+            <Channel Name="Rotation" Type="Quaternion">
+                <Keys>
+                    <Key Name="Key1" Time="0">
+                        <KeepLookAtActor ActorName="Fleet"/>
+                    </Key>
+                    <Key Name="Key2" Time="7.5">
+                        <KeepLookAtActor ActorName="Fleet"/>
+                    </Key>
+                    <Key Name="Key3" Time="8">
+                        <KeepLookAtActor ActorName="OtherFleet"/>
+                    </Key>
+                    <Key Name="Opposite" Time="11">
+                        <KeepLookAtActor ActorName="Fleet">
+                            <Offset X="0" Y="0" Z="0" Space="Unit" />
+                        </KeepLookAtActor>
+                    </Key>
+                </Keys>
+                <Interpolators>
+                    <Interpolator From="Key2" To="Key3" Type="" Curve="EaseInOut"/>
+                </Interpolators>
+            </Channel>
+
+            <Channel Name="Fov" Type="Float">
+                <Keys>
+                    <Key Name="Key1" Time="0">
+                        <SetFloat Value="35" />
+                    </Key>
+                    <Key Name="Opposite" Time="11">
+                        <SetFloat Value="45" />
+                    </Key>
+                </Keys>
+            </Channel>
+
+            <Channel Name="Noise" Type="Float">
+                <Keys>
+                    <Key Name="Key1" Time="0">
+                        <SetFloat Value="0" />
+                    </Key>
+                </Keys>
+            </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+        </Channels>
+    </Shot>
+
+  <Shot Name="LongRange_1" PreferedStart="1" MaxDuration="5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleets">
+              <Offset X="-0.75" Y="-0.25" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleets">
+			  <Offset X="-0.25" Y="-0.25" Z="0" Space="Unit" />
+			  <!--<UpVector X="0" Y="0" Z="1" />-->
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="35" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_2" PreferedStart="1" MaxDuration="5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="-1.5" Y="1.4" Z="2.5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="-2" Y=".7" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+ 
+  <Shot Name="LongRange_3" PreferedStart="2.5" MaxDuration="6.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="1.2" Y="0" Z="0.3" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="LongRange_3_alt1" PreferedStart="2.5" MaxDuration="6.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="0.51" Y="0.51" Z="0.7" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+ 
+  <Shot Name="LongRange_4" PreferedStart="2.5" MaxDuration="6.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1" Y="-.18" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="22" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="LongRange_4_alt1" PreferedStart="3" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="0.7" Y="-.18" Z="0.7" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="20" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+   
+  <Shot Name="LongRange_4_alt1_zoom" PreferedStart="3" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="0.7" Y="-.18" Z="0.7" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="20" />
+          </Key>
+          <Key Name="Key2a" Time="4">
+            <SetFloat Value="20" />
+          </Key>
+          <Key Name="Key2b" Time="4.5">
+            <SetFloat Value="60" />
+          </Key>
+	    </Keys>
+		<Interpolators>
+          <Interpolator From="Key2a" To="Key2b" Type="" Curve="Linear" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+ 
+  <Shot Name="LongRange_4_alt2" PreferedStart="2.5" MaxDuration="6.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1" Y=".36" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="22" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="LongRange_5" PreferedStart="1" MaxDuration="5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1" Y="-.3" Z="0.8" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+ 
+  <Shot Name="LongRange_6" PreferedStart="1" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="-.8" Y="-.25" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key1b" Time="3">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+		<Interpolators>
+          <Interpolator From="Key1" To="Key1b" Type="" Curve="EaseInOut" />
+        </Interpolators>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_7" PreferedStart="2" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="5" Y="-.25" Z="0.9" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="40" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_8" PreferedStart="1" MaxDuration="5">
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Targets" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="1.5" Y="-.5" Z="0.51" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetLookAtActor ActorName="Ship">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</SetLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+   
+  <Shot Name="LongRange_9" PreferedStart="2.5" MaxDuration="6.5">
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+      <ActorProvider Name="Target" Path="$Targets" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Target">
+              <Offset X="-1.5" Y="-.25" Z="1.5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Target">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+<!--             <SetFloat Value="12" /> 0626-->
+            <SetFloat Value="35" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+   
+  <Shot Name="LongRange_10" PreferedStart="1" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+      <ActorProvider Name="Other" Path="$Targets" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1.5" Y="-.25" Z="0.1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2" Time="3">
+            <KeepLookAtActor ActorName="Ship">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2b" Time="3.5">
+            <KeepLookAtActor ActorName="Other">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+		<Interpolators>
+          <Interpolator From="Key2" To="Key2b" Type="" Curve="EaseOut" />
+        </Interpolators>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+          <Key Name="Key2b" Time="3.5">
+            <SetFloat Value="60" />
+          </Key>
+          <Key Name="Key2c" Time="4">
+            <SetFloat Value="20" />
+          </Key>
+	    </Keys>
+		<Interpolators>
+          <Interpolator From="Key2b" To="Key2c" Type="" Curve="EaseOut" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+    
+  <Shot Name="LongRange_11" PreferedStart="1" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="Other" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="0.51" Y="-.5" Z="0.4" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Other">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_12" PreferedStart="1" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1.75" Y="0" Z=".30" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.20" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2a" Time="3">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.20" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2b" Time="3.5">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+		<Interpolators>
+          <Interpolator From="Key2a" To="Key2b" Type="" Curve="Linear" />
+        </Interpolators>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+          <Key Name="Key3a" Time="3.5">
+            <SetFloat Value="50" />
+          </Key>
+          <Key Name="Key3b" Time="4.5">
+            <SetFloat Value="20" />
+          </Key>
+	    </Keys>
+ 		<Interpolators>
+          <Interpolator From="Key3a" To="Key3b" Type="" Curve="Linear" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+  
+    </Channels>
+  </Shot>
+ 
+  <Shot Name="LongRange_13" PreferedStart="1" MaxDuration="7"><!-- a virer -->
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="-.75" Y="0" Z=".45" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.20" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2a" Time="3">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.20" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2b" Time="3.5">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z=".15" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+		<Interpolators>
+          <Interpolator From="Key2a" To="Key2b" Type="" Curve="Linear" />
+        </Interpolators>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="30" />
+          </Key>
+          <Key Name="Key3a" Time="3.5">
+            <SetFloat Value="30" />
+          </Key>
+          <Key Name="Key3b" Time="4.5">
+            <SetFloat Value="15" />
+          </Key>
+	    </Keys>
+ 		<Interpolators>
+          <Interpolator From="Key3a" To="Key3b" Type="" Curve="Linear" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+  
+    </Channels>
+  </Shot>
+   
+  <Shot Name="LongRange_14" PreferedStart="1" MaxDuration="8">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1" Y="-.3" Z="0.8" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2a" Time="3">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+          <Key Name="Key2b" Time="4">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z=".05" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+		<Interpolators>
+          <Interpolator From="Key2a" To="Key2b" Type="" Curve="EaseInOut" />
+        </Interpolators>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="40" />
+          </Key>
+		  <Key Name="Key3a" Time="4">
+            <SetFloat Value="40" />
+          </Key>
+          <Key Name="Key3b" Time="5">
+            <SetFloat Value="20" />
+          </Key>
+	    </Keys>
+ 		<Interpolators>
+          <Interpolator From="Key3a" To="Key3b" Type="" Curve="Linear" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="1.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_15" PreferedStart="1" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1.75" Y="0.2" Z=".5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.45" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="45" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_16" PreferedStart="1" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="3.5" Y="0.5" Z=".5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.45" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="45" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_16_zoom" PreferedStart="1" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="3.5" Y="0.5" Z=".5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.45" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="45" />
+          </Key>
+          <Key Name="Key2a" Time="2">
+            <SetFloat Value="45" />
+          </Key>
+          <Key Name="Key2b" Time="2.5">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key3a" Time="3.5">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key3b" Time="4">
+            <SetFloat Value="25" />
+          </Key>
+	    </Keys>
+		<Interpolators>
+          <Interpolator From="Key2a" To="Key2b" Type="" Curve="Linear" />
+          <Interpolator From="Key3a" To="Key3b" Type="" Curve="Linear" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+  
+    </Channels>
+  </Shot>
+
+  <Shot Name="LongRange_17" PreferedStart="1" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="4.5" Y="0.5" Z=".5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0.45" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="20" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="MediumRange_1" PreferedStart="1.5" MaxDuration="4.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+		  <Key Name="Key1" Time="0"><!-- top shot -->
+            <SetActorPosition ActorName="Fleets">
+              <Offset X="0" Y="2.5" Z="0" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0"><!-- top shot --><!-- TODO: trouver un moyen de faire une rotation de 90° trigo -->
+            <SetLookAtActor ActorName="Fleets">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</SetLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="65" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="0626_TopShot_1" PreferedStart="1.5" MaxDuration="4.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+		  <Key Name="Key1" Time="0"><!-- top shot -->
+            <SetActorPosition ActorName="Fleets">
+              <Offset X="0" Y="2.5" Z="0" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0"><!-- top shot --><!-- TODO: trouver un moyen de faire une rotation de 90° trigo -->
+            <SetLookAtActor ActorName="Fleets">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</SetLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="55" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+ 
+  <Shot Name="MediumRange_1_alt1" PreferedStart="1.5" MaxDuration="4.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+		  <Key Name="Key1" Time="0"><!-- top shot -->
+            <SetActorPosition ActorName="Fleets">
+              <Offset X="0" Y="2.5" Z="2" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0"><!-- top shot --><!-- TODO: trouver un moyen de faire une rotation de 90° trigo -->
+            <SetLookAtActor ActorName="Fleets">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</SetLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="MediumRange_2" PreferedStart="1.5" MaxDuration="4.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleets">
+              <Offset X="-1" Y="0.1" Z=".8" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleets">
+			  <Offset X="-0.25" Y="-0.25" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="MediumRange_3" PreferedStart="1" MaxDuration="3">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="0" Y="0" Z="2.5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="-.3" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="30" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="MediumRange_4" PreferedStart="2" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="1.4" Y="0" Z="0.6" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="MediumRange_5" PreferedStart="2" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1" Y="-.18" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="22" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="MediumRange_6" PreferedStart="2" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1" Y="-.3" Z="0.8" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="30" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+   
+  <Shot Name="MediumRange_6_alt1" PreferedStart="3" MaxDuration="8">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1" Y="-.3" Z="0.8" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="30" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+     
+  <Shot Name="ShortRange_1" PreferedStart="1.5" MaxDuration="4.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+		  <Key Name="Key1" Time="0"><!-- top shot -->
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="-1.5" Y="7" Z="-.25" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0"><!-- top shot --><!-- TODO: trouver un moyen de faire une rotation de 90° trigo -->
+            <SetLookAtActor ActorName="Fleets">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</SetLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+      
+  <Shot Name="ShortRange_2" PreferedStart="1.5" MaxDuration="5.5">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleets">
+              <Offset X="-0.18" Y="-0.25" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleets">
+			  <Offset X="-0.25" Y="-0.25" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+          <Key Name="Key1b" Time="3">
+            <SetFloat Value="40" />
+          </Key>
+	    </Keys>
+		<Interpolators>
+          <Interpolator From="Key1" To="Key1b" Type="" Curve="Linear" />
+        </Interpolators>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+     
+  <Shot Name="ShortRange_3" PreferedStart="2" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherFleet">
+              <Offset X="1.5" Y="0" Z="0.8" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+     
+  <Shot Name="ShortRange_4" PreferedStart="1" MaxDuration="3">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepActorPosition ActorName="Fleet">
+              <Offset X="0.65" Y="0.1" Z="-.45" Space="Unit" />
+			</KeepActorPosition>
+		  </Key>
+          <Key Name="Key1b" Time="2">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="0.65" Y="0.1" Z="-.5" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+		<Interpolators>
+          <Interpolator From="Key1" To="Key1b" Type="" Curve="Linear" />
+        </Interpolators>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Fleets">
+			  <Offset X="0" Y="-.25" Z="-.15" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="60" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+     
+  <Shot Name="ShortRange_5" PreferedStart="2" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1" Y="-.18" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="22" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+     
+  <Shot Name="ShortRange_6" PreferedStart="2" MaxDuration="6">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="1" Y="-.18" Z="1" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+    
+  <Shot Name="Report" PreferedStart="0" MaxDuration="10">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="4" Y=".8" Z=".2" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+     
+  <Shot Name="Report_alt1" PreferedStart="3" MaxDuration="13">
+    <Actors>
+      <ActorProvider Name="Fleet" Path="$MyFleet" />
+      <ActorProvider Name="OtherFleet" Path="$OtherFleet" />
+      <ActorProvider Name="Fleets" Path="$Fleets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Fleet">
+              <Offset X="0.7" Y="-.18" Z="0.65" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="OtherFleet">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="Fire" PreferedStart="1" MaxDuration="9" EventTime="2">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-.65" Y="-.15" Z="0.51" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+          <Key Name="Key2" Time="2">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-.65" Y="-.1" Z="0.10" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0.25" Y="0.15" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+          <Key Name="Key2" Time="2">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0.1" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key2" Time="2">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.5" />
+          </Key>
+        </Keys>
+      </Channel>
+
+    </Channels>
+  </Shot>    
+ 
+  <Shot Name="Fire_alt1" PreferedStart="3" MaxDuration="10" EventTime="4">				
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1.05" Y="-.15" Z="0.51" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+          <Key Name="Key2" Time="5">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1" Y="-.1" Z="0.10" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0.25" Y="0.15" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+          <Key Name="Key2" Time="5">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0.1" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key2" Time="5">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="1" />
+          </Key>
+        </Keys>
+      </Channel>  
+    </Channels>
+  </Shot>    
+
+  <Shot Name="Fire_1" PreferedStart="1" MaxDuration="3" EventTime="0.51">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-.7" Y="-.15" Z="0.51" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0.25" Y="0.15" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="1" />
+          </Key>
+        </Keys>
+      </Channel>  
+    </Channels>
+  </Shot>    
+
+  <Shot Name="Fire_2" PreferedStart="2" MaxDuration="6" EventTime="1">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key2" Time="2">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-.7" Y="-.1" Z="0.10" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key2" Time="2">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0.1" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key2" Time="2">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="1" />
+          </Key>
+        </Keys>
+      </Channel> 
+    </Channels>
+  </Shot>    
+
+  <Shot Name="Fire_3" PreferedStart="2" MaxDuration="5" EventTime="3">				
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1.5" Y="-.10" Z="0.7" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0" />
+          </Key>
+        </Keys>
+      </Channel>  
+    </Channels>
+  </Shot>     
+
+  <Shot Name="Fire_4" PreferedStart="2" MaxDuration="5" EventTime="3">				
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-3.5" Y="1.5" Z="0.7" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0.25" Space="Unit" />
+            </SetLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0" />
+          </Key>
+        </Keys>
+      </Channel> 
+  
+    </Channels>
+  </Shot>    
+  
+  <Shot Name="0626_Event_Ship" PreferedStart="1" MaxDuration="9" EventTime="2">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-2.5" Y="0" Z="1" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.5" />
+          </Key>
+        </Keys>
+      </Channel>
+
+    </Channels>
+  </Shot>  
+  
+  <Shot Name="0626_Event_Ship_Zoom" PreferedStart="1" MaxDuration="9" EventTime="2">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-2.5" Y="0" Z="1" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key2a" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+          <Key Name="Key2b" Time="2">
+            <SetFloat Value="30" />
+          </Key>
+          <Key Name="Key3a" Time="4.5">
+            <SetFloat Value="30" />
+          </Key>
+          <Key Name="Key3b" Time="5">
+            <SetFloat Value="100" />
+          </Key>
+        </Keys>
+		<Interpolators>
+          <Interpolator From="Key2a" To="Key2b" Type="" Curve="Linear" />
+          <Interpolator From="Key3a" To="Key3b" Type="" Curve="Linear" />
+        </Interpolators>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.5" />
+          </Key>
+        </Keys>
+      </Channel>
+
+    </Channels>
+  </Shot>  
+
+  <Shot Name="0626_Event_Ship_2" PreferedStart="3" MaxDuration="7">
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+      <ActorProvider Name="OtherShip" Path="$Targets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-2.5" Y="-1" Z="2.7" Space="Unit" />
+			</SetActorPosition>
+		  </Key>
+        </Keys>
+	  </Channel>
+	  
+	  <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+			  <Offset X="0" Y="0" Z="0" Space="Unit" />
+			</KeepLookAtActor>
+          </Key>
+		</Keys>
+	  </Channel>
+		  
+	  <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="40" />
+          </Key>
+	    </Keys>
+      </Channel>
+		
+	  <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>
+  
+  <Shot Name="0626_Event_OtherShip" PreferedStart="1" MaxDuration="9" EventTime="2">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Instigators" />
+      <ActorProvider Name="OtherShip" Path="$Targets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="OtherShip">
+              <Offset X="2.5" Y="0" Z="1" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="50" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.5" />
+          </Key>
+        </Keys>
+      </Channel>
+
+    </Channels>
+  </Shot>  
+  
+  <Shot Name="Destruction" PreferedStart="2" PreferedEnd="8" MaxDuration="10" EventTime="5">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Targets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1" Y="0" Z="1.5" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+
+          <Key Name="Key2" Time="5">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1.5" Y="0.51" Z="-0.3" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="40" />
+          </Key>
+          <Key Name="Key2" Time="5">
+            <SetFloat Value="60" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+        </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>    
+  
+  <Shot Name="Destruction_alt1" PreferedStart="3" PreferedEnd="10" EventTime="7">				
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Targets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1" Y="0" Z="1.5" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+
+          <Key Name="Key2" Time="6">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1.5" Y="0.51" Z="-0.3" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="40" />
+          </Key>
+          <Key Name="Key2" Time="6">
+            <SetFloat Value="60" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+        </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>    
+ 
+  <Shot Name="Destruction_alt2" PreferedStart="2" MaxDuration="5" EventTime="3">						
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Targets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="-1" Y="0" Z="1.5" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </KeepLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="40" />
+          </Key>
+          <Key Name="Key2" Time="5">
+            <SetFloat Value="60" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+        </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>    
+   
+  <Shot Name="Destruction_2" PreferedStart="2" MaxDuration="8" EventTime="3">							
+    <Actors>
+      <ActorProvider Name="Ship" Path="$Targets" />
+    </Actors>
+	
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetActorPosition ActorName="Ship">
+              <Offset X="0" Y="2" Z="3" Space="Unit" />
+            </SetActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetLookAtActor ActorName="Ship">
+              <Offset X="0" Y="0" Z="0" Space="Unit" />
+            </SetLookAtActor>
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Fov" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="70" />
+          </Key>
+        </Keys>
+      </Channel>
+
+      <Channel Name="Noise" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+        </Keys>
+      </Channel>
+	  
+	  <!--
+	  <Channel Name="SoundListenerAngle" Type="Float">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <SetFloat Value="0.51" />
+          </Key>
+	    </Keys>
+      </Channel>
+	  -->	  
+    </Channels>
+  </Shot>    
+
+  <!--<Shot Name="Missile" MaxDuration="6" EventTime="2">
+    <Actors>
+      <Actor Name="Projectile" Path="$Projectile" />
+    </Actors>
+    <Channels>
+      <Channel Name="Position" Type="Vector">
+        <Keys>
+          <Key Name="Key1" Type="0">
+            <KeepActorPosition ActorName="Projectile">
+              <Offset X="0" Y="5" Z="-15" space="Local"/>
+            </KeepActorPosition>
+          </Key>
+        </Keys>
+      </Channel>
+      <Channel Name="Rotation" Type="Quaternion">
+        <Keys>
+          <Key Name="Key1" Time="0">
+            <KeepLookAtActor ActorName="Projectile" />
+          </Key>
+        </Keys>
+      </Channel>
+    </Channels>
+  </Shot>  -->
+  
+</Datatable>

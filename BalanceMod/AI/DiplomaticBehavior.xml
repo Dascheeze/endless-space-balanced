@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Condition list
+  - DiplomaticStatus      : Check diplomatic status (War, ColdWar, Peace, Alliance, used ! for say different)
+  - Attitude              : Check attitude value (value or range float [-200,200])
+  - AttitudeTrend         : Check attitude trend (value float, for positive value check >, for négative value check <)
+  - BattleRatio           : Check battle ratio (value or range float [0,1])
+  - ConquestRatio         : Check battle ratio (value or range float [0,1])
+  - WarRatio              : Check battle ratio (value or range float [0,1])
+  - WarFatigue            : Check war fatigue value (value or range int [0,1000])
+  - BetterMilitaryPower   : Check if i have a better military power than my current enemy (value boolean)
+  - IAmAttacker           : Check if i am the attacker of actual war (value boolean)
+  - PeriodOfNonAggression : Check period of non aggression (nb turn : value int)
+  - AtWar                 : Check if empire is during a war with someone (value boolean)
+  - AtAlliance            : Check if empire is in alliance with someone (value boolean)
+  -->
+  
+  <!-- DeclareWarTerm -->
+  <DiplomaticBehavior Name="WarTerm2" Action="Offer" Term="DeclareWarTerm">
+    <Condition Name="Attitude"          RangeValues="-200;-150" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="PeriodOfNonAggression" Value="20" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="WarTerm3" Action="Offer" Term="DeclareWarTerm">
+    <Condition Name="Attitude"          RangeValues="-150;-100" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="-1" />
+    <Condition Name="PeriodOfNonAggression" Value="20" />
+  </DiplomaticBehavior>
+
+  <!-- CeaseFireTerm -->
+  <DiplomaticBehavior Name="CeaseFireTerm1" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"            Value="-200" />
+    <Condition Name="DiplomaticStatus"    Value="War" />
+    <Condition Name="WarRatio"         RangeValues="0;0.3" />     <!-- I Am Clearly Loosing The War -->
+    <Condition Name="WarFatigue"          RangeValues="200;1000" />
+    <Condition Name="BetterMilitaryPower" Value="False" />
+    <Condition Name="IAmAttacker"         Value="True" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CeaseFireTerm2" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"            Value="-200" />
+    <Condition Name="DiplomaticStatus"    Value="War" />
+    <Condition Name="WarRatio"         RangeValues="0;0.3" /> <!-- I Am Clearly Loosing The War -->
+    <Condition Name="WarFatigue"          RangeValues="300;1000" />
+    <Condition Name="BetterMilitaryPower" Value="True" />
+    <Condition Name="IAmAttacker"         Value="True" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CeaseFireTerm3" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"            Value="-200" />
+    <Condition Name="DiplomaticStatus"    Value="War" />
+    <Condition Name="WarRatio"         RangeValues="0;0.3" />   <!-- I Am Clearly Loosing The War -->
+    <Condition Name="WarFatigue"          RangeValues="200;1000" />
+    <Condition Name="BetterMilitaryPower" Value="False" />
+    <Condition Name="IAmAttacker"         Value="False" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CeaseFireTerm4" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"            Value="-200" />
+    <Condition Name="DiplomaticStatus"    Value="War" />
+    <Condition Name="WarRatio"         RangeValues="0;0.3" /> <!-- I Am Clearly Loosing The War -->
+    <Condition Name="WarFatigue"          RangeValues="300;1000" />
+    <Condition Name="BetterMilitaryPower" Value="True" />
+    <Condition Name="IAmAttacker"         Value="False" />
+  </DiplomaticBehavior>
+  
+  <DiplomaticBehavior Name="CeaseFireTerm5" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"          Value="-200" />
+    <Condition Name="DiplomaticStatus"  Value="War" />
+    <Condition Name="WarRatio"       RangeValues="0.3;0.6" /> <!-- That War is going nowhere -->
+    <Condition Name="WarFatigue"        RangeValues="300;1000" />
+  </DiplomaticBehavior>
+
+
+  <DiplomaticBehavior Name="CeaseFireTerm6" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"          Value="-200" />
+    <Condition Name="DiplomaticStatus"  Value="War" />
+    <Condition Name="WarRatio"       RangeValues="0.6;1" />    <!-- I Am Winning The War -->
+    <Condition Name="WarFatigue"        RangeValues="200;1000" />
+    <Condition Name="IAmAttacker"       Value="True" />
+    <Condition Name="BetterMilitaryPower" Value="False" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CeaseFireTerm7" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"          Value="-200" />
+    <Condition Name="DiplomaticStatus"  Value="War" />
+    <Condition Name="WarRatio"       RangeValues="0.6;1" />  <!-- I Am Winning The War -->
+    <Condition Name="WarFatigue"        RangeValues="250;1000" />
+    <Condition Name="IAmAttacker"       Value="False" />
+    <Condition Name="BetterMilitaryPower" Value="False" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CeaseFireTerm8" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"          Value="-200" />
+    <Condition Name="DiplomaticStatus"  Value="War" />
+    <Condition Name="WarRatio"       RangeValues="0.6;1" />    <!-- I Am Winning The War -->
+    <Condition Name="WarFatigue"        RangeValues="300;1000" />
+    <Condition Name="IAmAttacker"       Value="False" />
+    <Condition Name="BetterMilitaryPower" Value="True" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CeaseFireTerm9" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="Attitude"          Value="-200" />
+    <Condition Name="DiplomaticStatus"  Value="War" />
+    <Condition Name="WarRatio"       RangeValues="0.6;1" /> <!-- I Am Winning The War -->
+    <Condition Name="WarFatigue"        RangeValues="300;1000" />
+    <Condition Name="IAmAttacker"       Value="True" />
+    <Condition Name="BetterMilitaryPower" Value="True" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CeaseFireTermAnswerContract1" Action="Offer" Term="CeaseFireTerm">
+    <Condition Name="ContractAnswer" Value="True" />
+  </DiplomaticBehavior>
+
+  <!-- Peace -->
+  <DiplomaticBehavior Name="Peace1" Action="Offer" Term="PeaceTerm">
+    <Condition Name="Attitude"          RangeValues="-150;-100" />
+    <Condition Name="DiplomaticStatus"  Value="ColdWar" />
+    <Condition Name="AttitudeTrend"     Value="1"/>
+    <Condition Name="PeriodOfNonAggression" Value="10" />           <!-- No War In Past 10 Turns -->
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="Peace2" Action="Offer" Term="PeaceTerm">
+    <Condition Name="Attitude"          RangeValues="-100;0" />
+    <Condition Name="DiplomaticStatus"  Value="ColdWar" />
+    <Condition Name="PeriodOfNonAggression" Value="10" />           <!-- No War In Past 10 Turns -->
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="Peace3" Action="Offer" Term="PeaceTerm">
+    <Condition Name="Attitude"          RangeValues="0;200" />
+    <Condition Name="DiplomaticStatus"  Value="ColdWar" />
+    <Condition Name="PeriodOfNonAggression" Value="10" />           <!-- No War In Past 10 Turns -->
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="PeaceTermAnswerContract1" Action="Offer" Term="PeaceTerm">
+    <Condition Name="Attitude"          RangeValues="-150;200" />
+    <Condition Name="ContractAnswer" Value="True" />
+    <Condition Name="PeriodOfNonAggression" Value="10" />
+  </DiplomaticBehavior>
+  
+  <!-- OpenBordersTerm -->
+  <DiplomaticBehavior Name="OpenBordersTerm1" Action="Offer" Term="OpenBordersTerm">
+    <Condition Name="Attitude"          RangeValues="-100;-50" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AttitudeTrend"     Value="2"/>
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="OpenBordersTerm2" Action="Offer" Term="OpenBordersTerm">
+    <Condition Name="Attitude"          RangeValues="-50;50" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AttitudeTrend"     Value="1"/>
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="OpenBordersTerm3" Action="Offer" Term="OpenBordersTerm">
+    <Condition Name="Attitude"          RangeValues="50;200" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="OpenBordersAnswerContract1" Action="Offer" Term="OpenBordersTerm">
+    <Condition Name="Attitude"          RangeValues="-150;200" />
+    <Condition Name="ContractAnswer" Value="True" />
+    <Condition Name="PeriodOfNonAggression" Value="10" />
+  </DiplomaticBehavior>
+
+  <!-- CreateAllianceTerm -->
+  <DiplomaticBehavior Name="CreateAllianceTerm1" Action="Offer" Term="CreateAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="0;100" />
+    <Condition Name="DiplomaticStatus"  Value="Peace" />
+    <Condition Name="AttitudeTrend"     Value="1" />
+    <Condition Name="AllianceAttitude"  RangeValues="-50;200" />    <!-- None with less than -50 in attitude in his alliance -->
+    <Condition Name="AtAlliance"        Value="False" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CreateAllianceTerm2" Action="Offer" Term="CreateAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="100;150" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AttitudeTrend"     Value="1"/>
+    <Condition Name="AtAlliance"        Value="False" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CreateAllianceTerm3" Action="Offer" Term="CreateAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="150;200" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AtAlliance"        Value="False" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CreateAllianceAnswerContract1" Action="Offer" Term="CreateAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="0;200" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AtAlliance"        Value="False" />
+    <Condition Name="ContractAnswer"    Value="True" />
+  </DiplomaticBehavior>
+
+  <!-- InviteToAllianceTerm -->
+  <DiplomaticBehavior Name="InviteToAllianceTerm1" Action="Offer" Term="InviteToAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="0;100" />
+    <Condition Name="DiplomaticStatus"  Value="Peace" />
+    <Condition Name="AttitudeTrend"     Value="1" />
+    <Condition Name="AllianceAttitude"  RangeValues="-50;200" />    <!-- None with less than -50 in attitude in his alliance -->
+    <Condition Name="AtAlliance"        Value="True" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="InviteToAllianceTerm2" Action="Offer" Term="InviteToAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="100;150" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AttitudeTrend"     Value="1"/>
+    <Condition Name="AtAlliance"        Value="True" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="InviteToAllianceTerm3" Action="Offer" Term="InviteToAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="150;200" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AtAlliance"        Value="True" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="InviteToAllianceAnswerContract1" Action="Offer" Term="InviteToAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="0;200" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AtAlliance"        Value="True" />
+    <Condition Name="ContractAnswer"    Value="True" />
+  </DiplomaticBehavior>
+
+  <!-- LeaveAllianceTerm -->
+  <DiplomaticBehavior Name="LeaveAllianceTerm1" Action="Offer" Term="LeaveAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="-100;150" />
+    <Condition Name="DiplomaticStatus"  Value="Alliance"/>
+    <Condition Name="AttitudeTrend"     Value="-2"/>
+    <Condition Name="AtWar"             Value="False" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="LeaveAllianceTerm2" Action="Offer" Term="LeaveAllianceTerm">
+    <Condition Name="Attitude"          RangeValues="-200;-100" />
+    <Condition Name="DiplomaticStatus"  Value="Alliance"/>
+  </DiplomaticBehavior>
+
+  <!-- CooperationAgreement -->
+  <DiplomaticBehavior Name="CooperationAgreementTerm1" Action="Offer" Term="CooperationAgreementTerm">
+    <Condition Name="Attitude"          RangeValues="-50;50" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AttitudeTrend"     Value="3"/>
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CooperationAgreementTerm2" Action="Offer" Term="CooperationAgreementTerm">
+    <Condition Name="Attitude"          RangeValues="50;200" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+    <Condition Name="AttitudeTrend"     Value="1"/>
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CooperationAgreementTerm3" Action="Offer" Term="CooperationAgreementTerm">
+    <Condition Name="Attitude"          RangeValues="0;200" />
+    <Condition Name="DiplomaticStatus"  Value="Alliance"/>
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CooperationAgreementAnswerContract1" Action="Offer" Term="CooperationAgreementTerm">
+    <Condition Name="ContractAnswer"    Value="True" />
+    <Condition Name="Attitude"          RangeValues="-50;200" />
+    <Condition Name="DiplomaticStatus"  Value="Peace"/>
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="CooperationAgreementAnswerContract2" Action="Offer" Term="CooperationAgreementTerm">
+    <Condition Name="ContractAnswer"    Value="True" />
+    <Condition Name="Attitude"          RangeValues="-50;200" />
+    <Condition Name="DiplomaticStatus"  Value="Alliance"/>
+  </DiplomaticBehavior>
+
+  <!-- BreakOpenBorder -->
+  <DiplomaticBehavior Name="BreakOpenBorder1" Action="Cancel" Term="OpenBordersTerm">
+    <Condition Name="Attitude"          RangeValues="-200;-50" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="-0.5"/>
+  </DiplomaticBehavior>
+
+  <!-- BreakCooperation -->
+  <DiplomaticBehavior Name="BreakCooperation1" Action="Cancel" Term="CooperationAgreementTerm">
+    <Condition Name="Attitude"          RangeValues="-200;0" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="-1" />
+  </DiplomaticBehavior>
+
+  <!-- Exchange -->
+  <DiplomaticBehavior Name="Exchange1" Action="Exchange" Term="">
+    <Condition Name="Attitude"          RangeValues="-150;-100" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="1"/>
+    <SpecificCondition Name="very important Need ratio" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="Exchange2" Action="Exchange" Term="">
+    <Condition Name="Attitude"          RangeValues="-100;0" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="0.1"/>
+    <SpecificCondition Name="Normal need ratio" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="Exchange3" Action="Exchange" Term="">
+    <Condition Name="Attitude"          RangeValues="0;200" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <SpecificCondition Name="Normal need ratio" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="ExchangeAnswerContract1" Action="Exchange" Term="">
+    <Condition Name="ContractAnswer"    Value="True" />
+  </DiplomaticBehavior>
+  
+  <!-- Break Exchange -->
+
+  <!-- <DiplomaticBehavior Name="BreakExchange1" Action="" Term="">
+    <Condition Name="Attitude"          RangeValues="-150;-100" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="-1"/>
+    <SpecificCondition Name="Will not break deal if receiving a strategic resource" />
+  </DiplomaticBehavior>
+
+ <DiplomaticBehavior Name="BreakExchange2" Action="" Term="">
+    <Condition Name="Attitude"          RangeValues="-100;-50" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="-5"/>
+    <SpecificCondition Name="Will not break deal if receiving a strategic resource" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="BreakExchange3" Action="" Term="">
+    <Condition Name="Attitude"          RangeValues="-50;0" />
+    <Condition Name="DiplomaticStatus"  Value="!War" />
+    <Condition Name="AttitudeTrend"     Value="-10"/>
+    <SpecificCondition Name="Will not break deal if receiving a strategic resource" />
+  </DiplomaticBehavior>-->
+
+  <DiplomaticBehavior Name="BreakContract1" Action="BreakFinishedContract">
+    <Condition Name="Attitude"          RangeValues="-200;-100" />
+  </DiplomaticBehavior>
+
+  <DiplomaticBehavior Name="BreakContract2" Action="BreakOneSidedContract">
+    <Condition Name="Attitude"          RangeValues="-200;150" />
+  </DiplomaticBehavior>
+  
+</Datatable>

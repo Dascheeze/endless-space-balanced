@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <SimulationObjectDescriptor Name="ClassStarSystem" Type="Class">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="OverheadPopulation" 	Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="Population" 	        Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="MaxPopulation" 	      Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="MaxSystemPopulation" 	Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="Money" 			  Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="Science" 		  Value="0" IsCompound="true" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Industry" 		Value="0" IsCompound="true" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Food" 			  Value="0" IsCompound="true" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Approval" 		Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="TradeRoutes" 	Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="Defense" 		  Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="Upkeep" 		  Value="0" IsCompound="true" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="MoneyNet" 		Value="0" IsCompound="false" IsPermanent="false" IsOutput="true" MinValue="Negative"/>
+
+      <SimulationObjectPropertyDescriptor Name="Production" 		Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      
+      <SimulationObjectPropertyDescriptor Name="ScienceUpkeep" 	Value="0" IsCompound="true" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="ScienceNet" 		Value="0" IsCompound="false" IsPermanent="false" IsOutput="true" MinValue="Negative"/>
+
+      <SimulationObjectPropertyDescriptor Name="FoodPerPop"         Value="2" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="FoodConsumption"    Value="0" IsCompound="false" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="FoodSurplus" 		    Value="0" IsCompound="false" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="FoodSurplusBonus" 	Value="1" IsCompound="false" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      
+      <SimulationObjectPropertyDescriptor Name="SystemInvasionRegeneration" Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      
+      <SimulationObjectPropertyDescriptor Name="Influence" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="DetectionRadius" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="FleetSpying" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="InvisibleForEnnemies" Value="0"/>      
+
+      <SimulationObjectPropertyDescriptor Name="MaxTradeRoutes" Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="TradeRoutesBonuses" Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="TradeRoutesDustBonus" Value="1" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="TradeRoutesScienceBonus" Value="1" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="TradeRoutesDistanceBonusFactor" Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="OverPopulation" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="OverPopulationApproval" Value="0" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="BaseApproval" 		      Value="0" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="EmpireApprovalOverall"  Value="0" />
+      <SimulationObjectPropertyDescriptor Name="CurrentOwnership"       Value="0" />
+      
+      <SimulationObjectPropertyDescriptor Name="BypassBlockade" Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      
+      <SimulationObjectPropertyDescriptor Name="OverColonizationApproval" Value="0"  MinValue="Negative"/>
+
+      <SimulationObjectPropertyDescriptor Name="MoneyLeeched" Value="0" />
+      <SimulationObjectPropertyDescriptor Name="ScienceLeeched" Value="0" />     
+      
+      <SimulationObjectPropertyDescriptor Name="MoneyLeechBonus" Value="0" />
+      <SimulationObjectPropertyDescriptor Name="ScienceLeechBonus" Value="0" />
+
+      <!--XP applied on ships each turn while they are in orbit or hangar-->
+      <SimulationObjectPropertyDescriptor Name="IdleShipXPPerTurn"       Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="ShipInitialXP"       Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="ShipInitialHPBonus" Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <!-- Reduce the cost of ships or improvements constructed by the star system -->
+      <SimulationObjectPropertyDescriptor Name="ShipCostBonus"        Value="1" />
+      <SimulationObjectPropertyDescriptor Name="ImprovementCostBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="AffinityHisshoShipCostBonus"          Value="1"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="AffinityHisshoShipCostBonusApplied"   Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      
+      <!-- Reduce the buy cost of ships or improvements constructed by the star system -->
+      <SimulationObjectPropertyDescriptor Name="BuyOutBonus"          Value="1"/>
+
+      <!-- Bonus for the system invasion regeneration. (use only when no one is invading) -->
+      <SimulationObjectPropertyDescriptor Name="InvasionRegenerationBonus"  Value="0" IsCompound="false" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="SystemInvasionDefense"      Value="0" IsCompound="false" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+
+      <!-- Used by the empire to compute the number of colonized StarSystem. -->
+      <SimulationObjectPropertyDescriptor Name="ColonizedStarSystems"      Value="1"  IsCompound="false"/>
+      
+      <!-- Convert food surplus into industry over production -->
+      <SimulationObjectPropertyDescriptor Name="IndustryOverProductionBonus" Value="0" IsCompound="false"/>
+      <SimulationObjectPropertyDescriptor Name="FoodSurplusBeforeConversion" Value="0" IsCompound="false" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="FoodSurplusToProductionBonus" Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <!-- Convert industry over production into science -->
+      <SimulationObjectPropertyDescriptor Name="IndustryToScienceConversionFactor"  Value="0"  IsCompound="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="CooperationAgreementCount"  Value="0"/>
+    </SimulationObjectPropertyDescriptors>
+
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="MoneyLeeched"  BinaryOperationType="Multiplication" Left="$(Money)" Right="$(MoneyLeechBonus)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="ScienceLeeched" BinaryOperationType="Multiplication" Left="$(Science)" Right="$(ScienceLeechBonus)" OperationType="Addition" Path="ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="$(MoneyLeeched)" OperationType="Soustraction" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceUpkeep" Value="$(ScienceLeeched)" OperationType="Soustraction" Path="ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MoneyNet" Value="$(Money)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MoneyNet" Value="$(Upkeep)" OperationType="Addition" Path="ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Production" Value="$(Industry)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Production" Value="$(FoodSurplusToProductionBonus)" OperationType="Addition" Path="ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceNet" Value="$(Science)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceNet" Value="$(ScienceUpkeep)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodConsumption" Value="$(Population)" OperationType="Soustraction" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodConsumption" Value="$(FoodPerPop)" OperationType="Multiplication" Path="ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplus" Value="$(Food)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplus" Value="$(FoodConsumption)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplus" Value="$(FoodSurplusBonus)" OperationType="Multiplication" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplus" Value="$(FoodSurplusToProductionBonus)" OperationType="Soustraction" Path="ClassStarSystem" Priority="4"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplusBeforeConversion" Value="$(Food)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplusBeforeConversion" Value="$(FoodConsumption)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplusBeforeConversion" Value="$(FoodSurplusBonus)" OperationType="Multiplication" Path="ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="$(Population)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="5" OperationType="Division" Path="ClassStarSystem"/>
+
+      <!-- These Approval modifiers must be moved to be some Difficulty modifiers.-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation" 	  Value="$(Population)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval" 	  Value="$(OverPopulation)" OperationType="Addition" Path="ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="$(CurrentOwnership)" OperationType="Multiplication" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="$(BaseApproval)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="$(OverPopulationApproval)" OperationType="Soustraction" Path="ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="EmpireApprovalOverall" Value="$(Approval)" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="EmpireApprovalOverall" Value="$(Population)" OperationType="Multiplication" Path="ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="$(Influence)" OperationType="Addition" Path="ClassStarSystem"/>
+
+      <!-- System Invasion defense = Defense * population-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SystemInvasionDefense" Value="$(Defense)" OperationType="Addition" Path="ClassStarSystem" Priority="0"/>
+      <!--
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="SystemInvasionDefense"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication" Right="$(Defense)" Left="$(Population)"
+                                                        Path="ClassStarSystem"
+                                                        Priority="0"/>
+      -->
+      
+      <!-- Invasion regeneration computing.
+           regen = ((population * 3) / (Defense + 1)) + 2 + regenerationBonus-->
+ <!--     <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="SystemInvasionRegeneration" 
+                                                        OperationType="Addition" 
+                                                        BinaryOperationType="Multiplication" Right="3" Left="$(Population)" 
+                                                        Path="ClassStarSystem" 
+                                                        Priority="0"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="SystemInvasionRegeneration"
+                                                        OperationType="Division"
+                                                        BinaryOperationType="Addition" Right="1" Left="$(Defense)"
+                                                        Path="ClassStarSystem"
+                                                        Priority="0"/> -->  <!-- not relevant -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SystemInvasionRegeneration" Value="2" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SystemInvasionRegeneration" Value="$(InvasionRegenerationBonus)" OperationType="Addition" Path="ClassStarSystem"/>
+
+      <!-- Empire Over Colonization approval malus on star systems -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="$(OverColonizationApproval)" OperationType="Soustraction" Path="ClassStarSystem"/>
+
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemBonusHome" Type="StarSystemBonus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes" Value="2" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	        Value="2" OperationType="Addition" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" 	      Value="2" OperationType="Addition" Path="ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+    
+  <SimulationObjectDescriptor Name="StarTypeWhite" Type="StarType"/>
+  <SimulationObjectDescriptor Name="StarTypeYellow" Type="StarType"/>
+  <SimulationObjectDescriptor Name="StarTypeBlue" Type="StarType"/>
+  <SimulationObjectDescriptor Name="StarTypeProtostar" Type="StarType"/>
+  <SimulationObjectDescriptor Name="StarTypeRedSupergiant" Type="StarType"/>
+  <SimulationObjectDescriptor Name="StarTypeDouble" Type="StarType"/>
+  <SimulationObjectDescriptor Name="StarTypeRedDwarf" Type="StarType"/>
+  <SimulationObjectDescriptor Name="StarTypeWhiteDwarf" Type="StarType"/>
+
+  <SimulationObjectDescriptor Name="StarSystemApprovalStatusEcstatic" Type="ApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.20" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.20" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.20" OperationType="Percent" Path="ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemApprovalStatusHappy" Type="ApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.10" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.10" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.10" OperationType="Percent" Path="ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemApprovalStatusContent" Type="ApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemApprovalStatusUnhappy" Type="ApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="-0.2" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="-0.2" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.2" OperationType="Percent" Path="ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemApprovalStatusStrike" Type="ApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="-0.5" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="-0.5" OperationType="Percent" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemStatusBlocus" Type="StarSystemStatus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"    Value="-0.25" OperationType="Percent"        Path="ClassStarSystem" Priority="3"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0"     OperationType="Multiplication" Path="ClassStarSystem" Priority="3"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Colony Expansion Limiter -->
+  <SimulationObjectDescriptor Name="ColonyExpansionLimiterUnderMe" Type="ColonyExpansionLimiter">
+      <SimulationObjectPropertyModifierDescriptors>
+        <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                            OperationType="Addition"
+                                                            BinaryOperationType="Multiplication"
+                                                            Right="$(Population)"
+                                                            Left="40"
+                                                            Path="ClassStarSystem"/>
+      </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ColonyExpansionLimiterUnderAlly" Type="ColonyExpansionLimiter"> <!-- At peace with or in same Alliance -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="0" OperationType="Multiplication" Path="ClassStarSystem" TooltipVisibility="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.50" OperationType="Multiplication" Path="ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication"
+                                                        Right="$(Population)"
+                                                        Left="40"
+                                                        Path="ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ColonyExpansionLimiterNeutral" Type="ColonyExpansionLimiter">
+      <SimulationObjectPropertyModifierDescriptors>
+        <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="0" OperationType="Multiplication" Path="ClassStarSystem" TooltipVisibility="true"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.50" OperationType="Multiplication" Path="ClassStarSystem"/>
+          <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                            OperationType="Addition"
+                                                            BinaryOperationType="Multiplication"
+                                                            Right="$(Population)"
+                                                            Left="30"
+                                                            Path="ClassStarSystem"/>
+      </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ColonyExpansionLimiterUnderEnnemy" Type="ColonyExpansionLimiter">
+      <SimulationObjectPropertyModifierDescriptors>
+        <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="0" OperationType="Multiplication" Path="ClassStarSystem" TooltipVisibility="true"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.25" OperationType="Multiplication" Path="ClassStarSystem"/>
+          <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                            OperationType="Addition"
+                                                            BinaryOperationType="Multiplication"
+                                                            Right="$(Population)"
+                                                            Left="24"
+                                                            Path="ClassStarSystem"/>
+      </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemOwnerSower" Type="StarSystemOwner">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="2" OperationType="Division" Path="ClassStarSystem" Priority="1"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Food" OperationType="Addition" BinaryOperationType="Multiplication" Right="0.4" Left="$(Industry)" Path="ClassStarSystem" Priority="2"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemOwnerDefault" Type="StarSystemOwner" />
+
+  <!-- Example of FIDS conversion descriptors that can be used by infinite star system improvements -->
+  <!-- Convert 50% of the industry over production into science -->
+  <SimulationObjectDescriptor Name="StarSystemConversionIndustryToScience" Type="StarSystemConversionIndustry" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Science" OperationType="Addition" BinaryOperationType="Division" Right="4" Left="$(Industry)" Path="ClassStarSystem" Priority="1" TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <!-- Convert 100% of the food surplus into industry -->
+  <SimulationObjectDescriptor Name="StarSystemConversionIndustryToDust" Type="StarSystemConversionIndustry" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Money" OperationType="Addition" BinaryOperationType="Division" Right="4" Left="$(Industry)" Path="ClassStarSystem" Priority="1" TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+</Datatable>

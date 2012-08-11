@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Formation Name="Line" FirstPatternName="Head">
+    <AxisRatio>
+      <x>100</x>
+      <y>100</y>
+      <z>100</z>
+    </AxisRatio>
+
+    <!-- Large Ship size :  Z=8 Y=4 X=4 -->
+    <!-- Medium Ship size : Z=4 Y=2 X=2 -->
+    <!-- Small Ship size :  Z=2 Y=1 X=1 -->
+    <FormationPattern Name="Head">
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="0"     Y="0"   X="-5"     />
+
+      <FormationPatternSpawn PatternName="A"        Z="0"   Y="0"   X="0"     />
+    </FormationPattern>
+
+    <FormationPattern Name="A">
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-2"   Y="3.5"     X="0"/>
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-6.75"   Y="2"     X="-3.5"/>
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-12"   Y="-.25"     X="-1.5"/>
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-24"   Y="6.5"     X="-1.75"/>
+      <FormationPosition ShipSize="ShipSizeMedium"   Z="-13.5"   Y="0.75"     X="-3"/>
+      <FormationPosition ShipSize="ShipSizeMedium"   Z="-20"   Y="2.5"     X="-6"/>
+      <FormationPosition ShipSize="ShipSizeMedium"   Z="-15"   Y="-4"     X="-5"/>
+      <FormationPosition ShipSize="ShipSizeLarge"  Z="-9"  Y="5"      X="-2"     /><!-- 2 -->
+      <FormationPosition ShipSize="ShipSizeLarge"  Z="-27"   Y="-4"     X="-2"     /><!-- 4 -->
+	  <FormationPosition ShipSize="ShipSizeLarge"  Z="-33"   Y="4"      X="-5.5"     /><!-- 5 -->
+      <FormationPosition ShipSize="ShipSizeLarge"  Z="-41"   Y="-1.5"   X="-6.5"     /><!-- 6 -->
+      <FormationPosition ShipSize="ShipSizeLarge"  Z="-17"   Y="2"      X="-10"     /><!-- 3 -->
+	  
+	  <FormationPatternSpawn PatternName="A"        Z="-35"   Y="0"   X="0"     />
+    </FormationPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeMedium" ToShipSize="ShipSizeSmall">
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="0.5"   Y="-1"    X="-0.3"/>
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="-0.5"  Y="1"     X="0.2"/>
+    </FormationReplacementPattern>
+	
+    <FormationReplacementPattern FromShipSize="ShipSizeLarge" ToShipSize="ShipSizeMedium">
+        <FormationPosition ShipSize="ShipSizeMedium"  Z="0"  Y="-1"   X="-1"/>
+        <FormationPosition ShipSize="ShipSizeMedium"  Z="4"  Y="1"   X="1"/>
+    </FormationReplacementPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeLarge" ToShipSize="ShipSizeSmall">
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="0"   Y="0"     X="0"/>
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="3"  Y="1"   X="1"/>
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="-2"   Y="1"     X="-1.5"/>
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="0"  Y="2"   X="1"/>
+    </FormationReplacementPattern>
+  </Formation>
+
+  <Formation Name="LineFRANCOIS" FirstPatternName="Head">
+    <AxisRatio>
+      <x>90</x>
+      <y>90</y>
+      <z>160</z>
+    </AxisRatio>
+
+    <!-- Large Ship size :  Z=8 Y=4 X=4 -->
+    <!-- Medium Ship size : Z=4 Y=2 X=2 -->
+    <!-- Small Ship size :  Z=2 Y=1 X=1 -->
+    <FormationPattern Name="Head">
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="0"     Y="0"   X="0"     />
+
+      <FormationPatternSpawn PatternName="A"        Z="0"   Y="0"   X="0"     />
+    </FormationPattern>
+
+    <FormationPattern Name="A">
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-2.2"  Y="7"   X="0"     />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-2.2"  Y="-7"  X="0"     />
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-6.5"  Y="9"   X="-9"    />
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-6.5"  Y="-9"  X="-9"    />
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="-9"    Y="5"   X="-3"    />
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="-9"    Y="-5"  X="-3"    />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-11.5" Y="9"   X="-7.5"  />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-11.5" Y="-9"  X="-7.5"  />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="0"     Y="5"   X="-6"    />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="0"     Y="-5"  X="-6"    />
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-9"    Y="0"   X="-3"    />
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="-18"   Y="0"   X="0"     />
+
+      <FormationPatternSpawn PatternName="B"        Z="-18"   Y="0"   X="0"     />
+    </FormationPattern>
+
+    <FormationPattern Name="B">
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-2.2"  Y="7"   X="0"     />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-2.2"  Y="-7"  X="0"     />
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-6.5"  Y="9"   X="-9"    />
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-6.5"  Y="-9"  X="-9"    />
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="-9"    Y="5"   X="-3"    />
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="-9"    Y="-5"  X="-3"    />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-11.5" Y="9"   X="-7.5"  />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="-11.5" Y="-9"  X="-7.5"  />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="0"     Y="5"   X="-6"    />
+      <FormationPosition ShipSize="ShipSizeMedium"  Z="0"     Y="-5"  X="-6"    />
+      <FormationPosition ShipSize="ShipSizeSmall"   Z="-9"    Y="0"   X="-3"    />
+      <FormationPosition ShipSize="ShipSizeLarge"   Z="-18"   Y="0"   X="0"     />
+
+      <FormationPatternSpawn PatternName="B"        Z="-18"   Y="0"   X="0"     />
+    </FormationPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeLarge" ToShipSize="ShipSizeMedium">
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="2.5"   Y="-0.6"  X="-0.4"/>
+        <FormationPosition ShipSize="ShipSizeMedium"  Z="-2.6"  Y="0.5"   X="0.2"/>
+    </FormationReplacementPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeLarge" ToShipSize="ShipSizeSmall">
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="2.4"   Y="0"     X="0"/>
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="-2.5"  Y="1.2"   X="-0.4"/>
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="-2.5"  Y="-1"    X="0.1"/>
+    </FormationReplacementPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeMedium" ToShipSize="ShipSizeSmall">
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="0.1"   Y="-1"    X="-0.3"/>
+        <FormationPosition ShipSize="ShipSizeSmall"   Z="-0.3"  Y="1"     X="0.2"/>
+    </FormationReplacementPattern>
+  </Formation>
+
+  <Formation Name="Linezzz" FirstPatternName="A">
+    <AxisRatio>
+      <x>120</x>
+      <y>90</y>
+      <z>120</z>
+    </AxisRatio>
+    
+    <FormationPattern Name="A">
+      <FormationPosition ShipSize="ShipSizeLarge" X="0" Y="0" Z="0"/>
+      <FormationPosition ShipSize="ShipSizeMedium" X="0" Y="-5" Z="0"/>
+      <FormationPosition ShipSize="ShipSizeSmall" X="0" Y="5" Z="0"/>
+
+      <FormationPatternSpawn PatternName="A" Z="-10" Y="0" X="0"/>
+    </FormationPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeLarge" ToShipSize="ShipSizeMedium">
+        <FormationPosition ShipSize="ShipSizeMedium" X="5" Y="1" Z="0"/>
+        <FormationPosition ShipSize="ShipSizeMedium" X="-5" Y="-1" Z="0"/>
+    </FormationReplacementPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeLarge" ToShipSize="ShipSizeSmall">
+        <FormationPosition ShipSize="ShipSizeSmall" X="3" Y="1" Z="0"/>
+        <FormationPosition ShipSize="ShipSizeSmall" X="0" Y="0" Z="0" />
+        <FormationPosition ShipSize="ShipSizeSmall" X="-3" Y="-1" Z="0"/>
+    </FormationReplacementPattern>
+
+    <FormationReplacementPattern FromShipSize="ShipSizeMedium" ToShipSize="ShipSizeSmall">
+        <FormationPosition ShipSize="ShipSizeSmall" X="-2" Y="1" Z="0"/>
+        <FormationPosition ShipSize="ShipSizeSmall" X="2" Y="-1" Z="0"/>
+    </FormationReplacementPattern>
+    
+  </Formation>
+</Datatable>

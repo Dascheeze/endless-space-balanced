@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <GameSpeed Name="Slow">
+        <Gui Name="GameSpeedSlow">
+            <Title>%GameSpeedSlowTitle</Title>
+            <Description>%GameSpeedSlowDescription</Description>
+        </Gui>
+        <!-- Enumération de tous les descriptors -->
+        <Descriptors>CostSlow;FoodRequiredSlow</Descriptors>
+
+        <RegistryKeys>
+            <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfIndustry/DustFundingGameSpeedFactor" Value="-0.25"/>
+            <RegistryKey Path="/Game/VictoryConditions/TimeVictorySpeedFactor" Value="0.5"/>
+            <RegistryKey Path="/Game/VictoryConditions/EconomicVictorySpeedFactor" Value="0.5"/>
+            <RegistryKey Path="/Game/VictoryConditions/DiplomaticVictorySpeedFactor" Value="0.5"/>       
+            <RegistryKey Path="/Game/RandomEventFactors/EventDuration" Value="40"/>
+        </RegistryKeys>
+    </GameSpeed>
+
+    <GameSpeed Name="Normal" Default="true">
+        <Gui Name="GameSpeedNormal">
+            <Title>%GameSpeedNormalTitle</Title>
+            <Description>%GameSpeedNormalDescription</Description>
+        </Gui>
+
+        <RegistryKeys>
+            <RegistryKey Path="/Game/RandomEventFactors/EventDuration" Value="20"/>
+        </RegistryKeys>
+    </GameSpeed>
+
+    <GameSpeed Name="Fast">
+        <Gui Name="GameSpeedFast">
+            <Title>%GameSpeedFastTitle</Title>
+            <Description>%GameSpeedFastDescription</Description>
+        </Gui>
+        <Descriptors>CostFast;FoodRequiredFast</Descriptors>
+
+        <RegistryKeys>
+            <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfIndustry/DustFundingGameSpeedFactor" Value="0.25"/>
+            <RegistryKey Path="/Game/VictoryConditions/TimeVictorySpeedFactor" Value="-0.5"/>
+            <RegistryKey Path="/Game/VictoryConditions/EconomicVictorySpeedFactor" Value="-0.5"/>
+            <RegistryKey Path="/Game/VictoryConditions/DiplomaticVictorySpeedFactor" Value="-0.5"/>
+            <RegistryKey Path="/Game/RandomEventFactors/EventDuration" Value="10"/>
+        </RegistryKeys>
+    </GameSpeed>
+    
+</Datatable>

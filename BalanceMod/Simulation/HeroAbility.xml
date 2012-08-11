@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- TEST ability
+  <HeroAbility Name="HeroAbilityCommon00" ClassHero="Common" IsActive="false">
+    <Descriptors>HeroAbilityCommon00</Descriptors>
+    <PathsPrerequisite></PathsPrerequisite>
+    <AbilitiesDependencies></AbilitiesDependencies>
+    <Gui>
+      <Title>TEST ABILITY</Title>
+      <Description>===TO BE REMOVED AFTER TESTS===</Description>
+      <Icon Small="Gui/DynamicBitmaps/Actions/BattleTechAction6Small" Large="Gui/DynamicBitmaps/Actions/BattleTechAction6Large"/>
+    </Gui>
+  </HeroAbility>
+  -->
+
+
+
+
+
+  <!-- Common abilities-->
+  <HeroAbility Name="HeroAbilityCommon01" ClassHero="Common" IsActive="false">
+    <!-- Veteran 1 -->
+    <Descriptors>HeroAbilityCommon01</Descriptors>
+    <PathsPrerequisite></PathsPrerequisite>
+    <AbilitiesDependencies>HeroAbilityCommon06;HeroAbilityCommon09;HeroAbilityCommon12;HeroAbilityCommon15</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon01Title</Title>
+      <Description>%HeroAbilityCommon01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon01Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon02" ClassHero="Common" IsActive="false">
+    <!-- Veteran 2 -->
+    <Descriptors>HeroAbilityCommon02</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon02Title</Title>
+      <Description>%HeroAbilityCommon02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon02Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon02Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon03" ClassHero="Common" IsActive="false">
+    <!-- Veteran 3 -->
+    <Descriptors>HeroAbilityCommon03</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon03Title</Title>
+      <Description>%HeroAbilityCommon03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon03Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon03Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon04" ClassHero="Common" IsActive="false">
+    <!-- Veteran 4 -->
+    <Descriptors>HeroAbilityCommon04</Descriptors>
+    <PathsPrerequisite></PathsPrerequisite>
+    <AbilitiesDependencies>HeroAbilityCommon03</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon04Title</Title>
+      <Description>%HeroAbilityCommon04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon04Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon04Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon05" ClassHero="Common" IsActive="false">
+    <!-- Cyberskilled -->
+    <Descriptors>HeroAbilityCommon05</Descriptors>
+    <PathsPrerequisite></PathsPrerequisite>
+    <AbilitiesDependencies>HeroAbilityCommon04</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon05Title</Title>
+      <Description>%HeroAbilityCommon05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon05Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon05Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon06" ClassHero="Common" IsActive="false">
+    <!-- Director 1 -->
+    <Descriptors>HeroAbilityCommon06</Descriptors>
+    <PathsPrerequisite></PathsPrerequisite>
+    <AbilitiesDependencies></AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon06Title</Title>
+      <Description>%HeroAbilityCommon06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon06Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon06Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon07" ClassHero="Common" IsActive="false">
+    <!-- Director 2 -->
+    <Descriptors>HeroAbilityCommon07</Descriptors>
+    <PathsPrerequisite></PathsPrerequisite>
+    <AbilitiesDependencies>HeroAbilityCommon06</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon07Title</Title>
+      <Description>%HeroAbilityCommon07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon07Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon07Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon08" ClassHero="Common" IsActive="false">
+    <!-- Director 3 -->
+    <Descriptors>HeroAbilityCommon08</Descriptors>
+    <PathsPrerequisite></PathsPrerequisite>
+    <AbilitiesDependencies>HeroAbilityCommon07</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon08Title</Title>
+      <Description>%HeroAbilityCommon08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon08Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon08Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon09" ClassHero="Common" IsActive="false">
+    <!-- Negotiator 1 -->
+    <Descriptors>HeroAbilityCommon09</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies></AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon09Title</Title>
+      <Description>%HeroAbilityCommon09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon09Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon09Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon10" ClassHero="Common" IsActive="false">
+    <!-- Negotiator 2 -->
+    <Descriptors>HeroAbilityCommon10</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon09</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon10Title</Title>
+      <Description>%HeroAbilityCommon10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon10Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon10Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon11" ClassHero="Common" IsActive="false">
+    <!-- Negotiator 3 -->
+    <Descriptors>HeroAbilityCommon11</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon10</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon11Title</Title>
+      <Description>%HeroAbilityCommon11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon11Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon12" ClassHero="Common" IsActive="false">
+    <!-- Assailant 1 -->
+    <Descriptors>HeroAbilityCommon12</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies></AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon12Title</Title>
+      <Description>%HeroAbilityCommon12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon12Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon12Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon13" ClassHero="Common" IsActive="false">
+    <!-- Assailant 2 -->
+    <Descriptors>HeroAbilityCommon13</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon12</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon13Title</Title>
+      <Description>%HeroAbilityCommon13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon13Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon13Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon14" ClassHero="Common" IsActive="false">
+    <!-- Assailant 3 -->
+    <Descriptors>HeroAbilityCommon14</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon13</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon14Title</Title>
+      <Description>%HeroAbilityCommon14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon14Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon14Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon15" ClassHero="Common" IsActive="false">
+    <!-- Defender 1 -->
+    <Descriptors>HeroAbilityCommon15</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies></AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon15Title</Title>
+      <Description>%HeroAbilityCommon15Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon15Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon15Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon16" ClassHero="Common" IsActive="false">
+    <!-- Defender 2 -->
+    <Descriptors>HeroAbilityCommon16</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon15</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon16Title</Title>
+      <Description>%HeroAbilityCommon16Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon16Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon16Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon17" ClassHero="Common" IsActive="false">
+    <!-- Defender 3 -->
+    <Descriptors>HeroAbilityCommon17</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon16</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon17Title</Title>
+      <Description>%HeroAbilityCommon17Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon17Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon17Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon18" ClassHero="Common" IsActive="false">
+    <!-- Ground Pounder 1 -->
+    <Descriptors>HeroAbilityCommon18</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon18Title</Title>
+      <Description>%HeroAbilityCommon18Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon18Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon18Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon19" ClassHero="Common" IsActive="false">
+    <!-- Ground Pounder 2 -->
+    <Descriptors>HeroAbilityCommon19</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon18</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon19Title</Title>
+      <Description>%HeroAbilityCommon19Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon19Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon19Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon20" ClassHero="Common" IsActive="false">
+    <!-- Ground Pounder 3 -->
+    <Descriptors>HeroAbilityCommon20</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon19</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon20Title</Title>
+      <Description>%HeroAbilityCommon20Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon20Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon20Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon21" ClassHero="Common" IsActive="false">
+    <!-- Hardy Constitution 1 -->
+    <Descriptors>HeroAbilityCommon21</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon21Title</Title>
+      <Description>%HeroAbilityCommon21Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon21Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon21Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon25" ClassHero="Common" IsActive="false">
+    <!-- Dust Wielder 1 -->
+    <Descriptors>HeroAbilityCommon25</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon25Title</Title>
+      <Description>%HeroAbilityCommon25Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon25Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon25Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommon26" ClassHero="Common" IsActive="false">
+    <!-- Dust Wielder 2 -->
+    <Descriptors>HeroAbilityCommon26</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon25</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommon26Title</Title>
+      <Description>%HeroAbilityCommon26Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon26Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommon26Large"/>
+    </Gui>
+  </HeroAbility>
+
+
+
+
+
+  <!-- Administrator abilities -->
+  <HeroAbility Name="HeroAbilityAdministrator01" ClassHero="Administrator" IsActive="false">
+    <!-- Civil Engineer 1 -->
+    <Descriptors>HeroAbilityAdministrator01</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon06</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator01Title</Title>
+      <Description>%HeroAbilityAdministrator01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator01Large"/>
+    </Gui>
+  </HeroAbility>
+  
+    <!-- Added two more ranks of Civil Engineer -->
+  <HeroAbility Name="HeroAbilityAdministrator13" ClassHero="Administrator" IsActive="false">
+    <!-- Civil Engineer 2 -->
+    <Descriptors>HeroAbilityAdministrator13</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon07</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator13Title</Title>
+      <Description>%HeroAbilityAdministrator13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator01Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <!-- Added two more ranks of Civil Engineer -->
+  <HeroAbility Name="HeroAbilityAdministrator14" ClassHero="Administrator" IsActive="false">
+    <!-- Civil Engineer 3 -->
+    <Descriptors>HeroAbilityAdministrator14</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon08</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator14Title</Title>
+      <Description>%HeroAbilityAdministrator14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator01Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator02" ClassHero="Administrator" IsActive="false">
+    <!-- Crop Geneticist 1 -->
+    <Descriptors>HeroAbilityAdministrator02</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon07</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator02Title</Title>
+      <Description>%HeroAbilityAdministrator02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator02Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator02Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator03" ClassHero="Administrator" IsActive="false">
+    <!-- Crop Geneticist 2 -->
+    <Descriptors>HeroAbilityAdministrator03</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdministrator02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator03Title</Title>
+      <Description>%HeroAbilityAdministrator03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator03Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator03Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator04" ClassHero="Administrator" IsActive="false">
+    <!-- Minister of Propaganda 1 -->
+    <Descriptors>HeroAbilityAdministrator04</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon06</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator04Title</Title>
+      <Description>%HeroAbilityAdministrator04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator04Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator04Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator05" ClassHero="Administrator" IsActive="false">
+    <!-- Minister of Propaganda 2 -->
+    <Descriptors>HeroAbilityAdministrator05</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdministrator04</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator05Title</Title>
+      <Description>%HeroAbilityAdministrator05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator05Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator05Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator06" ClassHero="Administrator" IsActive="false">
+    <!-- Motivational Leader -->
+    <Descriptors>HeroAbilityAdministrator06</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon07</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator06Title</Title>
+      <Description>%HeroAbilityAdministrator06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator06Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator06Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator07" ClassHero="Administrator" IsActive="false">
+    <!-- Efficient Schooling -->
+    <Descriptors>HeroAbilityAdministrator07</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon06</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator07Title</Title>
+      <Description>%HeroAbilityAdministrator07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator07Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator07Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator10" ClassHero="Administrator" IsActive="false">
+    <!-- Emergency Preparedness 1 -->
+    <Descriptors>HeroAbilityAdministrator10</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon15</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator10Title</Title>
+      <Description>%HeroAbilityAdministrator10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator10Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator10Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator11" ClassHero="Administrator" IsActive="false">
+    <!-- Emergency Preparedness 2 -->
+    <Descriptors>HeroAbilityAdministrator11</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdministrator10</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator11Title</Title>
+      <Description>%HeroAbilityAdministrator11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator11Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdministrator12" ClassHero="Administrator" IsActive="false">
+    <!-- Black Marketeer -->
+    <Descriptors>HeroAbilityAdministrator12</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon10</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdministrator12Title</Title>
+      <Description>%HeroAbilityAdministrator12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator12Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdministrator12Large"/>
+    </Gui>
+  </HeroAbility>
+  
+  
+  
+  
+
+  <!-- Corporate abilities -->
+  <HeroAbility Name="HeroAbilityCorporate01" ClassHero="Corporate" IsActive="false">
+    <!-- Smart Investor 1 -->
+    <Descriptors>HeroAbilityCorporate01</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon11</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate01Title</Title>
+      <Description>%HeroAbilityCorporate01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate01Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate02" ClassHero="Corporate" IsActive="false">
+    <!-- Smart Investor 2 -->
+    <Descriptors>HeroAbilityCorporate02</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCorporate01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate02Title</Title>
+      <Description>%HeroAbilityCorporate02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate02Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate02Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate03" ClassHero="Corporate" IsActive="false">
+    <!-- Smart Investor 3 -->
+    <Descriptors>HeroAbilityCorporate03</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCorporate02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate03Title</Title>
+      <Description>%HeroAbilityCorporate03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate03Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate03Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate04" ClassHero="Corporate" IsActive="false">
+    <!-- Savvy Business 1 -->
+    <Descriptors>HeroAbilityCorporate04</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon09</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate04Title</Title>
+      <Description>%HeroAbilityCorporate04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate04Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate04Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate05" ClassHero="Corporate" IsActive="false">
+    <!-- Savvy Business 2 -->
+    <Descriptors>HeroAbilityCorporate05</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCorporate04</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate05Title</Title>
+      <Description>%HeroAbilityCorporate05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate05Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate05Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate06" ClassHero="Corporate" IsActive="false">
+    <!-- Savvy Business 3 -->
+    <Descriptors>HeroAbilityCorporate06</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCorporate05</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate06Title</Title>
+      <Description>%HeroAbilityCorporate06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate06Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate06Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate07" ClassHero="Corporate" IsActive="false">
+    <!-- Security Specialist -->
+    <Descriptors>HeroAbilityCorporate07</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate07Title</Title>
+      <Description>%HeroAbilityCorporate07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate07Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate07Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate10" ClassHero="Corporate" IsActive="false">
+    <!-- Value Creator 1 -->
+    <Descriptors>HeroAbilityCorporate10</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon11</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate10Title</Title>
+      <Description>%HeroAbilityCorporate10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate10Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate10Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate11" ClassHero="Corporate" IsActive="false">
+    <!-- Value Creator 2 -->
+    <Descriptors>HeroAbilityCorporate11</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCorporate10</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate11Title</Title>
+      <Description>%HeroAbilityCorporate11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate11Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCorporate12" ClassHero="Corporate" IsActive="false">
+    <!-- Industry-Academic Partnerships -->
+    <Descriptors>HeroAbilityCorporate12</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon25</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCorporate12Title</Title>
+      <Description>%HeroAbilityCorporate12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate12Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCorporate12Large"/>
+    </Gui>
+  </HeroAbility>
+
+
+
+
+
+  <!-- Commander abilites -->
+  <HeroAbility Name="HeroAbilityCommander01" ClassHero="Commander" IsActive="false">
+    <!-- Tactician 1 -->
+    <!-- automatically takes HeroAbilityCommander01Battle into account too -->
+    <Descriptors>HeroAbilityCommander01</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon12;HeroAbilityCommon15</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander01Title</Title>
+      <Description>%HeroAbilityCommander01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander01Large"/>
+	  <Tooltip>
+	    <Description>%HeroAbilityCommander01TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander02" ClassHero="Commander" IsActive="false">
+    <!-- Tactician 2 -->
+    <!-- automatically takes HeroAbilityCommander02Battle into account too -->
+    <Descriptors>HeroAbilityCommander02</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommander01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander02Title</Title>
+      <Description>%HeroAbilityCommander02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander02Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander02Large"/>
+	  <Tooltip>
+	    <Description>%HeroAbilityCommander02TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander03" ClassHero="Commander" IsActive="false">
+    <!-- Fearless Foe -->
+    <!-- automatically takes HeroAbilityCommander03Battle into account too -->
+    <Descriptors>HeroAbilityCommander03</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon25</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander03Title</Title>
+      <Description>%HeroAbilityCommander03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander03Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander03Large"/>
+	  <Tooltip>
+	    <Description>%HeroAbilityCommander03TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander05" ClassHero="Commander" IsActive="false">
+    <!-- Team Spirit 1 -->
+    <Descriptors>HeroAbilityCommander05</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander05Title</Title>
+      <Description>%HeroAbilityCommander05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander05Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander05Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander07" ClassHero="Commander" IsActive="false">
+    <!-- Hyper-driven -->
+    <Descriptors>HeroAbilityCommander07</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon05</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander07Title</Title>
+      <Description>%HeroAbilityCommander07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander07Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander07Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander08" ClassHero="Commander" IsActive="false">
+    <!-- Battle Action : Dust Warheads -->
+    <Descriptors>HeroAbilityCommander08</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon12</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander08Title</Title>
+      <Description>%HeroAbilityCommander08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander08Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander08Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander10" ClassHero="Commander" IsActive="false">
+    <!-- Battle Action : Ultimate Defense -->
+    <Descriptors>HeroAbilityCommander10</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon16</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander10Title</Title>
+      <Description>%HeroAbilityCommander10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander10Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander10Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander11" ClassHero="Commander" IsActive="false">
+    <!-- Battle Action : Emergency Shelter -->
+    <Descriptors>HeroAbilityCommander11</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon03</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander11Title</Title>
+      <Description>%HeroAbilityCommander11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander11Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander12" ClassHero="Commander" IsActive="false">
+    <!-- Commander-in-Chief 1 -->
+    <Descriptors>HeroAbilityCommander12</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon18</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander12Title</Title>
+      <Description>%HeroAbilityCommander12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander12Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander12Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityCommander13" ClassHero="Commander" IsActive="false">
+    <!-- Commander-in-Chief 2 -->
+    <Descriptors>HeroAbilityCommander13</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommander12</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityCommander13Title</Title>
+      <Description>%HeroAbilityCommander13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander13Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander13Large"/>
+    </Gui>
+  </HeroAbility>
+
+
+
+
+
+  <!-- Pilot abilities -->
+  <HeroAbility Name="HeroAbilityPilot01" ClassHero="Pilot" IsActive="false">
+    <!-- Engine Tuner 1 -->
+    <Descriptors>HeroAbilityPilot01</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot01Title</Title>
+      <Description>%HeroAbilityPilot01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot01Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot02" ClassHero="Pilot" IsActive="false">
+    <!-- Engine Tuner 2 -->
+    <Descriptors>HeroAbilityPilot02</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot02Title</Title>
+      <Description>%HeroAbilityPilot02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot02Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot02Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot03" ClassHero="Pilot" IsActive="false">
+    <!-- Tinkerer 1 -->
+    <Descriptors>HeroAbilityPilot03</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot03Title</Title>
+      <Description>%HeroAbilityPilot03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot03Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot03Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot04" ClassHero="Pilot" IsActive="false">
+    <!-- Tinkerer 2 -->
+    <Descriptors>HeroAbilityPilot04</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot03</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot04Title</Title>
+      <Description>%HeroAbilityPilot04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot04Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot04Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot05" ClassHero="Pilot" IsActive="false">
+    <!-- Lethal Modder -->
+    <Descriptors>HeroAbilityPilot05</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot03</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot05Title</Title>
+      <Description>%HeroAbilityPilot05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot05Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot05Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot06" ClassHero="Pilot" IsActive="false">
+    <!-- Defense System Specialist -->
+    <Descriptors>HeroAbilityPilot06</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot03</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot06Title</Title>
+      <Description>%HeroAbilityPilot06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot06Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot06Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot07" ClassHero="Pilot" IsActive="false">
+    <!-- Fast Reboot 1 -->
+    <Descriptors>HeroAbilityPilot07</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot04</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot07Title</Title>
+      <Description>%HeroAbilityPilot07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot07Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot07Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot08" ClassHero="Pilot" IsActive="false">
+    <!-- Fast Reboot 2 -->
+    <Descriptors>HeroAbilityPilot08</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot07</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot08Title</Title>
+      <Description>%HeroAbilityPilot08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot08Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot08Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot09" ClassHero="Pilot" IsActive="false">
+    <!-- Rapid Adaptation -->
+    <Descriptors>HeroAbilityPilot09</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot07</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot09Title</Title>
+      <Description>%HeroAbilityPilot09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot09Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot09Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot11" ClassHero="Pilot" IsActive="false">
+    <!-- Battle Action : Dust Barrier -->
+    <Descriptors>HeroAbilityPilot11</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon15</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot11Title</Title>
+      <Description>%HeroAbilityPilot11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot11Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot12" ClassHero="Pilot" IsActive="false">
+    <!-- Battle Action : Power Convergence -->
+    <Descriptors>HeroAbilityPilot12</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon25</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot12Title</Title>
+      <Description>%HeroAbilityPilot12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot12Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot12Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityPilot14" ClassHero="Pilot" IsActive="false">
+    <!-- Battle Action : Gravity Well -->
+    <Descriptors>HeroAbilityPilot14</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityPilot05</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityPilot14Title</Title>
+      <Description>%HeroAbilityPilot14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot14Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot14Large"/>
+    </Gui>
+  </HeroAbility>
+
+
+
+
+
+  <!-- Adventurer abilities -->
+  <HeroAbility Name="HeroAbilityAdventurer01" ClassHero="Adventurer" IsActive="false">
+    <!-- Foresight -->
+    <Descriptors>HeroAbilityAdventurer01</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon15</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer01Title</Title>
+      <Description>%HeroAbilityAdventurer01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer01Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer01Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer02" ClassHero="Adventurer" IsActive="false">
+    <!-- Inside Informant 1 -->
+    <Descriptors>HeroAbilityAdventurer02</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon18</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer02Title</Title>
+      <Description>%HeroAbilityAdventurer02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer02Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer02Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer03" ClassHero="Adventurer" IsActive="false">
+    <!-- Inside Informant 2 -->
+    <Descriptors>HeroAbilityAdventurer03</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer03Title</Title>
+      <Description>%HeroAbilityAdventurer03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer03Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer03Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer04" ClassHero="Adventurer" IsActive="false">
+    <!-- Master Hacker -->
+    <Descriptors>HeroAbilityAdventurer04</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon03</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer04Title</Title>
+      <Description>%HeroAbilityAdventurer04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer04Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer04Large"/>
+	  <Tooltip>
+	    <Description>%HeroAbilityAdventurer04TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer05" ClassHero="Adventurer" IsActive="false">
+    <!-- Saboteur -->
+    <Descriptors>HeroAbilityAdventurer05</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer04</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer05Title</Title>
+      <Description>%HeroAbilityAdventurer05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer05Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer05Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer06" ClassHero="Adventurer" IsActive="false">
+    <!-- Blockade Runner -->
+    <Descriptors>HeroAbilityAdventurer06</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer06Title</Title>
+      <Description>%HeroAbilityAdventurer06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer06Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer06Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer08" ClassHero="Adventurer" IsActive="false">
+    <!-- Insight 1 -->
+    <Descriptors>HeroAbilityAdventurer08</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer03</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer08Title</Title>
+      <Description>%HeroAbilityAdventurer08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer08Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer08Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer09" ClassHero="Adventurer" IsActive="false">
+    <!-- Snare -->
+    <Descriptors>HeroAbilityAdventurer09</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer04</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer09Title</Title>
+      <Description>%HeroAbilityAdventurer09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer09Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer09Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer10" ClassHero="Adventurer" IsActive="false">
+    <!-- Battle Action : Armor Weak Point -->
+    <Descriptors>HeroAbilityAdventurer10</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon01</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer10Title</Title>
+      <Description>%HeroAbilityAdventurer10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer10Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer10Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <!-- Battle Action : Stolen Technology
+  <HeroAbility Name="HeroAbilityAdventurer11" ClassHero="Adventurer" IsActive="false">
+    <Descriptors>HeroAbilityAdventurer11</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer11Title</Title>
+      <Description>%HeroAbilityAdventurer11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer11Large"/>
+    </Gui>
+  </HeroAbility>
+  -->
+
+  <HeroAbility Name="HeroAbilityAdventurer12" ClassHero="Adventurer" IsActive="false">
+    <!-- Insight 2 -->
+    <Descriptors>HeroAbilityAdventurer12</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer08</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer12Title</Title>
+      <Description>%HeroAbilityAdventurer12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer12Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer12Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer13" ClassHero="Adventurer" IsActive="false">
+    <!-- Battle Action : Illusion -->
+    <Descriptors>HeroAbilityAdventurer13</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityCommon25</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer13Title</Title>
+      <Description>%HeroAbilityAdventurer13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer13Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer13Large"/>
+    </Gui>
+  </HeroAbility>
+
+  <HeroAbility Name="HeroAbilityAdventurer14" ClassHero="Adventurer" IsActive="false">
+    <!-- Battle Action : Beam Surge -->
+    <Descriptors>HeroAbilityAdventurer14</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <AbilitiesDependencies>HeroAbilityAdventurer02</AbilitiesDependencies>
+    <Gui>
+      <Title>%HeroAbilityAdventurer14Title</Title>
+      <Description>%HeroAbilityAdventurer14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer14Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer14Large"/>
+    </Gui>
+  </HeroAbility>
+
+</Datatable>

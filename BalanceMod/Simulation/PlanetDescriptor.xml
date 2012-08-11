@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Every time you add a descriptor on a SimulationObject, it will add a tag with the Descriptor.Name property.-->
+  <!-- The property computing start by get all Addition Modifier then multiply them by each Multiply Modifier and finally compute the Percent to add.-->
+  <!-- Food : Add 2, Add 4, Mult 3, Percent 0.2, Percent 0.1 ==> ((2 + 4) * 3) * (1.0 + (0.2 + 0.1))-->
+
+  <!-- Base descriptor for planet definition -->
+  <SimulationObjectDescriptor Name="ClassPlanet" Type="Class">
+    <SimulationObjectPropertyDescriptors>
+      <!-- IsCompound : add all children same property before compute his own one -->
+      <!-- IsPermanent : Keep the last turn value and add the new value -->
+      <!-- IsOutput : Define the "Principal" properties which will be displayed just above the Planet in System View -->
+      <SimulationObjectPropertyDescriptor Name="Population"         Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="OverheadPopulation" Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="MaxPopulation"      Value="0" IsCompound="true" IsPermanent="false" IsOutput="false" MaxValue="14"/>
+      <SimulationObjectPropertyDescriptor Name="Food"     Value="0" IsCompound="true" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Science"  Value="0" IsCompound="true" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Industry" Value="0" IsCompound="true" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Money"    Value="0" IsCompound="true" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Approval" Value="0" IsCompound="true" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="Upkeep"   Value="0" IsCompound="true" IsPermanent="false" IsOutput="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="LocustPoints"   Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LocustPointsUpdatePerTurn"   Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="ColonizedModifier" Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="MaxSystemPopulation" Value="0" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <!-- Il manque la gestion de la croissance (Growth / NeededGrowth) >>> effectué par département de l'agriculture ou équivalent -->
+
+      <!-- Strategic Resources use their own variables to manage FIDS bonus -->
+      <SimulationObjectPropertyDescriptor Name="ResourceFood"     Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="ResourceScience"  Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="ResourceIndustry" Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="ResourceMoney"    Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="ResourceFIDSBonusMultiplier"   Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="LuxuryFood"     Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryScience"  Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryIndustry" Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryMoney"    Value="0" IsCompound="false" IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryFIDSBonusMultiplier"   Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      
+    </SimulationObjectPropertyDescriptors>
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceMoney"              Value="$(ResourceFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceScience"            Value="$(ResourceFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceIndustry"           Value="$(ResourceFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceFood"               Value="$(ResourceFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"              Value="$(ResourceMoney)" OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"            Value="$(ResourceScience)" OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"           Value="$(ResourceIndustry)" OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"               Value="$(ResourceFood)" OperationType="Addition" Path="ClassPlanet"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney"              Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience"            Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryIndustry"           Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood"               Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassPlanet"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"              Value="$(LuxuryMoney)" OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"            Value="$(LuxuryScience)" OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"           Value="$(LuxuryIndustry)" OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"               Value="$(LuxuryFood)" OperationType="Addition" Path="ClassPlanet"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"              Value="$(Population)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"            Value="$(Population)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"           Value="$(Population)" OperationType="Multiplication" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"               Value="$(Population)" OperationType="Multiplication" Path="ClassPlanet"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"           Value="$(ColonizedModifier)" OperationType="Multiplication" Path="ClassPlanet"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverheadPopulation" Value="$(Population)" OperationType="Addition" Path="ClassPlanet"/>
+
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="MaxSystemPopulation" OperationType="Addition" BinaryOperationType="Multiplication" Right="$(ColonizedModifier)" Left="$(MaxPopulation)" Path="ClassPlanet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Planet Status list -->
+  <!-- Note: PlanetStatus is serializable -->
+  <SimulationObjectDescriptor Name="PlanetStatusColonized" Type="PlanetStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ColonizedModifier" Value="1" OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverheadPopulation" Value="-1" OperationType="Addition" Path="ClassPlanet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Planet Type list -->
+  <!-- Note: PlanetType is serializable -->
+  <SimulationObjectDescriptor Name="PlanetTypeTerran" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TargetProperty : The property to modify -->
+      <!-- Value : The amount to modify. This can be binded to another property : food = food * worker -->
+      <!-- OperationType : Define the OperationType to use. Addition, Multiplication or Percent. -->
+      <!-- Path : Define on which object the modifier will be added.
+ClassPlanet : add on me when I contain a tag "ClassPlanet"
+./ClassStarSystem : my parent when it contains a tag "ClassSystem"
+../ClassStarSystem : find the first parent which contain a tag "ClassSystem". Start by testing me.
+.../ClassStarSystem : find all simulationObject which are child of the root and contain a tag "ClassSystem".
+...//ClassPlanet, PlanetTypeTerran : find all simulationObject which contains the tags "ClassPlanet" AND "PlanetTypeTerran" at any level under the root -->
+      <!-- IsBase : Elements displayed and calculated when the planet is not colonized by the actual player -->
+      <!-- exemple <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="-0.25" OperationType="Percent" Path="Planet" IsBase="true"-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="0" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeJungle" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="0" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeOcean" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="0" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeArid" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="2" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="5" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-5" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeTundra" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="2" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="5" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-5" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeDesert" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="3" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="5" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeArctic" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="3" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="5" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeLava" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="4" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-15" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeBarren" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="4" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-15" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeAsteroids" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="5" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="4" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeGasHydrogen" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="5" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeGasHelium" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="5" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetTypeGasMethane" Type="PlanetType" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="PlanetClass" Value="5" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <!-- Planet Size list -->
+  <SimulationObjectDescriptor Name="PlanetSizeHuge" Type="PlanetSize" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="10" OperationType="Addition" Path="PlanetTypeTerran" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="10" OperationType="Addition" Path="PlanetTypeJungle" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="10" OperationType="Addition" Path="PlanetTypeOcean" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="8" OperationType="Addition" Path="PlanetTypeArid" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="8" OperationType="Addition" Path="PlanetTypeTundra" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="6" OperationType="Addition" Path="PlanetTypeDesert" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="6" OperationType="Addition" Path="PlanetTypeArctic" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeLava" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeBarren" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeAsteroids" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeGasHydrogen" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeGasHelium" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeGasMethane" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetSizeLarge" Type="PlanetSize" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="8" OperationType="Addition" Path="PlanetTypeTerran" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="8" OperationType="Addition" Path="PlanetTypeJungle" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="8" OperationType="Addition" Path="PlanetTypeOcean" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="7" OperationType="Addition" Path="PlanetTypeArid" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="7" OperationType="Addition" Path="PlanetTypeTundra" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="5" OperationType="Addition" Path="PlanetTypeDesert" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="5" OperationType="Addition" Path="PlanetTypeArctic" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeLava" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeBarren" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeAsteroids" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeGasHydrogen" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeGasHelium" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeGasMethane" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetSizeMedium" Type="PlanetSize" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="6" OperationType="Addition" Path="PlanetTypeTerran" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="6" OperationType="Addition" Path="PlanetTypeJungle" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="6" OperationType="Addition" Path="PlanetTypeOcean" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="5" OperationType="Addition" Path="PlanetTypeArid" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="5" OperationType="Addition" Path="PlanetTypeTundra" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeDesert" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeArctic" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeLava" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeBarren" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeAsteroids" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeGasHydrogen" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeGasHelium" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeGasMethane" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetSizeSmall" Type="PlanetSize" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="5" OperationType="Addition" Path="PlanetTypeTerran" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="5" OperationType="Addition" Path="PlanetTypeJungle" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="5" OperationType="Addition" Path="PlanetTypeOcean" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeArid" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeTundra" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeDesert" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeArctic" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeLava" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeBarren" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeAsteroids" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeGasHydrogen" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeGasHelium" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeGasMethane" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetSizeTiny" Type="PlanetSize" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeTerran" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeJungle" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="4" OperationType="Addition" Path="PlanetTypeOcean" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeArid" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="3" OperationType="Addition" Path="PlanetTypeTundra" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeDesert" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="PlanetTypeArctic" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="PlanetTypeLava" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="PlanetTypeBarren" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="PlanetTypeAsteroids" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="PlanetTypeGasHydrogen" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="PlanetTypeGasHelium" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="PlanetTypeGasMethane" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  
+  
+  <!-- Anomaly list -->
+    <SimulationObjectDescriptor Name="PlanetAnomaly01" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly02" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly03" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly04" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly05" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly06" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly07" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly08" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly09" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly10" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly11" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly12" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly13" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly14" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly15" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly16" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly17" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly18" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly19" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly20" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly21" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly22" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly23" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly24" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly25" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly26" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly27" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly28" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly29" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly30" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly31" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly32" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly33" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly34" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly35" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly36" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly37" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly38" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly39" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly40" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly41" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly42" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly43" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly44" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly45" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly46" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly47" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly48" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly49" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly50" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <!-- Anomaly Reduction 1 -->
+  <SimulationObjectDescriptor Name="PlanetAnomaly22Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly23Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly26Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly30Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly31Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly33Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly34Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly35Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly36Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly37Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly38Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly39Reduction1" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <!-- Anomaly Reduction 2 -->
+  <SimulationObjectDescriptor Name="PlanetAnomaly40Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly41Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly42Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly43Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly44Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly45Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly46Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly47Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly48Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly49Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetAnomaly50Reduction2" Type="PlanetAnomaly" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  
+  
+  <!-- PlanetStrategicResource list -->
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceTitanium" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceIndustry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceHyperium" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceScience" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceHexaferrum" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceIndustry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceAnti-Matter" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceScience" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceOrichalcedon" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceIndustry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceScience" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceSiderite" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceIndustry" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceScience" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceAdamantium" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceIndustry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceScience" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetStrategicResourceQuadrinite" Type="PlanetStrategicResource" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceIndustry" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceScience" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+ 
+
+  <!-- Luxury list -->
+  
+  <!-- Xenonutrition (diplomacy tech tree) -->
+  <SimulationObjectDescriptor Name="PlanetLuxury1" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury2" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury3" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury4" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+  <!-- Xenomineralogy (exploration tech tree) -->
+  <SimulationObjectDescriptor Name="PlanetLuxury5" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury6" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury7" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury8" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+  <!-- Xenopharmacology (science tech tree) -->
+  <SimulationObjectDescriptor Name="PlanetLuxury9" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury10" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="30" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury11" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="40" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury12" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+  <!-- Xenoarchaeology (warfare tech tree) -->
+  <SimulationObjectDescriptor Name="PlanetLuxury13" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury14" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="2" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury15" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetLuxury16" Type="PlanetLuxury" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" Value="1" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" Value="3" OperationType="Addition" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <!-- Locust descriptors : used by Cravers affinity -->
+  <SimulationObjectDescriptor Name="PlanetColonizationStatusLocust" Type="PlanetColonizationStatus" Serializable="true"/>
+
+  <!-- The path "ClassPlanet,PlanetColonizationStatusLocust" is used to disable the descriptor's effects if the planet isn't currently owned by cravers -->
+  <SimulationObjectDescriptor Name="PlanetQualityImproved" Type="PlanetQuality" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.25" OperationType="Percent" Path="ClassPlanet,PlanetColonizationStatusLocust" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.25" OperationType="Percent" Path="ClassPlanet,PlanetColonizationStatusLocust" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="0.25" OperationType="Percent" Path="ClassPlanet,PlanetColonizationStatusLocust" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.25" OperationType="Percent" Path="ClassPlanet,PlanetColonizationStatusLocust" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetQualityDefault" Type="PlanetQuality" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="PlanetQualityDepleted" Type="PlanetQuality" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="-0.25" OperationType="Percent" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="-0.25" OperationType="Percent" Path="ClassPlanet" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="-0.25" OperationType="Percent" Path="ClassPlanet" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ResourceDepositLuxury" Type="ResourceDeposit">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="DepositSize" Value="0"/>
+    </SimulationObjectPropertyDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ResourceDepositStrategic" Type="ResourceDeposit">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="DepositSize" Value="0"/>
+    </SimulationObjectPropertyDescriptors>
+  </SimulationObjectDescriptor>
+  
+</Datatable>

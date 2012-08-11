@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Samples -->
+  <SimulationObjectDescriptor Name="Trait011" Type="Trait">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Trait012" Type="Trait">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Trait013" Type="Trait">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <!-- APPEARANCE TRAITS -->
+  <SimulationObjectDescriptor Name="AffinityMappingAmoeba" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingTerran" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingEmperor" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingHoratio" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingHissho" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingSwarm" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingResistance" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingSophon" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingPirates" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityMappingSower" Type="AffinityMapping" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityAmoeba" Type="Affinity" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinitySophon" Type="Affinity" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModuleCostBonus" Value="-0.5" OperationType="Percent" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="AffinityTerran" Type="Affinity" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialXP" Value="10" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor> 
+  <SimulationObjectDescriptor Name="AffinityResistance" Type="Affinity" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityHoratio" Type="Affinity" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FatigueRecoveryPerTurn" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassHero" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="AffinitySower" Type="Affinity" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityHissho" Type="Affinity" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinitySwarm" Type="Affinity" Serializable="true" />
+  <SimulationObjectDescriptor Name="AffinityPirates" Type="Affinity" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MoneyNet" Value="0" OperationType="Multiplication" Path="ClassEmpire" IsBase="true" Priority="2"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Following, the descriptors applied by the occasional effects of the affinity "AffinityHissho" -->
+  <SimulationObjectDescriptor Name="AffinityHisshoInvasionVictory" Type="AffinityHisshoInvasionVictory" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AffinityHisshoInvasionVictory" Value="1" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="AffinityHisshoBattleVictory" Type="AffinityHisshoBattleVictory" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.05" OperationType="Percent" Path="ClassEmpire//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.05" OperationType="Percent" Path="ClassEmpire//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AffinityHisshoBattleVictory" Value="1" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  
+<!-- ################################################################################## -->
+<!-- ############################# CHEAT TRAITS ####################################### -->
+<!-- ################################################################################## -->
+  
+  <SimulationObjectDescriptor Name="TraitCheat01Norm1" Type="TraitCheat01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="1000"  OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="75"    OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitCheat02Norm1" Type="TraitCheat02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1000"  OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="1000"  OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1000"  OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  
+<!-- ################################################################################## -->
+<!-- ############################ ALIGNMENT TRAITS #################################### -->
+<!-- ################################################################################## -->
+  <SimulationObjectDescriptor Name="TraitAlignmentGood" Type="TraitAlignment" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- Not used for now, but we may need it later -->
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitAlignmentNeutral" Type="TraitAlignment" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- Not used for now, but we may need it later -->
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitAlignmentEvil" Type="TraitAlignment" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- Not used for now, but we may need it later -->
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <!-- HOME PLANET TRAITS-->
+
+  
+  
+  <!-- ################################################################################## -->
+  <!-- ##########################  TECHNOLOGY TRAITS  ################################### -->
+  <!-- ################################################################################## -->
+
+  <SimulationObjectDescriptor Name="TraitTechA01" Type="TraitTechA01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechA02" Type="TraitTechA02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="TraitTechE01" Type="TraitTechE01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechE27" Type="TraitTechE27" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="TraitTechT01" Type="TraitTechT01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechT02" Type="TraitTechT02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="TraitTechG01" Type="TraitTechG01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechG02" Type="TraitTechG02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <!-- ### 2nd circle techs ###-->
+  <SimulationObjectDescriptor Name="TraitTechA03" Type="TraitTechA03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechA04" Type="TraitTechA04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechA05" Type="TraitTechA05" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitTechE02" Type="TraitTechE02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechE03" Type="TraitTechE03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechE04" Type="TraitTechE04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitTechT03" Type="TraitTechT03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitTechT04" Type="TraitTechT04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitTechG03" Type="TraitTechG03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  
+  
+<!-- ################################################################################## -->
+<!-- ############################  ECONOMY TRAITS  #################################### -->
+<!-- ################################################################################## -->
+  <!-- Businessmen* -->  
+  
+  <SimulationObjectDescriptor Name="TraitEconomy01Norm1" Type="TraitEconomy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitEconomy01Norm2" Type="TraitEconomy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.20" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitEconomy01Norm3" Type="TraitEconomy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitEconomy01Alt1" Type="TraitEconomy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitEconomy01Alt2" Type="TraitEconomy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.20" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitEconomy01Alt3" Type="TraitEconomy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+
+  <!-- Merchants* -->
+  <SimulationObjectDescriptor Name="TraitEconomy02Norm1" Type="TraitEconomy02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitEconomy02Norm2" Type="TraitEconomy02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes" Value="2" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <!--
+  <SimulationObjectDescriptor Name="TraitEconomy02Alt1" Type="TraitEconomy02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes" Value="-1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  -->
+  
+  <!-- Blockade Breakers -->
+  <SimulationObjectDescriptor Name="TraitEconomy07Norm1" Type="TraitEconomy07" Serializable="true"/>
+  
+
+  <!-- [Dust bonus] -->
+  <SimulationObjectDescriptor Name="TraitEconomy09Norm1" Type="TraitEconomy09" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/ClassPlanet" 			IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <!-- [Initial Dust bonus in bank] -->
+  <SimulationObjectDescriptor Name="TraitEconomy10Norm1" Type="TraitEconomy10" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitEconomy10Norm2" Type="TraitEconomy10" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitEconomy10Alt1"  Type="TraitEconomy10" Serializable="true"/>
+
+<!-- ################################################################################## -->
+<!-- ########################### POPULATION TRAITS #################################### -->
+<!-- ################################################################################## -->
+  <!-- Cloning* -->
+  <SimulationObjectDescriptor Name="TraitPopulation01Norm1" Type="TraitPopulation01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert" 			IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava" 			IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen" 	IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane" 	IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation01Norm2" Type="TraitPopulation01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid" 			IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert" 			IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava" 			IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen" 	IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium" 		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane" 	IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation01Norm3" Type="TraitPopulation01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/ClassPlanet" 			IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- GrowthPlan* -->
+
+  <SimulationObjectDescriptor Name="TraitPopulation02Norm1" Type="TraitPopulation02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation02Norm2" Type="TraitPopulation02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation02Norm3" Type="TraitPopulation02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.3" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation02Alt1" Type="TraitPopulation02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation02Alt2" Type="TraitPopulation02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation02Alt3" Type="TraitPopulation02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.3" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  
+  <!-- Optimistic* -->
+  <SimulationObjectDescriptor Name="TraitPopulation03Norm1" Type="TraitPopulation03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation03Norm2" Type="TraitPopulation03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="20" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation03Alt1" Type="TraitPopulation03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-10" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation03Alt2" Type="TraitPopulation03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-20" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Crowded Planets -->
+  <SimulationObjectDescriptor Name="TraitPopulation04Norm1" Type="TraitPopulation04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetSizeTiny"		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetSizeSmall"		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetSizeMedium"	IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitPopulation04Norm2" Type="TraitPopulation04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetSizeTiny"		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="2" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetSizeSmall"		IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem/PlanetSizeMedium"	IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+
+  
+<!-- ################################################################################## -->
+<!-- ############################  SCIENCE TRAITS  #################################### -->
+<!-- ################################################################################## -->
+  <!-- Scientists* -->
+  <SimulationObjectDescriptor Name="TraitScience01Norm1" Type="TraitScience01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitScience01Norm2" Type="TraitScience01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.20" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitScience01Norm3" Type="TraitScience01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitScience01Alt1" Type="TraitScience01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitScience01Alt2" Type="TraitScience01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.20" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitScience01Alt3" Type="TraitScience01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Tolerant -->
+  <SimulationObjectDescriptor Name="TraitScience03Default" Type="TraitScience03" Serializable="true" />
+    
+  <SimulationObjectDescriptor Name="TraitScience03VisibleNorm1" Type="TraitScience03Visible" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="ColonizationMalus" Value="-50" MinValue="Negative" />
+    </SimulationObjectPropertyDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitScience03VisibleNorm2" Type="TraitScience03Visible" Serializable="true">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="ColonizationMalus" Value="-25" MinValue="Negative" />
+    </SimulationObjectPropertyDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+<!-- ################################################################################## -->
+<!-- ###########################  BUILDING TRAITS  #################################### -->
+<!-- ################################################################################## -->
+  <!-- Builders* -->
+  <SimulationObjectDescriptor Name="TraitBuilding01Norm1" Type="TraitBuilding01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="-0.1" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding01Norm2" Type="TraitBuilding01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="-0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding01Norm3" Type="TraitBuilding01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="-0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding01Alt1" Type="TraitBuilding01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.1" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding01Alt2" Type="TraitBuilding01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding01Alt3" Type="TraitBuilding01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Militarists* -->
+  <SimulationObjectDescriptor Name="TraitBuilding02Norm1" Type="TraitBuilding02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="-0.1" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding02Norm2" Type="TraitBuilding02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="-0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding02Norm3" Type="TraitBuilding02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="-0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding02Alt1" Type="TraitBuilding02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.1" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding02Alt2" Type="TraitBuilding02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding02Alt3" Type="TraitBuilding02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Masters of Destruction -->
+  <SimulationObjectDescriptor Name="TraitBuilding03Norm1" Type="TraitBuilding03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : descriptor is OK but doesn't work -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="WeaponModuleCostBonus" Value="-0.25" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitBuilding03Norm2" Type="TraitBuilding03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : descriptor is OK but doesn't work -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="WeaponModuleCostBonus" Value="-0.50" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  
+  
+<!-- ################################################################################## -->
+<!-- ############################   FLEET TRAITS   #################################### -->
+<!-- ################################################################################## -->
+  <!-- Fast Travelers* -->
+  <SimulationObjectDescriptor Name="TraitFleet01Norm1" Type="TraitFleet01" Serializable="true"> 
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed"       Value="1" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet01Norm2" Type="TraitFleet01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed"       Value="2" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet01Alt1" Type="TraitFleet01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed"       Value="-1" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet01Alt2" Type="TraitFleet01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed"       Value="-2" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Big Fleets* -->
+  <SimulationObjectDescriptor Name="TraitFleet02Norm1" Type="TraitFleet02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="1" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet02Norm2" Type="TraitFleet02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="2" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet02Alt1" Type="TraitFleet02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="-1" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet02Alt2" Type="TraitFleet02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="-2" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Omniscient -->
+  <!-- ##### May be removed : too complex to code + its effect is obsolete since detection radius has been implemented #####
+  <SimulationObjectDescriptor Name="TraitFleet03Norm1" Type="TraitFleet03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  -->
+  
+  <!-- Strong Alloys* -->
+  <SimulationObjectDescriptor Name="TraitFleet04Norm1" Type="TraitFleet04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassShip" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet04Norm2" Type="TraitFleet04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="0.4" OperationType="Percent" Path="ClassEmpire//ClassShip" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet04Alt1" Type="TraitFleet04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="-0.15" OperationType="Percent" Path="ClassEmpire//ClassShip" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet04Alt2" Type="TraitFleet04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="-0.3" OperationType="Percent" Path="ClassEmpire//ClassShip" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Optimal Structure* -->
+  <SimulationObjectDescriptor Name="TraitFleet05Norm1" Type="TraitFleet05" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="0.15" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet05Norm2" Type="TraitFleet05" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="0.3" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet05Alt1" Type="TraitFleet05" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="-0.1" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet05Alt2" Type="TraitFleet05" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="-0.2" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Masters of Illusion -->
+  <SimulationObjectDescriptor Name="TraitFleet06Norm1" Type="TraitFleet06" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="UnarmedShipCostBonus" Value="-0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet06Norm2" Type="TraitFleet06" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="UnarmedShipCostBonus" Value="-0.4" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <!-- Meticulous information analysis -->
+  <SimulationObjectDescriptor Name="TraitFleet07Norm1" Type="TraitFleet07" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="1" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitFleet07Norm2" Type="TraitFleet07" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="2" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  
+  
+<!-- ################################################################################## -->
+<!-- ########################## SPACE BATTLE TRAITS ################################### -->
+<!-- ################################################################################## -->
+  <!-- Dust recyclers -->
+  <SimulationObjectDescriptor Name="TraitSpaceBattle01Norm1" Type="TraitSpaceBattle01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : insert '+10 Dust gain per destroyed CP' bonus here -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DustBonusPerCPAfterEncounter" Value="10" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle01Norm2" Type="TraitSpaceBattle01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : insert '+20 Dust gain per destroyed CP' bonus here -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DustBonusPerCPAfterEncounter" Value="20" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Snipers* -->
+  <SimulationObjectDescriptor Name="TraitSpaceBattle02Norm1" Type="TraitSpaceBattle02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="0.05" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle02Norm2" Type="TraitSpaceBattle02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle02Norm3" Type="TraitSpaceBattle02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="0.15" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle02Alt1" Type="TraitSpaceBattle02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.05" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle02Alt2" Type="TraitSpaceBattle02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle02Alt3" Type="TraitSpaceBattle02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.15" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Deadly Weapons* -->
+  <SimulationObjectDescriptor Name="TraitSpaceBattle03Norm1" Type="TraitSpaceBattle03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.12" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.12" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle03Norm2" Type="TraitSpaceBattle03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.24" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.24" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle03Norm3" Type="TraitSpaceBattle03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.36" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.36" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle03Alt1" Type="TraitSpaceBattle03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.12" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.12" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle03Alt2" Type="TraitSpaceBattle03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.24" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.24" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle03Alt3" Type="TraitSpaceBattle03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.36" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.36" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Optimal Defense* -->
+  <SimulationObjectDescriptor Name="TraitSpaceBattle04Norm1" Type="TraitSpaceBattle04" Serializable="true"> 
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.05"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.05"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.05"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle04Norm2" Type="TraitSpaceBattle04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.10"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.10"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.10"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle04Norm3" Type="TraitSpaceBattle04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.15"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.15"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.15"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle04Alt1" Type="TraitSpaceBattle04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="-0.05"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.05"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="-0.05"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle04Alt2" Type="TraitSpaceBattle04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="-0.10"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.10"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="-0.10"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle04Alt3" Type="TraitSpaceBattle04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="-0.15"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.15"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="-0.15"     OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Mutual Understanding -->
+  <SimulationObjectDescriptor Name="TraitSpaceBattle05Norm1" Type="TraitSpaceBattle05" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="DamageMin"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.05"
+                                                        Right="$(NumberOfAllies)"
+                                                        Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="DamageMax"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.05"
+                                                        Right="$(NumberOfAllies)"
+                                                        Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle05Norm2" Type="TraitSpaceBattle05" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="DamageMin"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.1"
+                                                        Right="$(NumberOfAllies)"
+                                                        Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="DamageMax"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.1"
+                                                        Right="$(NumberOfAllies)"
+                                                        Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Knowledge Gathering -->
+  <SimulationObjectDescriptor Name="TraitSpaceBattle07Norm1" Type="TraitSpaceBattle07" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceBonusPerCPAfterEncounter" Value="20" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitSpaceBattle07Norm2" Type="TraitSpaceBattle07" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceBonusPerCPAfterEncounter" Value="40" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  
+  
+  <!-- ################################################################################## -->
+  <!-- ############################# DEFENSE TRAITS ##################################### -->
+  <!-- ################################################################################## -->
+  <!-- Fearless Warriors* -->
+  <SimulationObjectDescriptor Name="TraitDefense01Norm1" Type="TraitDefense01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="12"
+                                                          Path="ClassEmpire/ClassStarSystem"
+                                                          BindOnSource="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDefense01Norm2" Type="TraitDefense01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="25"
+                                                          Path="ClassEmpire/ClassStarSystem"
+                                                          BindOnSource="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDefense01Alt1" Type="TraitDefense01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="-8"
+                                                          Path="ClassEmpire/ClassStarSystem"
+                                                          BindOnSource="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDefense01Alt2" Type="TraitDefense01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="-8"
+                                                          Path="ClassEmpire/ClassStarSystem"
+                                                          BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="-0.25" OperationType="Percent"  Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Rebellion* -->
+  <SimulationObjectDescriptor Name="TraitDefense02Norm1" Type="TraitDefense02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipGainBonus" Value="0.50" OperationType="Percent" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipLossBonus" Value="-0.40" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDefense02Norm2" Type="TraitDefense02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipGainBonus" Value="1.00" OperationType="Percent" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipLossBonus" Value="-0.80" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDefense02Alt1" Type="TraitDefense02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipGainBonus" Value="-0.40" OperationType="Percent" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipLossBonus" Value="0.50" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDefense02Alt2" Type="TraitDefense02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipGainBonus" Value="-0.80" OperationType="Percent" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OwnershipLossBonus" Value="0.80" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Stellar guardians* -->
+  <SimulationObjectDescriptor Name="TraitDefense03Norm1" Type="TraitDefense03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="2" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDefense03Norm2" Type="TraitDefense03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="4" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <!-- Revenge* -->
+  <!-- Those 2 descriptors are only used to check if the empire has the corresponding faction trait - They don't have permanent effects -->
+  <SimulationObjectDescriptor Name="TraitDefense04Norm1" Type="TraitDefense04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>	
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitDefense04Norm2" Type="TraitDefense04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>	
+  </SimulationObjectDescriptor>
+
+  <!-- Following, the descriptors applied by the occasional effects of the traits "TraitDefense04Norm1" and "TraitDefense04Norm2" -->
+  <SimulationObjectDescriptor Name="TraitDefense04Norm1SystemLost" Type="TraitDefense04Norm1SystemLost" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPowerInvasion" Value="0.25" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="TraitDefense04Norm2SystemLost" Type="TraitDefense04Norm2SystemLost" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPowerInvasion" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+<!-- ################################################################################## -->
+<!-- ###########################  DIPLOMACY TRAITS  ################################### -->
+<!-- ################################################################################## -->
+  <!-- Diplomats -->
+  <SimulationObjectDescriptor Name="TraitDiplomacy01Norm1" Type="TraitDiplomacy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDiplomacy01Norm2" Type="TraitDiplomacy01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Symbiosis* -->
+  <SimulationObjectDescriptor Name="TraitDiplomacy02Norm1" Type="TraitDiplomacy02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.15"
+                                                        Right="$(CooperationAgreementCount)"
+                                                        Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDiplomacy02Norm2" Type="TraitDiplomacy02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.3"
+                                                        Right="$(CooperationAgreementCount)"
+                                                        Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Naive* -->
+  <SimulationObjectDescriptor Name="TraitDiplomacy03Norm1" Type="TraitDiplomacy03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="4"
+                                                        Right="$(NumberOfFriends)"
+                                                        Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDiplomacy03Norm2" Type="TraitDiplomacy03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="8"
+                                                        Right="$(NumberOfFriends)"
+                                                        Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <!--
+  <SimulationObjectDescriptor Name="TraitDiplomacy03Alt1" Type="TraitDiplomacy03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="-4"
+                                                        Right="$(NumberOfFriends)"
+                                                        Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitDiplomacy03Alt2" Type="TraitDiplomacy03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="-8"
+                                                        Right="$(NumberOfFriends)"
+                                                        Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  -->
+  
+  <!-- Eternal War -->
+  <SimulationObjectDescriptor Name="DiplomaticStatusEternalWar" Type="DiplomaticStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors />
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+<!-- ################################################################################## -->
+<!-- ############################   ANOMALY TRAITS   ################################## -->
+<!-- ################################################################################## -->
+    <!-- Faction anomaly -->
+  <SimulationObjectDescriptor Name="TraitAnomaly01Norm1" Type="TraitAnomaly01" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly01Alt1" Type="TraitAnomaly01" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly02Norm1" Type="TraitAnomaly02" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly02Alt1" Type="TraitAnomaly02" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly03Norm1" Type="TraitAnomaly03" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly03Alt1" Type="TraitAnomaly03" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly04Norm1" Type="TraitAnomaly04" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly05Norm1" Type="TraitAnomaly05" Serializable="true"/>
+  <SimulationObjectDescriptor Name="TraitAnomaly06Norm1" Type="TraitAnomaly06" Serializable="true"/>
+  
+  
+<!-- ################################################################################## -->
+<!-- #############################   HERO TRAITS   #################################### -->
+<!-- ################################################################################## -->
+  <!-- Power Masters* -->
+  <SimulationObjectDescriptor Name="TraitHero01Norm1" Type="TraitHero01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BattleCardCostBonus" Value="-0.25" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero01Norm2" Type="TraitHero01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BattleCardCostBonus" Value="-0.50" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero01Alt1" Type="TraitHero01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BattleCardCostBonus" Value="0.50" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero01Alt2" Type="TraitHero01" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BattleCardCostBonus" Value="1.00" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <!-- Heroic Medicine -->
+  <SimulationObjectDescriptor Name="TraitHero02Norm1" Type="TraitHero02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="-0.25" OperationType="Percent" Path="ClassEmpire//ClassHero" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero02Norm2" Type="TraitHero02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="-0.5" OperationType="Percent" Path="ClassEmpire//ClassHero" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero02Alt1" Type="TraitHero02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="0.50" OperationType="Percent" Path="ClassEmpire//ClassHero" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero02Alt2" Type="TraitHero02" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="1.00" OperationType="Percent" Path="ClassEmpire//ClassHero" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Legendary Heroes -->
+  <SimulationObjectDescriptor Name="TraitHero03Norm1" Type="TraitHero03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroInitialXP" Value="10" OperationType="Addition" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="2" OperationType="Addition" Path="ClassEmpire//ClassHero" TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero03Norm2" Type="TraitHero03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroInitialXP" Value="20" OperationType="Addition" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="4" OperationType="Addition" Path="ClassEmpire//ClassHero" TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero03Alt1" Type="TraitHero03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus"        Value="-0.20" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerAssignedTurnBonus"  Value="-0.20" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerConstructionBonus"  Value="-0.20" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerEnnemyInjuredBonus" Value="-0.20" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero03Alt2" Type="TraitHero03" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus"        Value="-0.40" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerAssignedTurnBonus"  Value="-0.40" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerConstructionBonus"  Value="-0.40" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerEnnemyInjuredBonus" Value="-0.40" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  
+  <!-- Death Before Dishonor* -->
+  <SimulationObjectDescriptor Name="TraitHero04Norm1" Type="TraitHero04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TraitHero04Norm2" Type="TraitHero04" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus" Value="0.4" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors />
+  </SimulationObjectDescriptor>
+
+  <!-- Maluses applied to planets' FIDS while the associated colonization technology isn't discovered -->
+  
+  <!-- TUNDRA -->
+  <SimulationObjectDescriptor Name="TraitScience03TundraNorm1" Type="TraitScience03Tundra" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03TundraNorm2" Type="TraitScience03Tundra" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeTundra"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03TundraDefault" Type="TraitScience03Tundra" Serializable="true"/>
+  <SimulationObjectDescriptor Name="ColonizeTundraWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+
+  <!-- ARID -->
+  <SimulationObjectDescriptor Name="TraitScience03AridNorm1" Type="TraitScience03Arid" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03AridNorm2" Type="TraitScience03Arid" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArid"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03AridDefault" Type="TraitScience03Arid" Serializable="true"/>
+  <SimulationObjectDescriptor Name="ColonizeAridWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+
+  <!-- DESERT -->
+  <SimulationObjectDescriptor Name="TraitScience03DesertNorm1" Type="TraitScience03Desert" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03DesertNorm2" Type="TraitScience03Desert" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeDesert"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03DesertDefault" Type="TraitScience03Desert" Serializable="true"/>
+  <SimulationObjectDescriptor Name="ColonizeDesertWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+
+  <!-- ARCTIC -->
+  <SimulationObjectDescriptor Name="TraitScience03ArcticNorm1" Type="TraitScience03Arctic" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03ArcticNorm2" Type="TraitScience03Arctic" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeArctic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03ArcticDefault" Type="TraitScience03Arctic" Serializable="true"/>
+  <SimulationObjectDescriptor Name="ColonizeArcticWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+
+  <!-- LAVA -->
+  <SimulationObjectDescriptor Name="TraitScience03LavaNorm1" Type="TraitScience03Lava" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03LavaNorm2" Type="TraitScience03Lava" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeLava"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03LavaDefault" Type="TraitScience03Lava" Serializable="true"/>
+  <SimulationObjectDescriptor Name="ColonizeLavaWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+
+  <!-- BARREN -->
+  <SimulationObjectDescriptor Name="TraitScience03BarrenNorm1" Type="TraitScience03Barren" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03BarrenNorm2" Type="TraitScience03Barren" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeBarren"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03BarrenDefault" Type="TraitScience03Barren" Serializable="true"/>
+  <SimulationObjectDescriptor Name="ColonizeBarrenWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+
+  <!-- ASTEROIDS -->
+  <SimulationObjectDescriptor Name="TraitScience03AsteroidsNorm1" Type="TraitScience03Asteroids" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03AsteroidsNorm2" Type="TraitScience03Asteroids" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeAsteroids"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03AsteroidsDefault" Type="TraitScience03Asteroids" Serializable="true"/>
+  <SimulationObjectDescriptor Name="ColonizeAsteroidsWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+  
+  <!-- GAS GIANT -->
+  <SimulationObjectDescriptor Name="ColonizeGasGiantWithColonizeTraitScience03" Type="TraitScience03Fake" Serializable="true" TooltipVisibility="false"/>
+
+  <!-- GAS HYDROGEN -->
+  <SimulationObjectDescriptor Name="TraitScience03GasHydrogenNorm1" Type="TraitScience03GasHydrogen" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03GasHydrogenNorm2" Type="TraitScience03GasHydrogen" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHydrogen"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03GasHydrogenDefault" Type="TraitScience03GasHydrogen" Serializable="true"/>
+
+  <!-- GAS HELIUM -->
+  <SimulationObjectDescriptor Name="TraitScience03GasHeliumNorm1" Type="TraitScience03GasHelium" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03GasHeliumNorm2" Type="TraitScience03GasHelium" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasHelium"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03GasHeliumDefault" Type="TraitScience03GasHelium" Serializable="true"/>
+
+  <!-- GAS METHANE -->
+  <SimulationObjectDescriptor Name="TraitScience03GasMethaneNorm1" Type="TraitScience03GasMethane" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03GasMethaneNorm2" Type="TraitScience03GasMethane" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/PlanetTypeGasMethane"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TraitScience03GasMethaneDefault" Type="TraitScience03GasMethane" Serializable="true"/>
+
+</Datatable>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- **************************************************** GAME SPEED SLOW ********************************************************** -->
+
+  <!-- Building Industry Cost -->
+  <SimulationObjectDescriptor Name="CostSlow" Type="CostSpeedFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="1.5" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus"        Value="1.5" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus"      Value="1.5" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Food required per pop -->
+  <SimulationObjectDescriptor Name="FoodRequiredSlow" Type="FoodRequiredSpeedFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodPerPop" Value="1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+
+  <!-- **************************************************** GAME SPEED NORMAL ********************************************************** -->
+
+
+  <!-- **************************************************** GAME SPEED FAST  ********************************************************** -->
+
+  <!-- Building Industry Cost -->
+  <SimulationObjectDescriptor Name="CostFast" Type="CostSpeedFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.5" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus"        Value="0.5" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus"      Value="0.5" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Food required per pop -->
+  <SimulationObjectDescriptor Name="FoodRequiredFast" Type="FoodRequiredSpeedFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodPerPop" Value="-1" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+</Datatable>

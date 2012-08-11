@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GuiInfo Name="Food">
+    <Title>%FoodTitle</Title>
+    <Description>%FoodDescription</Description>
+    <Icon Small="FoodSmall" Large="FoodLarge"/>
+    <CharCode>7701</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="FoodSurplus">
+    <Title>%FoodTitle</Title>
+    <Description>%FoodDescription</Description>
+    <Icon Small="FoodSmall" Large="FoodLarge"/>
+    <CharCode>7701</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Industry">
+    <Title>%IndustryTitle</Title>
+    <Description>%IndustryDescription</Description>
+    <Icon Small="IndustrySmall" Large="IndustryLarge"/>
+    <CharCode>7702</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Production">
+    <Title>%IndustryTitle</Title>
+    <Description>%IndustryDescription</Description>
+    <Icon Small="IndustrySmall" Large="IndustryLarge"/>
+    <CharCode>7702</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Money">
+    <Title>%MoneyTitle</Title>
+    <Description>%MoneyDescription</Description>
+    <Icon Small="MoneySmall" Large="MoneyLarge"/>
+    <CharCode>7704</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="MoneyTiny">
+    <Title>%MoneyTitle</Title>
+    <Description>%MoneyDescription</Description>
+    <Icon Small="MoneySmall" Large="MoneyLarge"/>
+    <CharCode>7718</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="MoneyNet">
+    <Title>%MoneyNetTitle</Title>
+    <Description>%MoneyNetDescription</Description>
+    <Icon Small="MoneyNetSmall" Large="MoneyNetLarge"/>
+    <CharCode>7704</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Science">
+    <Title>%ScienceTitle</Title>
+    <Description>%ScienceDescription</Description>
+    <Icon Small="ScienceSmall" Large="ScienceLarge"/>
+    <CharCode>7703</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="ScienceTiny">
+    <Title>%ScienceTitle</Title>
+    <Description>%ScienceDescription</Description>
+    <Icon Small="ScienceSmall" Large="ScienceLarge"/>
+    <CharCode>7726</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="ScienceNet">
+    <Title>%ScienceTitle</Title>
+    <Description>%ScienceDescription</Description>
+    <Icon Small="ScienceSmall" Large="ScienceLarge"/>
+    <CharCode>7703</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="ScienceUpkeep">
+    <Title>%ScienceTitle</Title>
+    <Description>%ScienceDescription</Description>
+    <Icon Small="ScienceSmall" Large="ScienceLarge"/>
+    <CharCode>7703</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Approval">
+    <Title>%ApprovalTitle</Title>
+    <Description>%ApprovalDescription</Description>
+  <CharCode>7711</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Population">
+    <Title>%PopulationTitle</Title>
+    <Description>%PopulationDescription</Description>
+    <Icon Small="PopulationUnitSmall" Large=""/>
+    <CharCode>7706</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="MaxPopulation">
+    <Title>%MaxPopulationTitle</Title>
+    <Description>%MaxPopulationDescription</Description>
+    <Icon Small="PopulationCapacitySmall" Large=""/>
+    <CharCode>7707</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="MilitaryPower">
+    <Title>%MilitaryPowerTitle</Title>
+    <Description>%MilitaryPowerDescription</Description>
+    <Icon Small="militaryPowerSmall" Large=""/>
+    <CharCode>7708</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Weight">
+    <Title>%WeightTitle</Title>
+    <Description>%WeightDescription</Description>
+    <Icon Small="weightSmall" Large="weightLarge"/>
+    <CharCode>7709</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Infinite">
+    <CharCode>7724</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="FIDS">
+    <CharCode>7725</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ResourceFood">
+    <Icon Small="FoodSmall" Large="FoodLarge"/>
+    <CharCode>7701</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="ResourceIndustry">
+    <Icon Small="IndustrySmall" Large="IndustryLarge"/>
+    <CharCode>7702</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="ResourceMoney">
+    <Icon Small="MoneySmall" Large="MoneyLarge"/>
+    <CharCode>7704</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="ResourceScience">
+    <Icon Small="ScienceSmall" Large="ScienceLarge"/>
+    <CharCode>7703</CharCode>
+  </GuiInfo>
+
+
+  <GuiInfo Name="LuxuryFood">
+    <Title>%LuxuryTitle</Title>
+    <Icon Small="FoodSmall" Large="FoodLarge"/>
+    <CharCode>7701</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="LuxuryIndustry">
+    <Title>%LuxuryTitle</Title>
+    <Icon Small="IndustrySmall" Large="IndustryLarge"/>
+    <CharCode>7702</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="LuxuryMoney">
+    <Title>%LuxuryTitle</Title>
+    <Icon Small="MoneySmall" Large="MoneyLarge"/>
+    <CharCode>7704</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="LuxuryScience">
+    <Title>%LuxuryTitle</Title>
+    <Icon Small="ScienceSmall" Large="ScienceLarge"/>
+    <CharCode>7703</CharCode>
+  </GuiInfo>
+  
+  <!-- Descriptor Modifiers -->
+  <GuiInfo Name="MaxWeight">
+    <Title>%WeightTitle</Title>
+    <Description>%WeightDescription</Description>
+    <Icon Small="weightSmall" Large="weightLarge"/>
+    <CharCode>7709</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="BaseApproval">
+    <Title>%BaseApprovalTitle</Title>
+    <Description>%BaseApprovalDescription</Description>
+    <CharCode>7711</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Speed">
+    <CharCode>7712</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="FreeSpeed">
+    <CharCode>7723</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Upkeep">
+    <Title>%UpkeepTitle</Title>
+    <Description>%UpkeepDescription</Description>
+    <CharCode>7704</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="ColonizedModifier">
+    <Title>%ColonizedModifierTitle</Title>
+    <Description>%ColonizedModifierDescription</Description>
+    <CharCode>7713</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="MaxSystemPopulation">
+    <Title>%MaxSystemPopulationTitle</Title>
+    <Description>%MaxSystemPopulationDescription</Description>
+    <CharCode>7707</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Cost">
+    <CharCode>7702</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="MaxTradeRoutes">
+    <Title>%MaxTradeRoutesTitle</Title>
+    <Description>%MaxTradeRoutesDescription</Description>
+    <!--<CharCode>7714</CharCode>-->
+  </GuiInfo>
+  <GuiInfo Name="TradeRoutesBonuses">
+    <Title>%TradeRoutesBonusesTitle</Title>
+    <Description>%TradeRoutesBonusesDescription</Description>
+    <!--<CharCode>7715</CharCode>-->
+  </GuiInfo>
+  <GuiInfo Name="TradeRoutesDistanceBonusFactor">
+    <Title>%TradeRoutesDistanceBonusFactorTitle</Title>
+    <Description>%TradeRoutesDistanceBonusFactorDescription</Description>
+    <!--<CharCode>7716</CharCode>-->
+  </GuiInfo>
+  <GuiInfo Name="DetectionRadius">
+    <Title>%DetectionRadiusTitle</Title>
+    <Description>%DetectionRadiusDescription</Description>
+    <CharCode>7717</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="CommandPoint">
+    <CharCode>7719</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="MaxHealth">
+    <CharCode>7720</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Turn">
+    <CharCode>7721</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="Warning">
+    <CharCode>7722</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="AttitudeTrendImproving">
+    <CharCode>7727</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="AttitudeTrendStable">
+    <CharCode>7728</CharCode>
+  </GuiInfo>
+  <GuiInfo Name="AttitudeTrendWorsening">
+    <CharCode>7729</CharCode>
+  </GuiInfo>
+
+  <!-- Planet special qualities -->
+  <GuiInfo Name="PlanetQualityImproved">
+    <Title>%PlanetQualityImprovedTitle</Title>
+    <Description>%PlanetQualityImprovedDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="PlanetQualityDefault">
+    <Title>%PlanetQualityDefaultTitle</Title>
+    <Description>%PlanetQualityDefaultDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="PlanetQualityDepleted">
+    <Title>%PlanetQualityDepletedTitle</Title>
+    <Description>%PlanetQualityDepletedDescription</Description>
+  </GuiInfo>
+
+  <!-- Star system states -->
+  <GuiInfo Name="StarSystemStateNeutral">
+    <Title>%StarSystemStateNeutralTitle</Title>
+    <Description>%StarSystemStateNeutralDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemStateOutpost">
+    <Title>%StarSystemStateOutpostTitle</Title>
+    <Description>%StarSystemStateOutpostDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemStateColony">
+    <Title>%StarSystemStateColonyTitle</Title>
+    <Description>%StarSystemStateColonyDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemStateHomeSystem">
+    <Title>%StarSystemStateHomeSystemTitle</Title>
+    <Description>%StarSystemStateHomeSystemDescription</Description>
+  </GuiInfo>
+
+  <!-- Empire approval statuses -->
+  <GuiInfo Name="EmpireApprovalStatusFervent">
+    <Title>%EmpireApprovalStatusFerventTitle</Title>
+    <Description>%EmpireApprovalStatusFerventDescription</Description>
+    <Icon Small="EmpireApprovalStatusFervent"/>
+    <ColorCode>#71D557#</ColorCode>
+  </GuiInfo>
+  <GuiInfo Name="EmpireApprovalStatusContent">
+    <Title>%EmpireApprovalStatusContentTitle</Title>
+    <Description>%EmpireApprovalStatusContentDescription</Description>
+    <Icon Small="EmpireApprovalStatusContent"/>
+    <ColorCode>#FFFFFF#</ColorCode>
+  </GuiInfo>
+  <GuiInfo Name="EmpireApprovalStatusUnhappy">
+    <Title>%EmpireApprovalStatusUnhappyTitle</Title>
+    <Description>%EmpireApprovalStatusUnhappyDescription</Description>
+    <Icon Small="EmpireApprovalStatusUnhappy"/>
+    <ColorCode>#F88535#</ColorCode>
+  </GuiInfo>
+  <GuiInfo Name="EmpireApprovalStatusRebellion">
+    <Title>%EmpireApprovalStatusRebellionTitle</Title>
+    <Description>%EmpireApprovalStatusRebellionDescription</Description>
+    <Icon Small="EmpireApprovalStatusRebellion"/>
+    <ColorCode>#FF3535#</ColorCode>
+  </GuiInfo>
+
+  <!-- Star system approval statuses -->
+  <GuiInfo Name="StarSystemApprovalStatusEcstatic">
+    <Title>%StarSystemApprovalStatusEcstaticTitle</Title>
+    <Description>%StarSystemApprovalStatusEcstaticDescription</Description>
+    <Icon Small="StarSystemApprovalStatusEcstatic"/>
+    <ColorCode>#008000#</ColorCode>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemApprovalStatusHappy">
+    <Title>%StarSystemApprovalStatusHappyTitle</Title>
+    <Description>%StarSystemApprovalStatusHappyDescription</Description>
+    <Icon Small="StarSystemApprovalStatusHappy"/>
+    <ColorCode>#71D557#</ColorCode>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemApprovalStatusContent">
+    <Title>%StarSystemApprovalStatusContentTitle</Title>
+    <Description>%StarSystemApprovalStatusContentDescription</Description>
+    <Icon Small="StarSystemApprovalStatusContent"/>
+    <ColorCode>#FFFFFF#</ColorCode>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemApprovalStatusUnhappy">
+    <Title>%StarSystemApprovalStatusUnhappyTitle</Title>
+    <Description>%StarSystemApprovalStatusUnhappyDescription</Description>
+    <Icon Small="StarSystemApprovalStatusUnhappy"/>
+    <ColorCode>#F88535#</ColorCode>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemApprovalStatusStrike">
+    <Title>%StarSystemApprovalStatusStrikeTitle</Title>
+    <Description>%StarSystemApprovalStatusStrikeDescription</Description>
+    <Icon Small="StarSystemApprovalStatusStrike"/>
+    <ColorCode>#FF3535#</ColorCode>
+  </GuiInfo>
+
+  <!-- Star system security  -->
+  <GuiInfo Name="StarSystemSecurityNeutral">
+    <Title>%StarSystemSecurityNeutralTitle</Title>
+    <Description>%StarSystemSecurityNeutralDescription</Description>
+    <Icon Small="StarSystemSecurityNeutral"/>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemSecurityProtected">
+    <Title>%StarSystemSecurityProtectedTitle</Title>
+    <Description>%StarSystemSecurityProtectedDescription</Description>
+    <Icon Small="StarSystemSecurityProtected"/>
+  </GuiInfo>
+  <GuiInfo Name="StarSystemSecurityDanger">
+    <Title>%StarSystemSecurityDangerTitle</Title>
+    <Description>%StarSystemSecurityDangerDescription</Description>
+    <Icon Small="StarSystemSecurityDanger"/>
+  </GuiInfo>
+
+  <!-- Diplomatic state (for the control banner) -->
+  <GuiInfo Name="DiplomaticStatePeace">
+    <Title>%DiplomaticStatePeaceTitle</Title>
+    <Description>%DiplomaticStatePeaceDescription</Description>
+    <Icon Small="DiplomaticStatePeace"/>
+  </GuiInfo>
+
+  <GuiInfo Name="DiplomaticStateNeutral">
+    <Title>%DiplomaticStateNeutralTitle</Title>
+    <Description>%DiplomaticStateNeutralDescription</Description>
+    <Icon Small="DiplomaticStateNeutral"/>
+  </GuiInfo>
+
+  <GuiInfo Name="DiplomaticStateWar">
+    <Title>%DiplomaticStateWarTitle</Title>
+    <Description>%DiplomaticStateWarDescription</Description>
+    <Icon Small="DiplomaticStateWar"/>
+  </GuiInfo>
+
+  <!-- Module categories -->
+  <!-- Char code is used to sort the module types in the table -->
+  <GuiInfo Name="WeaponModuleKinetic">
+    <Title>%WeaponModuleKineticTitle</Title>
+    <Description>%WeaponModuleKineticDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleWeaponKinetic"/>
+    <CharCode>0</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="WeaponModuleLaser">
+    <Title>%WeaponModuleLaserTitle</Title>
+    <Description>%WeaponModuleLaserDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleWeaponLaser"/>
+    <CharCode>1</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="WeaponModuleMissile">
+    <Title>%WeaponModuleMissileTitle</Title>
+    <Description>%WeaponModuleMissileDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleWeaponMissile"/>
+    <CharCode>2</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="SupportModulePower">
+    <Title>%SupportModulePowerTitle</Title>
+    <Description>%SupportModulePowerDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportPower"/>
+    <CharCode>1</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="SupportModuleInvasion">
+    <Title>%SupportModuleInvasionTitle</Title>
+    <Description>%SupportModuleInvasionDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportInvasion"/>
+    <CharCode>2</CharCode>
+  </GuiInfo>
+
+<!-- DEPRECATED
+  <GuiInfo Name="SupportModuleUnique">
+    <Title>%SupportModuleUniqueTitle</Title>
+    <Description>%SupportModuleUniqueDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportPower"/>
+    <CharCode>3</CharCode>
+  </GuiInfo>
+  -->
+  
+  <GuiInfo Name="SupportModuleArmor">
+    <Title>%ArmorModuleTitle</Title>
+    <Description>%ArmorModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportArmor"/>
+    <CharCode>4</CharCode>
+  </GuiInfo>
+  
+  <GuiInfo Name="SupportModuleCivilian">
+    <Title>%SupportModuleCivilianTitle</Title>
+    <Description>%SupportModuleCivilianDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportCivilian"/>
+    <CharCode>5</CharCode>
+  </GuiInfo>
+  
+  <GuiInfo Name="SupportModuleEngine">
+    <Title>%EngineModuleTitle</Title>
+    <Description>%EngineModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportEngine"/>
+    <CharCode>6</CharCode>
+  </GuiInfo>
+  
+  <GuiInfo Name="SupportModuleScout">
+    <Title>%ScoutModuleTitle</Title>
+    <Description>%ScoutModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportScout"/>
+    <CharCode>7</CharCode>
+  </GuiInfo>
+  
+  <GuiInfo Name="SupportModuleRepair">
+    <Title>%RepairModuleTitle</Title>
+    <Description>%RepairModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportRepair"/>
+    <CharCode>8</CharCode>
+  </GuiInfo>
+  
+  <GuiInfo Name="SupportModuleTonnage">
+    <Title>%TonnageModuleTitle</Title>
+    <Description>%TonnageModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportTonnage"/>
+    <CharCode>9</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="DefenseModuleKinetic">
+    <Title>%DefenseModuleKineticTitle</Title>
+    <Description>%DefenseModuleKineticDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleDefenseDeflector"/>
+    <CharCode>0</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="DefenseModuleLaser">
+    <Title>%DefenseModuleLaserTitle</Title>
+    <Description>%DefenseModuleLaserDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleDefenseShield"/>
+    <CharCode>1</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="DefenseModuleMissile">
+    <Title>%DefenseModuleMissileTitle</Title>
+    <Description>%DefenseModuleMissileDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleDefenseAntimissile"/>
+    <CharCode>2</CharCode>
+  </GuiInfo>
+
+  <!-- Module Families -->
+  <!-- Char code is used to sort families in the interface -->
+  <GuiInfo Name="WeaponModule">
+    <Title>%WeaponModuleFamilyTitle</Title>
+    <Description>%WeaponModuleFamilyDescription</Description>
+    <CharCode>0</CharCode>
+  </GuiInfo>
+  
+  <GuiInfo Name="DefenseModule">
+    <Title>%DefenseModuleFamilyTitle</Title>
+    <Description>%DefenseModuleFamilyDescription</Description>
+    <CharCode>1</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="SupportModule">
+    <Title>%SupportModuleFamilyTitle</Title>
+    <Description>%SupportModuleFamilyDescription</Description>
+    <CharCode>2</CharCode>
+  </GuiInfo>
+
+  <!-- Fleet actions -->
+  <GuiInfo Name="FleetColonize">
+    <Icon Small="FleetColonize"/>
+  </GuiInfo>
+  
+  <GuiInfo Name="FleetAttack">
+    <Icon Small="FleetAttack"/>
+  </GuiInfo>
+  
+  <GuiInfo Name="FleetInvade">
+    <Icon Small="FleetInvade"/>
+  </GuiInfo>
+
+  <GuiInfo Name="FleetGuard">
+    <Icon Small="FleetGuard"/>
+  </GuiInfo>
+
+  <GuiInfo Name="FleetAutoExplore">
+    <Icon Small="FleetAutoExplore"/>
+  </GuiInfo>
+
+  <!-- GUI Module Category -->
+  <!-- Char code is used to sort families in the interface -->
+
+  <GuiInfo Name="ModuleCategoryKinetic">
+    <Title>%WeaponModuleKineticTitle</Title>
+    <Description>%WeaponModuleKineticDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleWeaponKinetic"/>
+    <CharCode>0</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategoryLaser">
+    <Title>%WeaponModuleLaserTitle</Title>
+    <Description>%WeaponModuleLaserDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleWeaponLaser"/>
+    <CharCode>1</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategoryMissile">
+    <Title>%WeaponModuleMissileTitle</Title>
+    <Description>%WeaponModuleMissileDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleWeaponMissile"/>
+    <CharCode>2</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategorySupport">
+    <Title>%SupportModuleTitle</Title>
+    <Description>%SupportModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportPower"/>
+    <CharCode>6</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategoryEngine">
+    <Title>%EngineModuleTitle</Title>
+    <Description>%EngineModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportEngine"/>
+    <CharCode>7</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategoryArmor">
+    <Title>%ArmorModuleTitle</Title>
+    <Description>%ArmorModuleDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleSupportArmor"/>
+    <CharCode>8</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategoryDeflector">
+    <Title>%DefenseModuleKineticTitle</Title>
+    <Description>%DefenseModuleKineticDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleDefenseDeflector"/>
+    <CharCode>9</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategoryShield">
+    <Title>%DefenseModuleLaserTitle</Title>
+    <Description>%DefenseModuleLaserDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleDefenseShield"/>
+    <CharCode>10</CharCode>
+  </GuiInfo>
+
+  <GuiInfo Name="ModuleCategoryFlak">
+    <Title>%DefenseModuleMissileTitle</Title>
+    <Description>%DefenseModuleMissileDescription</Description>
+    <Icon Small="GUI/DynamicBitmaps/Modules/ModuleDefenseAntimissile"/>
+    <CharCode>11</CharCode>
+  </GuiInfo>
+
+  <!-- Operation Type Descrition -->
+  <GuiInfo Name="Addition">
+    <Title>%AdditionTitle</Title>
+    <Description>%AdditionDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Soustraction">
+    <Title>%SoustractionTitle</Title>
+    <Description>%SoustractionDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Multiplication">
+    <Title>%MultiplicationTitle</Title>
+    <Description>%MultiplicationDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Division">
+    <Title>%DivisionTitle</Title>
+    <Description>%DivisionDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Percent">
+    <Title>%PercentTitle</Title>
+    <Description>%PercentDescription</Description>
+  </GuiInfo>
+
+  <!-- Hero Attributes -->
+  <GuiInfo Name="Labor">
+    <Title>%HeroAttributeLaborTitle</Title>
+    <Description>%HeroAttributeLaborDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Wit">
+    <Title>%HeroAttributeWitTitle</Title>
+    <Description>%HeroAttributeWitDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Melee">
+    <Title>%HeroAttributeMeleeTitle</Title>
+    <Description>%HeroAttributeMeleeDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Offense">
+    <Title>%HeroAttributeOffenseTitle</Title>
+    <Description>%HeroAttributeOffenseDescription</Description>
+  </GuiInfo>
+  <GuiInfo Name="Defense">
+    <Title>%HeroAttributeDefenseTitle</Title>
+    <Description>%HeroAttributeDefenseDescription</Description>
+  </GuiInfo>
+  
+  <!-- Planet types -->
+  <GuiInfo Name="PlanetTypeTerran">
+    <Title>%PlanetTypeTerranTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeTerranWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeJungle">
+    <Title>%PlanetTypeJungleTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeJungleWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeOcean">
+    <Title>%PlanetTypeOceanTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeOceanWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeArid">
+    <Title>%PlanetTypeAridTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeAridWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeTundra">
+    <Title>%PlanetTypeTundraTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeTundraWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeDesert">
+    <Title>%PlanetTypeDesertTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeDesertWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeArctic">
+    <Title>%PlanetTypeArcticTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeArcticWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeLava">
+    <Title>%PlanetTypeLavaTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeLavaWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeBarren">
+    <Title>%PlanetTypeBarrenTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeBarrenWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeAsteroids">
+    <Title>%PlanetTypeAsteroidsTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeAsteroidsWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeGasHydrogen">
+    <Title>%PlanetTypeGasHydrogenTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeGasHydrogenWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeGasHelium">
+    <Title>%PlanetTypeGasHeliumTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeGasHeliumWide"/>
+  </GuiInfo>
+  <GuiInfo Name="PlanetTypeGasMethane">
+    <Title>%PlanetTypeGasMethaneTitle</Title>
+    <Icon Wide="GUI/DynamicBitmaps/Planets/PlanetTypeGasMethaneWide"/>
+  </GuiInfo>
+  
+<!-- Planet sizes -->
+  <GuiInfo Name="PlanetSizeHuge">
+    <Title>%PlanetSizeHugeTitle</Title>
+  </GuiInfo>
+  <GuiInfo Name="PlanetSizeLarge">
+    <Title>%PlanetSizeLargeTitle</Title>
+  </GuiInfo>
+  <GuiInfo Name="PlanetSizeMedium">
+    <Title>%PlanetSizeMediumTitle</Title>
+  </GuiInfo>
+  <GuiInfo Name="PlanetSizeSmall">
+    <Title>%PlanetSizeSmallTitle</Title>
+  </GuiInfo>
+  <GuiInfo Name="PlanetSizeTiny">
+    <Title>%PlanetSizeTinyTitle</Title>
+  </GuiInfo>
+  
+  <!-- Cooperation agreements steps-->
+  <GuiInfo Name="CooperationAgreementStep1">
+    <Tooltip>
+      <Description>%CooperationAgreementStep1TooltipEffect</Description>
+    </Tooltip>
+  </GuiInfo>
+  <GuiInfo Name="CooperationAgreementStep2">
+    <Tooltip>
+      <Description>%CooperationAgreementStep2TooltipEffect</Description>
+    </Tooltip>
+  </GuiInfo>
+  <GuiInfo Name="CooperationAgreementStep3">
+    <Tooltip>
+      <Description>%CooperationAgreementStep3TooltipEffect</Description>
+    </Tooltip>
+  </GuiInfo>
+  
+</Datatable>

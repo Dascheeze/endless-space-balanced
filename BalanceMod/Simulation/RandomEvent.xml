@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- RandomEventType = "GlobalEvent or PositiveFactionEvent or NegativeFactionEvent" -->
+    <!-- If the duration is set to -1, this value will depend on Game Speed (10,20,40 cf. Design) -->
+
+    <!-- ********************************** GLOBAL EVENT *********************************** -->
+    <!-- DUST CODE CRACKED -->
+    <RandomEvent Name="Achievement_ScienceBonus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="3">
+        <Gui>
+            <Title>%GlobalRandomEvent01Title</Title>
+            <Description>%GlobalRandomEvent01Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent01"/>
+        </Gui>
+        <Descriptors>Achievement_ScienceBonus</Descriptors>
+    </RandomEvent>
+
+    <!-- DUST LODE SELF-ACTIVATES -->
+    <RandomEvent Name="Achievement_ScienceMalus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="2">
+        <Gui>
+            <Title>%GlobalRandomEvent02Title</Title>
+            <Description>%GlobalRandomEvent02Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent02"/>
+        </Gui>
+        <Descriptors>Achievement_ScienceMalus</Descriptors>
+    </RandomEvent>
+
+    <!-- HULK DISCOVERED WITH ENDLESS TECH -->
+    <RandomEvent Name="Achievement_SpeedBonus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%GlobalRandomEvent03Title</Title>
+            <Description>%GlobalRandomEvent03Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent03"/>
+        </Gui>
+        <Descriptors>Achievement_SpeedBonus</Descriptors>
+    </RandomEvent>
+
+    <!-- ENDLESS SIGNALS TECH DISCOVERED -->
+    <RandomEvent Name="Achievement_FrontierBonus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%GlobalRandomEvent04Title</Title>
+            <Description>%GlobalRandomEvent04Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent04"/>
+        </Gui>
+        <Descriptors>Achievement_FrontierBonus</Descriptors>
+    </RandomEvent>
+
+    <!-- DARK MATTER REACTS -->
+    <RandomEvent Name="Achievement_FrontierMalus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%GlobalRandomEvent05Title</Title>
+            <Description>%GlobalRandomEvent05Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent05"/>
+        </Gui>
+        <Descriptors>Achievement_FrontierMalus</Descriptors>
+    </RandomEvent>
+
+    <!-- TRADE TREATY GENIUS -->
+    <RandomEvent Name="Achievement_DiplomaticBonus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%GlobalRandomEvent06Title</Title>
+            <Description>%GlobalRandomEvent06Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent06"/>
+        </Gui>
+        <Descriptors>Achievement_DiplomaticBonus</Descriptors>
+    </RandomEvent>
+
+    <!-- EXPLORER DESECRATES ENDLESS TEMPLE -->
+    <RandomEvent Name="Achievement_DiplomaticMalus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%GlobalRandomEvent07Title</Title>
+            <Description>%GlobalRandomEvent07Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent07"/>
+        </Gui>
+        <Descriptors>Achievement_DiplomaticMalus</Descriptors>
+    </RandomEvent>
+
+    <!-- SUBTERRANEAN ENDLESS TREASURES DISCOVERED -->
+    <RandomEvent Name="Achievement_EmpireBonus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%GlobalRandomEvent12Title</Title>
+            <Description>%GlobalRandomEvent12Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent12"/>
+        </Gui>
+        <Descriptors>Achievement_EmpireBonus</Descriptors>
+    </RandomEvent>
+
+    <!-- CORRUPTION AND NEPOTISM SCANDAL -->
+    <RandomEvent Name="Achievement_EmpireMalus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%GlobalRandomEvent13Title</Title>
+            <Description>%GlobalRandomEvent13Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/GlobalRandomEvent13"/>
+        </Gui>
+        <Descriptors>Achievement_EmpireMalus</Descriptors>
+    </RandomEvent>
+
+
+    <!-- ********************************** POSITIVE FACTION RANDOM EVENTS ********************************** -->
+    <!-- ENDLESS MAP ARTIFACT DISCOVERED -->
+    <RandomEvent Name="Achievement_RevealMap" Duration="1" RandomEventType="PositiveFactionEvent" RandWeight="5">
+        <Gui>
+            <Title>%FactionRandomPositiveEvent01Title</Title>
+            <Description>%FactionRandomPositiveEvent01Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomPositiveEvent01"/>
+        </Gui>
+        <Descriptors>Achievement_RevealMapBonus</Descriptors>
+    </RandomEvent>
+
+    <!-- LEGENDARY WRECK ANALYZED -->
+    <Achievement_XpBonusShip Name="Achievement_XpBonusShip" Duration="1" RandomEventType="PositiveFactionEvent" RandWeight="5"  GainXP="40">
+        <Gui>
+            <Title>%FactionRandomPositiveEvent03Title</Title>
+            <Description>%FactionRandomPositiveEvent03Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomPositiveEvent03"/>
+			<Tooltip><Description>%Achievement_XpBonusShipTooltipEffect</Description></Tooltip>
+        </Gui>
+        <Descriptors>Achievement_XpBonusShip</Descriptors>
+    </Achievement_XpBonusShip>
+
+    <!-- SUCCESSFUL SKUNKWORKS -->
+    <Achievement_LowScienceDiscovery Name="Achievement_LowScienceDiscovery" Duration="1" RandomEventType="PositiveFactionEvent" RandWeight="3">
+        <Gui>
+            <Title>%FactionRandomPositiveEvent04Title</Title>
+            <Description>%FactionRandomPositiveEvent04Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomPositiveEvent04"/>
+			<Tooltip><Description>%Achievement_LowScienceDiscoveryTooltipEffect</Description></Tooltip>
+        </Gui>
+        <Descriptors>Achievement_LowScienceDiscovery</Descriptors>
+    </Achievement_LowScienceDiscovery>
+
+    <!-- UNEXPECTED EXPERIMENTAL RESULTS -->
+    <Achievement_HighScienceDiscovery Name="Achievement_HighScienceDiscovery" Duration="1" RandomEventType="PositiveFactionEvent" RandWeight="2">
+        <Gui>
+            <Title>%FactionRandomPositiveEvent05Title</Title>
+            <Description>%FactionRandomPositiveEvent05Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomPositiveEvent05"/>
+			<Tooltip><Description>%Achievement_HighScienceDiscoveryTooltipEffect</Description></Tooltip>
+        </Gui>
+        <Descriptors>Achievement_HighScienceDiscovery</Descriptors>
+    </Achievement_HighScienceDiscovery>
+
+    <!-- PARTIAL DUST RE-ANIMATION -->
+    <Achievement_XpBonusHero Name="Achievement_XpBonusHero" Duration="1" RandomEventType="PositiveFactionEvent" RandWeight="5" GainXP="50">
+        <Gui>
+            <Title>%FactionRandomPositiveEvent02Title</Title>
+            <Description>%FactionRandomPositiveEvent02Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomPositiveEvent02"/>
+			<Tooltip><Description>%Achievement_XpBonusHeroTooltipEffect</Description></Tooltip>
+        </Gui>
+        <Descriptors>Achievement_XpBonusHero</Descriptors>
+    </Achievement_XpBonusHero>
+
+    <!-- A RIP IN THE FABRIC… -->
+    <Achievement_AddAnomaly Name="Achievement_PositiveAnomaly" Duration="1" RandomEventType="PositiveFactionEvent" RandWeight="5">
+        <Gui>
+            <Title>%FactionRandomPositiveEvent08Title</Title>
+            <Description>%FactionRandomPositiveEvent08Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomPositiveEvent08"/>
+			<Tooltip><Description>%Achievement_PositiveAnomalyTooltipEffect</Description></Tooltip>
+        </Gui>
+        <Anomalies>PlanetAnomaly07;PlanetAnomaly08;PlanetAnomaly14;PlanetAnomaly18</Anomalies>
+        <PlanetsAffected>4</PlanetsAffected>
+        <Descriptors>Achievement_PositiveAnomaly</Descriptors>
+    </Achievement_AddAnomaly>
+
+    <!-- TIME-SPACE ANOMALY YIELDS SHIP -->
+    <Achievement_NewColonyShip Name="Achievement_NewColonyShip" Duration="1" RandomEventType="PositiveFactionEvent" RandWeight="2">
+        <Gui>
+            <Title>%FactionRandomPositiveEvent10Title</Title>
+            <Description>%FactionRandomPositiveEvent10Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomPositiveEvent10"/>
+			<Tooltip><Description>%Achievement_NewColonyShipTooltipEffect</Description></Tooltip>
+        </Gui>
+        <Descriptors>Achievement_NewColonyShip</Descriptors>
+    </Achievement_NewColonyShip>
+
+    <!-- ********************************** NEGATIVE FACTION RANDOM EVENTS ********************************** -->
+    <!-- SUPERNOVA DISRUPTS NAVIGATION MAPS -->
+    <RandomEvent Name="Achievement_HideMap" Duration="-1" RandomEventType="NegativeFactionEvent" RandWeight="4">
+        <Gui>
+            <Title>%FactionRandomNegativeEvent01Title</Title>
+            <Description>%FactionRandomNegativeEvent01Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomNegativeEvent01"/>
+        </Gui>
+        <Descriptors>Achievement_HideMap</Descriptors>
+    </RandomEvent>
+
+    <!-- FANATIC REBELS SUICIDE BOMB NAVY -->
+    <Achievement_ShipSabotage Name="Achievement_ShipSabotage" Duration="1" RandomEventType="NegativeFactionEvent" RandWeight="3" SabotagePercent="-0.25">
+        <Gui>
+            <Title>%FactionRandomNegativeEvent03Title</Title>
+            <Description>%FactionRandomNegativeEvent03Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomNegativeEvent03"/>
+        </Gui>
+        <Descriptors>Achievement_ShipSabotage</Descriptors>
+    </Achievement_ShipSabotage>
+
+    <!-- ENGINE CONTROL TECH FAULT DISCOVERED -->
+    <RandomEvent Name="Achievement_SpeedMalus" Duration="-1" RandomEventType="GlobalEvent" RandWeight="4">
+        <Gui>
+            <Title>%FactionRandomNegativeEvent05Title</Title>
+            <Description>%FactionRandomNegativeEvent05Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomNegativeEvent05"/>
+        </Gui>
+        <Descriptors>Achievement_SpeedMalus</Descriptors>
+    </RandomEvent>
+
+    <!-- QUANTUM-COUPLED DIASASTER -->
+    <Achievement_AddAnomaly Name="Achievement_NegativeAnomaly" Duration="1" RandomEventType="NegativeFactionEvent" RandWeight="5">
+        <Gui>
+            <Title>%FactionRandomNegativeEvent08Title</Title>
+            <Description>%FactionRandomNegativeEvent08Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomNegativeEvent08"/>
+			<Tooltip><Description>%Achievement_NegativeAnomalyTooltipEffect</Description></Tooltip>
+        </Gui>
+        <Anomalies>PlanetAnomaly01;PlanetAnomaly02;PlanetAnomaly11;PlanetAnomaly15</Anomalies>
+        <PlanetsAffected>3</PlanetsAffected>
+        <Descriptors>Achievement_NegativeAnomaly</Descriptors>
+    </Achievement_AddAnomaly>
+
+    <!-- SUPERBUG CONTAGION -->
+    <Achievement_Disease Name="Achievement_Disease" Duration="1" RandomEventType="NegativeFactionEvent" RandWeight="5">
+        <Gui>
+            <Title>%FactionRandomNegativeEvent09Title</Title>
+            <Description>%FactionRandomNegativeEvent09Description</Description>
+            <Icon Large="Gui/DynamicBitmaps/Events/FactionRandomNegativeEvent09"/>
+			<Tooltip><Description>%Achievement_DiseaseTooltipEffect</Description></Tooltip>
+        </Gui>
+        <PopulationLoss>1</PopulationLoss>
+        <PlanetsAffected>3</PlanetsAffected>
+        <Descriptors>Achievement_Disease</Descriptors>
+    </Achievement_Disease>
+
+
+</Datatable>

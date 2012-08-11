@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Faction Name="Terran" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameTerTitle</Title>
+    <Description>%FactionTerDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/terranLeaderSmall" Large="Gui/DynamicBitmaps/Factions/terranLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/terranDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityTerran</Affinity>
+    <!--   [Tech1:Industry1]	[+10% dust]	[Evil]         [+1 DUST BONUS]    Strong Alloys+2   FearlessWarriors+2  Power Masters-1       -->
+    <Traits>TraitTechA02;TraitEconomy01Norm1;TraitAlignmentEvil;TraitEconomy09Norm1;TraitFleet04Norm2;TraitDefense01Norm2;TraitHero01Alt1</Traits>
+  </Faction>
+
+  <Faction Name="Swarm" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameSwaTitle</Title>
+    <Description>%FactionSwaDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/swarmLeaderSmall" Large="Gui/DynamicBitmaps/Factions/swarmLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/swarmDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinitySwarm</Affinity>
+    <!--    [Tech1:Arid][Tech1:Missile1]        [Evil]           Militarists+2          KnowledgeGathering+2 	    Big Fleets+2      Crowded planets+1        EternalWar      -->
+    <Traits>TraitTechE01;TraitTechG02;TraitAlignmentEvil;TraitBuilding02Norm2;TraitSpaceBattle07Norm2;TraitFleet02Norm2;TraitPopulation04Norm1;TraitDiplomacy04Norm1</Traits>
+  </Faction>
+
+  <Faction Name="Sophon" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameSopTitle</Title>
+    <Description>%FactionSopDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/sophonLeaderSmall" Large="Gui/DynamicBitmaps/Factions/sophonLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/sophonDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinitySophon</Affinity>
+    <!--  [Tech1:Sys.Sci1][Tech2:P.Sci2][Tech2:U.Mod]        [Good]          Scientists+3      FastTraveler+2  M.info analysis+1 FearlessWarriors-2     Builders-1 -->
+    <Traits>TraitTechA01;TraitTechA03;TraitTechA04;TraitAlignmentGood;TraitScience01Norm3;TraitFleet01Norm2;TraitFleet07Norm1;TraitDefense01Alt2;TraitBuilding01Alt1</Traits>
+  </Faction>
+
+  <Faction Name="Horatio" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameHorTitle</Title>
+    <Description>%FactionHorDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/horatioLeaderSmall" Large="Gui/DynamicBitmaps/Factions/horatioLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/horatioDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityHoratio</Affinity>
+    <!--    [Tech1:Arid][Tech1:Food1]           [Neutral]    Stellar Guardian         Cloning+1          Crowded planets+2    Heroic medicine+2   Militarists-2 -->
+    <Traits>TraitTechE01;TraitTechT01;TraitAlignmentNeutral;TraitDefense03Norm2;TraitPopulation01Norm3;TraitPopulation04Norm2;TraitHero02Norm2;TraitBuilding02Alt2</Traits>
+  </Faction>
+
+  <Faction Name="Hissho" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameHisTitle</Title>
+    <Description>%FactionHisDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/hisshoLeaderSmall"  Large="Gui/DynamicBitmaps/Factions/hisshoLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/hisshoDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityHissho</Affinity>
+    <!--  [Tech1:Kinetic2]     [Evil]       [Ano: Huygens Rings]       Revenge+2              Snipers+3           Deadly weapons+3      Mast.destruction+2  Death.dishonor+2    Scientists-2 -->
+    <Traits>TraitTechG01;TraitAlignmentEvil;TraitAnomaly06Norm1;TraitDefense04Norm2;TraitSpaceBattle02Norm3;TraitSpaceBattle03Norm3;TraitBuilding03Norm2;TraitHero04Norm2;TraitScience01Alt2</Traits>
+  </Faction>
+
+  <Faction Name="Sower" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameSowTitle</Title>
+    <Description>%FactionSowDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/sowerLeaderSmall" Large="Gui/DynamicBitmaps/Factions/sowerLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/sowerDescriptionWide"/>
+    </Gui>
+      <Affinity>AffinitySower</Affinity>
+      <!--        Xenobotany            [Neutral]       Faction anomaly+1      Science -20%          Builders+2               Tolerant+2                      Dust recyclers+1     Fast travelers-1 -->
+      <Traits>TraitTechE27;TraitAlignmentNeutral;TraitAnomaly05Norm1;TraitScience01Alt2;TraitBuilding01Norm2;TraitScience03VisibleNorm2;TraitScience03Norm2;TraitSpaceBattle01Norm1;TraitFleet01Alt1</Traits>
+  </Faction>
+
+  <Faction Name="Amoeba" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameAmoTitle</Title>
+    <Description>%FactionAmoDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/amoebaLeaderSmall" Large="Gui/DynamicBitmaps/Factions/amoebaLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/amoebaDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityAmoeba</Affinity>
+    <!--   [Tech1:Food1]           [Good]            Diplomats+2           Symbiosis+2              Naïve+1           Omniscient+1 Masters of illusion+2 Mutual understanding+2 Terraformed planet+2 -->
+    <Traits>TraitTechT01;TraitAlignmentGood;TraitDiplomacy01Norm2;TraitDiplomacy02Norm2;TraitDiplomacy03Norm1;TraitFleet06Norm2;TraitSpaceBattle05Norm2;TraitAnomaly03Norm1</Traits>
+  </Faction>
+
+  <Faction Name="Resistance" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameResTitle</Title>
+    <Description>%FactionResDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/resistanceLeaderSmall" Large="Gui/DynamicBitmaps/Factions/resistanceLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/resistanceDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityResistance</Affinity>
+    <!--   [Tech1:Tundra]             [Good]            Rebellion+2          Diplomats+2           Optimistic+2     Legendary heroes+2 Mutual understanding+2  Knowledge gathering+1  Blockade breakers+1  Optimal structure-2-->
+    <Traits>TraitTechE27;TraitAlignmentGood;TraitDefense02Norm2;TraitDiplomacy01Norm2;TraitPopulation03Norm2;TraitHero03Norm2;TraitSpaceBattle05Norm2;TraitSpaceBattle07Norm1;TraitEconomy07Norm1;TraitFleet05Alt2</Traits>
+  </Faction>
+
+  <!--<Faction Name="ZCheat1" Standard="false" Author="AMPLITUDE Studios">--><!-- No traits -->
+  <!--<Gui>
+      <Title>%FactionNameZCheat1Title</Title>
+      <Description>%FactionNameZCheat1Title</Description>
+      <Icon Small="Gui/DynamicBitmaps/Factions/[Temp]LeaderSmall" Large="Gui/DynamicBitmaps/Factions/[Temp]LeaderLarge" Wide="Gui/DynamicBitmaps/Factions/[Temp]DescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityTerran</Affinity>
+    <Traits>TraitAlignmentEvil;TraitStartingShipScout;TraitStartingShipColonization</Traits>
+  </Faction>-->
+
+  <!--<Faction Name="ZCheat2" Standard="false" Author="AMPLITUDE Studios">--><!-- No particular trait; All techs unlocked -->
+  <!--<Gui>
+      <Title>%FactionNameZCheat2Title</Title>
+      <Description>%FactionNameZCheat2Title</Description>
+      <Icon Small="Gui/DynamicBitmaps/Factions/[Temp]LeaderSmall" Large="Gui/DynamicBitmaps/Factions/[Temp]LeaderLarge" Wide="Gui/DynamicBitmaps/Factions/[Temp]DescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityTerran</Affinity>
+    <Traits>TraitAlignmentEvil;TraitStartingShipScout;TraitStartingShipColonization;TraitUnlockTechTreeScience;TraitUnlockTechTreeExpansion;TraitUnlockTechTreeDiplomacy</Traits>
+  </Faction>-->
+
+  <Faction Name="Pirates" Hidden="true" Standard="false" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNamePirTitle</Title>
+      <Description>%FactionPirDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Factions/piratesLeaderSmall" Large="Gui/DynamicBitmaps/Factions/piratesLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/[Temp]DescriptionWide"/>
+    </Gui>
+    <!--They will have no colony ship, and no bonus traits. They could still have maluses though.-->
+    <Affinity>AffinityPirates</Affinity>
+    <!--         [Evil]				 [Slow travelers] -->
+    <Traits>TraitAlignmentEvil;TraitFleet01Alt2</Traits>
+  </Faction>
+  
+  <Faction Name="Emperor" Hidden="true" Standard="true" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameEmpTitle</Title>
+    <Description>%FactionEmpDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Factions/emperorLeaderSmall" Large="Gui/DynamicBitmaps/Factions/emperorLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/emperorDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityEmperor</Affinity>
+    <!--   [Tech1:Industry1]	[+10% dust]	[Evil]         [+1 DUST BONUS]    Strong Alloys+2   FearlessWarriors+2  Power Masters-1       -->
+    <Traits>TraitTechA02;TraitEconomy01Norm1;TraitAlignmentEvil;TraitEconomy09Norm1;TraitFleet04Norm2;TraitDefense01Norm2;TraitHero01Alt1</Traits>
+  </Faction>
+
+  <Faction Name="Random" Standard="false" Author="AMPLITUDE Studios">
+    <Gui>
+      <Title>%FactionNameRandomTitle</Title>
+      <Description>%FactionNameRandomDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Factions/randomLeaderSmall" Large="Gui/DynamicBitmaps/Factions/randomLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/randomDescriptionWide"/>
+    </Gui>
+    <Affinity>AffinityRandom</Affinity>
+    <!-- the trait 'TraitRandomizeFaction' tells the game to randomize the faction when it is bound to a player -->
+    <!-- random factions will have the 'TraitRandomFaction' trait afterwards -->
+    <Traits>TraitRandomizeFaction</Traits>
+  </Faction>
+  
+</Datatable>

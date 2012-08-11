@@ -1,0 +1,2107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Personality Name="PersonalityUnitedEmpire">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>1.2</Food>
+                <Industry>1.2</Industry>
+                <Money>1</Money>
+                <Science>0.8</Science>
+                <Approval>1</Approval>
+                <Military>1.3</Military>
+                <Diplomacy>0.1</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1.2</Limits>
+                <Values>1.2</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>1.2</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>1.5</Food>
+              <Industry>1.5</Industry>
+              <Money>1</Money>
+              <Science>0.8</Science>
+              <Diplomacy>0.5</Diplomacy>
+              <Approval>0.5</Approval>
+              <Expand>1.2</Expand>
+              <Military>1.5</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1.3</PlanetTypeArid>
+              <PlanetTypeTundra>1.5</PlanetTypeTundra>
+              <PlanetTypeDesert>0.8</PlanetTypeDesert>
+              <PlanetTypeArctic>0.8</PlanetTypeArctic>
+              <PlanetTypeLava>1.4</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+              <Movement>1</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>0.5</OrientedSystemPercent>
+                <TargetMinTurn>1</TargetMinTurn>
+                <TargetMaxTurn>1</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>2</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinGain>1</TargetMinGain>
+                <TargetMaxGain>1</TargetMaxGain>
+                <UnderApprovalPercent>0.8</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>3</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>2</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1.5</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>0.5</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>0.5</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1.5</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>1.5</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>1</LoosingWarScienceBonus>
+              <WarFatigueTurn>0.5</WarFatigueTurn>
+              <TradableBankAccountRatio>1</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>1</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>1</ReserveRevenueRatio>
+              <NeededResourceBonus>1</NeededResourceBonus>
+              <NeededMissingResourceBonus>1</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>1</HeroUpkeepFactor>
+              <PeaceReserveFactor>1.5</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <!-- The higher it gets, the longer the AI will take before making ships (this should not be higher than 1.1) -->
+              <DevelopmentPercentLimit>0.8</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>2</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>2</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <!--<Parameter Key="/Game/AI/Empire/Layer_Income/Money/SystemApprovalMin" Modifier="1"/>-->
+
+    <Gui>
+      <Title>%PersonalityUnitedEmpireAI</Title>
+      <Description>%PersonalityUnitedEmpireAI</Description>
+    </Gui>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1.5"      TrendCoef="15"      ValueRangeCoef="12" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1.5"      TrendCoef="1.5"      ValueRangeCoef="1.5" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="0.8"      TrendCoef="0.8"      ValueRangeCoef="0.8" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1" />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.1" TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2" TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress" ValueCoef="1.1"     TrendCoef="1.1"      ValueRangeCoef="1.1" TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"         ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"/>
+    </DiplomaticAttitudeModifier>
+
+  </Personality>
+
+  <Personality Name="PersonalityCravers">
+    <!-- Industrious agressive little tech-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>1</Food>
+                <Industry>1.2</Industry>
+                <Money>1.2</Money>
+                <Science>1</Science>
+                <Approval>1</Approval>
+                <Military>1.2</Military>
+                <Diplomacy>1</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1</Limits>
+                <Values>1</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1.5</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1.5</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>0.8</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>1</Food>
+              <Industry>1.5</Industry>
+              <Money>1.5</Money>
+              <Science>1</Science>
+              <Diplomacy>1</Diplomacy>
+              <Approval>1</Approval>
+              <Expand>1.2</Expand>
+              <Military>1.5</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1.4</PlanetTypeArid>
+              <PlanetTypeTundra>1.4</PlanetTypeTundra>
+              <PlanetTypeDesert>1</PlanetTypeDesert>
+              <PlanetTypeArctic>1</PlanetTypeArctic>
+              <PlanetTypeLava>1.2</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+              <Movement>1.1</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinTurn>1</TargetMinTurn>
+                <TargetMaxTurn>1</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>1.5</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1.5</OrientedSystemPercent>
+                <TargetMinGain>1.5</TargetMinGain>
+                <TargetMaxGain>1.5</TargetMaxGain>
+                <UnderApprovalPercent>1</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>2</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>1.2</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1.5</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>0.9</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>0.9</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1.2</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>1.5</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>1</LoosingWarScienceBonus>
+              <WarFatigueTurn>1</WarFatigueTurn>
+              <TradableBankAccountRatio>2</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>2</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>2</ReserveRevenueRatio>
+              <NeededResourceBonus>1.5</NeededResourceBonus>
+              <NeededMissingResourceBonus>1.5</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>1</HeroUpkeepFactor>
+              <PeaceReserveFactor>1.5</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <DevelopmentPercentLimit>0.8</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>1</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>2</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="2"      TrendCoef="2"      ValueRangeCoef="2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="1"     TrendCoef="1.5"   ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="2"     TrendCoef="2"     ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1.5"   TrendCoef="1.5"   ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress"  ValueCoef="2"     TrendCoef="2"     ValueRangeCoef="2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"           ValueCoef="0"     TrendCoef="0"     ValueRangeCoef="0"   TrendRangeCoef="0"/>
+    </DiplomaticAttitudeModifier>
+
+    <Gui>
+      <Title>%PersonalityCravers</Title>
+      <Description>%PersonalityCravers</Description>
+    </Gui>
+  </Personality>
+
+  <Personality Name="PersonalitySophon">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>1</Food>
+                <Industry>1</Industry>
+                <Money>1</Money>
+                <Science>1.3</Science>
+                <Approval>1</Approval>
+                <Military>1</Military>
+                <Diplomacy>1</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1</Limits>
+                <Values>1</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>1</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>1</Food>
+              <Industry>1</Industry>
+              <Money>1</Money>
+              <Science>1.4</Science>
+              <Diplomacy>1.3</Diplomacy>
+              <Approval>1.2</Approval>
+              <Expand>1</Expand>
+              <Military>1</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1</PlanetTypeArid>
+              <PlanetTypeTundra>1</PlanetTypeTundra>
+              <PlanetTypeDesert>1.3</PlanetTypeDesert>
+              <PlanetTypeArctic>1.3</PlanetTypeArctic>
+              <PlanetTypeLava>1</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+              <Movement>1.2</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>1.5</OrientedSystemPercent>
+                <TargetMinTurn>1</TargetMinTurn>
+                <TargetMaxTurn>2</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinGain>1</TargetMinGain>
+                <TargetMaxGain>1</TargetMaxGain>
+                <UnderApprovalPercent>1</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>1</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>1</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>1</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>2</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>0.5</LoosingWarScienceBonus>
+              <WarFatigueTurn>1.2</WarFatigueTurn>
+              <TradableBankAccountRatio>1</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>1</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>1</ReserveRevenueRatio>
+              <NeededResourceBonus>1</NeededResourceBonus>
+              <NeededMissingResourceBonus>1</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>1</HeroUpkeepFactor>
+              <PeaceReserveFactor>1</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <DevelopmentPercentLimit>1</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1.2</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>1.2</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>1</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <!--<Parameter Key="/Game/AI/Empire/Layer_Income/Money/SystemApprovalMin" Modifier="1"/>-->
+
+    <Gui>
+      <Title>%PersonalitySophon</Title>
+      <Description>%PersonalitySophon</Description>
+    </Gui>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="2"      TrendCoef="2"      ValueRangeCoef="1.5"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="2"      TrendCoef="2"      ValueRangeCoef="2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1.5"      TrendCoef="1.5"      ValueRangeCoef="1.5"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="0.8"     TrendCoef="0.8"   ValueRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="0.8"     TrendCoef="0.8"     ValueRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1"   TrendCoef="1"   ValueRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress"  ValueCoef="0"     TrendCoef="0"     ValueRangeCoef="0"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"           ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"   TrendRangeCoef="1"/>
+    </DiplomaticAttitudeModifier>
+
+  </Personality>
+
+  <Personality Name="PersonalityHissho">
+    <!-- Always ready for war-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>1</Food>
+                <Industry>1.4</Industry>
+                <Money>1</Money>
+                <Science>0.8</Science>
+                <Approval>1</Approval>
+                <Military>1.4</Military>
+                <Diplomacy>0.8</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1</Limits>
+                <Values>1</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>1</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>1</Food>
+              <Industry>1.4</Industry>
+              <Money>1</Money>
+              <Science>0.8</Science>
+              <Diplomacy>0.8</Diplomacy>
+              <Approval>1</Approval>
+              <Expand>1.2</Expand>
+              <Military>1.4</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1</PlanetTypeArid>
+              <PlanetTypeTundra>1</PlanetTypeTundra>
+              <PlanetTypeDesert>1</PlanetTypeDesert>
+              <PlanetTypeArctic>1</PlanetTypeArctic>
+              <PlanetTypeLava>1.2</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+              <Movement>1</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>0.8</OrientedSystemPercent>
+                <TargetMinTurn>0.8</TargetMinTurn>
+                <TargetMaxTurn>1</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>1.2</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinGain>1</TargetMinGain>
+                <TargetMaxGain>1</TargetMaxGain>
+                <UnderApprovalPercent>1</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>1.4</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>1.4</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1.5</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>1</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>1</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>2</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>0.5</LoosingWarScienceBonus>
+              <WarFatigueTurn>0.8</WarFatigueTurn>
+              <TradableBankAccountRatio>1</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>1</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>1</ReserveRevenueRatio>
+              <NeededResourceBonus>1</NeededResourceBonus>
+              <NeededMissingResourceBonus>1</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>1</HeroUpkeepFactor>
+              <PeaceReserveFactor>1</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <DevelopmentPercentLimit>0.9</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>1</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>1</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <!--<Parameter Key="/Game/AI/Empire/Layer_Income/Money/SystemApprovalMin" Modifier="1"/>-->
+
+    <Gui>
+      <Title>%PersonalityHissho</Title>
+      <Description>%PersonalityHissho</Description>
+    </Gui>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="0.8"        TrendCoef="0.8"        ValueRangeCoef="0.8"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="0.8"      TrendCoef="0.8"      ValueRangeCoef="0.8"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="0.8"     TrendCoef="0.8"       ValueRangeCoef="0.8"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="0.8"     TrendCoef="0.8"       ValueRangeCoef="0.8"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress"         ValueCoef="0.8"     TrendCoef="0.8"       ValueRangeCoef="0.8"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"           ValueCoef="0"     TrendCoef="0"     ValueRangeCoef="0"   TrendRangeCoef="0"/>
+    </DiplomaticAttitudeModifier>
+
+  </Personality>
+
+
+  <!-- to do -->
+
+
+
+  <Personality Name="PersonalityHoratio">
+    <!-- Need to Expand, more food, more population. Number is their strength-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>1.4</Food>
+                <Industry>1</Industry>
+                <Money>1</Money>
+                <Science>0.8</Science>
+                <Approval>1.2</Approval>
+                <Military>1</Military>
+                <Diplomacy>1</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1.2</Limits>
+                <Values>1.2</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>1</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>1.4</Food>
+              <Industry>1</Industry>
+              <Money>1</Money>
+              <Science>0.8</Science>
+              <Diplomacy>1</Diplomacy>
+              <Approval>1.2</Approval>
+              <Expand>1.4</Expand>
+              <Military>1</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1</PlanetTypeArid>
+              <PlanetTypeTundra>1</PlanetTypeTundra>
+              <PlanetTypeDesert>1.4</PlanetTypeDesert>
+              <PlanetTypeArctic>1.4</PlanetTypeArctic>
+              <PlanetTypeLava>1</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+              <Movement>1</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinTurn>1</TargetMinTurn>
+                <TargetMaxTurn>1</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinGain>1</TargetMinGain>
+                <TargetMaxGain>1</TargetMaxGain>
+                <UnderApprovalPercent>1</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>1</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>1</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>1</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>2</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>0.8</LoosingWarScienceBonus>
+              <WarFatigueTurn>1.2</WarFatigueTurn>
+              <TradableBankAccountRatio>1</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>1</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>1</ReserveRevenueRatio>
+              <NeededResourceBonus>1</NeededResourceBonus>
+              <NeededMissingResourceBonus>1</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>1</HeroUpkeepFactor>
+              <PeaceReserveFactor>1</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <DevelopmentPercentLimit>1</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>1</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>1</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <!--<Parameter Key="/Game/AI/Empire/Layer_Income/Money/SystemApprovalMin" Modifier="1"/>-->
+
+    <Gui>
+      <Title>%PersonalityHoratio</Title>
+      <Description>%PersonalityHoratio</Description>
+    </Gui>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress"         ValueCoef="0"       TrendCoef="0"         ValueRangeCoef="0"         TrendRangeCoef="0"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"           ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"   TrendRangeCoef="1"/>
+    </DiplomaticAttitudeModifier>
+
+  </Personality>
+
+  <Personality Name="PersonalityAmoeba">
+    <!-- I want friend and exchange-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>1</Food>
+                <Industry>1</Industry>
+                <Money>1.2</Money>
+                <Science>1</Science>
+                <Approval>1.2</Approval>
+                <Military>1</Military>
+                <Diplomacy>1.4</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1</Limits>
+                <Values>1</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>1</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>1</Food>
+              <Industry>1</Industry>
+              <Money>1.2</Money>
+              <Science>1</Science>
+              <Diplomacy>1.4</Diplomacy>
+              <Approval>1.2</Approval>
+              <Expand>1.2</Expand>
+              <Military>1</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1</PlanetTypeArid>
+              <PlanetTypeTundra>1</PlanetTypeTundra>
+              <PlanetTypeDesert>1.4</PlanetTypeDesert>
+              <PlanetTypeArctic>1.4</PlanetTypeArctic>
+              <PlanetTypeLava>1</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+              <Movement>1</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>0.8</OrientedSystemPercent>
+                <TargetMinTurn>1</TargetMinTurn>
+                <TargetMaxTurn>1</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinGain>1</TargetMinGain>
+                <TargetMaxGain>1</TargetMaxGain>
+                <UnderApprovalPercent>1</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>1</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>1.5</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>1.5</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>1</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>0.5</LoosingWarScienceBonus>
+              <WarFatigueTurn>1.2</WarFatigueTurn>
+              <TradableBankAccountRatio>1.2</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>1.2</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>1.2</ReserveRevenueRatio>
+              <NeededResourceBonus>1.1</NeededResourceBonus>
+              <NeededMissingResourceBonus>1.2</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>0.8</HeroUpkeepFactor>
+              <PeaceReserveFactor>1.5</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <DevelopmentPercentLimit>1</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1.2</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>1.2</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>1</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <!--<Parameter Key="/Game/AI/Empire/Layer_Income/Money/SystemApprovalMin" Modifier="1"/>-->
+
+    <Gui>
+      <Title>%PersonalityAmoeba</Title>
+      <Description>%PersonalityAmoeba</Description>
+    </Gui>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1.2"      TrendCoef="1.2"      ValueRangeCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1.2"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1.2"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="1.2"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1.2"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1.2"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="1.2"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress"         ValueCoef="0"       TrendCoef="0"         ValueRangeCoef="0"         TrendRangeCoef="0"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"           ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"   TrendRangeCoef="1"/>
+    </DiplomaticAttitudeModifier>
+
+  </Personality>
+
+  <Personality Name="PersonalitySowers">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>0.8</Food>
+                <Industry>1.5</Industry>
+                <Money>1</Money>
+                <Science>1</Science>
+                <Approval>1</Approval>
+                <Military>1</Military>
+                <Diplomacy>1</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1</Limits>
+                <Values>1</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>1</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>0.6</Food>
+              <Industry>1.4</Industry>
+              <Money>1.3</Money>
+              <Science>1</Science>
+              <Diplomacy>0.8</Diplomacy>
+              <Approval>1</Approval>
+              <Expand>1.2</Expand>
+              <Military>1</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1.1</PlanetTypeArid>
+              <PlanetTypeTundra>1</PlanetTypeTundra>
+              <PlanetTypeDesert>1.2</PlanetTypeDesert>
+              <PlanetTypeArctic>1</PlanetTypeArctic>
+              <PlanetTypeLava>1.05</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1.1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1.1</PlanetTypeGasMethane>
+              <Movement>1</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinTurn>1</TargetMinTurn>
+                <TargetMaxTurn>1</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinGain>1</TargetMinGain>
+                <TargetMaxGain>1</TargetMaxGain>
+                <UnderApprovalPercent>1</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>1</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>1</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>1</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>1</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>1</LoosingWarScienceBonus>
+              <WarFatigueTurn>1</WarFatigueTurn>
+              <TradableBankAccountRatio>1</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>1</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>1</ReserveRevenueRatio>
+              <NeededResourceBonus>1</NeededResourceBonus>
+              <NeededMissingResourceBonus>1</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>1</HeroUpkeepFactor>
+              <PeaceReserveFactor>1</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <DevelopmentPercentLimit>1</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>1</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>1</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <!--<Parameter Key="/Game/AI/Empire/Layer_Income/Money/SystemApprovalMin" Modifier="1"/>-->
+
+    <Gui>
+      <Title>%PersonalitySower</Title>
+      <Description>%PersonalitySower</Description>
+    </Gui>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress"         ValueCoef="0"       TrendCoef="0"         ValueRangeCoef="0"         TrendRangeCoef="0"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"           ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="0.5"   TrendRangeCoef="1"/>
+    </DiplomaticAttitudeModifier>
+
+  </Personality>
+
+  <Personality Name="PersonalityPilgrims">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <System>
+            <SystemSettings>
+              <Modifiers>
+                <Food>1.1</Food>
+                <Industry>1</Industry>
+                <Money>1</Money>
+                <Science>1</Science>
+                <Approval>1.1</Approval>
+                <Military>1</Military>
+                <Diplomacy>1.2</Diplomacy>
+              </Modifiers>
+            </SystemSettings>
+            <Layer_Population>
+              <SystemGrowthTargets>
+                <!-- Growth target from food value-->
+                <Limits>1</Limits>
+                <Values>1</Values>
+              </SystemGrowthTargets>
+              <StrategicResourceBonus>
+                <Values>1</Values>
+              </StrategicResourceBonus>
+              <LuxuryBonus>
+                <Values>1</Values>
+              </LuxuryBonus>
+            </Layer_Population>
+          </System>
+          <Empire>
+            <Layer_Science>
+              <TurnCostWeightingCoef>1</TurnCostWeightingCoef>
+              <!-- technoScore = score - (TurnCostWeightingCoef * turncost) -->
+
+              <GrowthAlertBoostCoef>1</GrowthAlertBoostCoef>
+              <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+
+              <Food>1.1</Food>
+              <Industry>1</Industry>
+              <Money>1</Money>
+              <Science>1</Science>
+              <Diplomacy>1.1</Diplomacy>
+              <Approval>1.1</Approval>
+              <Expand>1</Expand>
+              <Military>1</Military>
+              <DefenseModuleLaser>1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1</DefenseModuleMissile>
+              <WeaponModuleLaser>1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1</WeaponModuleMissile>
+              <PlanetTypeArid>1</PlanetTypeArid>
+              <PlanetTypeTundra>1</PlanetTypeTundra>
+              <PlanetTypeDesert>1</PlanetTypeDesert>
+              <PlanetTypeArctic>1</PlanetTypeArctic>
+              <PlanetTypeLava>1</PlanetTypeLava>
+              <PlanetTypeBarren>1</PlanetTypeBarren>
+              <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+              <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+              <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+              <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+              <Movement>1.2</Movement>
+            </Layer_Science>
+            <Layer_Income>
+              <PopulationPercentMin>1</PopulationPercentMin>
+              <DevelopmentPercentMin>1</DevelopmentPercentMin>
+              <Science>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinTurn>1</TargetMinTurn>
+                <TargetMaxTurn>1</TargetMaxTurn>
+              </Science>
+              <Industry>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Industry>
+              <Money>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+                <TargetMinGain>1</TargetMinGain>
+                <TargetMaxGain>1</TargetMaxGain>
+                <UnderApprovalPercent>1</UnderApprovalPercent>
+                <SystemApprovalMin>1</SystemApprovalMin>
+                <EmpireApprovalMin>1</EmpireApprovalMin>
+              </Money>
+              <Military>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+          </Empire>
+          <Ministers>
+            <MilitaryMinister>
+              <!-- Define how many military power an AI will attribute to a neutral system. -->
+
+              <NeutralSystemThreat>1</NeutralSystemThreat>
+              <ThreatFactors>
+                <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+                <!-- Default is 0.1. this is used for unknown empire. -->
+                <Default>1</Default>
+                <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+                <PrepareWar>1</PrepareWar>
+
+
+              </ThreatFactors>
+              <!-- Define how many attack a defense zone can start.-->
+              <AttackPerZone>1</AttackPerZone>
+              <ShipRequests>
+                <!-- Ship request priority when the empire MP is over the needed MP -->
+                <MilitaryShipPriorityDefault>1</MilitaryShipPriorityDefault>
+                <!-- Ship request priority when the empire MP is under the minimal MP -->
+                <MilitaryShipPriorityUnderMin>1</MilitaryShipPriorityUnderMin>
+                <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+                <MilitaryShipPriorityUnderEnnemy>1</MilitaryShipPriorityUnderEnnemy>
+
+                <!-- Ship production percentage when the empire MP is over the needed MP -->
+                <MilitaryProductionPercentDefault>1</MilitaryProductionPercentDefault>
+                <!-- Ship production percentage when the empire MP is under the minimal MP -->
+                <MilitaryProductionPercentUnderMin>1</MilitaryProductionPercentUnderMin>
+                <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+                <MilitaryProductionPercentUnderEnnemy>1</MilitaryProductionPercentUnderEnnemy>
+
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>1</MinMilitaryPowerLimit>
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>1</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>1</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+            <DiplomacyMinister>
+              <!-- When no treaty are needed, the science bonus must have a default value.-->
+              <DefaultDiplomacyScienceBonus>1</DefaultDiplomacyScienceBonus>
+              <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+              <PerWantedTermScienceBonus>1</PerWantedTermScienceBonus>
+              <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+              <DefaultMilitaryScienceBonus>1</DefaultMilitaryScienceBonus>
+              <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+              <MaxMilitaryScienceBonus>2</MaxMilitaryScienceBonus>
+              <!-- When loosing the war, we need to boost the military science bonus.-->
+              <LoosingWarScienceBonus>1</LoosingWarScienceBonus>
+              <WarFatigueTurn>1</WarFatigueTurn>
+              <TradableBankAccountRatio>1</TradableBankAccountRatio>
+              <TradableMoneyNetRatio>1</TradableMoneyNetRatio>
+              <ReserveRevenueRatio>1</ReserveRevenueRatio>
+              <NeededResourceBonus>1</NeededResourceBonus>
+              <NeededMissingResourceBonus>1</NeededMissingResourceBonus>
+            </DiplomacyMinister>
+            <EconomyMinister>
+              <HeroUpkeepFactor>1</HeroUpkeepFactor>
+              <PeaceReserveFactor>1</PeaceReserveFactor>
+
+              <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+              <DevelopmentPercentLimit>1</DevelopmentPercentLimit>
+            </EconomyMinister>
+          </Ministers>
+          <AIStarSystemSettings>
+            <ScoreFimsFactor>1</ScoreFimsFactor>
+            <ScoreLinkToEmpireFactor>1</ScoreLinkToEmpireFactor>
+            <ScoreOwnershipFactor>1</ScoreOwnershipFactor>
+            <ScoreNeutralFactor>1</ScoreNeutralFactor>
+            <ScoreEnnemyFactor>1</ScoreEnnemyFactor>
+            <ScoreTurnToReachLimits>1</ScoreTurnToReachLimits>
+            <ScoreTurnToReachValues>1</ScoreTurnToReachValues>
+          </AIStarSystemSettings>
+        </AI>
+      </Game>
+    </Parameters>
+
+    <!--<Parameter Key="/Game/AI/Empire/Layer_Income/Money/SystemApprovalMin" Modifier="1"/>-->
+
+    <Gui>
+      <Title>%PersonalityPilgrims</Title>
+      <Description>%PersonalityPilgrims</Description>
+    </Gui>
+
+    <DiplomaticAttitudeModifier>
+      <!-- Positive factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1"      TrendCoef="1"      ValueRangeCoef="1"       TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0"        TrendCoef="0"        ValueRangeCoef="0"   TrendRangeCoef="0"  />
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="1"        TrendCoef="1"        ValueRangeCoef="1"   TrendRangeCoef="1"  />
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                        ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                    ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"             ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"            ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"             ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"         ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"  ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"           ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                 ValueCoef="1"       TrendCoef="1"         ValueRangeCoef="1"         TrendRangeCoef="1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress"         ValueCoef="0"       TrendCoef="0"         ValueRangeCoef="0"         TrendRangeCoef="0"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerTense"           ValueCoef="1"     TrendCoef="1"     ValueRangeCoef="1"   TrendRangeCoef="1"/>
+    </DiplomaticAttitudeModifier>
+
+  </Personality>
+
+
+
+
+
+  <!-- ***************************************** -->
+  <!-- ***** DIFFICULTY ATTITUDE MODIFIERS ***** -->
+  <!-- ***************************************** -->
+  <Personality Name="PersonalityEasy2" IsSerializable="false">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <Empire>
+            <Layer_Science>
+              <Military>0.6</Military>
+              <!-- <Movement>0.6</Movement>-->
+              <Expand>0.6</Expand>
+              <DefenseModuleLaser>0.8</DefenseModuleLaser>
+              <DefenseModuleKinetic>0.8</DefenseModuleKinetic>
+              <DefenseModuleMissile>0.8</DefenseModuleMissile>
+              <WeaponModuleLaser>0.8</WeaponModuleLaser>
+              <WeaponModuleKinetic>0.8</WeaponModuleKinetic>
+              <WeaponModuleMissile>0.8</WeaponModuleMissile>
+            </Layer_Science>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+            <Layer_ShipDesign>
+              <BattleEfficiencyAllDestroyed>1</BattleEfficiencyAllDestroyed>
+              <BattleEfficiencyLimit>0.4</BattleEfficiencyLimit>
+              <!-- base value = 0.5 -->
+            </Layer_ShipDesign>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+          </Empire>
+          <Ministers>
+            <!-- pour tweaker la volonté d'expansion -->
+            <ExpansionMinister>
+              <!-- Define the limit of still neutral system in the galaxy to allow the expansion to search one step further for expansion target.-->
+              <NeutralRatioLimitForExtendedExpansion>1</NeutralRatioLimitForExtendedExpansion>
+              <LimitExpansionFleets>0.5</LimitExpansionFleets>
+              <!-- base value : 2 -->
+
+              <!-- Define when to stop searching in the list for outpost to invade.-->
+              <RankLimitForCommando>0.8</RankLimitForCommando>
+              <!-- base value = 5 -->
+            </ExpansionMinister>
+            <MilitaryMinister>
+              <ShipRequests>
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>0.6</MinMilitaryPowerLimit>
+                <!--  nerfer puissance min à atteindre -->
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>0.7</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>0.7</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+          </Ministers>
+        </AI>
+      </Game>
+    </Parameters>
+    
+    <DiplomaticAttitudeModifier>
+      <!-- POSITIVE factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="1.2"      ValueRangeCoef="1.2"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                         ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                   ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                     ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"              ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"             ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"              ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"          ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"   ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"            ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                  ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress" ValueCoef="0.9"     ValueRangeCoef="0.9"     TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+    </DiplomaticAttitudeModifier>
+  </Personality>
+
+  
+  
+  <Personality Name="PersonalityEasy1" IsSerializable="false">
+    <Parameters>
+      <Game>
+        <AI>
+          <Empire>
+            <Layer_Science>
+              <Military>0.8</Military>
+              <!-- <Movement>0.6</Movement>-->
+              <Expand>0.8</Expand>
+              <DefenseModuleLaser>0.9</DefenseModuleLaser>
+              <DefenseModuleKinetic>0.9</DefenseModuleKinetic>
+              <DefenseModuleMissile>0.9</DefenseModuleMissile>
+              <WeaponModuleLaser>0.9</WeaponModuleLaser>
+              <WeaponModuleKinetic>0.9</WeaponModuleKinetic>
+              <WeaponModuleMissile>0.9</WeaponModuleMissile>
+            </Layer_Science>
+            <Layer_Income>
+              <Military>
+                <OrientedSystemPercent>1</OrientedSystemPercent>
+              </Military>
+            </Layer_Income>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+            <Layer_ShipDesign>
+              <BattleEfficiencyAllDestroyed>1</BattleEfficiencyAllDestroyed>
+              <BattleEfficiencyLimit>0.7</BattleEfficiencyLimit>
+              <!-- base value = 0.5 -->
+            </Layer_ShipDesign>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+          </Empire>
+          <Ministers>
+            <!-- pour tweaker la volonté d'expansion -->
+            <ExpansionMinister>
+              <!-- Define the limit of still neutral system in the galaxy to allow the expansion to search one step further for expansion target.-->
+              <NeutralRatioLimitForExtendedExpansion>1</NeutralRatioLimitForExtendedExpansion>
+              <LimitExpansionFleets>1</LimitExpansionFleets>
+              <!-- base value : 2 -->
+
+              <!-- Define when to stop searching in the list for outpost to invade.-->
+              <RankLimitForCommando>1</RankLimitForCommando>
+              <!-- base value = 5 -->
+            </ExpansionMinister>
+            <MilitaryMinister>
+              <ShipRequests>
+                <!-- Minimal MP max limit -->
+                <MinMilitaryPowerLimit>0.8</MinMilitaryPowerLimit>
+                <!--  nerfer puissance min à atteindre -->
+                <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+                <MinMilitaryPowerPopulationPower>0.9</MinMilitaryPowerPopulationPower>
+                <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+                <MinMilitaryPowerPopulationConstante>0.9</MinMilitaryPowerPopulationConstante>
+              </ShipRequests>
+            </MilitaryMinister>
+          </Ministers>
+        </AI>
+      </Game>
+    </Parameters>
+    
+    <DiplomaticAttitudeModifier>
+      <!-- POSITIVE factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="1.1"      ValueRangeCoef="1.1"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+    </DiplomaticAttitudeModifier>
+  </Personality>
+
+  
+  
+  <Personality Name="PersonalityNormal" IsSerializable="false">
+  </Personality>
+  
+  
+
+  <Personality Name="PersonalityHard1" IsSerializable="false">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <Empire>
+            <Layer_Science>
+              <Military>1.05</Military>
+              <!-- <Movement>0.6</Movement>-->
+              <Expand>1.05</Expand>
+            </Layer_Science>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+            <Layer_ShipDesign>
+              <BattleEfficiencyLimit>1.2</BattleEfficiencyLimit>
+              <!-- base value = 0.5 -->
+            </Layer_ShipDesign>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+          </Empire>
+          <Ministers>
+            <!-- pour tweaker la volonté d'expansion -->
+            <ExpansionMinister>
+              <!-- Define the limit of still neutral system in the galaxy to allow the expansion to search one step further for expansion target.-->
+              <!-- reduce this number to allow farther expansions-->
+              <NeutralRatioLimitForExtendedExpansion>0.9</NeutralRatioLimitForExtendedExpansion>
+              <LimitExpansionFleets>1.5</LimitExpansionFleets>
+              <!-- base value : 2 -->
+            </ExpansionMinister>
+          </Ministers>
+        </AI>
+      </Game>
+    </Parameters>
+    
+    <DiplomaticAttitudeModifier>
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                         ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                   ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                     ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"              ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"             ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"              ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"          ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"   ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"            ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                  ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress" ValueCoef="1.1"     ValueRangeCoef="1.1"     TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+    </DiplomaticAttitudeModifier>
+  </Personality>
+
+  
+  
+  <Personality Name="PersonalityHard2" IsSerializable="false">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <Empire>
+            <Layer_Science>
+              <Military>1.05</Military>
+              <!-- <Movement>0.6</Movement>-->
+              <Expand>1.05</Expand>
+              <DefenseModuleLaser>1.05</DefenseModuleLaser>
+              <DefenseModuleKinetic>1.05</DefenseModuleKinetic>
+              <DefenseModuleMissile>1.05</DefenseModuleMissile>
+              <WeaponModuleLaser>1.05</WeaponModuleLaser>
+              <WeaponModuleKinetic>1.05</WeaponModuleKinetic>
+              <WeaponModuleMissile>1.05</WeaponModuleMissile>
+            </Layer_Science>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+            <Layer_ShipDesign>
+              <BattleEfficiencyLimit>1.4</BattleEfficiencyLimit>
+              <!-- base value = 0.5 -->
+            </Layer_ShipDesign>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+          </Empire>
+          <Ministers>
+            <!-- pour tweaker la volonté d'expansion -->
+            <ExpansionMinister>
+              <!-- Define the limit of still neutral system in the galaxy to allow the expansion to search one step further for expansion target.-->
+              <!-- reduce this number to allow farther expansions-->
+              <NeutralRatioLimitForExtendedExpansion>0.75</NeutralRatioLimitForExtendedExpansion>
+              <LimitExpansionFleets>1.5</LimitExpansionFleets>
+              <!-- base value : 2 -->
+
+              <!-- Define when to stop searching in the list for outpost to invade.-->
+              <RankLimitForCommando>1.2</RankLimitForCommando>
+              <!-- base value = 5 -->
+            </ExpansionMinister>
+          </Ministers>
+        </AI>
+      </Game>
+    </Parameters>
+      
+    <DiplomaticAttitudeModifier>
+      <!-- POSITIVE factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="1.1"       TrendRangeCoef="1.1"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0.9"      ValueRangeCoef="0.9"      TrendCoef="0.9"       TrendRangeCoef="0.9"/>
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                         ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                   ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                     ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"              ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"             ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"              ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"          ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"   ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"            ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                  ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress" ValueCoef="1.2"     ValueRangeCoef="1.2"     TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+    </DiplomaticAttitudeModifier>
+  </Personality>
+  
+  
+
+  <Personality Name="PersonalityHard3" IsSerializable="false">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <Empire>
+            <Layer_Science>
+              <Military>1.1</Military>
+              <!-- <Movement>0.6</Movement>-->
+              <Expand>1.1</Expand>
+              <DefenseModuleLaser>1.05</DefenseModuleLaser>
+              <DefenseModuleKinetic>1.05</DefenseModuleKinetic>
+              <DefenseModuleMissile>1.05</DefenseModuleMissile>
+              <WeaponModuleLaser>1.05</WeaponModuleLaser>
+              <WeaponModuleKinetic>1.05</WeaponModuleKinetic>
+              <WeaponModuleMissile>1.05</WeaponModuleMissile>
+            </Layer_Science>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+            <Layer_ShipDesign>
+              <BattleEfficiencyLimit>1.5</BattleEfficiencyLimit>
+              <!-- base value = 0.5 -->
+            </Layer_ShipDesign>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+          </Empire>
+          <Ministers>
+            <!-- pour tweaker la volonté d'expansion -->
+            <ExpansionMinister>
+              <!-- Define the limit of still neutral system in the galaxy to allow the expansion to search one step further for expansion target.-->
+              <!-- reduce this number to allow farther expansions-->
+              <NeutralRatioLimitForExtendedExpansion>0.6</NeutralRatioLimitForExtendedExpansion>
+              <LimitExpansionFleets>2</LimitExpansionFleets>
+              <!-- base value : 2 -->
+
+              <!-- Define when to stop searching in the list for outpost to invade.-->
+              <RankLimitForCommando>1.4</RankLimitForCommando>
+              <!-- base value = 5 -->
+            </ExpansionMinister>
+          </Ministers>
+        </AI>
+      </Game>
+    </Parameters>
+    
+    <DiplomaticAttitudeModifier>      
+      <!-- POSITIVE factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="1.2"       TrendRangeCoef="1.2"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0.8"      ValueRangeCoef="0.8"      TrendCoef="0.8"       TrendRangeCoef="0.8"/>
+
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                         ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                   ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                     ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"              ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"             ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"              ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"          ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"   ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"            ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                  ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress" ValueCoef="1.3"     ValueRangeCoef="1.3"     TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+    </DiplomaticAttitudeModifier>
+  </Personality>
+  
+  
+
+  <Personality Name="PersonalityHard4" IsSerializable="false">
+    <!-- Greedy industrious powerful fleets-->
+    <Parameters>
+      <Game>
+        <AI>
+          <Empire>
+            <Layer_Science>
+              <Military>1.1</Military>
+              <!-- <Movement>0.6</Movement>-->
+              <Expand>1.1</Expand>
+              <DefenseModuleLaser>1.1</DefenseModuleLaser>
+              <DefenseModuleKinetic>1.1</DefenseModuleKinetic>
+              <DefenseModuleMissile>1.1</DefenseModuleMissile>
+              <WeaponModuleLaser>1.1</WeaponModuleLaser>
+              <WeaponModuleKinetic>1.1</WeaponModuleKinetic>
+              <WeaponModuleMissile>1.1</WeaponModuleMissile>
+            </Layer_Science>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+            <Layer_ShipDesign>
+              <BattleEfficiencyLimit>1.6</BattleEfficiencyLimit>
+              <!-- base value = 0.5 -->
+            </Layer_ShipDesign>
+            <!-- réactivité de l'ia vis à vis de ses ships design -->
+          </Empire>
+          <Ministers>
+            <!-- pour tweaker la volonté d'expansion -->
+            <ExpansionMinister>
+              <!-- Define the limit of still neutral system in the galaxy to allow the expansion to search one step further for expansion target.-->
+              <!-- reduce this number to allow farther expansions-->
+              <NeutralRatioLimitForExtendedExpansion>0.5</NeutralRatioLimitForExtendedExpansion>
+              <LimitExpansionFleets>2</LimitExpansionFleets>
+              <!-- base value : 2 -->
+
+              <!-- Define when to stop searching in the list for outpost to invade.-->
+              <RankLimitForCommando>1.6</RankLimitForCommando>
+              <!-- base value = 5 -->
+            </ExpansionMinister>
+          </Ministers>
+        </AI>
+      </Game>
+    </Parameters>
+    
+    <DiplomaticAttitudeModifier>
+      <!-- POSITIVE factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPeaceful"                   ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreement"       ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAlliance"                   ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonEnemy"                ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCommonFriends"              ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCurrentExchanges"           ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastExchanges"              ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="1.3"       TrendRangeCoef="1.3"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCooperationAgreementTreaty" ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOpenBordersTreaty"          ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierDonations"                  ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="1.3"       TrendRangeCoef="1.3"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerRespect"       ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerPity"          ValueCoef="0.7"      ValueRangeCoef="0.7"      TrendCoef="0.7"       TrendRangeCoef="0.7"/>
+      
+      <!-- Negative factors -->
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierWar"                         ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierCeaseFire"                   ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPastWar"                     ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierTenseFrontiers"              ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierAnotherAlliance"             ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierBrokenExchange"              ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierPropositionRefusal"          ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierOwningLegitimateTerritory"   ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierLivingSpaceTense"            ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierScoreTense"                  ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+      <ModifierWeighting ModifierName="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress" ValueCoef="1.4"     ValueRangeCoef="1.4"     TrendCoef="0.6"       TrendRangeCoef="0.6"/>
+    </DiplomaticAttitudeModifier>
+  </Personality>
+
+</Datatable>

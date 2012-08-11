@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- HeroesDescriptors.xml -->
+
+  <SimulationObjectDescriptor Name="ClassHero" Type="Class" Serializable="false">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="Level"      Value="1" IsSerializable="true"/>
+      <SimulationObjectPropertyDescriptor Name="CurrentXP"  Value="0" IsSerializable="true"/>
+      <SimulationObjectPropertyDescriptor Name="Upkeep"     Value="-2" MinValue="Negative" MaxValue="-2"/>
+      <SimulationObjectPropertyDescriptor Name="Fatigue"    Value="0" IsSerializable="true"/>
+
+      <SimulationObjectPropertyDescriptor Name="AbilityPoint" Value="0" IsSerializable="true"/>
+      <SimulationObjectPropertyDescriptor Name="AbilityPointSpent" Value="0" IsSerializable="true"/>
+
+      <SimulationObjectPropertyDescriptor Name="FatigueRecoveryPerTurn" Value="0.2" IsSerializable="true"/>
+      <SimulationObjectPropertyDescriptor Name="HealingCostBonus" Value="1" IsSerializable="true"/>
+      <SimulationObjectPropertyDescriptor Name="BattleCardCostBonus" Value="1" IsSerializable="true"/>
+
+      <SimulationObjectPropertyDescriptor Name="AssignationDelayLimit" Value="6" IsSerializable="true"/>
+
+      <!-- 5 attributes -->
+      <SimulationObjectPropertyDescriptor Name="Labor"    Value="1" />
+      <SimulationObjectPropertyDescriptor Name="Wit"      Value="1" />
+      <SimulationObjectPropertyDescriptor Name="Melee"    Value="1" />
+      <SimulationObjectPropertyDescriptor Name="Offense"  Value="1" />
+      <SimulationObjectPropertyDescriptor Name="Defense"  Value="1" />
+
+      <!-- 5 bonus for attribute. This will be multiplied by the attribute and add to the target (system, fleet, module, etc) as a percent.
+      Ex : Wit = 7, WitBonus = 5, -> Add to the StarSystem a (7 * 5) = 35% of bonus on science and money.
+      Wit = 7, WitBonus = 1, -> Add to the StarSystem a (7 * 1) = 7% of bonus on science and money.
+      -->
+      <SimulationObjectPropertyDescriptor Name="LaborBonus"   Value="0.02"/>
+      <SimulationObjectPropertyDescriptor Name="WitBonus"     Value="0.02"/>
+      <SimulationObjectPropertyDescriptor Name="MeleeDefenseAddBonus"   Value="5"/>
+      <SimulationObjectPropertyDescriptor Name="MeleeDefenseMultiplyBonus"   Value="0.05"/>
+      <SimulationObjectPropertyDescriptor Name="MeleeInvasionBonus"   Value="0.10"/>
+      <SimulationObjectPropertyDescriptor Name="OffenseBonus" Value="0.04"/>
+      <SimulationObjectPropertyDescriptor Name="DefenseBonus" Value="0.04"/>
+      
+      <!-- XP Bonuses. Each Hero can modify the XP he gains -->
+      <SimulationObjectPropertyDescriptor Name="XPPerBattleBonus"         Value="1"  />
+      <SimulationObjectPropertyDescriptor Name="XPPerAssignedTurnBonus"   Value="1" />
+      <SimulationObjectPropertyDescriptor Name="XPPerConstructionBonus"   Value="1" />
+      <SimulationObjectPropertyDescriptor Name="XPPerEnnemyInjuredBonus"  Value="1" />
+
+      <!-- Leech -->
+      <SimulationObjectPropertyDescriptor Name="MoneyLeechBonus" Value="0" />
+      <SimulationObjectPropertyDescriptor Name="ScienceLeechBonus" Value="0" />
+    </SimulationObjectPropertyDescriptors>
+
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Upkeep" OperationType="Soustraction" BinaryOperationType="Multiplication" Right="2" Left="$(AbilityPointSpent)" Path="ClassHero"/>
+      
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="DamageMin"           OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Offense)" Left="$(OffenseBonus)" Path="../ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="DamageMax"           OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Offense)" Left="$(OffenseBonus)" Path="../ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="InterceptionEvasion" OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Offense)" Left="$(OffenseBonus)" Path="../ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="MilitaryPower"       OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Offense)" Left="$(OffenseBonus)" Path="../ClassFleet//WeaponModule"/>
+      
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"               OperationType="Addition" BinaryOperationType="Multiplication" Right="$(Melee)" Left="$(MeleeDefenseAddBonus)"      Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"               OperationType="Percent"  BinaryOperationType="Multiplication" Right="$(Melee)" Left="$(MeleeDefenseMultiplyBonus)" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="MilitaryPowerInvasion" OperationType="Percent"  BinaryOperationType="Multiplication" Right="$(Melee)" Left="$(MeleeInvasionBonus)"        Path="../ClassFleet//ClassShip"/>
+
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="InterceptionAccuracy" OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Defense)" Left="$(DefenseBonus)" Path="../ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Absorption"           OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Defense)" Left="$(DefenseBonus)" Path="../ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="DeflectedPerTurn"     OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Defense)" Left="$(DefenseBonus)" Path="../ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="MilitaryPower"        OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Defense)" Left="$(DefenseBonus)" Path="../ClassFleet//DefenseModule"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AbilityPoint" Value="$(AbilityPointSpent)" OperationType="Soustraction" Path="ClassHero"/>
+      
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Science"  OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Wit)"   Left="$(WitBonus)"    Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Money"    OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Wit)"   Left="$(WitBonus)"    Path="../ClassStarSystem"/>
+
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Food"     OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Labor)" Left="$(LaborBonus)"  Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Industry" OperationType="Percent" BinaryOperationType="Multiplication" Right="$(Labor)" Left="$(LaborBonus)"  Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+
+  </SimulationObjectDescriptor>
+
+  <!-- HeroesClassesDescriptor -->
+  <SimulationObjectDescriptor Name="HeroClassAdministrator" Type="HeroClass" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroClassCorporate" Type="HeroClass" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroClassPilot" Type="HeroClass" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroClassCommander" Type="HeroClass" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroClassAdventurer" Type="HeroClass" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- HeroesAbilitiesDescriptor -->
+  <!-- TEST -->
+  <SimulationObjectDescriptor Name="HeroAbilityCommon00" Type="HeroAbilities">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AbilityPoint" Value="99" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Example :-->
+  <SimulationObjectDescriptor Name="HeroAbilityExample" Type="HeroAbilities">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- 30% Wit points are added to Trade Routes bonuses (need to be executed after the bonus computing)-->
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses" 
+                                                        OperationType="Addition" 
+                                                        BinaryOperationType="Multiplication" Left="0.3" Right="$(Wit)" 
+                                                        Path="./ClassStarSystem"
+                                                        Priority="1"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Common -->
+  <SimulationObjectDescriptor Name="HeroAbilityCommon01" Type="HeroAbilities">
+    <!-- Veteran 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Labor"    Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Wit"      Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee"    Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense"  Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense"  Value="1" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon02" Type="HeroAbilities">
+    <!-- Veteran 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Labor"    Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Wit"      Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee"    Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense"  Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense"  Value="1" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon03" Type="HeroAbilities">
+    <!-- Veteran 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Labor"    Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Wit"      Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee"    Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense"  Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense"  Value="1" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon04" Type="HeroAbilities">
+    <!-- Veteran 4 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Labor"    Value="2" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Wit"      Value="2" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee"    Value="2" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense"  Value="2" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense"  Value="2" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon05" Type="HeroAbilities">
+    <!-- Cyberskilled -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AbilityPoint" Value="2" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon06" Type="HeroAbilities">
+    <!-- Director 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Labor" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon07" Type="HeroAbilities">
+    <!-- Director 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Labor" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon08" Type="HeroAbilities">
+    <!-- Director 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Labor" Value="4" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon09" Type="HeroAbilities">
+    <!-- Negotiator 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Wit" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon10" Type="HeroAbilities">
+    <!-- Negotiator 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Wit" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon11" Type="HeroAbilities">
+    <!-- Negotiator 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Wit" Value="4" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon12" Type="HeroAbilities">
+    <!-- Assailant 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon13" Type="HeroAbilities">
+    <!-- Assailant 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon14" Type="HeroAbilities">
+    <!-- Assailant 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense" Value="4" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon15" Type="HeroAbilities">
+    <!-- Defender 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon16" Type="HeroAbilities">
+    <!-- Defender 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon17" Type="HeroAbilities">
+    <!-- Defender 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="4" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon18" Type="HeroAbilities">
+    <!-- Ground Pounder 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon19" Type="HeroAbilities">
+    <!-- Ground Pounder 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon20" Type="HeroAbilities">
+    <!-- Ground Pounder 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee" Value="4" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon21" Type="HeroAbilities">
+    <!-- Hardy Constitution 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="-0.40" OperationType="Percent" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon25" Type="HeroAbilities">
+    <!-- Dust Wielder 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BattleCardCostBonus" Value="-0.30"    OperationType="Percent" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommon26" Type="HeroAbilities">
+    <!-- Dust Wielder 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BattleCardCostBonus" Value="-0.50"    OperationType="Percent" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+  
+  
+
+
+  <!-- Administrator -->
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator01" Type="HeroAbilities">
+    <!-- Civil Engineer 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="7" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator13" Type="HeroAbilities">
+    <!-- Civil Engineer 2 -->
+	<SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="8" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator14" Type="HeroAbilities">
+    <!-- Civil Engineer 3 -->
+	<SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="10" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator02" Type="HeroAbilities">
+    <!-- Crop Geneticist 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="20" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator03" Type="HeroAbilities">
+    <!-- Crop Geneticist 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="30" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator04" Type="HeroAbilities">
+    <!-- Minister of Propaganda 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="30" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator05" Type="HeroAbilities">
+    <!-- Minister of Propaganda 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="40" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator06" Type="HeroAbilities">
+    <!-- Motivational Leader -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.20" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator07" Type="HeroAbilities">
+    <!-- Efficient Schooling -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.20" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator10" Type="HeroAbilities">
+    <!-- Emergency Preparedness 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="200" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator11" Type="HeroAbilities">
+    <!-- Emergency Preparedness 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="50"
+                                                          Path="../ClassStarSystem"
+                                                          BindOnSource="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdministrator12" Type="HeroAbilities">
+    <!-- Black Market -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.50" OperationType="Percent" Path="../ClassStarSystem,StarSystemStatusBlocus"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+
+
+
+
+  <!-- Corporate -->
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate01" Type="HeroAbilities">
+    <!-- Smart Investor 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="0.20" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate02" Type="HeroAbilities">
+    <!-- Smart Investor 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="0.25" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate03" Type="HeroAbilities">
+    <!-- Smart Investor 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="0.30" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate04" Type="HeroAbilities">
+    <!-- Savvy Business 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- 5% Wit points are added to Trade Routes bonuses (need to be executed after the bonus computing)-->
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+      OperationType="Percent"
+      BinaryOperationType="Multiplication" Left="0.02" Right="$(Wit)"
+      Path="../ClassStarSystem"
+      Priority="1"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate05" Type="HeroAbilities">
+    <!-- Savvy Business 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+      OperationType="Percent"
+      BinaryOperationType="Multiplication" Left="0.03" Right="$(Wit)"
+      Path="../ClassStarSystem"
+      Priority="1"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate06" Type="HeroAbilities">
+    <!-- Savvy Business 3 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+      OperationType="Percent"
+      BinaryOperationType="Multiplication" Left="0.04" Right="$(Wit)"
+      Path="../ClassStarSystem"
+      Priority="1"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate07" Type="HeroAbilities">
+    <!-- Security Specialist -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="4" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate10" Type="HeroAbilities">
+    <!-- Value Creator 1 -->
+    <!-- TO DO : Needs to be tested -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes" Value="1" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate11" Type="HeroAbilities">
+    <!-- Value Creator 2 -->
+    <!-- TO DO : Needs to be tested -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes" Value="2" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCorporate12" Type="HeroAbilities">
+    <!-- Industry-Academic Partnerships -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.2" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- Commander -->
+  <SimulationObjectDescriptor Name="HeroAbilityCommander01" Type="HeroAbilities">
+    <!-- Tactician 1 -->
+    <!-- as it affects opponent fleet, cf.HeroAbilityCommander01Battle below -->
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="HeroAbilityCommander01Battle" Type="NonPersistentBattle">
+    <!-- Tactician 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.06" OperationType="Percent" Path="../ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="HeroAbilityCommander02" Type="HeroAbilities">
+    <!-- Tactician 2 -->
+    <!-- as it affects opponent fleet, cf.HeroAbilityCommander02Battle below -->
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="HeroAbilityCommander02Battle" Type="NonPersistentBattle">
+    <!-- Tactician 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.07" OperationType="Percent" Path="../ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="HeroAbilityCommander03" Type="HeroAbilities">
+    <!-- Fearless Foe -->
+    <!-- as it affects opponent fleet, cf.HeroAbilityCommander03Battle below -->
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="HeroAbilityCommander03Battle" Type="NonPersistentBattle">
+    <!-- Fearless Foe -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.25" OperationType="Percent" Path="../ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.25" OperationType="Percent" Path="../ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommander05" Type="HeroAbilities">
+    <!-- Team Spirit 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense"  Value="3" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense"  Value="1" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommander07" Type="HeroAbilities">
+    <!-- Hyper-driven -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AssignationDelayLimit"  Value="-4" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommander08" Type="HeroAbilities">
+    <!-- Battle Action : Dust Warheads -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommander10" Type="HeroAbilities">
+    <!-- Battle Action : Ultimate Defense -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommander11" Type="HeroAbilities">
+    <!-- Battle Action : Emergency Shelter -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommander12" Type="HeroAbilities">
+    <!-- Commander-in-Chief 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus" Value="0.20" OperationType="Percent" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityCommander13" Type="HeroAbilities">
+    <!-- Commander-in-Chief 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus" Value="0.30" OperationType="Percent" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- Pilot -->
+  <SimulationObjectDescriptor Name="HeroAbilityPilot01" Type="HeroAbilities">
+    <!-- Engine Tuner 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="2" OperationType="Addition" Path="../ClassFleet/ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot02" Type="HeroAbilities">
+    <!-- Engine Tuner 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="3" OperationType="Addition" Path="../ClassFleet/ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot03" Type="HeroAbilities">
+    <!-- Tinkerer 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense" Value="1" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="2" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot04" Type="HeroAbilities">
+    <!-- Tinkerer 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense" Value="2" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot05" Type="HeroAbilities">
+    <!-- Lethal Modder -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense" Value="3" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot06" Type="HeroAbilities">
+    <!-- Defense Systems Specialist -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="4" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot07" Type="HeroAbilities">
+    <!-- Fast Reboot 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingAllied" Value="10" OperationType="Addition" Path="../ClassFleet/ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot08" Type="HeroAbilities">
+    <!-- Fast Reboot 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingPercentAllied" Value="0.04" OperationType="Percent" Path="../ClassFleet/ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot09" Type="HeroAbilities">
+    <!-- Rapid Adaptation -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- gives healing outside territory only if Fast reboot abilities have been unlocked -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Healing" Value="10" OperationType="Addition" Path="ClassHero,HeroAbilityPilot07/./ClassFleet/ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingPercent" Value="0.04" OperationType="Percent" Path="ClassHero,HeroAbilityPilot08/./ClassFleet/ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot11" Type="HeroAbilities">
+    <!-- Battle Action : Dust Barrier -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot12" Type="HeroAbilities">
+    <!-- Battle Action : Power Convergence -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityPilot14" Type="HeroAbilities">
+    <!-- Battle Action : Gravity Well -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- Adventurer -->
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer01" Type="HeroAbilities">
+    <!-- Foresight -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="2" OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="2" OperationType="Addition" Path="../ClassFleet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer02" Type="HeroAbilities">
+    <!-- Inside Informant 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MoneyLeechBonus" Value="0.25" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer03" Type="HeroAbilities">
+    <!-- Inside Informant 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MoneyLeechBonus" Value="0.5" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer04" Type="HeroAbilities">
+    <!-- Master Hacker -->
+    <!-- hard-coded -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer05" Type="HeroAbilities">
+    <!-- Saboteur -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DustBonusPerCPAfterEncounter" Value="20" OperationType="Addition" Path="../ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer06" Type="HeroAbilities">
+    <!-- Blockade Runner -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BypassBlockade"   Value="1" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer08" Type="HeroAbilities">
+    <!-- Insight 1 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceLeechBonus" Value="0.25" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer09" Type="HeroAbilities">
+    <!-- Snare -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Melee"    Value="8" OperationType="Addition" Path="ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Offense"  Value="2" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer10" Type="HeroAbilities">
+    <!-- Battle Action : Armor Weak Point -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer12" Type="HeroAbilities">
+    <!-- Insight 2 -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceLeechBonus" Value="0.5" OperationType="Addition" Path="ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer13" Type="HeroAbilities">
+    <!-- Battle Action : Beam Surge -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroAbilityAdventurer14" Type="HeroAbilities">
+    <!-- Battle Action : Illusion -->
+    <!-- Cf. BattleCardsDescriptors.xml -->
+  </SimulationObjectDescriptor>
+
+</Datatable>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <SupportModule Name="ModuleColonization" Cost="125" Weight="80" MilitaryPower="0"
+                 SupportCategory="Civilian">
+    <Gui>
+      <Title>%ModuleColonizationTitle</Title>
+      <Description>%ModuleColonizationDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleCivilianColonizationSmall" Large="Gui/DynamicBitmaps/Modules/ModuleCivilianColonizationLarge"/>
+    </Gui>
+  </SupportModule>
+  
+</Datatable>

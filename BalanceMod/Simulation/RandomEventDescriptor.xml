@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- ********************************** GLOBAL EVENT *********************************** -->
+    <SimulationObjectDescriptor Name="Achievement_ScienceBonus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_ScienceMalus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_SpeedBonus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_FrontierBonus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_FrontierMalus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="-0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_EmpireBonus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_EmpireMalus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="-0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="-0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_DiplomaticBonus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_DiplomaticMalus" Type="GlobalEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" Value="-0.2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+
+    <!-- ********************************** POSITIVE EVENT *********************************** -->
+    <SimulationObjectDescriptor Name="Achievement_RevealMapBonus" Type="PositiveEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="1" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <!-- ********************************** NEGATIVE EVENT *********************************** -->
+    <SimulationObjectDescriptor Name="Achievement_HideMap" Type="PositiveEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="-0.3" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="-0.3" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+    
+    <SimulationObjectDescriptor Name="Achievement_SpeedMalus" Type="NegativeEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="-0.5" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed" Value="-0.5" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <SimulationObjectDescriptor Name="Achievement_ShipSabotage" Type="NegativeEvent" Serializable="true">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="Health" Value="-0.25" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+    <!-- ********************************** DUMMIES *********************************** -->
+  <SimulationObjectDescriptor Name="Achievement_NewColonyShip" Type="PositiveEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Achievement_XpBonusShip" Type="PositiveEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Achievement_LowScienceDiscovery" Type="PositiveEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Achievement_HighScienceDiscovery" Type="PositiveEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Achievement_XpBonusHero" Type="PositiveEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Achievement_PositiveAnomaly" Type="PositiveEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="Achievement_NegativeAnomaly" Type="NegativeEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="Achievement_Disease" Type="NegativeEvent" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+</Datatable>

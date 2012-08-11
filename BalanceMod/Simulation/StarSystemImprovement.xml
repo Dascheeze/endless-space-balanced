@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- <PathsPrerequisites>StarSystemImprovementA</PathsPrerequisites> -->
+
+  <!-- This improvement is used by Pilgrims to manage their ability to evacuate a star system -->
+  <StarSystemImprovementEvacuation Name="StarSystemEvacuation" Cost="150" IsUnique="true">
+    <Descriptors>StarSystemEvacuation</Descriptors>
+    <Gui>
+      <Title>%StarSystemEvacuationTitle</Title>
+      <Description>%StarSystemEvacuationDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemEvacuationSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemEvacuationLarge"/>
+      <Tooltip>
+        <Description>%StarSystemEvacuationTooltipEffect3</Description>
+        <Description>%StarSystemEvacuationTooltipEffect4</Description>
+      </Tooltip>
+    </Gui>
+  </StarSystemImprovementEvacuation>
+
+  <StarSystemImprovement Name="StarSystemImprovementColonyBase" Cost="1" IsUnique="true">
+    <Descriptors>StarSystemImprovementColonyBase</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementColonyBaseTitle</Title>
+      <Description>%StarSystemImprovementColonyBaseDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementColonyBaseSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementColonyBaseLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+    
+  <StarSystemImprovement Name="StarSystemImprovementFood1" Cost="75" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood1</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementFood1Title</Title>
+      <Description>%StarSystemImprovementFood1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementFood2" Cost="200" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood2</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeLava,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeBarren,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeAsteroids,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHydrogen,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHelium,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasMethane,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementFood2Title</Title>
+      <Description>%StarSystemImprovementFood2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood2Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementFood3" Cost="300" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood3</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/ClassPlanet/MoonStatusExplored)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementFood3Title</Title>
+      <Description>%StarSystemImprovementFood3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementFood3Swarm" Cost="300" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood3Swarm</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/ClassPlanet/MoonStatusExplored)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementFood3Title</Title>
+      <Description>%StarSystemImprovementFood3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood3SwarmSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood3SwarmLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementFood3Sower" Cost="300" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood3Sower</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/ClassPlanet/MoonStatusExplored)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementFood3SowerTitle</Title>
+      <Description>%StarSystemImprovementFood3SowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood3SowerSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood3SowerLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementFood4" Cost="500" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood4</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceHyperium</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%StarSystemImprovementFood4Title</Title>
+      <Description>%StarSystemImprovementFood4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementFood5" Cost="1000" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood5</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeTerran,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeJungle,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeOcean,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeArid,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeTundra) or $(ClassStarSystem/PlanetTypeDesert,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeArctic,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementFood5Title</Title>
+      <Description>%StarSystemImprovementFood5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood5Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementFood6" Cost="2800" IsUnique="true">
+    <Descriptors>StarSystemImprovementFood6</Descriptors>
+    <Gui>
+      <Title>%StarSystemImprovementFood6Title</Title>
+      <Description>%StarSystemImprovementFood6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementFood6Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementFood6Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  
+  
+  <StarSystemImprovement Name="StarSystemImprovementIndustry1" Cost="75" IsUnique="true">
+    <Descriptors>StarSystemImprovementIndustry1</Descriptors>
+    <PathsPrerequisites />   
+    <Gui>
+      <Title>%StarSystemImprovementIndustry1Title</Title>
+      <Description>%StarSystemImprovementIndustry1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementIndustry2" Cost="200" IsUnique="true">
+    <Descriptors>StarSystemImprovementIndustry2</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementIndustry2Title</Title>
+      <Description>%StarSystemImprovementIndustry2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry2Large"/>>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementIndustry3" Cost="700" IsUnique="true">
+    <Descriptors>StarSystemImprovementIndustry3</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementIndustry3Title</Title>
+      <Description>%StarSystemImprovementIndustry3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry3Large"/>>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementIndustry4" Cost="1250" IsUnique="true">
+    <Descriptors>StarSystemImprovementIndustry4</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementIndustry4Title</Title>
+      <Description>%StarSystemImprovementIndustry4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry4Large"/>>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementIndustry5" Cost="2400" IsUnique="true">
+    <Descriptors>StarSystemImprovementIndustry5</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceAdamantium</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+      <Gui>
+      <Title>%StarSystemImprovementIndustry5Title</Title>
+      <Description>%StarSystemImprovementIndustry5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry5Large"/>>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementIndustry6" Cost="3600" IsUnique="true">
+    <Descriptors>StarSystemImprovementIndustry6</Descriptors>
+    <Gui>
+      <Title>%StarSystemImprovementIndustry6Title</Title>
+      <Description>%StarSystemImprovementIndustry6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry6Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementIndustry6Large"/>
+	  <Tooltip><Description>%StarSystemImprovementIndustry6TooltipEffect</Description></Tooltip>
+    </Gui>
+  </StarSystemImprovement>
+  
+  
+  
+  <StarSystemImprovement Name="StarSystemImprovementMoney1" Cost="75" IsUnique="true">
+    <Descriptors>StarSystemImprovementMoney1</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeTerran,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeJungle,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeOcean,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeArid,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeTundra,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementMoney1Title</Title>
+      <Description>%StarSystemImprovementMoney1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementMoney1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementMoney1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementMoney2" Cost="250" IsUnique="true">
+    <Descriptors>StarSystemImprovementMoney2</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>count(ClassStarSystem/ClassPlanet/MoonStatusExplored) gt 1</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementMoney2Title</Title>
+      <Description>%StarSystemImprovementMoney2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementMoney2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementMoney2Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementMoney3" Cost="400" IsUnique="true">
+    <Descriptors>StarSystemImprovementMoney3</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementMoney3Title</Title>
+      <Description>%StarSystemImprovementMoney3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementMoney3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementMoney3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementMoney4" Cost="800" IsUnique="true">
+    <Descriptors>StarSystemImprovementMoney4</Descriptors>
+    <PathsPrerequisites />
+    <ResourcesPrerequisites>PlanetStrategicResourceOrichalcedon</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%StarSystemImprovementMoney4Title</Title>
+      <Description>%StarSystemImprovementMoney4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementMoney4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementMoney4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementMoney4Amoeba" Cost="800" IsUnique="true">
+    <Descriptors>StarSystemImprovementMoney4Amoeba</Descriptors>
+    <PathsPrerequisites />
+    <ResourcesPrerequisites>PlanetStrategicResourceOrichalcedon</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%StarSystemImprovementMoney4AmoebaTitle</Title>
+      <Description>%StarSystemImprovementMoney4AmoebaDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementMoney4AmoebaSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementMoney4AmoebaLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementMoney5" Cost="2400" IsUnique="true">
+    <Descriptors>StarSystemImprovementMoney5</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementMoney5Title</Title>
+      <Description>%StarSystemImprovementMoney5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementMoney5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementMoney5Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementMoney6" Cost="3400" IsUnique="true">
+    <Descriptors>StarSystemImprovementMoney6</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementMoney6Title</Title>
+      <Description>%StarSystemImprovementMoney6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementMoney6Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementMoney6Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  
+  
+  <StarSystemImprovement Name="StarSystemImprovementScience1" Cost="75" IsUnique="true">
+    <Descriptors>StarSystemImprovementScience1</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementScience1Title</Title>
+      <Description>%StarSystemImprovementScience1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementScience1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementScience1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementScience2" Cost="200" IsUnique="true">
+    <Descriptors>StarSystemImprovementScience2</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementScience2Title</Title>
+      <Description>%StarSystemImprovementScience2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementScience2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementScience2Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementScience3" Cost="500" IsUnique="true">
+    <Descriptors>StarSystemImprovementScience3</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceAnti-Matter</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeArid,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeDesert,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeLava,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeBarren,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHydrogen,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasMethane,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementScience3Title</Title>
+      <Description>%StarSystemImprovementScience3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementScience3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementScience3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementScience3Sophon" Cost="500" IsUnique="true">
+    <Descriptors>StarSystemImprovementScience3Sophon</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceAnti-Matter</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeArid,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeDesert,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeLava,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeBarren,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHydrogen,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasMethane,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementScience3SophonTitle</Title>
+      <Description>%StarSystemImprovementScience3SophonDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementScience3SophonSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementScience3SophonLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementScience4" Cost="1250" IsUnique="true">
+    <Descriptors>StarSystemImprovementScience4</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementScience4Title</Title>
+      <Description>%StarSystemImprovementScience4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementScience4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementScience4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementScience5" Cost="2400" IsUnique="true">
+    <Descriptors>StarSystemImprovementScience5</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementScience5Title</Title>
+      <Description>%StarSystemImprovementScience5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementScience5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementScience5Large"/>
+	  <Tooltip><Description>%StarSystemImprovementScience5TooltipEffect</Description></Tooltip>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementScience6" Cost="3400" IsUnique="true">
+    <Descriptors>StarSystemImprovementScience6</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceAnti-Matter</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%StarSystemImprovementScience6Title</Title>
+      <Description>%StarSystemImprovementScience6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementScience6Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementScience6Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  
+
+  <StarSystemImprovement Name="StarSystemImprovementTrade1" Cost="75" IsUnique="true">
+    <Descriptors>StarSystemImprovementTrade1</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(../TraitEconomy07Norm1) or (($(../ClassEmpire:NumberOfFriends) ge 1) and ($(ClassStarSystem:TradeRoutes) ge $(ClassStarSystem:MaxTradeRoutes)))</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementTrade1Title</Title>
+      <Description>%StarSystemImprovementTrade1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementTrade1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementTrade1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementTrade2" Cost="200" IsUnique="true">
+    <Descriptors>StarSystemImprovementTrade2</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>($(../TraitEconomy07Norm1) or ($(../ClassEmpire:NumberOfFriends) ge 1)) and ($(ClassStarSystem:TradeRoutes) ge 1)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementTrade2Title</Title>
+      <Description>%StarSystemImprovementTrade2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementTrade2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementTrade2Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementTrade3" Cost="400" IsUnique="true">
+    <Descriptors>StarSystemImprovementTrade3</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>($(../TraitEconomy07Norm1) or ($(../ClassEmpire:NumberOfFriends) ge 1)) and ($(ClassStarSystem:TradeRoutes) gt 1)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementTrade3Title</Title>
+      <Description>%StarSystemImprovementTrade3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementTrade3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementTrade3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementTrade4" Cost="800" IsUnique="true">
+    <Descriptors>StarSystemImprovementTrade4</Descriptors>
+    <PathsPrerequisites />
+    <ResourcesPrerequisites>PlanetStrategicResourceOrichalcedon</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <AIPathsPrerequisites>($(../TraitEconomy07Norm1) or ($(../ClassEmpire:NumberOfFriends) ge 1)) and ($(ClassStarSystem:TradeRoutes) ge 1)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementTrade4Title</Title>
+      <Description>%StarSystemImprovementTrade4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementTrade4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementTrade4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementTrade5" Cost="2000" IsUnique="true">
+    <Descriptors>StarSystemImprovementTrade5</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>($(../TraitEconomy07Norm1) or ($(../ClassEmpire:NumberOfFriends) ge 1)) and ($(ClassStarSystem:TradeRoutes) ge $(ClassStarSystem:MaxTradeRoutes))</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementTrade5Title</Title>
+      <Description>%StarSystemImprovementTrade5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementTrade5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementTrade5Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementTrade6" Cost="3000" IsUnique="true">
+    <Descriptors>StarSystemImprovementTrade6</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>($(../TraitEconomy07Norm1) or ($(../ClassEmpire:NumberOfFriends) ge 1)) and ($(ClassStarSystem:TradeRoutes) ge 1)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementTrade6Title</Title>
+      <Description>%StarSystemImprovementTrade6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementTrade6Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementTrade6Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  
+
+  <StarSystemImprovement Name="StarSystemImprovementApproval1" Cost="150" IsUnique="true">
+    <Descriptors>StarSystemImprovementApproval1</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementApproval1Title</Title>
+      <Description>%StarSystemImprovementApproval1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementApproval1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementApproval1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementApproval2" Cost="200" IsUnique="true">
+    <Descriptors>StarSystemImprovementApproval2</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementApproval2Title</Title>
+      <Description>%StarSystemImprovementApproval2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementApproval2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementApproval2Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementApproval2Sower" Cost="200" IsUnique="true">
+    <Descriptors>StarSystemImprovementApproval2Sower</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementApproval2SowerTitle</Title>
+      <Description>%StarSystemImprovementApproval2SowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementApproval2SowerSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementApproval2SowerLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementApproval3" Cost="400" IsUnique="true">
+    <Descriptors>StarSystemImprovementApproval3</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementApproval3Title</Title>
+      <Description>%StarSystemImprovementApproval3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementApproval3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementApproval3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementApproval4" Cost="1600" IsUnique="true">
+    <Descriptors>StarSystemImprovementApproval4</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementApproval4Title</Title>
+      <Description>%StarSystemImprovementApproval4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementApproval4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementApproval4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementApproval5" Cost="3000" IsUnique="true">
+    <Descriptors>StarSystemImprovementApproval5</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementApproval5Title</Title>
+      <Description>%StarSystemImprovementApproval5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementApproval5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementApproval5Large"/>
+    </Gui>
+  </StarSystemImprovement>
+      
+  
+  <StarSystemImprovement Name="StarSystemImprovementHabitat1" Cost="150" IsUnique="true">
+    <Descriptors>StarSystemImprovementHabitat1</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetSizeSmall,PlanetStatusColonized) or $(ClassStarSystem/PlanetSizeTiny,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementHabitat1Title</Title>
+      <Description>%StarSystemImprovementHabitat1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementHabitat2" Cost="700" IsUnique="true">
+    <Descriptors>StarSystemImprovementHabitat2</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeTerran,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeJungle,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeOcean,PlanetStatusColonized) or $(ClassStarSystem/ClassPlanet/MoonStatusExplored)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementHabitat2Title</Title>
+      <Description>%StarSystemImprovementHabitat2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat2Large"/>
+	  <Tooltip>
+	    <Description>%StarSystemImprovementHabitat2TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementHabitat3" Cost="1500" IsUnique="true">
+    <Descriptors>StarSystemImprovementHabitat3</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeAsteroids,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHydrogen,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHelium,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasMethane,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementHabitat3Title</Title>
+      <Description>%StarSystemImprovementHabitat3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementHabitat3Horatio" Cost="1500" IsUnique="true">
+    <Descriptors>StarSystemImprovementHabitat3Horatio</Descriptors>
+    <PathsPrerequisites />
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeTerran,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeJungle,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeOcean,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeArid,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeTundra,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeAsteroids,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHydrogen,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHelium,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasMethane,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementHabitat3HoratioTitle</Title>
+      <Description>%StarSystemImprovementHabitat3HoratioDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat3HoratioSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat3HoratioLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementHabitat4" Cost="4000" IsUnique="true">
+    <Descriptors>StarSystemImprovementHabitat4</Descriptors>
+    <!-- <ResourcesPrerequisites>PlanetStrategicResourceOrichalcedon</ResourcesPrerequisites>-->
+    <Gui>
+      <Title>%StarSystemImprovementHabitat4Title</Title>
+      <Description>%StarSystemImprovementHabitat4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementHabitat4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+
+  <!-- MILITARY -->
+  <!-- //SHIP CLASS -->
+  <StarSystemImprovement Name="StarSystemImprovementShipQuality1" Cost="150" IsUnique="true">
+    <Descriptors>StarSystemImprovementShipQuality1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementShipQuality1Title</Title>
+      <Description>%StarSystemImprovementShipQuality1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementShipQuality2" Cost="700" IsUnique="true">
+    <Descriptors>StarSystemImprovementShipQuality2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementShipQuality2Title</Title>
+      <Description>%StarSystemImprovementShipQuality2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality2Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementShipQuality3" Cost="1200" IsUnique="true">
+    <Descriptors>StarSystemImprovementShipQuality3</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementShipQuality3Title</Title>
+      <Description>%StarSystemImprovementShipQuality3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality3Large"/>
+     </Gui>
+  </StarSystemImprovement>
+  
+  <StarSystemImprovement Name="StarSystemImprovementShipQuality4" Cost="2200" IsUnique="true">
+    <Descriptors>StarSystemImprovementShipQuality4</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementShipQuality4Title</Title>
+      <Description>%StarSystemImprovementShipQuality4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementShipQuality4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+
+  <StarSystemImprovement Name="StarSystemImprovementDefense1" Cost="100" IsUnique="true">
+    <Descriptors>StarSystemImprovementDefense1</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementDefense1Title</Title>
+      <Description>%StarSystemImprovementDefense1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense1Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementDefense2" Cost="250" IsUnique="true">
+    <Descriptors>StarSystemImprovementDefense2</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementDefense2Title</Title>
+      <Description>%StarSystemImprovementDefense2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense2Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementDefense3" Cost="1200" IsUnique="true">
+    <Descriptors>StarSystemImprovementDefense3</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementDefense3Title</Title>
+      <Description>%StarSystemImprovementDefense3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementDefense4" Cost="2200" IsUnique="true">
+    <Descriptors>StarSystemImprovementDefense4</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%StarSystemImprovementDefense4Title</Title>
+      <Description>%StarSystemImprovementDefense4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense4Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <StarSystemImprovement Name="StarSystemImprovementDefense5" Cost="3000" IsUnique="true">
+    <Descriptors>StarSystemImprovementDefense5</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceAdamantium</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%StarSystemImprovementDefense5Title</Title>
+      <Description>%StarSystemImprovementDefense5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementGroundDefense5Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+
+  <StarSystemImprovement Name="SystemBuildingInformation1" Cost="100" IsUnique="true">
+    <Descriptors>SystemBuildingInformation1</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%SystemBuildingInformation1Title</Title>
+      <Description>%SystemBuildingInformation1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystems/StarSystemImprovementInformation1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementInformation1Large"/>
+    </Gui>
+  </StarSystemImprovement>  
+  
+  <StarSystemImprovement Name="SystemBuildingInformation2" Cost="250" IsUnique="true">
+    <Descriptors>SystemBuildingInformation2</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%SystemBuildingInformation2Title</Title>
+      <Description>%SystemBuildingInformation2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementInformation2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementInformation2Large"/>
+      <Tooltip>
+        <Description>%FleetSpyingTitle</Description>
+      </Tooltip>
+    </Gui>
+  </StarSystemImprovement>  
+  
+  <StarSystemImprovement Name="SystemBuildingInformation3" Cost="900" IsUnique="true">
+    <Descriptors>SystemBuildingInformation3</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%SystemBuildingInformation3Title</Title>
+      <Description>%SystemBuildingInformation3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementInformation3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementInformation3Large"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="SystemBuildingInformation3Sophon" Cost="800" IsUnique="true">
+    <Descriptors>SystemBuildingInformation3Sophon</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%SystemBuildingInformation3SophonTitle</Title>
+      <Description>%SystemBuildingInformation3SophonDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementInformation3SophonSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementInformation3SophonLarge"/>
+    </Gui>
+  </StarSystemImprovement>  
+
+  <StarSystemImprovement Name="SystemBuildingInformation4" Cost="1800" IsUnique="true">
+    <Descriptors>SystemBuildingInformation4</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceSiderite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%SystemBuildingInformation4Title</Title>
+      <Description>%SystemBuildingInformation4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementInformation4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementInformation4Large"/>
+    </Gui>
+  </StarSystemImprovement>  
+  
+  
+  
+  <StarSystemImprovement Name="SystemBuildingSpecial1" Cost="80" IsUnique="true">
+    <Descriptors>SystemBuildingSpecial1</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%SystemBuildingSpecial1Title</Title>
+      <Description>%SystemBuildingSpecial1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial1Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial1Large"/>
+    </Gui>
+  </StarSystemImprovement>  
+  
+  <StarSystemImprovement Name="SystemBuildingSpecial2" Cost="700" IsUnique="true">
+    <Descriptors>SystemBuildingSpecial2</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%SystemBuildingSpecial2Title</Title>
+      <Description>%SystemBuildingSpecial2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial2Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial2Large"/>
+    </Gui>
+  </StarSystemImprovement>  
+  
+  <!--
+  <StarSystemImprovement Name="SystemBuildingSpecial3" Cost="1250" IsUnique="true">
+    <Descriptors>SystemBuildingSpecial3</Descriptors>
+    <PathsPrerequisites />
+    <Gui>
+      <Title>%SystemBuildingSpecial3Title</Title>
+      <Description>%SystemBuildingSpecial3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial3Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial3Large"/>
+	  <Tooltip><Description>%PlaceholderEffectTooltip</Description></Tooltip>
+    </Gui>
+  </StarSystemImprovement>-->
+  
+  <!--
+  <StarSystemImprovement Name="SystemBuildingSpecial4" Cost="3200" IsUnique="true">
+    <Descriptors>SystemBuildingSpecial4</Descriptors>
+    <Gui>
+      <Title>%SystemBuildingSpecial4Title</Title>
+      <Description>%SystemBuildingSpecial4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial4Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial4Large"/>
+	  <Tooltip><Description>%PlaceholderEffectTooltip</Description></Tooltip>
+    </Gui>
+  </StarSystemImprovement>  
+  -->
+  
+  <StarSystemImprovement Name="SystemBuildingSpecial5" Cost="3000" IsUnique="true">
+    <Descriptors>SystemBuildingSpecial5</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceTitanium</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%SystemBuildingSpecial5Title</Title>
+      <Description>%SystemBuildingSpecial5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial5Small" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementSpecial5Large"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  
+  
+  <StarSystemImprovement Name="StarSystemImprovementBuildingVictory" Cost="30000" IsUnique="true">
+    <Descriptors>StarSystemImprovementBuildingVictory</Descriptors>
+    <ResourcesPrerequisites>PlanetStrategicResourceSiderite;PlanetStrategicResourceQuadrinite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%StarSystemImprovementBuildingVictoryTitle</Title>
+      <Description>%StarSystemImprovementBuildingVictoryDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementBuildingVictorySmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementBuildingVictoryLarge"/>
+      <Tooltip>
+        <Description>%WonderScoreTitle</Description>
+      </Tooltip>
+    </Gui>
+  </StarSystemImprovement>
+  
+  
+
+  <StarSystemImprovement Name="StarSystemImprovementUniqueTerran" Cost="900" IsUnique="true">
+    <Descriptors>StarSystemImprovementUniqueTerran</Descriptors>
+    <AIPathsPrerequisites>$(ClassStarSystem/ClassPlanet,ResourceDepositStrategic,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementUniqueTerranTitle</Title>
+      <Description>%StarSystemImprovementUniqueTerranDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueTerranSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueTerranLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementUniqueResistance" Cost="450" IsUnique="true">
+    <Descriptors>StarSystemImprovementUniqueResistance</Descriptors>
+    <Gui>
+      <Title>%StarSystemImprovementUniqueResistanceTitle</Title>
+      <Description>%StarSystemImprovementUniqueResistanceDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueResistanceSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueResistanceLarge"/>
+	  <Tooltip><Description>%InvisibleForEnnemiesTitle</Description></Tooltip>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementUniqueHissho" Cost="250" IsUnique="true">
+    <Descriptors>StarSystemImprovementUniqueHissho</Descriptors>
+    <Gui>
+      <Title>%StarSystemImprovementUniqueHisshoTitle</Title>
+      <Description>%StarSystemImprovementUniqueHisshoDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueHisshoSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueHisshoLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementUniqueSower" Cost="450" IsUnique="true">
+    <Descriptors>StarSystemImprovementUniqueSower</Descriptors>
+    <AIPathsPrerequisites>$(ClassStarSystem/PlanetTypeTerran,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeOcean,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeArid,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeDesert,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeBarren,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHydrogen,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeGasHelium,PlanetStatusColonized) or $(ClassStarSystem/PlanetTypeArctic,PlanetStatusColonized)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementUniqueSowerTitle</Title>
+      <Description>%StarSystemImprovementUniqueSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueSowerSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueSowerLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementUniqueHoratio" Cost="450" IsUnique="true">
+    <Descriptors>StarSystemImprovementUniqueHoratio</Descriptors>
+    <Gui>
+      <Title>%StarSystemImprovementUniqueHoratioTitle</Title>
+      <Description>%StarSystemImprovementUniqueHoratioDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueHoratioSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueHoratioLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementUniqueAmoeba" Cost="900" IsUnique="true">
+    <Descriptors>StarSystemImprovementUniqueAmoeba</Descriptors>
+    <Gui>
+      <Title>%StarSystemImprovementUniqueAmoebaTitle</Title>
+      <Description>%StarSystemImprovementUniqueAmoebaDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueAmoebaSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueAmoebaLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+  <StarSystemImprovement Name="StarSystemImprovementUniqueSophon" Cost="900" IsUnique="true">
+    <Descriptors>StarSystemImprovementUniqueSophon</Descriptors>
+    <AIPathsPrerequisites>$(StarSystemApprovalStatusHappy) or $(StarSystemApprovalStatusEcstatic)</AIPathsPrerequisites>
+    <Gui>
+      <Title>%StarSystemImprovementUniqueSophonTitle</Title>
+      <Description>%StarSystemImprovementUniqueSophonDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueSophonSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemImprovementUniqueSophonLarge"/>
+    </Gui>
+  </StarSystemImprovement>
+
+  <!-- Example of Infinite Star System Improvement -->
+  <StarSystemInfiniteImprovement Name="StarSystemConversionIndustryToScience" Cost="-1" IsUnique="true">
+    <Descriptors>StarSystemConversionIndustryToScience</Descriptors>
+    <Gui>
+      <Title>%StarSystemConversionIndustryToScienceTitle</Title>
+      <Description>%StarSystemConversionIndustryToScienceDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemConversionIndustryToScienceSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemConversionIndustryToScienceLarge"/>
+	  <Tooltip><Description>%StarSystemConversionIndustryToScienceTooltipEffect</Description></Tooltip>
+    </Gui>
+  </StarSystemInfiniteImprovement>
+
+  <!-- Example of Inifite Star System Improvement -->
+  <StarSystemInfiniteImprovement Name="StarSystemConversionIndustryToDust" Cost="-1" IsUnique="true">
+    <Descriptors>StarSystemConversionIndustryToDust</Descriptors>
+    <Gui>
+      <Title>%StarSystemConversionIndustryToDustTitle</Title>
+      <Description>%StarSystemConversionIndustryToDustDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/StarSystems/StarSystemConversionIndustryToDustSmall" Large="Gui/DynamicBitmaps/Improvements/StarSystems/StarSystemConversionIndustryToDustLarge"/>
+	  <Tooltip><Description>%StarSystemConversionIndustryToDustTooltipEffect</Description></Tooltip>
+    </Gui>
+  </StarSystemInfiniteImprovement>
+  
+</Datatable>

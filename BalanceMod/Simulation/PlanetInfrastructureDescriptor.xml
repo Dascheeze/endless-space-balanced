@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <!-- Planet Improvement list -->
+  <SimulationObjectDescriptor Name="PlanetaryImprovementFood1" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="1"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeTerran"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementFood2" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="2"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeJungle"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeOcean"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementFood3" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="3"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="3"     OperationType="Addition" Path="ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeJungle"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeOcean"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeTundra"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  
+  
+  
+  <SimulationObjectDescriptor Name="PlanetaryImprovementIndustry1" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="1"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeLava"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementIndustry2" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="2"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeLava"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementIndustry3" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="3"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeJungle"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="3"     OperationType="Addition" Path="ClassPlanet,PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeGasMethane"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  
+  
+  
+  <SimulationObjectDescriptor Name="PlanetaryImprovementMoney1" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="1"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeArid"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementMoney2" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="2"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeDesert"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementMoney3" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="3"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="3"     OperationType="Addition" Path="ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeGasHydrogen"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  
+  
+  
+  <SimulationObjectDescriptor Name="PlanetaryImprovementScience1" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="1"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeBarren"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementScience2" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="2"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeBarren"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="PlanetaryImprovementScience3" Type="PlanetInfrastructure" Serializable="true" >
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="3"     OperationType="Addition" Path="ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeOcean"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="2"     OperationType="Addition" Path="ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="3"     OperationType="Addition" Path="ClassPlanet,PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"         Value="1"     OperationType="Addition" Path="ClassPlanet,PlanetTypeGasHelium"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+</Datatable>

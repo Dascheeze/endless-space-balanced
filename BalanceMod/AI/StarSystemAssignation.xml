@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationNone" Priority="0"/>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationFood" Priority="1">
+    <Parameter Name="Food"      Value="1"/>
+    <Parameter Name="Industry"  Value="0.5"/>
+    <Parameter Name="Money"     Value="0.5"/>
+    <Parameter Name="Science"   Value="0.5"/>
+    <Parameter Name="Military"  Value="0.3"/>
+    <Parameter Name="Diplomacy" Value="1"/>
+    <Parameter Name="Approval"  Value="1"/>
+    <Parameter Name="TradeRoutes"  Value="0.3"/>
+  </AIStarSystemAssignation>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationIndustry" Priority="2">
+    <Parameter Name="Food"      Value="0.5"/>
+    <Parameter Name="Industry"  Value="1"/>
+    <Parameter Name="Money"     Value="0.5"/>
+    <Parameter Name="Science"   Value="0.5"/>
+    <Parameter Name="Military"  Value="0.3"/>
+    <Parameter Name="Diplomacy" Value="0.3"/>
+    <Parameter Name="Approval"  Value="0.3"/>
+    <Parameter Name="TradeRoutes"  Value="0.3"/>
+  </AIStarSystemAssignation>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationMoney" Priority="3">
+    <Parameter Name="Food"      Value="0.5"/>
+    <Parameter Name="Industry"  Value="0.3"/>
+    <Parameter Name="Money"     Value="1"/>
+    <Parameter Name="Science"   Value="0.3"/>
+    <Parameter Name="Military"  Value="0.3"/>
+    <Parameter Name="Diplomacy" Value="0.3"/>
+    <Parameter Name="Approval"  Value="0.3"/>
+    <Parameter Name="TradeRoutes"  Value="0.5"/>
+  </AIStarSystemAssignation>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationScience" Priority="4">
+    <Parameter Name="Food"      Value="0.5"/>
+    <Parameter Name="Industry"  Value="0.3"/>
+    <Parameter Name="Money"     Value="0.3"/>
+    <Parameter Name="Science"   Value="1"/>
+    <Parameter Name="Military"  Value="0.3"/>
+    <Parameter Name="Diplomacy" Value="1"/>
+    <Parameter Name="Approval"  Value="0.3"/>
+    <Parameter Name="TradeRoutes"  Value="0.5"/>
+  </AIStarSystemAssignation>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationMilitary" Priority="5">
+    <Parameter Name="Food"      Value="0.3"/>
+    <Parameter Name="Industry"  Value="0.5"/>
+    <Parameter Name="Money"     Value="0.3"/>
+    <Parameter Name="Science"   Value="0.3"/>
+    <Parameter Name="Military"  Value="1"/>
+    <Parameter Name="Diplomacy" Value="0.2"/>
+    <Parameter Name="Approval"  Value="0.3"/>
+    <Parameter Name="TradeRoutes"  Value="0.3"/>
+  </AIStarSystemAssignation>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationDiplomacy" Priority="6">
+    <Parameter Name="Food"      Value="0.5"/>
+    <Parameter Name="Industry"  Value="0.5"/>
+    <Parameter Name="Money"     Value="0.5"/>
+    <Parameter Name="Science"   Value="0.5"/>
+    <Parameter Name="Military"  Value="0.3"/>
+    <Parameter Name="Diplomacy" Value="1"/>
+    <Parameter Name="Approval"  Value="1"/>
+    <Parameter Name="TradeRoutes"  Value="1"/>
+  </AIStarSystemAssignation>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationApproval" Priority="7">
+    <Parameter Name="Food"      Value="0.5"/>
+    <Parameter Name="Industry"  Value="0.3"/>
+    <Parameter Name="Money"     Value="1"/>
+    <Parameter Name="Science"   Value="0.3"/>
+    <Parameter Name="Military"  Value="0.3"/>
+    <Parameter Name="Diplomacy" Value="0.5"/>
+    <Parameter Name="Approval"  Value="1"/>
+    <Parameter Name="TradeRoutes"  Value="1"/>
+  </AIStarSystemAssignation>
+
+  <AIStarSystemAssignation Name="AIStarSystemAssignationBalanced" Priority="8">
+    <Parameter Name="Food"      Value="0.6"/>
+    <Parameter Name="Industry"  Value="0.5"/>
+    <Parameter Name="Money"     Value="0.6"/>
+    <Parameter Name="Science"   Value="0.5"/>
+    <Parameter Name="Military"  Value="0.3"/>
+    <Parameter Name="Diplomacy" Value="0.3"/>
+    <Parameter Name="Approval"  Value="0.5"/>
+    <Parameter Name="TradeRoutes"  Value="0.3"/>
+  </AIStarSystemAssignation>
+</Datatable>

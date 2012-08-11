@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <SimulationObjectDescriptor Name="ClassStarSystemImprovement" Type="Class">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="Upkeep"     Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+    </SimulationObjectPropertyDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementColonyBase" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="2"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"   Value="2" 		OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemEvacuation" Type="StarSystemImprovement" />
+
+
+
+  <!-- FOOD -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeJungle"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeOcean"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="3"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet/MoonStatusExplored"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood3Swarm" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="3"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet/MoonStatusExplored"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LocustPointsUpdatePerTurn"  Value="-0.5"     OperationType="Percent" Path="../ClassStarSystem/PlanetQualityDefault"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood3Sower" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="3"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet/MoonStatusExplored"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="3"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet/MoonStatusExploredWithTemple"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.30"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood5" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="9" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementFood6" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- this will add +100% from food surplus to Food -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplusBonus"   Value="1"     OperationType="Percent"       ValueMustBePositive="true"   Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"             Value="11" 		OperationType="Soustraction"  Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- INDUSTRY -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementIndustry1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="10"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		 OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementIndustry2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.20"     OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementIndustry3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementIndustry4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="-0.20"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementIndustry5" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="-0.20"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="9" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementIndustry6" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplusToProductionBonus" Value="$(FoodSurplusBeforeConversion)" OperationType="Addition" Path="../ClassStarSystem" Priority="4" BindOnSource="false" TooltipVisibility="false"/>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplus" Value="$(FoodSurplusBeforeConversion)" OperationType="Soustraction" Path="../ClassStarSystem" Priority="1" BindOnSource="false" TooltipVisibility="false"/>-->
+      <!-- if tweaked to be less than 100% effects, it should be written like this (but it will mess up the tooltips :
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="IndustryOverProductionBonus" OperationType="Addition" BinaryOperationType="Multiplication" Right="0.5" Left="$(FoodSurplusBeforeConversion)" Path="../ClassStarSystem" Priority="1" BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FoodSurplus"     Value="-0.5"     OperationType="Percent" Path="../ClassStarSystem" Priority="1"/>
+      -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="11" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- DUST -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementMoney1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeJungle"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeOcean"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementMoney2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet/MoonStatusExplored"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementMoney3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.20"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementMoney4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemImprovementMoney4Amoeba" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeJungle"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeOcean"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementMoney5" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="0.15"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="9" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementMoney6" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.30"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="11" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- SCIENCE -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementScience1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementScience2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="40"  OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementScience3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemImprovementScience3Sophon" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="4"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="4"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementScience4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.20"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementScience5" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="IndustryToScienceConversionFactor"     Value="0.5"     OperationType="Addition" Path="../ClassStarSystem" TooltipVisibility="false" />
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="9" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementScience6" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.40"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="11" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- TRADE -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementTrade1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO :  Allows trade routes -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes"   Value="1" OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementTrade2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes"   Value="1" OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesDistanceBonusFactor"   Value="0.2" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementTrade3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses"   Value="0.25" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementTrade4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesDistanceBonusFactor"   Value="0.4" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementTrade5" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes"   Value="2" OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="9" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementTrade6" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses"   Value="0.35" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BypassBlockade"   Value="1" OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="11" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+  
+  
+  <!-- APPROVAL -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementApproval1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="25"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementApproval2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="30"  OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="0.10"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"     Value="0.10"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"        Value="0.10"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"      Value="0.10"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"       Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemImprovementApproval2Sower" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="30"  OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"         Value="0.10"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"     Value="0.25"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"        Value="0.10"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"      Value="0.10"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementApproval3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="30"  OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval" Value="-0.40"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementApproval4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="40"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeDesert"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeLava"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="5"      OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="9" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>	  
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementApproval5" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="50"  OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval" Value="-0.40"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="11" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+  
+
+
+  <!-- HABITAT -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementHabitat1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/PlanetSizeTiny"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/PlanetSizeSmall"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"         Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementHabitat2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet/MoonStatusExplored/./ClassPlanet" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"         Value="4" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementHabitat3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"         Value="6" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StarSystemImprovementHabitat3Horatio" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeJungle"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeOcean"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeAsteroids"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasMethane"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"         Value="6" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementHabitat4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxPopulation"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"         Value="10" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- GROUND DEFENSE -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementDefense1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="25"
+                                                          Path="../ClassStarSystem"
+                                                          BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="1" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementDefense2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="15"
+                                                          Path="../ClassStarSystem"
+                                                          BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense"   Value="250" 		OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="1" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementDefense3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="40"
+                                                          Path="../ClassStarSystem"
+                                                          BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InvasionRegenerationBonus"   Value="5" 		OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementDefense4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="60"
+                                                          Path="../ClassStarSystem"
+                                                          BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementDefense5" Type="StarSystemImprovement"><!-- Strategic Resource Prerequisite -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : +2 defense on system FOR EACH planet -->
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Defense"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Right="$(Population)"
+                                                          Left="100"
+                                                          Path="../ClassStarSystem"
+                                                          BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InvasionRegenerationBonus"   Value="8" 		OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+  
+  
+
+  <!-- SHIP QUALITY -->
+  <!-- ########################################################################################################################## -->
+  <!-- ###############################   SHIP QUALITY IMPROVEMENTS ACTELLEMENT NON FONCTIONNELS  ################################-->
+  <!-- ########################################################################################################################## -->
+  <SimulationObjectDescriptor Name="StarSystemImprovementShipQuality1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialXP"     Value="6"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementShipQuality2" Type="StarSystemImprovement"><!-- Strategic Resource Prerequisite -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialHPBonus"     Value="0.25"     OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="4" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementShipQuality3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialXP"     Value="10"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="6" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementShipQuality4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialXP"     Value="14"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialHPBonus"     Value="0.20"     OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="10" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- INFORMATION -->
+  <!-- ########################################################################################################################## -->
+  <!-- ###############################   SYSTEM BUILDING INFORMATION ACTUELLEMENT NON FONCTIONNELS  ################################-->
+  <!-- ########################################################################################################################## -->
+  <SimulationObjectDescriptor Name="SystemBuildingInformation1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="3" OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="1" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="SystemBuildingInformation2" Type="StarSystemImprovement"> <!-- TODO : cloaking // OR // change effects if no more cloaking-->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FleetSpying" Value="1"  OperationType="Addition"      Path="../ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="2" OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="1" 		OperationType="Soustraction"  Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="SystemBuildingInformation3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="0.20" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="SystemBuildingInformation3Sophon" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="0.25" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="0.20" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="SystemBuildingInformation4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="0.25" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="0.10" OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- SPECIAL -->
+  <SimulationObjectDescriptor Name="SystemBuildingSpecial1" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="6"       OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="6"       OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="6"       OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="6"       OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="2" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="SystemBuildingSpecial2" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="1"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="1"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="1"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <!--
+  <SimulationObjectDescriptor Name="SystemBuildingSpecial3" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="SystemBuildingSpecial4" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.10"       OperationType="Percent" Path="../ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.10"       OperationType="Percent" Path="../ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="0.10"       OperationType="Percent" Path="../ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.10"       OperationType="Percent" Path="../ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="6" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+  -->
+  
+  <SimulationObjectDescriptor Name="SystemBuildingSpecial5" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="2"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="2"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="2"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="2"       OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="7" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <SimulationObjectPropertyDescriptors/>
+  </SimulationObjectDescriptor>
+
+  
+  
+  <SimulationObjectDescriptor Name="StarSystemImprovementBuildingVictory" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"   Value="2" OperationType="Addition" Path="../ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="20" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="WonderScore"   Value="1" 		OperationType="Addition" Path="../ClassEmpire" TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+  
+
+  <SimulationObjectDescriptor Name="StarSystemImprovementUniqueTerran" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DepositSize"   Value="1" OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,ResourceDepositStrategic" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ResourceFIDSBonusMultiplier"   Value="2" OperationType="Multiplication" Path="../ClassStarSystem/ClassPlanet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="StarSystemImprovementUniqueResistance" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : Enemies can't access system information (no access to system view) -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InvisibleForEnnemies"  Value="1"     OperationType="Addition" Path="../ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="30"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="StarSystemImprovementUniqueHissho" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- Add 1 XP each turn to ships that are in hangar or orbiting this star system -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="IdleShipXPPerTurn"  Value="1"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AffinityHisshoShipCostBonus" Value="-0.1"     OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="AffinityHisshoShipCostBonusApplied"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Addition"
+                                                          Left="$(AffinityHisshoShipCostBonus)"
+                                                          Right="-1"
+                                                          Path="../ClassStarSystem" BindOnSource="false" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus"  Value="$(AffinityHisshoShipCostBonusApplied)"     OperationType="Addition" Path="../ClassStarSystem" BindOnSource="false" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="StarSystemImprovementUniqueSower" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTerran"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeOcean"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="1"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArid"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeBarren"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHydrogen"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="2"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeGasHelium"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"  Value="3"     OperationType="Addition" Path="../ClassStarSystem/ClassPlanet,PlanetTypeArctic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="StarSystemImprovementUniqueHoratio" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"  Value="20"     OperationType="Addition" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="3" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="StarSystemImprovementUniqueAmoeba" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor   TargetProperty="TradeRoutesDustBonus"
+                                                          OperationType="Percent"
+                                                          BinaryOperationType="Multiplication"
+                                                          Left="0.1"
+                                                          Right="$(CooperationAgreementCount)"
+                                                          Path="../ClassStarSystem" BindOnSource="false"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor   TargetProperty="Approval"
+                                                          OperationType="Addition"
+                                                          BinaryOperationType="Multiplication"
+                                                          Left="10"
+                                                          Right="$(CooperationAgreementCount)"
+                                                          Path="../ClassStarSystem" BindOnSource="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="StarSystemImprovementUniqueSophon" Type="StarSystemImprovement">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"     Value="0.05"     OperationType="Percent" Path="./StarSystemApprovalStatusHappy"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"     Value="0.2"      OperationType="Percent" Path="./StarSystemApprovalStatusEcstatic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"     Value="0.02"      OperationType="Percent" Path="././EmpireApprovalStatusFervent"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep"   Value="5" 		OperationType="Soustraction" Path="ClassStarSystemImprovement"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+</Datatable>

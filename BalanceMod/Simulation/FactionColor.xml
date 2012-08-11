@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Color Name="Red" Red="0.803" Green="0.043" Blue="0.043"/>
+  <Color Name="Green" Red="0.556" Green="0.8" Blue="0.082"/>
+  <Color Name="Blue" Red="0.301" Green="0.4" Blue="1.0"/>
+  <Color Name="Orange" Red="1.0" Green="0.529" Blue="0.180"/>
+  <Color Name="Cyan" Red="0.149" Green="0.941" Blue="0.819"/>
+  <Color Name="Magenta" Red="0.870" Green="0.509" Blue="0.95"/>
+  <Color Name="Yellow" Red="0.976" Green="0.862" Blue="0.239"/>
+  <Color Name="Kaki" Red="0.0" Green="0.772" Blue="0.145"/>
+  
+  <!-- last one is reserved for pirates -->
+  <Color Name="Pirate" Red="0.219" Green="0.219" Blue="0.219"/>
+
+</Datatable>

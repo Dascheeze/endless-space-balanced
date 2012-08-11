@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BattleSequence Name="Default">
+    <LockDuration>1.0</LockDuration>
+    
+    <BattlePhase Name="BattlePhase.Arrival" Duration="20">
+      <Gui>
+        <Title>%BattlePhaseFleetArrivalTitle</Title>
+      </Gui>
+      <Simulation>
+        <Filters>BattlePhaseArrival</Filters>
+      </Simulation>
+      <Realization DefaultStack="Arrival">
+        <RealizationStack Name="Arrival" Time="0" />
+      </Realization>
+    </BattlePhase>
+    
+    
+    
+    <BattlePhase Name="BattlePhase.Combat.LongRange" Duration="27.5">
+      <Gui>
+        <Title>%BattlePhaseFleetLongRangeTitle</Title>
+        <Description>%BattlePhaseFleetLongRangeDescription</Description>
+      </Gui>
+      <Simulation>
+        <Filters>BattlePhaseCombat</Filters>
+        <Modifiers>BattlePhaseModifierLongRange</Modifiers>
+        <NumberOfRounds>4</NumberOfRounds>
+      </Simulation>
+      <Realization DefaultStack="Deco.LongRange">
+        <RealizationStack Name="Info.LongRange" Time="0" />
+      </Realization>
+    </BattlePhase>
+    
+    
+    
+    <BattlePhase Name="BattlePhase.Combat.MediumRange" Duration="27.5">
+      <Gui>
+        <Title>%BattlePhaseFleetMediumRangeTitle</Title>
+        <Description>%BattlePhaseFleetMediumRangeDescription</Description>
+      </Gui>
+      <Simulation>
+        <Filters>BattlePhaseCombat</Filters>
+        <Modifiers>BattlePhaseModifierMediumRange</Modifiers>
+        <NumberOfRounds>4</NumberOfRounds>
+      </Simulation>
+      <Realization DefaultStack="Deco.MediumRange">
+        <RealizationStack Name="Info.MediumRange" Time="0" />
+      </Realization>
+    </BattlePhase>
+    
+    
+    
+    <BattlePhase Name="BattlePhase.Combat.ShortRange" Duration="27.5">
+      <Gui>
+        <Title>%BattlePhaseFleetShortRangeTitle</Title>
+        <Description>%BattlePhaseFleetShortRangeDescription</Description>
+      </Gui>
+      <Simulation>
+        <Filters>BattlePhaseCombat</Filters>
+        <Modifiers>BattlePhaseModifierShortRange</Modifiers>
+        <NumberOfRounds>4</NumberOfRounds>
+      </Simulation>
+      <Realization DefaultStack="Deco.ShortRange">
+        <RealizationStack Name="Info.ShortRange" Time="0" />
+      </Realization>
+    </BattlePhase>
+    
+    
+    
+    <BattlePhase Name="BattlePhase.Report" Duration="10">
+      <Gui>
+        <Title>%BattlePhaseReportTitle</Title>
+      </Gui>
+      <Simulation>
+        <Filters>BattlePhaseReport</Filters>
+      </Simulation>
+      <Realization DefaultStack="Deco.Report"/>
+    </BattlePhase>
+    
+  </BattleSequence>
+</Datatable>

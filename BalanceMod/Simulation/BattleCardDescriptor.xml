@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--
+  <SimulationObjectDescriptor Name="BattleTechAction2" Type="BattleTechAction2">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="5"     OperationType="Addition" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="5"     OperationType="Addition" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  -->
+
+
+  <!-- ##### DEFENSE ACTIONS ##### -->
+  <!-- Camouflage -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor1" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.40"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="NumberPerSalve"       Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor2" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="NumberPerSalve"       Value="0.20"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Energy Absorption -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor3" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.40"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor4" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.20"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <!-- Magnetic Field -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor5" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.40"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor6" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.20"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.20"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <!-- Ultimate Defense -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor7" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.25"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.25"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.25"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor8" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.15"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.15"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.15"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Illusion -->
+  <!-- No need for descriptors ?
+  <SimulationObjectDescriptor Name="BattleCardDescriptor9" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor10" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  -->
+
+
+
+
+  <!-- ##### OFFENSE ACTIONS ##### -->
+  <!-- Beam Surge -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor11" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="CriticChance" Value="0.30"              OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor12" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="CriticChance" Value="0.20"              OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Weapon Overclock -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor13" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : best weapon mod instead of kinetic -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.40"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.40"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor14" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TODO : best weapon mod instead of kinetic -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.20"      OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Target Locked -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor15" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.20"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.20"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor16" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- DustWarheads -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor17" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="CriticChance" Value="0.25"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="CriticChance" Value="0.25"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor18" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="CriticChance" Value="0.15"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="CriticChance" Value="0.15"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Gravity Well -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor19" Type="BattleCardDescriptor"><!-- Self -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.15"       OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.15"       OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor20" Type="BattleCardDescriptor"><!-- Other -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.15"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.15"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor21" Type="BattleCardDescriptorCounter"><!-- Self -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.10"       OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.10"       OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor22" Type="BattleCardDescriptorCounter"><!-- Other -->
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- ##### ENGINEERING ##### -->
+  <!-- Dust Barrier -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor25" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- +X% of MaxHP added to armor -->
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Armor"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication" Right="0.25" Left="$(MaxHealth)"
+                                                        Path="ClassFleet/ClassShip"
+                                                        BindOnSource="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor26" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- +X% of MaxHP added to armor -->
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Armor"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication" Right="0.15" Left="$(MaxHealth)"
+                                                        Path="ClassFleet/ClassShip"
+                                                        BindOnSource="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Nano-Repair Systems -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor23" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- +X% (of MaxHP) regen on player Fleet -->
+      <!-- This is now done in the nano repair directly
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="BattleHealing"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication" Left="$(MaxHealth)" Right="0.20"
+                                                        Path="ClassFleet/ClassShip"
+                                                        BindOnSource="false"/>-->
+      
+      <!-- Bind on Source = False : Takes MaxHealth from ClassShip, not from ClassFleet (where the descriptor is applied) -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor24" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- +X% (of MaxHP) regen on player Fleet -->
+      <!-- This is now done in the nano repair directly
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="BattleHealing"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication" Right="0.10" Left="$(MaxHealth)"
+                                                        Path="ClassFleet/ClassShip"
+                                                        BindOnSource="false"/>-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.10"       OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.10"       OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  
+  
+  <!-- Emergency Shelter : no need for descriptors here
+  -->
+  
+  
+
+  <!-- Barrier -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor27" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Armor" Value="50"                OperationType="Addition" Path="ClassFleet/ClassShip"/>
+      <!-- +X% of MaxHP added to armor -->
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Armor"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Multiplication" Right="0.10" Left="$(MaxHealth)"
+                                                        Path="ClassFleet/ClassShip"
+                                                        BindOnSource="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor28" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Armor" Value="100"                OperationType="Addition" Path="ClassFleet/ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  
+  
+  
+
+  <!-- ##### SABOTAGE ##### -->
+  <!-- EMP -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor31" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.20"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.20"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.20"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.20"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor32" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.15"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.15"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.15"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.15"       OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Stolen Technology -->
+  <!--
+  <SimulationObjectDescriptor Name="BattleCardDescriptor51" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor33" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.20"    OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor52" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.10"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.10"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor34" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.10"    OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  -->
+  
+  <!-- Armor Weak Point -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor35" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor36" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Weapon Disruption -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor37" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.25"            OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.25"            OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor38" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="-0.15"            OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="-0.15"            OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Short Circuit -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor39" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="NumberPerSalve" Value="-0.40"    OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"     Value="0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor40" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="NumberPerSalve" Value="-0.10"    OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"     Value="-0.20"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- ##### TACTICS ##### -->
+  <!-- Adaptative Strategy -->
+  <!-- Special descriptors are set in the BattleCards.xml for this one (targeting *best* elements in a category) -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor41" Type="BattleCardDescriptor"><!-- Self -->
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor42" Type="BattleCardDescriptor"><!-- Other -->
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor43" Type="BattleCardDescriptorCounter"><!-- Self -->
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor44" Type="BattleCardDescriptorCounter"><!-- Other -->
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Retreat -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor45" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TO DO -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor46" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TO DO -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Offensive Retreat -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor47" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TO DO -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor48" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TO DO -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- PowerConvergence -->
+  <SimulationObjectDescriptor Name="BattleCardDescriptor49" Type="BattleCardDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TO DO -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="BattleCardDescriptor50" Type="BattleCardDescriptorCounter">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- TO DO -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  
+  
+</Datatable>

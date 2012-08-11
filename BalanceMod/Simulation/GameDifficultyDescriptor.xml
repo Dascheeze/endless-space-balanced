@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- **************************************************** HUMAN DIFFICULTY FACTORS ********************************************************** -->
+
+  <!-- *********************************************** -->
+  <!--  DIFFICULTY 1 : EASY 2 (-20% global difficulty) -->
+  <!-- *********************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyEasy2Human" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="4" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Industry cost
+  <SimulationObjectDescriptor Name="CostDifficultyEasy2Human" Type="CostDifficultyFactor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.9" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+   -->
+  <!-- Ship cost
+  <SimulationObjectDescriptor Name="BuyoutDifficultyEasy2Human" Type="BuyoutDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.9" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+   -->
+  <!-- Science(Techno) cost
+  <SimulationObjectDescriptor Name="AAAAAAAAAAAAAEasy2Human" Type="AAAAAAAAAAAAAFactor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus" Value="0.9" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  -->
+  <!-- Weapon Damage
+  <SimulationObjectDescriptor Name="WeaponDamageDifficultyEasy2Human" Type="WeaponDamageDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  -->
+  <!-- Defense efficiency
+  <SimulationObjectDescriptor Name="DefenseEfficiencyDifficultyEasy2Human" Type="DefenseEfficiencyDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.1" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn" Value="0.1" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption" Value="0.1" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  -->
+
+  <!-- *************************************** -->
+  <!--  DIFFICULTY 2 : EASY 1 (no bonus/malus) -->
+  <!-- *************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyEasy1Human" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1.1" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="4.5" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  
+  
+  <!-- *********************************************** -->
+  <!--  DIFFICULTY 3 : NORMAL (+20% global difficulty) -->
+  <!-- *********************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyNormalHuman" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1.2" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="5" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+  <!-- *********************************************** -->
+  <!--  DIFFICULTY 4 : HARD 1 (+40% global difficulty) -->
+  <!-- *********************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard1Human" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1.3" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="5.5" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+  <!-- *********************************************** -->
+  <!--  DIFFICULTY 5 : HARD 2 (+60% global difficulty) -->
+  <!-- *********************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard2Human" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1.4" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="6" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+  <!-- *********************************************** -->
+  <!--  DIFFICULTY 6 : HARD 3 (+80% global difficulty) -->
+  <!-- *********************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard3Human" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1.5" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="6.5" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+  <!-- *********************************************** -->
+  <!--  DIFFICULTY 7 : HARD 4 (+99% global difficulty) -->
+  <!-- *********************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard4Human" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1.8" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="7" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+  
+  
+  
+  
+
+
+
+  <!-- ************************************************************************************************************************************* -->
+  <!-- **************************************************** AI DIFFICULTY FACTORS ********************************************************** -->
+  <!-- ************************************************************************************************************************************* -->
+
+  <!-- ************************************************** -->
+  <!--  AI DIFFICULTY 1 : EASY 2 (-25% global difficulty) -->
+  <!-- ************************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyEasy2AI" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="1" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="3" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"  Value="15" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- ****************************************** -->
+  <!--  AI DIFFICULTY 2 : EASY 1 (no bonus/malus) -->
+  <!-- ****************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyEasy1AI" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="0.9" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="2.6" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"  Value="20" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <!-- Upkeep ship -->
+  <SimulationObjectDescriptor Name="UpkeepDifficultyEasy1AI" Type="UpkeepDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.15" OperationType="Percent" Path="ClassEmpire/ClassStarSystemImprovement"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.10" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.10" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Industry cost -->
+  <SimulationObjectDescriptor Name="CostDifficultyEasy1AI" Type="CostDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.9" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.9" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ship cost-->
+  <SimulationObjectDescriptor Name="BuyoutDifficultyEasy1AI" Type="BuyoutDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.15"  OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="0.9" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Weapon Damage -->
+  <SimulationObjectDescriptor Name="WeaponDamageDifficultyEasy1AI" Type="WeaponDamageDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Defense efficiency -->
+  <SimulationObjectDescriptor Name="DefenseEfficiencyDifficultyEasy1AI" Type="DefenseEfficiencyDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- FIDS efficiency -->
+  <SimulationObjectDescriptor Name="FIDSDifficultyEasy1AI" Type="FIDSDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.05" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.05" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.05" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- *************************************************** -->
+  <!--  AI DIFFICULTY 3 - NORMAL (+20% global difficulty)  -->
+  <!-- *************************************************** -->
+
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyNormalAI" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="0.8" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="2.2" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"  Value="25" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Upkeep ship -->
+  <SimulationObjectDescriptor Name="UpkeepDifficultyNormalAI" Type="UpkeepDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystemImprovement"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.20" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.20" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Industry cost -->
+  <SimulationObjectDescriptor Name="CostDifficultyNormalAI" Type="CostDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.8" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.8" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus" Value="0.95" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ship cost-->
+  <SimulationObjectDescriptor Name="BuyoutDifficultyNormalAI" Type="BuyoutDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.30"  OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="0.8" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Weapon Damage -->
+  <SimulationObjectDescriptor Name="WeaponDamageDifficultyNormalAI" Type="WeaponDamageDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.20" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.20" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.20" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Defense efficiency -->
+  <SimulationObjectDescriptor Name="DefenseEfficiencyDifficultyNormalAI" Type="DefenseEfficiencyDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower"        Value="0.10" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- FIDS efficiency -->
+  <SimulationObjectDescriptor Name="FIDSDifficultyNormalAI" Type="FIDSDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- *************************************************** -->
+  <!--  AI DIFFICULTY 4 - HARD 1 (+40% global difficulty)  -->
+  <!-- *************************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard1AI" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="0.7" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="1.8" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"  Value="30" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Upkeep ship -->
+  <SimulationObjectDescriptor Name="UpkeepDifficultyHard1AI" Type="UpkeepDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.45" OperationType="Percent" Path="ClassEmpire/ClassStarSystemImprovement"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.30" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.30" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Industry cost -->
+  <SimulationObjectDescriptor Name="CostDifficultyHard1AI" Type="CostDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.7" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.7" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus" Value="0.9" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ship cost-->
+  <SimulationObjectDescriptor Name="BuyoutDifficultyHard1AI" Type="BuyoutDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.45"  OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="0.7" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Weapon Damage -->
+  <SimulationObjectDescriptor Name="WeaponDamageDifficultyHard1AI" Type="WeaponDamageDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.40" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.40" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.40" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Defense efficiency -->
+  <SimulationObjectDescriptor Name="DefenseEfficiencyDifficultyHard1AI" Type="DefenseEfficiencyDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.20" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.20" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.20" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower"        Value="0.20" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- FIDS efficiency -->
+  <SimulationObjectDescriptor Name="FIDSDifficultyHard1AI" Type="FIDSDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.20" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.20" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.15" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- *************************************************** -->
+  <!--  AI DIFFICULTY 5 - HARD 2 (+60% global difficulty)  -->
+  <!-- *************************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard2AI" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="0.6" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="1.4" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"  Value="35" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Upkeep ship -->
+  <SimulationObjectDescriptor Name="UpkeepDifficultyHard2AI" Type="UpkeepDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.60" OperationType="Percent" Path="ClassEmpire/ClassStarSystemImprovement"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.40" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.40" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <!-- Industry cost -->
+  <SimulationObjectDescriptor Name="CostDifficultyHard2AI" Type="CostDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.6" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.6" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus" Value="0.85" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ship cost-->
+  <SimulationObjectDescriptor Name="BuyoutDifficultyHard2AI" Type="BuyoutDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.60"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="0.6" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <!-- Weapon Damage -->
+  <SimulationObjectDescriptor Name="WeaponDamageDifficultyHard2AI" Type="WeaponDamageDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.60" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.60" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.60" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Defense efficiency -->
+  <SimulationObjectDescriptor Name="DefenseEfficiencyDifficultyHard2AI" Type="DefenseEfficiencyDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.35" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.35" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.35" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower"        Value="0.35" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- FIDS efficiency -->
+  <SimulationObjectDescriptor Name="FIDSDifficultyHard2AI" Type="FIDSDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.20" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- *************************************************** -->
+  <!--  AI DIFFICULTY 6 - HARD 3 (+80% global difficulty)  -->
+  <!-- *************************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard3AI" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="0.5" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="1" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"  Value="40" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Upkeep ship -->
+  <SimulationObjectDescriptor Name="UpkeepDifficultyHard3AI" Type="UpkeepDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.80" OperationType="Percent" Path="ClassEmpire/ClassStarSystemImprovement"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.50" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.50" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <!-- Industry cost -->
+  <SimulationObjectDescriptor Name="CostDifficultyHard3AI" Type="CostDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.5" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.5" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus" Value="0.8" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ship cost-->
+  <SimulationObjectDescriptor Name="BuyoutDifficultyHard3AI" Type="BuyoutDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.80"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="0.4" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Weapon Damage -->
+  <SimulationObjectDescriptor Name="WeaponDamageDifficultyHard3AI" Type="WeaponDamageDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.80" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.80" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.80" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Defense efficiency -->
+  <SimulationObjectDescriptor Name="DefenseEfficiencyDifficultyHard3AI" Type="DefenseEfficiencyDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.50" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.50" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.50" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower"        Value="0.50" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- FIDS efficiency -->
+  <SimulationObjectDescriptor Name="FIDSDifficultyHard3AI" Type="FIDSDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.40" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.40" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.25" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+
+
+
+  <!-- *************************************************** -->
+  <!--  AI DIFFICULTY 7 - HARD 4 (+99% global difficulty)  -->
+  <!-- *************************************************** -->
+
+  <!-- Overpopulation approval malus -->
+  <SimulationObjectDescriptor Name="OverPopApprovalDifficultyHard4AI" Type="OverPopApprovalDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulation"  Value="3" OperationType="Soustraction" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverPopulationApproval"  Value="0.4" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount"  Value="2" OperationType="Soustraction" Path="ClassEmpire" TooltipVisibility="false"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval"  Value="0.6" OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"  Value="50" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Upkeep ship -->
+  <SimulationObjectDescriptor Name="UpkeepDifficultyHard4AI" Type="UpkeepDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.90" OperationType="Percent" Path="ClassEmpire/ClassStarSystemImprovement"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.60" OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="-0.60" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Industry cost -->
+  <SimulationObjectDescriptor Name="CostDifficultyHard4AI" Type="CostDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="0.4" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipCostBonus" Value="0.4" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TechnoCostBonus" Value="0.75" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ship cost-->
+  <SimulationObjectDescriptor Name="BuyoutDifficultyHard4AI" Type="BuyoutDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"    Value="-0.90"  OperationType="Percent" Path="../ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingCostBonus" Value="0.2" OperationType="Multiplication" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Weapon Damage -->
+  <SimulationObjectDescriptor Name="WeaponDamageDifficultyHard4AI" Type="WeaponDamageDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="1.00" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="1.00" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="1.00" OperationType="Percent" Path="ClassEmpire//ClassFleet//WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Defense efficiency -->
+  <SimulationObjectDescriptor Name="DefenseEfficiencyDifficultyHard4AI" Type="DefenseEfficiencyDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.65" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.65" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.65" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower"        Value="0.65" OperationType="Percent" Path="ClassEmpire//ClassFleet//DefenseModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- FIDS efficiency -->
+  <SimulationObjectDescriptor Name="FIDSDifficultyHard4AI" Type="FIDSDifficultyFactor" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"     Value="0.50" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.50" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"  Value="0.30" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+</Datatable>

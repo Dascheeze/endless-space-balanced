@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- DIPLOMACY & TRADE DOMAIN -->
+  <!-- 1st circle -->
+  <!-- nothing -->
+
+
+
+  <!-- Between 1st and 2nd circle -->
+  <!-- Soil Xenobiology -->
+  <Technology Name="TechT01" Cost="40" IsUnique="true" X="-1.5" Y="1.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood1" Access="Standard" />
+    <Unlockable Name="PlanetaryImprovementFood2" Access="Standard" />
+    <Gui>
+      <Title>%TechT01Title</Title>
+      <Description>%TechT01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT01Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Xenology -->
+  <Technology Name="TechT02" Cost="40" IsUnique="true" X="1.5" Y="1.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="LuxuryExploitation1" Access="Fake"/>
+    <Unlockable Name="PlanetLuxury1" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury2" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury3" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury4" Access="Hidden" />
+    <Unlockable Name="StarSystemImprovementMoney1" Access="Standard" />
+    <Gui>
+      <Title>%TechT02Title</Title>
+      <Description>%TechT02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT02Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- Between 2nd and 3rd circle -->
+  <!-- Particle Scanning -->
+  <Technology Name="TechT03" Cost="130" IsUnique="true" X="-2" Y="2.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT01</TechnologiesDependencies>
+    <Unlockable Name="PlanetaryImprovementMoney2" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation1" Access="Standard" />
+    <Gui>
+      <Title>%TechT03Title</Title>
+      <Description>%TechT03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT03Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Relativistic Economics -->
+  <Technology Name="TechT04" Cost="130" IsUnique="true" X="2" Y="2.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT02</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus1" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementTrade1" Access="Standard" />
+    <Gui>
+      <Title>%TechT04Title</Title>
+      <Description>%TechT04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT04Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT04EternalWar" Cost="130" IsUnique="true" X="2" Y="2.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT02</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus1Swarm" Access="Standard" />
+    <Gui>
+      <Title>%TechT04Title</Title>
+      <Description>%TechT04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT04Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- Between 3rd and 4th circle -->
+  <!-- Botanical Scanning -->
+  <Technology Name="TechT05" Cost="300" IsUnique="true" X="-2.5" Y="3.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT03</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood2" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementApproval1" Access="Standard" />
+    <Gui>
+      <Title>%TechT05Title</Title>
+      <Description>%TechT05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT05Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Improved Fleet Management -->
+  <Technology Name="TechT06" Cost="300" IsUnique="true" X="0" Y="3.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityResistance) and !$(AffinityHoratio) and !$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT03;TechT04;TechT04EternalWar</TechnologiesDependencies>
+    <Unlockable Name="MaxFleetSize1" Access="Standard" />
+    <Unlockable Name="HeroXPBonus1" Access="Standard" />
+    <Gui>
+      <Title>%TechT06Title</Title>
+      <Description>%TechT06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT06Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT06Resistance" Cost="300" IsUnique="true" X="0" Y="3" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityResistance)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT03;TechT04;TechT04EternalWar</TechnologiesDependencies>
+    <Unlockable Name="MaxFleetSize1" Access="Standard" />
+    <Unlockable Name="HeroXPBonus1Resistance" Access="Standard" />
+    <Gui>
+      <Title>%TechT06ResistanceTitle</Title>
+      <Description>%TechT06ResistanceDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT06ResistanceSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT06Sophon" Cost="300" IsUnique="true" X="0" Y="3" Category="DiplomacyTrade"><!-- LINK -->
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT03;TechT04;TechT04EternalWar</TechnologiesDependencies>
+    <Unlockable Name="MaxFleetSize1" Access="Standard" />
+    <Unlockable Name="HeroXPBonus1" Access="Standard" />
+    <Gui>
+      <Title>%TechT06Title</Title>
+      <Description>%TechT06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT06Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT06Horatio" Cost="300" IsUnique="true" X="0" Y="3" Category="DiplomacyTrade"><!-- LINK -->
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHoratio)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT03;TechT04;TechT04EternalWar</TechnologiesDependencies>
+    <Unlockable Name="MaxFleetSize1" Access="Standard" />
+    <Unlockable Name="HeroXPBonus1" Access="Standard" />
+    <Gui>
+      <Title>%TechT06Title</Title>
+      <Description>%TechT06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT06Small"/>
+    </Gui>
+  </Technology>
+  
+  <!-- Relativistic Market Exchanges -->
+  <Technology Name="TechT07" Cost="300" IsUnique="true" X="2.5" Y="3.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT04</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus2" Access="Standard" />
+    <Gui>
+      <Title>%TechT07Title</Title>
+      <Description>%TechT07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT07Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- Between 4th and 5th circle -->
+  <Technology Name="TechT21Resistance" Cost="680" IsUnique="true" X="0" Y="4.25" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityResistance)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT06Resistance</TechnologiesDependencies>
+    <Unlockable Name="HeroXPBonus2" Access="Standard" />
+    <Gui>
+      <Title>%TechT21ResistanceTitle</Title>
+      <Description>%TechT21ResistanceDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT21ResistanceSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Planetary Landscaping -->
+  <Technology Name="TechT08" Cost="680" IsUnique="true" X="-1" Y="4.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySower) and !$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT05</TechnologiesDependencies>
+    <Unlockable Name="PlanetaryImprovementFood3" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementFood3" Access="Standard" />
+    <Gui>
+      <Title>%TechT08Title</Title>
+      <Description>%TechT08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT08Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT08Sower" Cost="680" IsUnique="true" X="-1" Y="4.5" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySower)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT05</TechnologiesDependencies>
+    <Unlockable Name="PlanetaryImprovementFood3" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementFood3Sower" Access="Standard" />
+    <Gui>
+      <Title>%TechT08SowerTitle</Title>
+      <Description>%TechT08SowerDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT08SowerSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT08Swarm" Cost="680" IsUnique="true" X="-1" Y="4.5" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT05</TechnologiesDependencies>
+    <Unlockable Name="PlanetaryImprovementFood3" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementFood3Swarm" Access="Standard" />
+    <Gui>
+      <Title>%TechT08SwarmTitle</Title>
+      <Description>%TechT08SwarmDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT08SwarmSmall"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechT19Horatio" Cost="680" IsUnique="true" X="0" Y="4.25" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHoratio)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT06Horatio</TechnologiesDependencies>
+    <Unlockable Name="MaxHeroQuantity1" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation3" Access="Standard" />
+    <Gui>
+      <Title>%TechT19HoratioTitle</Title>
+      <Description>%TechT19HoratioDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT19HoratioSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechT22Sophon" Cost="680" IsUnique="true" X="0" Y="4.25" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon) and !$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT06Sophon</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus5" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation4" Access="Standard" />
+    <Gui>
+      <Title>%TechT22SophonTitle</Title>
+      <Description>%TechT22SophonDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT22SophonSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechT22SophonEternalWar" Cost="680" IsUnique="true" X="0" Y="4.25" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon) and $(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT06Sophon</TechnologiesDependencies>
+    <Unlockable Name="SystemBuildingInformation4" Access="Standard" />
+    <Gui>
+      <Title>%TechT22SophonTitle</Title>
+      <Description>%TechT22SophonDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT22SophonSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Xenominerology -->
+  <Technology Name="TechT09" Cost="680" IsUnique="true" X="1.1" Y="4.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT04EternalWar;TechT07</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementTrade2" Access="Standard" />
+    <Unlockable Name="LuxuryBoost2" Access="Standard" />
+    <Gui>
+      <Title>%TechT09Title</Title>
+      <Description>%TechT09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT09Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- Between 5th and 6th circle -->
+  <!-- Nanoscale Thermodynamics -->
+  <Technology Name="TechT10" Cost="1800" IsUnique="true" X="-2.5" Y="5.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT08;TechT08Sower;TechT08Swarm</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood4" Access="Standard" />
+    <Gui>
+      <Title>%TechT10Title</Title>
+      <Description>%TechT10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT10Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechT16Terran" Cost="1800" IsUnique="true" X="-1.25" Y="5.5" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT08</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood5" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementTrade4" Access="Standard" />
+    <Gui>
+      <Title>%TechT16TerranTitle</Title>
+      <Description>%TechT16TerranDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT16TerranSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT16Horatio" Cost="1800" IsUnique="true" X="-1.25" Y="5.5" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHoratio)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT08</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood5" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementTrade4" Access="Standard" />
+    <Gui>
+      <Title>%TechT16HoratioTitle</Title>
+      <Description>%TechT16HoratioDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT16HoratioSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Opimized Logistics -->
+  <Technology Name="TechT11" Cost="1800" IsUnique="true" X="0" Y="5.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySower)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT08;TechT08Swarm;TechT09</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney2" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementApproval2" Access="Standard" />
+    <Gui>
+      <Title>%TechT11Title</Title>
+      <Description>%TechT11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT11Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT11Sower" Cost="1800" IsUnique="true" X="0" Y="5.5" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySower)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT08Sower;TechT09</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney2" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementApproval2Sower" Access="Standard" />
+    <Gui>
+      <Title>%TechT11SowerTitle</Title>
+      <Description>%TechT11SowerDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT11SowerSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Quantum Communications -->
+  <Technology Name="TechT12" Cost="1800" IsUnique="true" X="2.5" Y="5.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT09</TechnologiesDependencies>
+    <Unlockable Name="MaxFleetSize2" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation2" Access="Standard" />
+    <Gui>
+      <Title>%TechT12Title</Title>
+      <Description>%TechT12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT12Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT12Swarm" Cost="1800" IsUnique="true" X="2.5" Y="5.5" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT09</TechnologiesDependencies>
+    <Unlockable Name="MaxFleetSize2Swarm" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation2" Access="Standard" />
+    <Gui>
+      <Title>%TechT12SwarmTitle</Title>
+      <Description>%TechT12SwarmDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT12SwarmSmall"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 7th circle -->
+  <!-- Inter-species Management Techniques -->
+  <Technology Name="TechT13" Cost="4000" IsUnique="true" X="-1.5" Y="7" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityResistance) and !$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT10;TechT16Terran;TechT16Horatio;TechT11;TechT11Sower</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementApproval3" Access="Standard" />
+    <Unlockable Name="DiplomacyBonus3" Access="Standard" />
+    <Gui>
+      <Title>%TechT13Title</Title>
+      <Description>%TechT13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT13Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT13Resistance" Cost="4000" IsUnique="true" X="-1.5" Y="7" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityResistance) and !$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT10;TechT11</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementApproval3" Access="Standard" />
+    <Unlockable Name="DiplomacyBonus3Resistance" Access="Standard" />
+    <Gui>
+      <Title>%TechT13ResistanceTitle</Title>
+      <Description>%TechT13ResistanceDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT13ResistanceSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT13EternalWar" Cost="4000" IsUnique="true" X="-1.5" Y="7" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT10;TechT16Terran;TechT16Horatio;TechT11;TechT11Sower</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementApproval3" Access="Standard" />
+    <Gui>
+      <Title>%TechT13Title</Title>
+      <Description>%TechT13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT13Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechT29Swarm" Cost="4000" IsUnique="true" X="0" Y="7" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT11</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney6" Access="Standard" />
+    <Unlockable Name="MaxFleetSize4" Access="Standard" />
+    <Gui>
+      <Title>%TechT29SwarmTitle</Title>
+      <Description>%TechT29SwarmDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT29SwarmSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT36Amoeba" Cost="4000" IsUnique="true" X="0" Y="7" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityAmoeba)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT11</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementUniqueAmoeba" Access="Standard" />
+    <Gui>
+      <Title>%TechT36AmoebaTitle</Title>
+      <Description>%TechT36AmoebaDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT36AmoebaSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Alien Negociation Theory -->
+  <Technology Name="TechT15" Cost="4000" IsUnique="true" X="1.5" Y="7" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT11;TechT11Sower;TechT12;TechT12Swarm</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney3" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementTrade3" Access="Standard" />
+    <Gui>
+      <Title>%TechT15Title</Title>
+      <Description>%TechT15Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT15Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 8th circle -->
+  <!-- Advanced Biologics -->
+  <Technology Name="TechT16" Cost="7500" IsUnique="true" X="-2.5" Y="8" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityTerran) and !$(AffinityHoratio) and (!$(AffinitySwarm) or $(TraitEconomy07Norm1))</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT13;TechT13Resistance;TechT13EternalWar</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood5" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementTrade4" Access="Standard" />
+    <Gui>
+      <Title>%TechT16Title</Title>
+      <Description>%TechT16Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT16Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT16Swarm" Cost="7500" IsUnique="true" X="-2.5" Y="8" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm) and !$(TraitEconomy07Norm1)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT13;TechT13EternalWar</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood5" Access="Standard" />
+    <Gui>
+      <Title>%TechT16Title</Title>
+      <Description>%TechT16Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT16Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Vocation-oriented Society -->
+  <Technology Name="TechT17" Cost="7500" IsUnique="true" X="-1" Y="8" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT13;TechT13Resistance;TechT13EternalWar;TechT36Amoeba</TechnologiesDependencies>
+    <Unlockable Name="PlanetaryImprovementMoney3" Access="Standard" />
+    <Gui>
+      <Title>%TechT17Title</Title>
+      <Description>%TechT17Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT17Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Advanced Scholastics -->
+  <Technology Name="TechT18" Cost="7500" IsUnique="true" X="1" Y="8" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityAmoeba)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT15</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney4" Access="Standard" />
+    <Gui>
+      <Title>%TechT18Title</Title>
+      <Description>%TechT18Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT18Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT18Amoeba" Cost="7500" IsUnique="true" X="1" Y="8" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityAmoeba)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT15;TechT36Amoeba</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney4Amoeba" Access="Standard" />
+    <Gui>
+      <Title>%TechT18AmoebaTitle</Title>
+      <Description>%TechT18AmoebaDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT18AmoebaSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Futuristic Game Theory -->
+  <Technology Name="TechT19" Cost="7500" IsUnique="true" X="2.5" Y="8" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHoratio) and !$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT15</TechnologiesDependencies>
+    <Unlockable Name="MaxHeroQuantity1" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation3" Access="Standard" />
+    <Gui>
+      <Title>%TechT19Title</Title>
+      <Description>%TechT19Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT19Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT19Sophon" Cost="7500" IsUnique="true" X="2.5" Y="8" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT15</TechnologiesDependencies>
+    <Unlockable Name="MaxHeroQuantity1" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation3Sophon" Access="Standard" />
+    <Gui>
+      <Title>%TechT19SophonTitle</Title>
+      <Description>%TechT19SophonDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT19SophonSmall"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 9th circle -->
+  <!-- High-consumption Society -->
+  <Technology Name="TechT20" Cost="14000" IsUnique="true" X="-2" Y="9" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT16;TechT16Swarm;TechT17</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementApproval4" Access="Standard" />
+    <Gui>
+      <Title>%TechT20Title</Title>
+      <Description>%TechT20Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT20Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechT32Amoeba" Cost="14000" IsUnique="true" X="-1" Y="9.25" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityAmoeba)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT17</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementTrade6" Access="Standard" />
+    <Unlockable Name="LuxuryBoost5" Access="Standard" />
+    <Gui>
+      <Title>%TechT32AmoebaTitle</Title>
+      <Description>%TechT32AmoebaDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT32AmoebaSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Maximized Resource Exploitation -->
+  <Technology Name="TechT21" Cost="14000" IsUnique="true" X="0" Y="9" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityResistance)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT17;TechT18;TechT18Amoeba</TechnologiesDependencies>
+    <Unlockable Name="HeroXPBonus2" Access="Standard" />
+    <Gui>
+      <Title>%TechT21Title</Title>
+      <Description>%TechT21Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT21Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechT31Amoeba" Cost="14000" IsUnique="true" X="1" Y="9.25" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityAmoeba) and !$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT18Amoeba</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus7Amoeba" Access="Standard" />
+    <Gui>
+      <Title>%TechT31AmoebaTitle</Title>
+      <Description>%TechT31AmoebaDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT31AmoebaSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Neural Information Society -->
+  <Technology Name="TechT22" Cost="14000" IsUnique="true" X="2" Y="9" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySophon) and !$(AffinityAmoeba) and !$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT18;TechT19</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus5" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation4" Access="Standard" />
+    <Gui>
+      <Title>%TechT22Title</Title>
+      <Description>%TechT22Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT22Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT22Amoeba" Cost="14000" IsUnique="true" X="2" Y="9" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityAmoeba)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT18Amoeba;TechT19</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus5Amoeba" Access="Standard" />
+    <Unlockable Name="SystemBuildingInformation4" Access="Standard" />
+    <Gui>
+      <Title>%TechT22AmoebaTitle</Title>
+      <Description>%TechT22AmoebaDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT22AmoebaSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT22Swarm" Cost="14000" IsUnique="true" X="2" Y="9" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT18;TechT19</TechnologiesDependencies>
+    <Unlockable Name="SystemBuildingInformation4" Access="Standard" />
+    <Gui>
+      <Title>%TechT22Title</Title>
+      <Description>%TechT22Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT22Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 10th circle -->
+  <!-- Accelerated Evolution -->
+  <Technology Name="TechT23" Cost="25000" IsUnique="true" X="-2.5" Y="10.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT20</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementFood6" Access="Standard" />
+    <Gui>
+      <Title>%TechT23Title</Title>
+      <Description>%TechT23Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT23Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Perfect Forecasting -->
+  <Technology Name="TechT24" Cost="25000" IsUnique="true" X="-1" Y="10.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHoratio) and (!$(AffinitySwarm) or $(TraitEconomy07Norm1))</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT20;TechT21</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementTrade5" Access="Standard" />
+    <Unlockable Name="MaxHeroQuantity2" Access="Standard" />
+    <Gui>
+      <Title>%TechT24Title</Title>
+      <Description>%TechT24Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT24Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT24Horatio" Cost="25000" IsUnique="true" X="-1" Y="10.5" Category="DiplomacyTrade" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHoratio)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT20;TechT21</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementTrade5" Access="Standard" />
+    <Unlockable Name="MaxHeroQuantity2Horatio" Access="Standard" />
+    <Gui>
+      <Title>%TechT24HoratioTitle</Title>
+      <Description>%TechT24HoratioDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT24HoratioSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT24Swarm" Cost="25000" IsUnique="true" X="-1" Y="10.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm) and !$(TraitEconomy07Norm1)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT20;TechT21</TechnologiesDependencies>
+    <Unlockable Name="MaxHeroQuantity2" Access="Standard" />
+    <Gui>
+      <Title>%TechT24Title</Title>
+      <Description>%TechT24Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT24Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Long-term Xeno-investing -->
+  <Technology Name="TechT25" Cost="25000" IsUnique="true" X="1" Y="10.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT21;TechT22;TechT22Amoeba;TechT22Swarm</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney5" Access="Standard" />
+    <Gui>
+      <Title>%TechT25Title</Title>
+      <Description>%TechT25Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT25Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Infinite Variable Computing -->
+  <Technology Name="TechT26" Cost="25000" IsUnique="true" X="2.5" Y="10.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT22;TechT22Amoeba;TechT22Swarm;TechT19Sophon</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus6" Access="Standard" />
+    <Unlockable Name="MaxFleetSize3" Access="Standard" />
+    <Gui>
+      <Title>%TechT26Title</Title>
+      <Description>%TechT26Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT26Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechT26EternalWar" Cost="25000" IsUnique="true" X="2.5" Y="10.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>$(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT22;TechT22Amoeba;TechT22Swarm;TechT19Sophon</TechnologiesDependencies>
+    <Unlockable Name="MaxFleetSize3" Access="Standard" />
+    <Gui>
+      <Title>%TechT26Title</Title>
+      <Description>%TechT26Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT26Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 11th circle -->
+  <!-- Permanent Advantage -->
+  <Technology Name="TechT27" Cost="36000" IsUnique="true" X="-2" Y="11.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT23</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementApproval5" Access="Standard" />
+    <Gui>
+      <Title>%TechT27Title</Title>
+      <Description>%TechT27Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT27Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Galactic Trade Center -->
+  <Technology Name="TechT29" Cost="36000" IsUnique="true" X="-0.5" Y="11.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT24;TechT24Horatio</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementMoney6" Access="Standard" />
+    <Unlockable Name="MaxFleetSize4" Access="Standard" />
+    <Gui>
+      <Title>%TechT29Title</Title>
+      <Description>%TechT29Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT29Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- ??? -->
+  <Technology Name="TechT32" Cost="36000" IsUnique="true" X="0.5" Y="11.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityAmoeba)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT25</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementTrade6" Access="Standard" />
+    <Unlockable Name="LuxuryBoost5" Access="Standard" />
+    <Gui>
+      <Title>%TechT32Title</Title>
+      <Description>%TechT32Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT32Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Perfect Negociations -->
+  <Technology Name="TechT31" Cost="36000" IsUnique="true" X="2" Y="11.5" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityAmoeba) or $(DiplomaticStatusEternalWar)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT26;TechT26EternalWar</TechnologiesDependencies>
+    <Unlockable Name="DiplomacyBonus7" Access="Standard" />
+    <Gui>
+      <Title>%TechT31Title</Title>
+      <Description>%TechT31Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT31Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- Pan-galactic Economics -->
+  <Technology Name="TechT33" Cost="60000" IsUnique="true" X="0" Y="12" Category="DiplomacyTrade">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechT29;TechT32</TechnologiesDependencies>
+    <Unlockable Name="ScienceVictoryUnlock2" Access="Standard" />
+    <Gui>
+      <Title>%TechT33Title</Title>
+      <Description>%TechT33Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyT33Small"/>
+    </Gui>
+  </Technology>
+
+</Datatable>

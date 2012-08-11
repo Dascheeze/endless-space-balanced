@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <SimulationObjectDescriptor Name="ClassEmpire" Type="Class">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="Food"       Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Industry"       Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Money"       Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="true" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="Science"     Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Approval"    Value="0"  IsCompound="false" IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="Population"  Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="Upkeep"      Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+
+      <SimulationObjectPropertyDescriptor Name="FoodSurplus" Value="0"  IsCompound="true"  IsPermanent="false" IsOutput="true"/>
+      <SimulationObjectPropertyDescriptor Name="Production"  Value="0"  IsCompound="true" IsPermanent="false" IsOutput="false"/>      
+      <SimulationObjectPropertyDescriptor Name="MoneyNet"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="ScienceNet"  Value="0"  IsCompound="false" IsPermanent="false" IsOutput="true" MinValue="Negative"/>
+      
+
+      <SimulationObjectPropertyDescriptor Name="EmpireApprovalOverall" Value="0" IsCompound="true" MinValue="Negative"/>
+
+      <SimulationObjectPropertyDescriptor Name="NumberOfAllies" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="NumberOfEmpiresAtPeace" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="NumberOfFriends"       Value="0"/> <!-- = NumberOfAllies + NumberOfEmpiresAtPeace -->
+      <SimulationObjectPropertyDescriptor Name="NumberOfWars" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="InAlliance" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="CooperationAgreementCount" Value="0"/>
+
+      <SimulationObjectPropertyDescriptor Name="MoneyGatheredByLeech" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="ScienceGatheredByLeech" Value="0"/>
+      
+      <!-- ColonizedStarSystems -->
+      <SimulationObjectPropertyDescriptor Name="ColonizedStarSystems"      Value="0"  IsCompound="true"/>
+      
+      <!-- Empire OverColonization Approval malus properties-->
+      <SimulationObjectPropertyDescriptor Name="OverColonizationStarSystemCount" Value="0"/>
+
+      <SimulationObjectPropertyDescriptor Name="FleetWormholeUnlock" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="FleetWormhole2Unlock" Value="0"/>
+
+      <SimulationObjectPropertyDescriptor Name="ShipInitialXP" Value="0"/>
+      <!-- The ShipCostBonus modify the cost of ships. This bonus is a percent to add or remove from the base cost. So ShipCostBonus=-0.15 means remove 15% from ship cost -->
+      <SimulationObjectPropertyDescriptor Name="ShipCostBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="UnarmedShipCostBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="WeaponModuleCostBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="DefenseModuleCostBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="SupportModuleCostBonus" Value="1" />
+      
+      <!-- Same as ShipCostBonus but for other constructions (system improvements, planet infrastructures) -->
+      <SimulationObjectPropertyDescriptor Name="ImprovementCostBonus" Value="1" />
+
+      <SimulationObjectPropertyDescriptor Name="TechnoCostBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="ScienceVictoryTechnoCostBonus" Value="1" />
+
+      <SimulationObjectPropertyDescriptor Name="DustTermBonus" Value="0" MinValue="Negative"/>
+      
+      <!-- Science bonus to apply for each command point worth of destroyed ship after an encounter -->
+      <SimulationObjectPropertyDescriptor Name="ScienceBonusPerCPAfterEncounter" Value="0"/>
+      
+      <!-- Dust bonus to apply for each command point worth of destroyed ship after an encounter victory -->
+      <SimulationObjectPropertyDescriptor Name="DustBonusPerCPAfterEncounter" Value="0"/>
+      
+      <!-- Allow the gameplay to get the "minimal" fleet speed of the whole empire. -->
+      <SimulationObjectPropertyDescriptor Name="Speed" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="FreeSpeed" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="MaxCommandPoint" Value="5"/>
+      <SimulationObjectPropertyDescriptor Name="CommandPoint" IsCompound="true"/>
+      <SimulationObjectPropertyDescriptor Name="WonderScore" Value="0"/>
+
+      <!-- Values computed by Scoring module -->
+      <SimulationObjectPropertyDescriptor Name="PercentageOfSystemsColonized" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="PercentageOfGalaxyColonized" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="ScienceVictoryTechnologyProgress" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="WonderVictoryScore" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="EconomicVictoryScore" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="DiplomaticVictoryScore" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="HomeSystemOwnedPercent" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="NumberOfSystem" Value="0"/>
+      
+      <!-- Heroes related -->
+      <SimulationObjectPropertyDescriptor Name="MaxHeroes" Value="3"/>
+      <SimulationObjectPropertyDescriptor Name="ExtraClonesAllowed" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="TurnsBeforeNewHero" Value="50"/>
+      <SimulationObjectPropertyDescriptor Name="HeroInitialXP" Value="0"/>
+      <!--There are 4 ways for heroes to gain experience (the associated base values can be modified independently)
+        - after a battle (the amount gained depends on the battle result) 
+        - each turn if assigned 
+        - after a construction
+        - after a battle victory against another hero 
+      -->
+      <SimulationObjectPropertyDescriptor Name="HeroXPPerBattleVictory"   Value="2"/>
+      <SimulationObjectPropertyDescriptor Name="HeroXPPerBattleDefeat"    Value="0.5"/>
+      <SimulationObjectPropertyDescriptor Name="HeroXPPerBattleDraw"      Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="HeroXPPerBattleDefault"   Value="10"/>
+      <SimulationObjectPropertyDescriptor Name="HeroXPPerAssignedTurn"    Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="HeroXPPerConstruction"    Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="HeroXPPerEnnemyInjured"   Value="20"/>
+
+      <!-- Ship Experience -->
+      <SimulationObjectPropertyDescriptor Name="ShipXPPerBattleVictory"   Value="2"/>
+      <SimulationObjectPropertyDescriptor Name="ShipXPPerBattleDefeat"    Value="0.5"/>
+      <SimulationObjectPropertyDescriptor Name="ShipXPPerBattleDraw"      Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="ShipXPPerBattleDefault"   Value="1"/>
+
+      <SimulationObjectPropertyDescriptor Name="RetroshipCostPercent"     Value="0.5"/>
+
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury1"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury2"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury3"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury4"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury5"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury6"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury7"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury8"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury9"     Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury10"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury11"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury12"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury13"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury14"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury15"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="PlanetLuxury16"    Value="0"  IsCompound="false"  IsPermanent="false" IsOutput="false"/>
+
+      <!-- here define what the luxury will affect (it can refer later to several variables)-->
+      <SimulationObjectPropertyDescriptor Name="LuxuryFood"                 Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryScience"              Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryIndustry"             Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryMoney"                Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryFIDSBonusMultiplier"  Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryApproval"             Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryHeroXP"               Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryShipHP"               Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryShipMovementBonus"    Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryShipXP"               Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryFIDS"                 Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryTradeRouteBonus"      Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryBuyOutBonus"          Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryInvasion"             Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryHealing"              Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryShipAttack"           Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="LuxuryShipDefense"          Value="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="AffinityHisshoInvasionVictory"        Value="0" MaxValue="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+      <SimulationObjectPropertyDescriptor Name="AffinityHisshoBattleVictory"          Value="0" MaxValue="1" IsCompound="false" IsPermanent="false" IsOutput="false"/>
+
+      <SimulationObjectPropertyDescriptor Name="OwnershipGainBonus" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="OwnershipLossBonus" Value="1"/>
+    </SimulationObjectPropertyDescriptors>
+    
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- here define if that luxury can be further affected by other multiplier-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney"                      Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience"                    Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryIndustry"                   Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood"                       Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryApproval"                   Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryHeroXP"                     Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipHP"                     Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipMovementBonus"          Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipXP"                     Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFIDS"                       Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryTradeRouteBonus"            Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryBuyOutBonus"                Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryInvasion"                   Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryHealing"                    Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipAttack"                 Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipDefense"                Value="$(LuxuryFIDSBonusMultiplier)" OperationType="Multiplication" Path="ClassEmpire"/>
+
+      
+      <!-- here define all the properties that can be affected by the luxury-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"                              Value="$(LuxuryMoney)"             OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"                            Value="$(LuxuryScience)"           OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"                           Value="$(LuxuryIndustry)"          OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"                               Value="$(LuxuryFood)"              OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval"                           Value="$(LuxuryApproval)"          OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroXPPerBattleVictory"             Value="$(LuxuryHeroXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroXPPerBattleDefeat"              Value="$(LuxuryHeroXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroXPPerBattleDraw"                Value="$(LuxuryHeroXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroXPPerBattleDefault"             Value="$(LuxuryHeroXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroXPPerAssignedTurn"              Value="$(LuxuryHeroXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroXPPerConstruction"              Value="$(LuxuryHeroXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HeroXPPerEnnemyInjured"             Value="$(LuxuryHeroXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialHPBonus"                 Value="$(LuxuryShipHP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed"                              Value="$(LuxuryShipMovementBonus)" OperationType="Multiplication" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed"                          Value="$(LuxuryShipMovementBonus)" OperationType="Multiplication" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipXPPerBattleVictory"             Value="$(LuxuryShipXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipXPPerBattleDefeat"              Value="$(LuxuryShipXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipXPPerBattleDraw"                Value="$(LuxuryShipXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipXPPerBattleDefault"             Value="$(LuxuryShipXP)"            OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"                              Value="$(LuxuryFIDS)"              OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science"                            Value="$(LuxuryFIDS)"              OperationType="Multiplication" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry"                           Value="$(LuxuryFIDS)"              OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food"                               Value="$(LuxuryFIDS)"              OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses"                 Value="$(LuxuryTradeRouteBonus)"   OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BuyOutBonus"                        Value="$(LuxuryBuyOutBonus)"       OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SystemInvasionDefense"              Value="$(LuxuryInvasion)"          OperationType="Multiplication" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPowerInvasion"              Value="$(LuxuryInvasion)"          OperationType="Multiplication" Path="ClassEmpire/ClassFleet"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Healing"                            Value="$(LuxuryHealing)"           OperationType="Multiplication" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingAllied"                      Value="$(LuxuryHealing)"           OperationType="Multiplication" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"                          Value="$(LuxuryShipAttack)"        OperationType="Multiplication" Path="ClassEmpire/ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"                          Value="$(LuxuryShipAttack)"        OperationType="Multiplication" Path="ClassEmpire/ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy"               Value="$(LuxuryShipDefense)"       OperationType="Multiplication" Path="ClassEmpire/ClassFleet/ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"                  Value="$(LuxuryShipDefense)"       OperationType="Multiplication" Path="ClassEmpire/ClassFleet/ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"                         Value="$(LuxuryShipDefense)"       OperationType="Multiplication" Path="ClassEmpire/ClassFleet/ClassShip/DefenseModule"/>
+
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="$(MoneyGatheredByLeech)" OperationType="Addition" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="$(ScienceGatheredByLeech)" OperationType="Addition" Path="ClassEmpire"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MoneyNet" Value="$(Money)" OperationType="Addition" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MoneyNet" Value="$(Upkeep)" OperationType="Addition" Path="ClassEmpire"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceNet" Value="$(Science)" OperationType="Addition" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceNet" Value="$(ScienceUpkeep)" OperationType="Addition" Path="ClassEmpire"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="$(Speed)" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed" Value="$(FreeSpeed)" OperationType="Addition" Path="ClassEmpire//ClassShip"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="$(EmpireApprovalOverall)" OperationType="Addition" Path="ClassEmpire" Priority="0"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="$(Population)" OperationType="Division" Path="ClassEmpire" Priority="0"/>
+
+      <!-- DustPerTurn deal -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money"    Value="$(DustTermBonus)" OperationType="Addition" Path="ClassEmpire" Priority="1"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="CooperationAgreementCount" Value="$(CooperationAgreementCount)" OperationType="Addition" Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="AffinityHisshoShipCostBonusApplied"
+                                                          OperationType="Multiplication"
+                                                          BinaryOperationType="Multiplication"
+                                                          Left="$(AffinityHisshoInvasionVictory)"
+                                                          Right="$(AffinityHisshoBattleVictory)"
+                                                          Path="ClassEmpire/ClassStarSystem" TooltipVisibility="false"/>
+
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="NumberOfFriends"
+                                                        OperationType="Addition"
+                                                        BinaryOperationType="Addition"
+                                                        Left="$(NumberOfAllies)"
+                                                        Right="$(NumberOfEmpiresAtPeace)"
+                                                        Path="ClassEmpire" TooltipVisibility="false"/>
+      
+      <!-- Empire Over Colonization approval malus on star systems -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationStarSystemCount" Value="$(ColonizedStarSystems)" OperationType="Addition" Path="ClassEmpire"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="$(OverColonizationStarSystemCount)" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- End Game descriptors-->
+  <SimulationObjectDescriptor Name="ExpansionVictory" Type="Victory" Serializable="true" />
+  <SimulationObjectDescriptor Name="ScoreVictory" Type="Victory" Serializable="true" />
+  <SimulationObjectDescriptor Name="ScientificVictory" Type="Victory" Serializable="true" />
+  <SimulationObjectDescriptor Name="WonderVictory" Type="Victory" Serializable="true" />
+  <SimulationObjectDescriptor Name="EconomicVictory" Type="Victory" Serializable="true" />
+  <SimulationObjectDescriptor Name="DiplomaticVictory" Type="Victory" Serializable="true" />
+  <SimulationObjectDescriptor Name="SupremacyVictory" Type="Victory" Serializable="true" />
+  
+  <SimulationObjectDescriptor Name="Defeat" Type="Defeat" Serializable="true" />
+  
+  <SimulationObjectDescriptor Name="Death" Type="Elimination" Serializable="true" />
+
+  <SimulationObjectDescriptor Name="GameOverContinuePlaying" Type="GameOver" Serializable="true" />
+  
+  
+  <!-- Movement descriptor -->
+  <SimulationObjectDescriptor Name="MovementWarp1" Type="EmpireFleetWarpMovement1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="4" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementWarp2" Type="EmpireFleetWarpMovement2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="2" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementWarp3" Type="EmpireFleetWarpMovement3" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="4" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementWarp4" Type="EmpireFleetWarpMovement4" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="6" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementWormhole1" Type="EmpireFleetWormholeMovement" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FleetWormholeUnlock" Value="1" OperationType="Addition" Path="ClassEmpire" TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="MovementWormhole2" Type="EmpireFleetWormhole2Movement" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FleetWormhole2Unlock" Value="1" OperationType="Addition" Path="ClassEmpire" TooltipVisibility="false"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementFreeMove0" Type="EmpireFleetFreeMovement0" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed" Value="0" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementFreeMove1" Type="EmpireFleetFreeMovement1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed" Value="5" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementFreeMove2" Type="EmpireFleetFreeMovement2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed" Value="7" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MovementFreeMove3" Type="EmpireFleetFreeMovement3" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FreeSpeed" Value="12" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- FLEET SIZE UNLOCKS -->
+  <!-- Placeholders with maximum CP obtained through their real effects -->
+  <SimulationObjectDescriptor Name="MaxFleetSize1" Type="MaxFleetSize1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="2" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MaxFleetSize2" Type="MaxFleetSize2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- Cf. ShipClassUnlockedSmall2 (giving up to 5 Max CP) -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MaxFleetSize2Swarm" Type="MaxFleetSize2Swarm" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!-- Cf. ShipClassUnlockedAllCravers (giving up to 5+2 Max CP) -->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="MaxFleetSize3" Type="MaxFleetSize3" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="3" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="MaxFleetSize4" Type="MaxFleetSize4" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="4" OperationType="Addition" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  
+  <!-- MOD MINIATURIZATION -->
+  <SimulationObjectDescriptor Name="ModMiniaturization1" Type="ModMiniaturization1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="0.10"     OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="ModMiniaturization2" Type="ModMiniaturization2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="0.15"     OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ModMiniaturization3" Type="ModMiniaturization3" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="0.20"     OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ModMiniaturization4" Type="ModMiniaturization4" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="0.25"     OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ModMiniaturization5" Type="ModMiniaturization5" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxWeight" Value="0.30"     OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  
+  
+  
+  
+  <!-- SCIENCE VICTORY UNLOCK-->
+  <SimulationObjectDescriptor Name="ScienceVictoryUnlock1" Type="ScienceVictoryUnlock1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceVictoryTechnoCostBonus" Value="-0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="ScienceVictoryUnlock2" Type="ScienceVictoryUnlock2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceVictoryTechnoCostBonus" Value="-0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="ScienceVictoryUnlock3" Type="ScienceVictoryUnlock3" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ScienceVictoryTechnoCostBonus" Value="-0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>  
+  
+  
+  
+  
+  
+  <!-- HEROES QUANTITY -->
+  <SimulationObjectDescriptor Name="MaxHeroQuantity1" Type="MaxHeroQuantity1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHeroes" Value="2" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TurnsBeforeNewHero" Value="-10" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="MaxHeroQuantity2" Type="MaxHeroQuantity2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHeroes" Value="3" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TurnsBeforeNewHero" Value="-10" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="MaxHeroQuantity2Horatio" Type="MaxHeroQuantity2Horatio" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHeroes" Value="3" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ExtraClonesAllowed" Value="3" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TurnsBeforeNewHero" Value="-10" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+
+  
+  
+  
+  <!-- HERO XP BONUS -->
+  <SimulationObjectDescriptor Name="HeroXPBonus1" Type="HeroXPBonus1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TurnsBeforeNewHero" Value="-5" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerAssignedTurnBonus" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerConstructionBonus" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerEnnemyInjuredBonus" Value="0.2" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroXPBonus1Resistance" Type="HeroXPBonus1Resistance" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TurnsBeforeNewHero" Value="-10" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus" Value="0.3" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerAssignedTurnBonus" Value="0.3" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerConstructionBonus" Value="0.3" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerEnnemyInjuredBonus" Value="0.3" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="HeroXPBonus2" Type="HeroXPBonus2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TurnsBeforeNewHero" Value="-5" OperationType="Addition" Path="ClassEmpire" IsBase="true"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerBattleBonus" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerAssignedTurnBonus" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerConstructionBonus" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerEnnemyInjuredBonus" Value="0.5" OperationType="Percent" Path="ClassEmpire//ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  
+  
+  
+
+  <!-- DIPLOMACY BONUS -->
+  <!-- Xenolinguistics -->
+  <SimulationObjectDescriptor Name="DiplomacyBonus1" Type="DiplomacyBonus1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="DiplomacyBonus1Swarm" Type="DiplomacyBonus1Swarm" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Alien Security -->
+  <SimulationObjectDescriptor Name="DiplomacyBonus2" Type="DiplomacyBonus2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Alien Standards and Systems -->
+  <SimulationObjectDescriptor Name="DiplomacyBonus3" Type="DiplomacyBonus3" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="DiplomacyBonus3Resistance" Type="DiplomacyBonus3Resistance" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+       OperationType="Percent"
+       BinaryOperationType="Multiplication"
+       Left="0.30"
+       Right="$(NumberOfAllies)"
+       Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <!-- Alien Psychoanalysis -->
+  <SimulationObjectDescriptor Name="DiplomacyBonus5" Type="DiplomacyBonus5" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AlliedTerritoryDefenseBonus" Value="0.20"     OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="DiplomacyBonus5Amoeba" Type="DiplomacyBonus5Amoeba" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="AlliedTerritoryDefenseBonus" Value="0.20"     OperationType="Percent" Path="ClassEmpire//ClassShip"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+       OperationType="Percent"
+       BinaryOperationType="Multiplication"
+       Left="0.20"
+       Right="$(NumberOfAllies)"
+       Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Alien Relations -->
+  <SimulationObjectDescriptor Name="DiplomacyBonus6" Type="DiplomacyBonus6" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+       OperationType="Percent"
+       BinaryOperationType="Multiplication"
+       Left="0.30"
+       Right="$(NumberOfAllies)"
+       Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Alien Esteem -->
+  <SimulationObjectDescriptor Name="DiplomacyBonus7" Type="DiplomacyBonus7" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+       OperationType="Addition"
+       BinaryOperationType="Multiplication"
+       Left="10"
+       Right="$(InAlliance)"
+       Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Science"
+       OperationType="Percent"
+       BinaryOperationType="Multiplication"
+       Left="0.05"
+       Right="$(InAlliance)"
+       Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+       OperationType="Addition"
+       BinaryOperationType="Multiplication"
+       Left="5"
+       Right="$(NumberOfWars)"
+       Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Industry"
+       OperationType="Percent"
+       BinaryOperationType="Multiplication"
+       Left="0.05"
+       Right="$(NumberOfWars)"
+       Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="DiplomacyBonus7Amoeba" Type="DiplomacyBonus7Amoeba" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+       OperationType="Addition"
+       BinaryOperationType="Multiplication"
+       Left="25"
+       Right="$(InAlliance)"
+       Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Approval"
+       OperationType="Addition"
+       BinaryOperationType="Multiplication"
+       Left="-10"
+       Right="$(NumberOfWars)"
+       Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Industry"
+       OperationType="Percent"
+       BinaryOperationType="Multiplication"
+       Left="0.10"
+       Right="$(NumberOfAllies)"
+       Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="Science"
+       OperationType="Percent"
+       BinaryOperationType="Multiplication"
+       Left="0.05"
+       Right="$(NumberOfAllies)"
+       Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  
+  
+  
+
+  <!-- APPROVAL STATUSES -->
+  <SimulationObjectDescriptor Name="EmpireApprovalStatusFervent" Type="EmpireApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.10" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="EmpireApprovalStatusContent" Type="EmpireApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="EmpireApprovalStatusUnhappy" Type="EmpireApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.4" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.4" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.4" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="EmpireApprovalStatusRebellion" Type="EmpireApprovalStatus" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="-0.5" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="TaxBonus0" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="autre" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.0" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.0" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.0" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.0" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.0" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.0" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.0" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="100" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.5" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus1" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.15" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.1" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="95" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.45" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus2" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.2" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="90" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.4" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus3" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.45" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.3" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="85" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.35" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus4" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.4" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.4" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.4" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.4" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.4" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.4" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.4" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="80" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.3" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus5" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.5" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.5" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.5" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.5" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.5" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.5" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.5" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="75" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.25" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus6" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.6" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="70" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.2" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.04" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus7" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.85" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.7" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="60" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.15" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.08" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus8" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.8" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="50" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.1" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.12" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus9" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.95" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="0.9" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="40" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.05" OperationType="Percent" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.16" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus10" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.0" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="30" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.20" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus11" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.05" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.09" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.09" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.09" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.09" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.09" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.09" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.09" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="20" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.24" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus12" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.1" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.17" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.17" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.17" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.17" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.17" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.17" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.17" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="10" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.28" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus13" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.15" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.24" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.24" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.24" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.24" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.24" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.24" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.24" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="0" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.32" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus14" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.2" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="-10" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.36" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus15" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.25" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="-25" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.40" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus16" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.3" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.39" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.39" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.39" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.39" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.39" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.39" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.39" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="-40" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.44" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus17" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.35" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.42" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.42" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.42" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.42" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.42" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.42" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.42" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="-55" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.48" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus18" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.4" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="-70" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.52" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus19" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.45" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.48" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.48" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.48" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.48" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.48" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.48" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.48" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="-85" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.56" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="TaxBonus20" Type="TaxBonus">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinitySwarm/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinitySophon/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinitySower/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinityAmoeba/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinityResistance/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinityHoratio/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Money" Value="1.5" OperationType="Multiplication" Path="ClassEmpire,AffinityHissho/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BaseApproval" Value="-100" OperationType="Addition" Path="ClassEmpire/ClassStarSystem"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.60" OperationType="Percent" Path="ClassEmpire,AffinityTerran/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  
+  
+  <!-- Bonus Strategic Resources -->
+  <SimulationObjectDescriptor Name="StratMonopolyBonus1" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StratMonopolyBonus2" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StratMonopolyBonus3" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StratMonopolyBonus4" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StratMonopolyBonus5" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StratMonopolyBonus6" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StratMonopolyBonus7" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="StratMonopolyBonus8" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--<SimulationObjectPropertyModifierDescriptor TargetProperty="Money" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>-->
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+
+  
+    <!-- Bonus Luxury Resources -->
+    <!-- Redsang -->
+    <SimulationObjectDescriptor Name="LuxuryBonus1" Type="LuxuryBonus" Serializable="false">
+      <SimulationObjectPropertyModifierDescriptors>
+        <!-- L'opération ci dessous augmente le Dust de l'Empire de 1% par Luxury1 -->
+        <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryMoney"
+                                                          OperationType="Percent"
+                                                          BinaryOperationType="Multiplication"
+                                                          Left="0.02"
+                                                          Right="$(PlanetLuxury1)"
+                                                          Path="ClassEmpire"/>
+      </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+    <SimulationObjectDescriptor Name="MonopolyBonus1" Type="MonopolyBonus" Serializable="false">
+        <SimulationObjectPropertyModifierDescriptors>
+            <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryMoney" 	  Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+        </SimulationObjectPropertyModifierDescriptors>
+    </SimulationObjectDescriptor>
+
+  <!-- Bluecap Mold -->
+  <SimulationObjectDescriptor Name="LuxuryBonus2" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryApproval"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.02"
+                                                        Right="$(PlanetLuxury2)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus2" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryApproval" 	  Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Dustwater -->
+  <SimulationObjectDescriptor Name="LuxuryBonus3" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryHeroXP"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.05"
+                                                        Right="$(PlanetLuxury3)"
+                                                        Path="ClassEmpire"/>
+
+    </SimulationObjectPropertyModifierDescriptors>
+    
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus3" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryHeroXP" 	  Value="0.3" OperationType="Percent" Path="ClassEmpire"/>
+
+      </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Hydromiel -->
+  <SimulationObjectDescriptor Name="LuxuryBonus4" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryFood"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.02"
+                                                        Right="$(PlanetLuxury4)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus4" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFood" 	  Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Mercurite -->
+  <SimulationObjectDescriptor Name="LuxuryBonus5" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryShipHP"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.04"
+                                                        Right="$(PlanetLuxury5)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus5" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipHP" 	  Value="0.4" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Void Stone -->
+  <SimulationObjectDescriptor Name="LuxuryBonus6" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryHealing"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.02"
+                                                        Right="$(PlanetLuxury6)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus6" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryHealing" 	  Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Jadonyx -->
+  <SimulationObjectDescriptor Name="LuxuryBonus7" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryShipAttack"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.04"
+                                                        Right="$(PlanetLuxury7)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus7" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipAttack" 	  Value="0.4" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ionic Crystals -->
+  <SimulationObjectDescriptor Name="LuxuryBonus8" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryShipMovementBonus"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.1"
+                                                        Right="$(PlanetLuxury8)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus8" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipMovementBonus" 	  Value="0.6" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Transvine -->
+  <SimulationObjectDescriptor Name="LuxuryBonus9" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryInvasion"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.04"
+                                                        Right="$(PlanetLuxury9)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus9" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryInvasion" 	  Value="0.4" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Meta-entactogen -->
+  <SimulationObjectDescriptor Name="LuxuryBonus10" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryShipDefense"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.04"
+                                                        Right="$(PlanetLuxury10)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus10" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipDefense" 	  Value="0.4" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Eden Incense -->
+  <SimulationObjectDescriptor Name="LuxuryBonus11" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryShipXP"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.04"
+                                                        Right="$(PlanetLuxury11)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus11" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryShipXP" 	  Value="0.4" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Proto-Orchid -->
+  <SimulationObjectDescriptor Name="LuxuryBonus12" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryFIDS"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.01"
+                                                        Right="$(PlanetLuxury12)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus12" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFIDS" 	  Value="0.1" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Virtuals' artifacts -->
+  <SimulationObjectDescriptor Name="LuxuryBonus13" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="TradeRoutesBonuses"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.04"
+                                                        Right="$(PlanetLuxury13)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus13" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses" 	  Value="0.4" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Concretes' artifacts -->
+  <SimulationObjectDescriptor Name="LuxuryBonus14" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryIndustry"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.02"
+                                                        Right="$(PlanetLuxury14)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus14" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryIndustry" 	  Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Pre-schism artifacts -->
+  <SimulationObjectDescriptor Name="LuxuryBonus15" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryBuyOutBonus"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="-0.03"
+                                                        Right="$(PlanetLuxury15)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus15" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryBuyOutBonus" 	  Value="-0.3" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Ancient colony ruins -->
+  <SimulationObjectDescriptor Name="LuxuryBonus16" Type="LuxuryBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="LuxuryScience"
+                                                        OperationType="Percent"
+                                                        BinaryOperationType="Multiplication"
+                                                        Left="0.02"
+                                                        Right="$(PlanetLuxury16)"
+                                                        Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="MonopolyBonus16" Type="MonopolyBonus" Serializable="false">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryScience" 	  Value="0.2" OperationType="Percent" Path="ClassEmpire"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+    
+  <!-- Luxuries boosts -->
+  <SimulationObjectDescriptor Name="LuxuryBoost2" Type="LuxuryBoost" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFIDSBonusMultiplier" 	  Value="1" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/ClassPlanet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="LuxuryBoost5" Type="LuxuryBoost" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="LuxuryFIDSBonusMultiplier" 	  Value="2" OperationType="Percent" Path="ClassEmpire/ClassStarSystem/ClassPlanet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor> 
+  
+
+  <SimulationObjectDescriptor Name="ShipClassUnlockedSmall2" Type="ShipClassUnlockedSmall2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="2" OperationType="Addition" Path="ClassEmpire,MaxFleetSize2"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassUnlockedMedium1" Type="ShipClassUnlockedMedium1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="2" OperationType="Addition" Path="ClassEmpire,MaxFleetSize2"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassUnlockedMedium2" Type="ShipClassUnlockedMedium2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="2" OperationType="Addition" Path="ClassEmpire,MaxFleetSize2"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassUnlockedLarge1" Type="ShipClassUnlockedLarge1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="2" OperationType="Addition" Path="ClassEmpire,MaxFleetSize2"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassUnlockedAllCravers" Type="ShipClassUnlockedAll" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxCommandPoint" Value="2" OperationType="Addition" Path="ClassEmpire,ShipClassUnlockedSmall2,ShipClassUnlockedMedium1,ShipClassUnlockedMedium2,ShipClassUnlockedLarge1"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  
+  <!-- Overcolonisation malus reduction -->
+  <SimulationObjectDescriptor Name="Overcolonization1" Type="Overcolonization1" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="-0.22" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="Overcolonization2" Type="Overcolonization2" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="-0.22" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="Overcolonization3" Type="Overcolonization3" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="-0.22" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  <SimulationObjectDescriptor Name="Overcolonization4" Type="Overcolonization4" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="OverColonizationApproval" Value="-0.22" OperationType="Percent" Path="ClassEmpire/ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- Fake descriptors that are used to display cooperation agreements' tooltips -->
+  <SimulationObjectDescriptor Name="CooperationAgreementStep1" Type="CooperationAgreementStep" Serializable="false" />  
+  <SimulationObjectDescriptor Name="CooperationAgreementStep2" Type="CooperationAgreementStep" Serializable="false" />  
+  <SimulationObjectDescriptor Name="CooperationAgreementStep3" Type="CooperationAgreementStep" Serializable="false" />  
+</Datatable>

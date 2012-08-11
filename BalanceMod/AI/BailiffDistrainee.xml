@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <BailiffDistrainee Name="Pass0" Index="0"
+                     BuildingBatchLimit="3"
+                     ShipBatchLimit="3"
+                     ShipXPMaxLimit="1">
+    <BuildingParameters>
+      <AIParameter Name="Food"      Value="-5"/>
+      <AIParameter Name="Industry"  Value="-5"/>
+      <AIParameter Name="Money"     Value="-5"/>
+      <AIParameter Name="Science"   Value="-5"/>
+      <AIParameter Name="Military"  Value="0.1"/>
+      <AIParameter Name="Diplomacy" Value="0.1"/>
+      <AIParameter Name="Approval"  Value="-5"/>
+      <AIParameter Name="TradeRoutes"  Value="-5"/>
+    </BuildingParameters>
+  </BailiffDistrainee>
+  
+  <BailiffDistrainee Name="Pass1" Index="1"
+                     BuildingBatchLimit="3"
+                     ShipBatchLimit="3"
+                     ShipXPMaxLimit="1">
+    <BuildingParameters>
+      <AIParameter Name="Food"      Value="-5"/>
+      <AIParameter Name="Industry"  Value="-5"/>
+      <AIParameter Name="Money"     Value="-5"/>
+      <AIParameter Name="Science"   Value="0.1"/>
+      <AIParameter Name="Military"  Value="0.1"/>
+      <AIParameter Name="Diplomacy" Value="0.1"/>
+      <AIParameter Name="Approval"  Value="0.1"/>
+      <AIParameter Name="TradeRoutes"  Value="-5"/>
+    </BuildingParameters>
+  </BailiffDistrainee>
+
+  <BailiffDistrainee Name="Pass2" Index="2"
+                     BuildingBatchLimit="3"
+                     ShipBatchLimit="3"
+                     ShipXPMaxLimit="11">
+    <BuildingParameters>
+      <AIParameter Name="Food"      Value="0.1"/>
+      <AIParameter Name="Industry"  Value="-5"/>
+      <AIParameter Name="Money"     Value="-5"/>
+      <AIParameter Name="Science"   Value="0.1"/>
+      <AIParameter Name="Military"  Value="0.1"/>
+      <AIParameter Name="Diplomacy" Value="0.1"/>
+      <AIParameter Name="Approval"  Value="0.1"/>
+      <AIParameter Name="TradeRoutes"  Value="-5"/>
+    </BuildingParameters>
+  </BailiffDistrainee>
+
+  <BailiffDistrainee Name="Pass3" Index="3"
+                     BuildingBatchLimit="3"
+                     ShipBatchLimit="3"
+                     ShipXPMaxLimit="31">
+    <BuildingParameters>
+      <AIParameter Name="Food"      Value="0.1"/>
+      <AIParameter Name="Industry"  Value="-5"/>
+      <AIParameter Name="Money"     Value="-5"/>
+      <AIParameter Name="Science"   Value="0.1"/>
+      <AIParameter Name="Military"  Value="0.1"/>
+      <AIParameter Name="Diplomacy" Value="0.1"/>
+      <AIParameter Name="Approval"  Value="0.1"/>
+      <AIParameter Name="TradeRoutes"  Value="-5"/>
+    </BuildingParameters>
+  </BailiffDistrainee>
+
+  <BailiffDistrainee Name="Pass4" Index="4"
+                     BuildingBatchLimit="3"
+                     ShipBatchLimit="3"
+                     ShipXPMaxLimit="-1">
+    <BuildingParameters>
+      <AIParameter Name="Food"      Value="0.1"/>
+      <AIParameter Name="Industry"  Value="0.1"/>
+      <AIParameter Name="Money"     Value="-5"/>
+      <AIParameter Name="Science"   Value="0.1"/>
+      <AIParameter Name="Military"  Value="0.1"/>
+      <AIParameter Name="Diplomacy" Value="0.1"/>
+      <AIParameter Name="Approval"  Value="0.1"/>
+      <AIParameter Name="TradeRoutes"  Value="-5"/>
+    </BuildingParameters>
+  </BailiffDistrainee>
+
+  <BailiffDistrainee Name="Pass5" Index="5"
+                     BuildingBatchLimit="3"
+                     ShipBatchLimit="3"
+                     ShipXPMaxLimit="-1">
+    <BuildingParameters>
+      <AIParameter Name="Food"      Value="0.1"/>
+      <AIParameter Name="Industry"  Value="0.1"/>
+      <AIParameter Name="Money"     Value="0.1"/>
+      <AIParameter Name="Science"   Value="0.1"/>
+      <AIParameter Name="Military"  Value="0.1"/>
+      <AIParameter Name="Diplomacy" Value="0.1"/>
+      <AIParameter Name="Approval"  Value="0.1"/>
+      <AIParameter Name="TradeRoutes"  Value="0.1"/>
+    </BuildingParameters>
+  </BailiffDistrainee>
+</Datatable>

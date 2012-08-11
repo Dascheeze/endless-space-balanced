@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AIParametersDatatableElement ConstructibleElement="Hero01">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero02">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero03">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero04">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero05">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero06">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero07">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero08">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero09">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero10">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero11">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero12">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero13">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero14">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero15">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero16">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero17">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero18">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero19">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero20">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero21">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero22">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero23">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero24">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero25">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero26">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero27">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero28">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero29">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero30">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero31">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero32">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero33">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero34">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero35">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero36">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero37">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero38">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero39">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero40">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero41">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero42">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero43">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero44">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero45">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="0" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero46">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero47">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero48">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero49">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero50">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero51">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero52">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero53">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero54">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero55">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero56">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero57">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero58">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero59">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero60">
+    <AIParameter Name="Fleet" Value="0" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero61">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="Hero62">
+    <AIParameter Name="Fleet" Value="1" />
+    <AIParameter Name="StarSystem" Value="1" />
+  </AIParametersDatatableElement>
+</Datatable>

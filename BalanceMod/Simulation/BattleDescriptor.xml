@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <SimulationObjectDescriptor Name="BattlePhaseModifierLongRange" Type="BattlePhaseModifier">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.8"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.1"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.5"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="BattlePhaseModifierMediumRange" Type="BattlePhaseModifier">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.6"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.3"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.1"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="BattlePhaseModifierShortRange" Type="BattlePhaseModifier">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.1"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.6"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Accuracy" Value="-0.3"     OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule,Laser"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+</Datatable>

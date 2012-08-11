@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <DiplomaticStatus Name="ColdWar">
+        <Gui>
+            <Title>%DiplomacyStatusColdWarTitle</Title>
+            <Description>%DiplomacyStatusColdWarDescription</Description>
+            <Icon Small=""/>
+        </Gui>
+    </DiplomaticStatus>
+    
+    <DiplomaticStatus Name="War">
+        <Gui>
+            <Title>%DiplomacyStatusWarTitle</Title>
+            <Description>%DiplomacyStatusWarDescription</Description>
+            <Icon Small=""/>
+        </Gui>
+    </DiplomaticStatus>
+    
+    <DiplomaticStatus Name="Peace">
+        <Gui>
+            <Title>%DiplomacyStatusPeaceTitle</Title>
+            <Description>%DiplomacyStatusPeaceDescription</Description>
+            <Icon Small=""/>
+        </Gui>
+    </DiplomaticStatus>
+    
+    <DiplomaticStatus Name="Alliance">
+        <Gui>
+            <Title>%DiplomacyStatusAllianceTitle</Title>
+            <Description>%DiplomacyStatusAllianceDescription</Description>
+            <Icon Small=""/>
+        </Gui>
+    </DiplomaticStatus>
+
+  <DiplomaticStatus Name="Eliminated">
+    <Gui>
+      <Title>%DiplomacyStatusEliminatedTitle</Title>
+      <Description>%DiplomacyStatusEliminatedDescription</Description>
+      <Icon Small=""/>
+    </Gui>
+  </DiplomaticStatus>
+  
+  <!-- Unattainable DiplomaticStatus. -->
+  <DiplomaticStatus Name="Unattainable">
+    <Gui>
+      <Title>%DiplomacyStatusUnattainableTitle</Title>
+      <Description>%DiplomacyStatusUnattainableDescription</Description>
+      <Icon Small=""/>
+    </Gui>
+  </DiplomaticStatus>
+
+  <!-- Pirate only -->
+  <DiplomaticStatus Name="Pirate">
+    <Gui>
+      <Title>%DiplomacyStatusPirateTitle</Title>
+      <Description>%DiplomacyStatusPirateDescription</Description>
+      <Icon Small=""/>
+    </Gui>
+  </DiplomaticStatus>
+    
+</Datatable>

@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ShipDesignTemplate Name="ScoutTemplate" Hull="ShipClassSmall1" FleetWeight="0">
+    <Repartition Name="Scout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerTemplate" Hull="ShipClassColonization" FleetWeight="0">
+    <Repartition Name="Colonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1Templates" Hull="ShipClassSmall1" FleetWeight="0.3">
+    <Repartition Name="Defender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="Guardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="Ranger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2Templates" Hull="ShipClassSmall2" FleetWeight="0.3">
+    
+    <Repartition Name="Defender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="Guardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="Ranger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1Templates" Hull="ShipClassMedium1" FleetWeight="0.3">
+    <Repartition Name="Fletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="Nimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2Templates" Hull="ShipClassMedium2" FleetWeight="0.3">
+    <Repartition Name="Fletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="Nimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1Templates" Hull="ShipClassLarge1" FleetWeight="0.3">
+    <Repartition Name="Dominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="Imperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisTemplates" Hull="ShipClassLarge1" FleetWeight="0.3">
+    <Repartition Name="DominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="ImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- TERRAN TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutTerranTemplate" Hull="ShipClassSmall1Terran" FleetWeight="0">
+    <Repartition Name="TerranScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerTerranTemplate" Hull="ShipClassColonizationTerran" FleetWeight="0">
+    <Repartition Name="TerranColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1TerranTemplates" Hull="ShipClassSmall1Terran" FleetWeight="0.3">
+    <Repartition Name="TerranDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="TerranGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="TerranRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2TerranTemplates" Hull="ShipClassSmall2Terran" FleetWeight="0.3">
+
+    <Repartition Name="TerranDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="TerranGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="TerranRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1TerranTemplates" Hull="ShipClassMedium1Terran" FleetWeight="0.3">
+    <Repartition Name="TerranFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="TerranNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2TerranTemplates" Hull="ShipClassMedium2Terran" FleetWeight="0.3">
+    <Repartition Name="TerranFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="TerranNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1TerranTemplates" Hull="ShipClassLarge1Terran" FleetWeight="0.3">
+    <Repartition Name="TerranDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="TerranImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisTerranTemplates" Hull="ShipClassLarge1Terran" FleetWeight="0.3">
+    <Repartition Name="TerranDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="TerranImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- SWARM TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutSwarmTemplate" Hull="ShipClassSmall1Swarm" FleetWeight="0">
+    <Repartition Name="SwarmScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerSwarmTemplate" Hull="ShipClassColonizationSwarm" FleetWeight="0">
+    <Repartition Name="SwarmColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1SwarmTemplates" Hull="ShipClassSmall1Swarm" FleetWeight="0.3">
+    <Repartition Name="SwarmDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="SwarmGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="SwarmRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2SwarmTemplates" Hull="ShipClassSmall2Swarm" FleetWeight="0.3">
+
+    <Repartition Name="SwarmDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="SwarmGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="SwarmRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1SwarmTemplates" Hull="ShipClassMedium1Swarm" FleetWeight="0.3">
+    <Repartition Name="SwarmFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="SwarmNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2SwarmTemplates" Hull="ShipClassMedium2Swarm" FleetWeight="0.3">
+    <Repartition Name="SwarmFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="SwarmNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1SwarmTemplates" Hull="ShipClassLarge1Swarm" FleetWeight="0.3">
+    <Repartition Name="SwarmDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="SwarmImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisSwarmTemplates" Hull="ShipClassLarge1Swarm" FleetWeight="0.3">
+    <Repartition Name="SwarmDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="SwarmImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- SOPHON TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutSophonTemplate" Hull="ShipClassSmall1Sophon" FleetWeight="0">
+    <Repartition Name="SophonScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerSophonTemplate" Hull="ShipClassColonizationSophon" FleetWeight="0">
+    <Repartition Name="SophonColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1SophonTemplates" Hull="ShipClassSmall1Sophon" FleetWeight="0.3">
+    <Repartition Name="SophonDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="SophonGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="SophonRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2SophonTemplates" Hull="ShipClassSmall2Sophon" FleetWeight="0.3">
+
+    <Repartition Name="SophonDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="SophonGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="SophonRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1SophonTemplates" Hull="ShipClassMedium1Sophon" FleetWeight="0.3">
+    <Repartition Name="SophonFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="SophonNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2SophonTemplates" Hull="ShipClassMedium2Sophon" FleetWeight="0.3">
+    <Repartition Name="SophonFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="SophonNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1SophonTemplates" Hull="ShipClassLarge1Sophon" FleetWeight="0.3">
+    <Repartition Name="SophonDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="SophonImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisSophonTemplates" Hull="ShipClassLarge1Sophon" FleetWeight="0.3">
+    <Repartition Name="SophonDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="SophonImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- HORATIO TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutHoratioTemplate" Hull="ShipClassSmall1Horatio" FleetWeight="0">
+    <Repartition Name="HoratioScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerHoratioTemplate" Hull="ShipClassColonizationHoratio" FleetWeight="0">
+    <Repartition Name="HoratioColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1HoratioTemplates" Hull="ShipClassSmall1Horatio" FleetWeight="0.3">
+    <Repartition Name="HoratioDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="HoratioGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="HoratioRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2HoratioTemplates" Hull="ShipClassSmall2Horatio" FleetWeight="0.3">
+
+    <Repartition Name="HoratioDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="HoratioGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="HoratioRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1HoratioTemplates" Hull="ShipClassMedium1Horatio" FleetWeight="0.3">
+    <Repartition Name="HoratioFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="HoratioNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2HoratioTemplates" Hull="ShipClassMedium2Horatio" FleetWeight="0.3">
+    <Repartition Name="HoratioFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="HoratioNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1HoratioTemplates" Hull="ShipClassLarge1Horatio" FleetWeight="0.3">
+    <Repartition Name="HoratioDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="HoratioImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisHoratioTemplates" Hull="ShipClassLarge1Horatio" FleetWeight="0.3">
+    <Repartition Name="HoratioDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="HoratioImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- HISSHO TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutHisshoTemplate" Hull="ShipClassSmall1Hissho" FleetWeight="0">
+    <Repartition Name="HisshoScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerHisshoTemplate" Hull="ShipClassColonizationHissho" FleetWeight="0">
+    <Repartition Name="HisshoColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1HisshoTemplates" Hull="ShipClassSmall1Hissho" FleetWeight="0.3">
+    <Repartition Name="HisshoDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="HisshoGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="HisshoRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2HisshoTemplates" Hull="ShipClassSmall2Hissho" FleetWeight="0.3">
+
+    <Repartition Name="HisshoDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="HisshoGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="HisshoRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1HisshoTemplates" Hull="ShipClassMedium1Hissho" FleetWeight="0.3">
+    <Repartition Name="HisshoFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="HisshoNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2HisshoTemplates" Hull="ShipClassMedium2Hissho" FleetWeight="0.3">
+    <Repartition Name="HisshoFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="HisshoNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1HisshoTemplates" Hull="ShipClassLarge1Hissho" FleetWeight="0.3">
+    <Repartition Name="HisshoDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="HisshoImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisHisshoTemplates" Hull="ShipClassLarge1Hissho" FleetWeight="0.3">
+    <Repartition Name="HisshoDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="HisshoImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- SOWER TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutSowerTemplate" Hull="ShipClassSmall1Sower" FleetWeight="0">
+    <Repartition Name="SowerScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerSowerTemplate" Hull="ShipClassColonizationSower" FleetWeight="0">
+    <Repartition Name="SowerColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1SowerTemplates" Hull="ShipClassSmall1Sower" FleetWeight="0.3">
+    <Repartition Name="SowerDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="SowerGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="SowerRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2SowerTemplates" Hull="ShipClassSmall2Sower" FleetWeight="0.3">
+
+    <Repartition Name="SowerDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="SowerGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="SowerRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1SowerTemplates" Hull="ShipClassMedium1Sower" FleetWeight="0.3">
+    <Repartition Name="SowerFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="SowerNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2SowerTemplates" Hull="ShipClassMedium2Sower" FleetWeight="0.3">
+    <Repartition Name="SowerFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="SowerNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1SowerTemplates" Hull="ShipClassLarge1Sower" FleetWeight="0.3">
+    <Repartition Name="SowerDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="SowerImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisSowerTemplates" Hull="ShipClassLarge1Sower" FleetWeight="0.3">
+    <Repartition Name="SowerDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="SowerImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- AMOEBA TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutAmoebaTemplate" Hull="ShipClassSmall1Amoeba" FleetWeight="0">
+    <Repartition Name="AmoebaScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerAmoebaTemplate" Hull="ShipClassColonizationAmoeba" FleetWeight="0">
+    <Repartition Name="AmoebaColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1AmoebaTemplates" Hull="ShipClassSmall1Amoeba" FleetWeight="0.3">
+    <Repartition Name="AmoebaDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="AmoebaGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="AmoebaRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2AmoebaTemplates" Hull="ShipClassSmall2Amoeba" FleetWeight="0.3">
+
+    <Repartition Name="AmoebaDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="AmoebaGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="AmoebaRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1AmoebaTemplates" Hull="ShipClassMedium1Amoeba" FleetWeight="0.3">
+    <Repartition Name="AmoebaFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="AmoebaNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2AmoebaTemplates" Hull="ShipClassMedium2Amoeba" FleetWeight="0.3">
+    <Repartition Name="AmoebaFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="AmoebaNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1AmoebaTemplates" Hull="ShipClassLarge1Amoeba" FleetWeight="0.3">
+    <Repartition Name="AmoebaDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="AmoebaImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisAmoebaTemplates" Hull="ShipClassLarge1Amoeba" FleetWeight="0.3">
+    <Repartition Name="AmoebaDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="AmoebaImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+<!-- RESISTANCE TEMPLATES -->
+  <ShipDesignTemplate Name="ScoutResistanceTemplate" Hull="ShipClassSmall1Resistance" FleetWeight="0">
+    <Repartition Name="ResistanceScout">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleScout" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleEngine" Weight="-1"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.2"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.2"/>
+      
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="ColonizerResistanceTemplate" Hull="ShipClassColonizationResistance" FleetWeight="0">
+    <Repartition Name="ResistanceColonizer">
+      <ModuleRepartition ModuleFamily="SupportModule" ModuleCategory="SupportModuleCivilian" Weight="-1"/>
+
+      <!-- Only 20% of the scout is fullfilled, the rest must be let "clear" -->
+      <ModuleRepartition ModuleFamily="" ModuleCategory="" Weight="1"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Small1ResistanceTemplates" Hull="ShipClassSmall1Resistance" FleetWeight="0.3">
+    <Repartition Name="ResistanceDefender">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="ResistanceGuardian">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="ResistanceRanger">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Small2ResistanceTemplates" Hull="ShipClassSmall2Resistance" FleetWeight="0.3">
+
+    <Repartition Name="ResistanceDefender2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.49"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.51"/>
+    </Repartition>
+    <Repartition Name="ResistanceGuardian2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.6"/>
+    </Repartition>
+    <Repartition Name="ResistanceRanger2">
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+  <ShipDesignTemplate Name="Medium1ResistanceTemplates" Hull="ShipClassMedium1Resistance" FleetWeight="0.3">
+    <Repartition Name="ResistanceFletcher">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+      
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="ResistanceNimitz">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Medium2ResistanceTemplates" Hull="ShipClassMedium2Resistance" FleetWeight="0.3">
+    <Repartition Name="ResistanceFletcher2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.4"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.3"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.15"/>
+    </Repartition>
+    <Repartition Name="ResistanceNimitz2">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1ResistanceTemplates" Hull="ShipClassLarge1Resistance" FleetWeight="0.3">
+    <Repartition Name="ResistanceDominator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="ResistanceImperator">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+
+  <ShipDesignTemplate Name="Large1BisResistanceTemplates" Hull="ShipClassLarge1Resistance" FleetWeight="0.3">
+    <Repartition Name="ResistanceDominatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.7"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.3"/>
+    </Repartition>
+    <Repartition Name="ResistanceImperatorBis">
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="" Weight="0.25"/>
+
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+      <ModuleRepartition ModuleFamily="DefenseModule" ModuleCategory="" Weight="0.25"/>
+    </Repartition>
+  </ShipDesignTemplate>
+  
+</Datatable>

@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- BATTLECARDS -->
+  <!-- Available action :
+              -> Target = Self or Other
+                      
+                 <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+                 -> Alteration = the suffix of the alteration prefab for the module
+                 -> WeaponClass = the module weapon class.
+                                  
+                 <BattleAction-FleetSimulation Target="Self">
+                   <Descriptors>TotoDescriptor1,TotoDescriptor3</Descriptors>
+                 </BattleAction-FleetSimulation>
+                 -> Descriptors = All descriptors to add separat by "," or ";"
+                 
+                 <BattleAction-FleetIllusion Target="Self" Descriptor="TotoDescriptor1" Percent="50"/>
+                 -> Descriptor = The only one illusion descriptor.
+                 -> Percent = The percent of the fleet which will be copied.
+                 
+                 <BattleAction-ModuleOverclock Target="Self" ModuleClass="WeaponModule" OverlockChoice="Best">
+                  <SimulationObjectPropertyModifierDescriptor .../>
+                  <SimulationObjectPropertyBinaryModifierDescriptor .../>
+                 </BattleAction-ModuleOverclock>
+                 -> ModuleClass = class to target (WeaponModule or DefenseModule only)
+                 -> OverlockChoice = type of module to target (Best or Worst)
+                 -> In fact, you have to describe the simulationObjectPropertyModifierDescriptor that will be used for this action directly here and not in a descriptor...
+                  
+                  <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips/TheirShips/OurFleet/TheirFleet" StartDelay="1.0" RangeDelay="3.0" Target="Other/Me" Prefab="Defense/Offense/..."/>
+                  -> StartDelay : The effects are emitted after the phase begin time + start delay.
+                  -> RangeDelay : The effects are emitted during this short duration.$                  
+                  
+                  <BattleAction-PowerConvergence Target="Self" Alteration="Alt1" Power="3"/>
+                  -> Power : Will power the next phase by multiplying the effect with power.
+                             As long as this is a multiplier of "Descriptor" application, only integers are accepted.
+                        
+                  <BattleAction_NanoRepair RepairValue="0" RepairPercent="0.1" AttachTo="OurShips" StarDelay="1.5" StartDelay="1.0" RangeDelay="4" Prefab="Engineering/FX_NanoRepairSystem_$(ShipSize)"/>
+                  -> RepairValue : Instant HP repair.
+                  -> RepairPercent : Instant percent of MaxHP repair.
+                  
+                 -->
+
+
+  <!-- TEST -->
+  <BattleCard Name="BattleTest">
+    <Gui>
+      <Title>BattleTest</Title>
+      <Description>BattleTest</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction4Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction4Large"/>
+    </Gui>
+    <Family>BattleCardFamilyDefense</Family>
+    <Counter/>
+    <RealizationTags>Global</RealizationTags>
+    <Tags>BattlePhaseCombat</Tags>
+    <Actions>
+      <!-- Added when not countered and/or when counter the other.-->
+      <Pack Name="Regular">
+        <BattleAction-PowerConvergence Target="Self" Alteration="Alt1" Power="3"/>
+      </Pack>
+      <!-- Added when counter the other.-->
+      <Pack Name="Counter">
+      </Pack>
+      <!-- Added when countered.-->
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+
+
+  <!-- ##### DEFENSE ACTIONS ##### -->
+  <!-- Camouflage -->
+  <BattleCard Name="BattleTechAction4">
+    <Gui>
+      <Title>%BattleTechAction4Title</Title>
+      <Description>%BattleTechAction4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction4Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction4Large"/>
+    </Gui>
+    <Family>BattleCardFamilyDefense</Family>
+    <Counter>BattleCardFamilySabotage</Counter>
+    <RealizationTags>Global</RealizationTags>
+    <Tags>BattlePhaseCombat</Tags>
+    <Actions>
+      <!-- Added when not countered and/or when counter the other.-->
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor1</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Other" Prefab="Defense/Fx_Camouflage_$(ShipSize)"/>
+      </Pack>
+      <!-- Added when counter the other.-->
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor2</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="6.0" Target="Other" Prefab="Defense/Fx_Camouflage_$(ShipSize)_Boost"/>
+      </Pack>
+      <!-- Added when countered.-->
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Energy Absorption -->
+  <BattleCard Name="BattleTechAction12">
+    <Gui>
+      <Title>%BattleTechAction12Title</Title>
+      <Description>%BattleTechAction12Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction12Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction12Large"/>
+    </Gui>
+    <Family>BattleCardFamilyDefense</Family>
+    <Counter>BattleCardFamilyOffense</Counter>
+    <RealizationTags>Global</RealizationTags>
+    <Tags>BattlePhaseCombat</Tags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor3</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="5.0" Target="Me" Prefab="Defense/Fx_Energy_Absorption_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor4</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="6.0" Target="Me" Prefab="Defense/Fx_Energy_Absorption_$(AffinityMapping)_$(ShipSize)_$(Variation)_Boost"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Magnetic Field -->
+  <BattleCard Name="BattleTechAction9">
+    <Gui>
+      <Title>%BattleTechAction9Title</Title>
+      <Description>%BattleTechAction9Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction9Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction9Large"/>
+    </Gui>
+    <Family>BattleCardFamilyDefense</Family>
+    <Counter>BattleCardFamilyOffense</Counter>
+    <RealizationTags>Global</RealizationTags>
+    <Tags>BattlePhaseCombat</Tags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor5</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="5.0" Target="Other" Prefab="Defense/Fx_Magnetic_Field_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor6</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="6.0" Target="Other" Prefab="Defense/Fx_Magnetic_Field_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION :: COMMANDER :: Ultimate Defense -->
+  <BattleCard Name="BattleHeroAction3" Cost="30">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityCommander10)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction3Title</Title>
+      <Description>%BattleHeroAction3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityCommander10Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander10Large"/>
+    </Gui>
+    <Family>BattleCardFamilyDefense</Family>
+    <Counter>BattleCardFamilyTactics</Counter>
+    <RealizationTags>Global</RealizationTags>
+    <Tags>BattlePhaseCombat</Tags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor7</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="5.0" Target="Me" Prefab="Defense/Fx_Ultimate_Defense_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor8</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="6.0" Target="Me" Prefab="Defense/Fx_Ultimate_Defense_$(AffinityMapping)_$(ShipSize)_$(Variation)_Boost"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION :: PILOT :: Illusion -->
+  <BattleCard Name="BattleHeroAction7" Cost="60">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityAdventurer13)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction7Title</Title>
+      <Description>%BattleHeroAction7Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityAdventurer13Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer13Large"/>
+    </Gui>
+    <Family>BattleCardFamilyDefense</Family>
+    <Counter>BattleCardFamilySabotage</Counter>
+    <RealizationTags>Global</RealizationTags>
+    <Tags>BattlePhaseCombat</Tags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetIllusion Target="Self"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetIllusion Target="Self"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+
+
+
+
+  <!-- ##### OFFENSE ACTIONS ##### -->
+  <!-- HERO ACTION :: COMMANDER :: Beam Surge -->
+  <BattleCard Name="BattleHeroAction2" Cost="50">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityAdventurer14)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction2Title</Title>
+      <Description>%BattleHeroAction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityAdventurer14Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer14Large"/>
+    </Gui>
+    <Family>BattleCardFamilyOffense</Family>
+    <Counter>BattleCardFamilyDefense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor11</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Other" Prefab="Offense/Fx_BeamSurge_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor12</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="5.0" Target="Other" Prefab="Offense/Fx_BeamSurge_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Weapon Overclock -->
+  <BattleCard Name="BattleTechAction1">
+    <Gui>
+      <Title>%BattleTechAction1Title</Title>
+      <Description>%BattleTechAction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction1Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction1Large"/>
+    </Gui>
+    <Family>BattleCardFamilyOffense</Family>
+    <Counter>BattleCardFamilyTactics</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor13</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-ModuleOverclockEffect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Me" Prefab="Offense/Fx_WeaponOverClock_$(WeaponClass)_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor14</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleTechAction1 WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="5.0" Target="Me" Prefab="Offense/Fx_WeaponOverClock_$(WeaponClass)_$(ShipSize)"/>
+        <!--<BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="5.0" Target="Me" Prefab="Offense/Fx_WeaponOverClock_$(WeaponClass)_$(ShipSize)"/>-->
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Target Locked -->
+  <BattleCard Name="BattleTechAction10">
+    <Gui>
+      <Title>%BattleTechAction10Title</Title>
+      <Description>%BattleTechAction10Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction10Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction10Large"/>
+    </Gui>
+    <Family>BattleCardFamilyOffense</Family>
+    <Counter>BattleCardFamilyTactics</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor15</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Me" Prefab="Offense/Fx_Target_Locked_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor16</Descriptors>
+        </BattleAction-FleetSimulation>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION :: COMMANDER :: DustWarheads -->
+  <BattleCard Name="BattleHeroAction1" Cost="20">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityCommander08)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction1Title</Title>
+      <Description>%BattleHeroAction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityCommander08Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander08Large"/>
+    </Gui>
+    <Family>BattleCardFamilyOffense</Family>
+    <Counter>BattleCardFamilyEngineering</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor17</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Me" Prefab="Offense/Fx_DustWarHeads_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor18</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="6.0" Target="Me" Prefab="Offense/Fx_DustWarHeads_$(ShipSize)_Boost"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION :: PILOT :: Gravity Well -->
+  <BattleCard Name="BattleHeroAction8" Cost="60">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityPilot14)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction8Title</Title>
+      <Description>%BattleHeroAction8Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityPilot14Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot14Large"/>
+    </Gui>
+    <Family>BattleCardFamilyOffense</Family>
+    <Counter>BattleCardFamilyOffense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor19</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor20</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirFleet" StartDelay="2.0" Prefab="Offense/FX_Gravity_Well"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-WeaponAlteration Target="Self" Alteration="Alt1" WeaponClass="Laser"/>
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor21</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor22</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirFleet" StartDelay="2.0" Prefab="Offense/FX_Gravity_Well_Boost"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+
+
+
+
+  <!-- ##### ENGINEERING ##### -->
+  <!-- Nano-Repair Systems -->
+  <BattleCard Name="BattleTechAction5">
+    <Gui>
+      <Title>%BattleTechAction5Title</Title>
+      <Description>%BattleTechAction5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction5Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction5Large"/>
+    </Gui>
+    <Family>BattleCardFamilyEngineering</Family>
+    <Counter>BattleCardFamilySabotage</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor23</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction_NanoRepair RepairValue="0" RepairPercent="0.2" AttachTo="OurShips" StarDelay="1.5" StartDelay="1.0" RangeDelay="2.5" Prefab="Engineering/FX_NanoRepairSystem_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor24</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction_NanoRepair RepairValue="0" RepairPercent="0.1" AttachTo="OurShips" StarDelay="1.5" StartDelay="1.0" RangeDelay="4" Prefab="Engineering/FX_NanoRepairSystem_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION :: PILOT :: Dust Barrier -->
+  <BattleCard Name="BattleHeroAction5" Cost="20">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityPilot11)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction5Title</Title>
+      <Description>%BattleHeroAction5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityPilot11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot11Large"/>
+    </Gui>
+    <Family>BattleCardFamilyEngineering</Family>
+    <Counter>BattleCardFamilyOffense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor25</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" Target="Me" StartDelay="2.0" RangeDelay="4.0" Prefab="Engineering/Fx_BA_Dust_Barrier_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor26</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" Target="Me" StartDelay="2.0" RangeDelay="5.0" Prefab="Engineering/Fx_BA_Dust_Barrier_$(AffinityMapping)_$(ShipSize)_$(Variation)_Boost"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION ::  COMMANDER :: Emergency Shelter -->
+  <BattleCard Name="BattleHeroAction4" Cost="50">
+    <PathsPrerequisites>$(ClassFleet/ClassHero,HeroAbilityCommander11)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction4Title</Title>
+      <Description>%BattleHeroAction4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityCommander11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityCommander11Large"/>
+    </Gui>
+    <Family>BattleCardFamilyEngineering</Family>
+    <Counter>BattleCardFamilySabotage</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Me" Prefab="Engineering/Fx_Emergency_Shelter_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+        <BattleAction-Alteration Target="Self" Alteration="EmergencyShelter"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="6.0" Target="Me" Prefab="Engineering/Fx_Emergency_Shelter_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+        <BattleAction-Alteration Target="Self" Alteration="EmergencyShelter"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+  
+  <!-- Barrier -->
+  <BattleCard Name="BattleTechAction14">
+    <Gui>
+      <Title>%BattleTechAction14Title</Title>
+      <Description>%BattleTechAction14Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction14Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction14Large"/>
+    </Gui>
+    <Family>BattleCardFamilyEngineering</Family>
+    <Counter>BattleCardFamilySabotage</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor27</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Other" Prefab="Engineering/Fx_BA_Barrier_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor28</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="4.0" Target="Other" Prefab="Engineering/Fx_BA_Barrier_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+
+
+
+
+  <!-- ##### SABOTAGE ##### -->
+  <!-- EMP -->
+  <BattleCard Name="BattleTechAction11">
+    <Gui>
+      <Title>%BattleTechAction11Title</Title>
+      <Description>%BattleTechAction11Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction11Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction11Large"/>
+    </Gui>
+    <Family>BattleCardFamilySabotage</Family>
+    <Counter>BattleCardFamilyDefense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor31</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirFleet" StartDelay="6.0" Target="Other" Prefab="Sabotage/FX_Electromagnetic_Pulse"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor32</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirFleet" StartDelay="6.0" Target="Other" Prefab="Sabotage/FX_Electromagnetic_Pulse"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION :: ADVENTURER :: Stolen Technology -->
+  <!--
+  <BattleCard Name="BattleHeroAction10" Cost="70">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityAdventurer11)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction10Title</Title>
+      <Description>%BattleHeroAction10Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityAdventurer11Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer11Large"/>
+    </Gui>
+    <Family>BattleCardFamilySabotage</Family>
+    <Counter>BattleCardFamilyOffense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor51</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor33</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirFleet" StartDelay="4.0" Target="Other" Prefab="Sabotage/FX_Stolen_Technology"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor52</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor34</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirFleet" StartDelay="4.0" Target="Other" Prefab="Sabotage/FX_Stolen_Technology"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+  -->
+
+  <!-- HERO ACTION :: ADVENTURER :: Armor Weak Point -->
+  <BattleCard Name="BattleHeroAction9" Cost="30">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityAdventurer10)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction9Title</Title>
+      <Description>%BattleHeroAction9Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityAdventurer10Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityAdventurer10Large"/>
+    </Gui>
+    <Family>BattleCardFamilySabotage</Family>
+    <Counter>BattleCardFamilyEngineering</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor35</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirShips" Target="Me" StartDelay="5.0" RangeDelay="5.0" Prefab="Sabotage/Fx_Armor_Weakpoint_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor36</Descriptors>
+        </BattleAction-FleetSimulation>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Weapon Disruption -->
+  <BattleCard Name="BattleTechAction3">
+    <Gui>
+      <Title>%BattleTechAction3Title</Title>
+      <Description>%BattleTechAction3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction3Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction3Large"/>
+    </Gui>
+    <Family>BattleCardFamilySabotage</Family>
+    <Counter>BattleCardFamilyOffense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor37</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirShips" RangeDelay="4.0" StartDelay="6.0" Target="Me" Prefab="Sabotage/Fx_WeaponDisruption_$(AffinityMapping)_$(ShipSize)_$(Variation)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor38</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirShips" RangeDelay="4.0" StartDelay="6.0" Target="Me" Prefab="Sabotage/Fx_WeaponDisruption_$(AffinityMapping)_$(ShipSize)_$(Variation)_Boost"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Short Circuit -->
+  <BattleCard Name="BattleTechAction8">
+    <Gui>
+      <Title>%BattleTechAction8Title</Title>
+      <Description>%BattleTechAction8Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction8Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction8Large"/>
+    </Gui>
+    <Family>BattleCardFamilySabotage</Family>
+    <Counter>BattleCardFamilyDefense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor39</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirShips" Target="Me" StartDelay="6.0" RangeDelay="4.0" Prefab="Sabotage/Fx_ShortCircuit_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Other">
+          <Descriptors>BattleCardDescriptor40</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="TheirShips" Target="Me" StartDelay="3.0" RangeDelay="6.0" Prefab="Sabotage/Fx_ShortCircuit_$(ShipSize)_Boost"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+
+
+
+
+  <!-- ##### TACTICS ##### -->
+  <!-- Adaptative Strategy -->
+  <BattleCard Name="BattleTechAction13">
+    <Gui>
+      <Title>%BattleTechAction13Title</Title>
+      <Description>%BattleTechAction13Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction13Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction13Large"/>
+    </Gui>
+    <Family>BattleCardFamilyTactics</Family>
+    <Counter>BattleCardFamilyEngineering</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-ModuleOverclock Target="Self" ModuleClass="WeaponModule" OverlockChoice="Best">
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.40"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.40"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+        </BattleAction-ModuleOverclock>
+        <BattleAction-ModuleOverclock Target="Self" ModuleClass="DefenseModule" OverlockChoice="Best">
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="-0.30"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="-0.30"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="-0.30"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+        </BattleAction-ModuleOverclock>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="3.0" Target="Me" Prefab="Tactics/Fx_AdaptativeStrategy_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-ModuleOverclock Target="Self" ModuleClass="WeaponModule" OverlockChoice="Best">
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            Value="0.10"      OperationType="Percent" Path="ClassFleet/ClassShip/WeaponModule"/>
+        </BattleAction-ModuleOverclock>
+        <BattleAction-ModuleOverclock Target="Self" ModuleClass="DefenseModule" OverlockChoice="Best">
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.30"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.30"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+          <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.30"     OperationType="Percent" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+        </BattleAction-ModuleOverclock>
+        <BattleAction-Effect WrapMode="OneShot" AttachTo="OurShips" StartDelay="2.0" RangeDelay="3.0" Target="Me" Prefab="Tactics/Fx_AdaptativeStrategy_$(ShipSize)"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Retreat -->
+  <BattleCard Name="BattleTechAction0">
+    <Gui>
+      <Title>%BattleTechAction0Title</Title>
+      <Description>%BattleTechAction0Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction0Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction0Large"/>
+    </Gui>
+    <Family>BattleCardFamilyUnblockable</Family>
+    <Counter>BattleCardFamilyTactics</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor45</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Retreat Target="Self" TurnsBeforeRetreat="2"/>
+        <BattleAction-UnilateralDamage Target="Other"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor46</Descriptors>
+        </BattleAction-FleetSimulation>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- Offensive Retreat -->
+  <BattleCard Name="BattleTechAction6">
+    <Gui>
+      <Title>%BattleTechAction6Title</Title>
+      <Description>%BattleTechAction6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/BattleActions/BattleTechAction6Small" Large="Gui/DynamicBitmaps/BattleActions/BattleTechAction6Large"/>
+    </Gui>
+    <Family>BattleCardFamilyTactics</Family>
+    <Counter>BattleCardFamilyTactics</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor47</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Retreat Target="Self" TurnsBeforeRetreat="1"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-FleetSimulation Target="Self">
+          <Descriptors>BattleCardDescriptor48</Descriptors>
+        </BattleAction-FleetSimulation>
+        <BattleAction-Retreat Target="Self" TurnsBeforeRetreat="2"/>
+        <BattleAction-UnilateralDamage Target="Self"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+  <!-- HERO ACTION :: PILOT :: PowerConvergence -->
+  <BattleCard Name="BattleHeroAction6" Cost="50">
+    <PathsPrerequisites>$(//ClassHero,HeroAbilityPilot12)</PathsPrerequisites>
+    <Gui>
+      <Title>%BattleHeroAction6Title</Title>
+      <Description>%BattleHeroAction6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/HeroAbilities/HeroAbilityPilot12Small" Large="Gui/DynamicBitmaps/HeroAbilities/HeroAbilityPilot12Large"/>
+    </Gui>
+    <Family>BattleCardFamilyTactics</Family>
+    <Counter>BattleCardFamilyDefense</Counter>
+    <Tags>BattlePhaseCombat</Tags>
+    <RealizationTags>Fire</RealizationTags>
+    <Actions>
+      <Pack Name="Regular">
+        <BattleAction-PowerConvergence Target="Self" Alteration="Alt1" Power="3"/>
+      </Pack>
+      <Pack Name="Counter">
+        <BattleAction-PowerConvergence Target="Self" Alteration="Alt1" Power="3"/>
+      </Pack>
+      <Pack Name="Countered"/>
+    </Actions>
+  </BattleCard>
+
+
+
+  <!-- FAMILIES -->
+  <BattleCardFamily Name="BattleCardFamilyOffense">
+    <Gui>
+      <Title>%BattleCardFamilyOffenseTitle</Title>
+      <Description>%BattleCardFamilyOffenseDescription</Description>
+      <ColorCode>#FCBEBE#</ColorCode>
+    </Gui>
+  </BattleCardFamily>
+
+  <BattleCardFamily Name="BattleCardFamilyDefense">
+    <Gui>
+      <Title>%BattleCardFamilyDefenseTitle</Title>
+      <Description>%BattleCardFamilyDefenseDescription</Description>
+      <ColorCode>#FCFBBE#</ColorCode>
+    </Gui>
+  </BattleCardFamily>
+
+  <BattleCardFamily Name="BattleCardFamilyEngineering">
+    <Gui>
+      <Title>%BattleCardFamilyEngineeringTitle</Title>
+      <Description>%BattleCardFamilyEngineeringDescription</Description>
+      <ColorCode>#BEEDFC#</ColorCode>
+    </Gui>
+  </BattleCardFamily>
+
+  <BattleCardFamily Name="BattleCardFamilyTactics">
+    <Gui>
+      <Title>%BattleCardFamilyTacticsTitle</Title>
+      <Description>%BattleCardFamilyTacticsDescription</Description>
+      <ColorCode>#BFFCBE#</ColorCode>
+    </Gui>
+  </BattleCardFamily>
+
+  <BattleCardFamily Name="BattleCardFamilySabotage">
+    <Gui>
+      <Title>%BattleCardFamilySabotageTitle</Title>
+      <Description>%BattleCardFamilySabotageDescription</Description>
+      <ColorCode>#E8BEFC#</ColorCode>
+    </Gui>
+  </BattleCardFamily>
+
+  <BattleCardFamily Name="BattleCardFamilyUnblockable">
+    <Gui>
+      <Title>%BattleCardFamilyUnblockableTitle</Title>
+      <Description>%BattleCardFamilyUnblockableDescription</Description>
+      <ColorCode>#FFFFFF#</ColorCode>
+    </Gui>
+  </BattleCardFamily>
+
+</Datatable>

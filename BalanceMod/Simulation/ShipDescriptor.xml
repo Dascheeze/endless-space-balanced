@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- CLASS -->  
+  <SimulationObjectDescriptor Name="ClassShip" Type="Class">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="AttackPoint" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="MaxMovement" Value="1.0"/>
+      <SimulationObjectPropertyDescriptor Name="Movement" Value="0.0"/>
+
+      <SimulationObjectPropertyDescriptor Name="CurrentXP" Value="0.0"/>
+      <SimulationObjectPropertyDescriptor Name="Level" Value="-1" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="Upkeep" Value="0" MinValue="Negative"/>
+
+      <SimulationObjectPropertyDescriptor Name="DetectionRadius" Value="2"/>
+      <SimulationObjectPropertyDescriptor Name="MilitaryPowerInvasion" Value="0"/>
+      <SimulationObjectPropertyDescriptor Name="Cloaking" Value="0"/>
+
+      <SimulationObjectPropertyDescriptor Name="CanHeal" Value="0"/>
+
+      <!-- Healing capacity of this ship in other than allied orbit -->
+      <SimulationObjectPropertyDescriptor Name="HealingPercent" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="Healing" Value="0"/>
+
+      <!-- Healing capacity of this ship in allied orbit -->
+      <SimulationObjectPropertyDescriptor Name="HealingPercentAllied" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="HealingAllied" Value="0"/>
+
+      <!-- Healing capacity of this ship each battle phase -->
+      <SimulationObjectPropertyDescriptor Name="BattleHealingPercent" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="BattleHealing" Value="0"/>
+
+      <SimulationObjectPropertyDescriptor Name="FleetHealingPercent" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="FleetHealing" Value="0"/>
+      
+      <SimulationObjectPropertyDescriptor Name="FleetHealingPercentAllied" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="FleetHealingAllied" Value="0"/>
+
+      <SimulationObjectPropertyDescriptor Name="FleetBattleHealingPercent" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="FleetBattleHealing" Value="0"/>
+      
+      <!-- Module Weight bonus -->
+      <SimulationObjectPropertyDescriptor Name="SupportModuleEngineWeightBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="SupportModuleScoutWeightBonus"  Value="1"  />
+      <SimulationObjectPropertyDescriptor Name="SupportModuleRepairWeightBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="SupportModuleCivilianWeightBonus" Value="1"/>
+      <SimulationObjectPropertyDescriptor Name="SupportModuleArmorWeightBonus"    Value="1" />
+      <SimulationObjectPropertyDescriptor Name="SupportModuleInvasionWeightBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="SupportModulePowerWeightBonus"    Value="1" />
+      <SimulationObjectPropertyDescriptor Name="DefenseModuleWeightBonus" Value="1" />
+      <SimulationObjectPropertyDescriptor Name="WeaponModuleWeightBonus"  Value="1" />
+      
+    </SimulationObjectPropertyDescriptors>
+
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="$(CommandPoint)" OperationType="Soustraction" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="1" OperationType="Multiplication" Path="ClassShip"/>
+      
+      <!-- Initial Heal percent -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingPercentAllied" Value="0.05" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingPercent" Value="0.01" OperationType="Percent" Path="ClassShip"/>
+
+      <!-- Assure that the ship has not move to be healed.-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingPercent" Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Healing"        Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingPercentAllied" Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingAllied"        Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      
+      <!-- Assure that the ship has not move to be able to heal other ships.-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FleetHealingPercent" Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FleetHealing" Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FleetHealingPercentAllied" Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="FleetHealingAllied" Value="$(CanHeal)" OperationType="Multiplication" Path="ClassShip"/>
+      
+      <!-- Forward to the other ships (include himself), the ability to be healed based on this ship modules.-->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Healing" Value="$(FleetHealing)" OperationType="Addition" Path="./ClassFleet/ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="HealingAllied" Value="$(FleetHealingAllied)" OperationType="Addition" Path="./ClassFleet/ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="BattleHealing" Value="$(FleetBattleHealing)" OperationType="Addition" Path="./ClassFleet/ClassShip"/>
+
+      <!-- For GUI purpose, we have set the Percent values to 1 and made only "Percent" operation on it. To sum them all, we have to remove the "1" part to retrieve only the bonus. -->
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="HealingPercent" OperationType="Percent" BinaryOperation="Addition" Left="$(FleetHealingPercent)" Right="-1" Path="./ClassFleet/ClassShip"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="HealingPercentAllied" OperationType="Percent" BinaryOperation="Addition" Left="$(FleetHealingPercentAllied)" Right="-1" Path="./ClassFleet/ClassShip"/>
+      <SimulationObjectPropertyBinaryModifierDescriptor TargetProperty="BattleHealingPercent" OperationType="Percent" BinaryOperation="Addition" Left="$(FleetBattleHealingPercent)" Right="-1" Path="./ClassFleet/ClassShip"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPowerInvasion" Value="$(MilitaryPower)" OperationType="Addition" Path="ClassShip"/>
+      
+      <!-- Apply Module weight bonus -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(SupportModuleCivilianWeightBonus)" OperationType="Multiplication" Path="ClassShip/SupportModuleCivilian"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(SupportModuleEngineWeightBonus)" OperationType="Multiplication" Path="ClassShip/SupportModuleEngine"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(SupportModuleScoutWeightBonus)" OperationType="Multiplication" Path="ClassShip/SupportModuleScout"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(SupportModuleRepairWeightBonus)" OperationType="Multiplication" Path="ClassShip/SupportModuleRepair"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(SupportModuleArmorWeightBonus)" OperationType="Multiplication" Path="ClassShip/SupportModuleArmor"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(SupportModuleInvasionWeightBonus)" OperationType="Multiplication" Path="ClassShip/SupportModuleInvasion"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(SupportModulePowerWeightBonus)" OperationType="Multiplication" Path="ClassShip/SupportModulePower"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(DefenseModuleWeightBonus)" OperationType="Multiplication" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight" Value="$(WeaponModuleWeightBonus)" OperationType="Multiplication" Path="ClassShip/WeaponModule"/>
+
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ClassFleet" Type="Class">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="AttackPoint" Value="0" IsCompoundMinimum="true"/>
+      <SimulationObjectPropertyDescriptor Name="CommandPoint" Value="0" IsCompound="true"/>
+      <SimulationObjectPropertyDescriptor Name="DetectionRadius" Value="1" IsCompoundMaximum="true"/>
+      <SimulationObjectPropertyDescriptor Name="FlightRange" Value="33"/>
+      <SimulationObjectPropertyDescriptor Name="MaxMovement" Value="1.0" IsCompoundMinimum="true"/>
+      <SimulationObjectPropertyDescriptor Name="Movement" Value="0.0" IsCompoundMaximum="true"/>
+      <SimulationObjectPropertyDescriptor Name="Speed" Value="0" IsCompoundMinimum="true"/>
+      <SimulationObjectPropertyDescriptor Name="FreeSpeed" Value="0" IsCompoundMinimum="true"/>
+      <SimulationObjectPropertyDescriptor Name="Weight" Value="0" IsCompound="true"/>
+      <SimulationObjectPropertyDescriptor Name="Upkeep" Value="0" IsCompound="true" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="MilitaryPower" Value="0" IsCompound="true"/>
+      <SimulationObjectPropertyDescriptor Name="MilitaryPowerInvasion" Value="0" IsCompound="true"/>
+      <SimulationObjectPropertyDescriptor Name="Cloaking" Value="0" IsCompoundMinimum="true"/>
+
+      <!-- Battle bonus (Defense/Attack) [0,1]-->
+      <!-- When fleet is in an allied territory or not. -->
+      <SimulationObjectPropertyDescriptor Name="AlliedTerritoryDefenseBonus" Value="0" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="HostileTerritoryDefenseBonus" Value="0" MinValue="Negative"/>
+      
+      <SimulationObjectPropertyDescriptor Name="AlliedTerritoryAttackBonus" Value="0" MinValue="Negative"/>
+      <SimulationObjectPropertyDescriptor Name="HostileTerritoryAttackBonus" Value="0" MinValue="Negative"/>
+    </SimulationObjectPropertyDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="FleetGuiDescriptor" Type="GuiDescriptor">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Upkeep" Value="0"     OperationType="Multiplication" Path="ClassFleet" Priority="1"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- SHIPCLASSIFICATION -->
+  <SimulationObjectDescriptor Name="ShipClassificationCivilian" Type="ShipClassification"/>
+  <SimulationObjectDescriptor Name="ShipClassificationEvacuation" Type="ShipClassificationEvacuation"/>
+
+  <!-- Example of "Hull Descriptors"
+  you can add them in a <Descriptors> balise under the Hull description in Hulls.xml
+  -->
+  <SimulationObjectDescriptor Name="ShipClassColonization" Type="ShipClassColonization">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModuleCivilianWeightBonus" Value="-0.40"     OperationType="Percent" Path="ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassSmall1" Type="ShipClassSmall1">
+    <SimulationObjectPropertyModifierDescriptors>
+      <!--
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Speed" Value="50" OperationType="Addition" Path="ClassShip"/>
+      -->
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModuleEngineWeightBonus" Value="-0.25"     OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModuleScoutWeightBonus"  Value="-0.25"     OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModuleRepairWeightBonus" Value="-0.25"     OperationType="Percent" Path="ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  <SimulationObjectDescriptor Name="ShipClassSmall2" Type="ShipClassSmall2">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="WeaponModuleWeightBonus"        Value="-0.20"     OperationType="Percent" Path="ClassShip"/>      
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassMedium1" Type="ShipClassMedium1">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModuleArmorWeightBonus"    Value="-0.25"     OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModuleInvasionWeightBonus" Value="-0.25"     OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="SupportModulePowerWeightBonus"    Value="-0.25"     OperationType="Percent" Path="ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassMedium2" Type="ShipClassMedium2">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DefenseModuleWeightBonus" Value="-0.20"     OperationType="Percent" Path="ClassShip"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipClassLarge1" Type="ShipClassLarge1">
+  </SimulationObjectDescriptor>
+  
+  
+
+  <SimulationObjectDescriptor Name="ModuleModifierDefault" Type="ModuleModifier">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="$(Count)" OperationType="Multiplication" Path="ClassModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Weight"        Value="$(Count)" OperationType="Multiplication" Path="ClassModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+  
+
+  <SimulationObjectDescriptor Name="ShipLevel0" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors/>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel1" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="0.05" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.05" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.05" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.05" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.05"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.05"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.05"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.05" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.05" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel2" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="0.10" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.10" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.10" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.10" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.10"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.10"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.10"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.1" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.1" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel3" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="0.20" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.20" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.20" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.20" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.20"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.20"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.20"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.20" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.20" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel4" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="0.40" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.30" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.30" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.30" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.30"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.30"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.30"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.30" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.30" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel5" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="0.80" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.40" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.40" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.40" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.40"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.40"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.40"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.40" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.40" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel6" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="1.60" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.50" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.50" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.50" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.50"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.50"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.50"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.50" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.50" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel7" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="2.40" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.60" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.60" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.60" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.60"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.60"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.60"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.60" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.60" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel8" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="3.20" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="0.75" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="0.75" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="0.75" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="0.75"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="0.75"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="0.75"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.75" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="0.75" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="ShipLevel9" Type="ShipLevel" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxHealth" Value="5" OperationType="Percent" Path="ClassShip"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin" Value="1" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax" Value="1" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  Value="1" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" Value="1"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    Value="1"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorption"           Value="1"     OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="1.00" OperationType="Percent" Path="ClassShip/DefenseModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MilitaryPower" Value="1.00" OperationType="Percent" Path="ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <!-- These descriptors are added to the fleets at the battle start depending on the battle orbit. -->
+  <SimulationObjectDescriptor Name="BattleTerritoryAllied" Type="BattleTerritory">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" OperationType="Percent" Value="$(AlliedTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    OperationType="Percent" Value="$(AlliedTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorbtion"           OperationType="Percent" Value="$(AlliedTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+      
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            OperationType="Percent" Value="$(AlliedTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            OperationType="Percent" Value="$(AlliedTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  OperationType="Percent" Value="$(AlliedTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="BattleTerritoryNeutral" Type="BattleTerritory">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" OperationType="Percent" Value="$(HostileTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    OperationType="Percent" Value="$(HostileTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorbtion"           OperationType="Percent" Value="$(HostileTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            OperationType="Percent" Value="$(HostileTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            OperationType="Percent" Value="$(HostileTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  OperationType="Percent" Value="$(HostileTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="BattleTerritoryHostile" Type="BattleTerritory">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionAccuracy" OperationType="Percent" Value="$(HostileTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Missile"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DeflectionPerTurn"    OperationType="Percent" Value="$(HostileTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Kinetic"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Absorbtion"           OperationType="Percent" Value="$(HostileTerritoryDefenseBonus)" Path="ClassFleet/ClassShip/DefenseModule,Laser"/>
+
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMin"            OperationType="Percent" Value="$(HostileTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DamageMax"            OperationType="Percent" Value="$(HostileTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="InterceptionEvasion"  OperationType="Percent" Value="$(HostileTerritoryAttackBonus)" Path="ClassFleet/ClassShip/WeaponModule"/>
+    </SimulationObjectPropertyModifierDescriptors>
+  </SimulationObjectDescriptor>
+  
+</Datatable>

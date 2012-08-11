@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+<!-- GALACTIC WARFARE DOMAIN -->
+
+  
+  
+  <!-- 1st circle -->
+  <Technology Name="TechG01" Cost="40" IsUnique="true" X="-1.5" Y="1.5" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic2" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile1" Access="Standard" />
+    <Gui>
+      <Title>%TechG01Title</Title>
+      <Description>%TechG01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG01Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG02" Cost="40" IsUnique="true" X="1.5" Y="1.5" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile1" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector2" Access="Standard" />
+    <Gui>
+      <Title>%TechG02Title</Title>
+      <Description>%TechG02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG02Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 2nd circle -->
+  <Technology Name="TechG03" Cost="130" IsUnique="true" X="0" Y="2.25" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG01;TechG02</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementShipQuality1" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementDefense1" Access="Standard" /><!--TODO: Defense1-->
+    <Gui>
+      <Title>%TechG03Title</Title>
+      <Description>%TechG03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG03Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 3rd circle -->
+  <Technology Name="TechG04" Cost="300" IsUnique="true" X="-2.5" Y="3" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG03</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic3" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile2" Access="Standard" />
+    <Gui>
+      <Title>%TechG04Title</Title>
+      <Description>%TechG04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG04Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG05" Cost="300" IsUnique="true" X="-1" Y="3" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG03</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile2" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor2" Access="Standard" />
+    <Gui>
+      <Title>%TechG05Title</Title>
+      <Description>%TechG05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG05Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG06" Cost="300" IsUnique="true" X="1" Y="3" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG03</TechnologiesDependencies>
+    <Unlockable Name="ModuleDefenseShield1" Access="Standard" />
+    <Unlockable Name="ModuleSupportInvasion1" Access="Standard" />
+    <Gui>
+      <Title>%TechG06Title</Title>
+      <Description>%TechG06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG06Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG07" Cost="300" IsUnique="true" X="2.5" Y="3" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG03</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser1" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector3" Access="Standard" />
+    <Gui>
+      <Title>%TechG07Title</Title>
+      <Description>%TechG07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG07Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 4th circle -->
+  <Technology Name="TechG08" Cost="680" IsUnique="true" X="-3.25" Y="4.25" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG04</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic4" Access="Standard" />
+    <Gui>
+      <Title>%TechG08Title</Title>
+      <Description>%TechG08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG08Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG09" Cost="680" IsUnique="true" X="-2" Y="4.25" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG04</TechnologiesDependencies>
+    <Unlockable Name="ModuleDefenseAntimissile3" Access="Standard" />
+    <Gui>
+      <Title>%TechG09Title</Title>
+      <Description>%TechG09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG09Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG10" Cost="680" IsUnique="true" X="-0.75" Y="4.25" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG05</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile3" Access="Standard" />
+    <Gui>
+      <Title>%TechG10Title</Title>
+      <Description>%TechG10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG10Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG50Hissho" Cost="680" IsUnique="true" X="0" Y="3.5" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG05;TechG06</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementUniqueHissho" Access="Standard" />
+    <Gui>
+      <Title>%TechG50HisshoTitle</Title>
+      <Description>%TechG50HisshoDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG50HisshoSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG11" Cost="680" IsUnique="true" X="0.75" Y="4.25" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG06</TechnologiesDependencies>
+    <Unlockable Name="ModuleDefenseShield2" Access="Standard" />
+    <Gui>
+      <Title>%TechG11Title</Title>
+      <Description>%TechG11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG11Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG12" Cost="680" IsUnique="true" X="2" Y="4.25" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG07</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser2" Access="Standard" />
+    <Gui>
+      <Title>%TechG12Title</Title>
+      <Description>%TechG12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG12Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG13" Cost="680" IsUnique="true" X="3.25" Y="4.25" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG07</TechnologiesDependencies>
+    <Unlockable Name="ModuleDefenseDeflector4" Access="Standard" />
+    <Gui>
+      <Title>%TechG13Title</Title>
+      <Description>%TechG13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG13Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 5th circle -->
+  <Technology Name="TechG14" Cost="1800" IsUnique="true" X="-0.5" Y="5" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG10;TechG50Hissho</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementShipQuality2" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor3" Access="Standard" /><!--TODO: Armor Mod 3-->
+    <Gui>
+      <Title>%TechG14Title</Title>
+      <Description>%TechG14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG14Small"/>
+    </Gui>
+  </Technology>  
+  <Technology Name="TechG14Terran" Cost="1800" IsUnique="true" X="-0.5" Y="5" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG10</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementShipQuality2" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor3Terran" Access="Standard" />
+    <!--TODO: Armor Mod 3-->
+    <Gui>
+      <Title>%TechG14TerranTitle</Title>
+      <Description>%TechG14TerranDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG14TerranSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG15" Cost="1800" IsUnique="true" X="0.5" Y="5" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG11;TechG50Hissho</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementDefense2" Access="Standard" />
+    <Unlockable Name="ModuleSupportPower2" Access="Standard" />
+    <Gui>
+      <Title>%TechG15Title</Title>
+      <Description>%TechG15Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG15Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 6th circle -->
+  <Technology Name="TechG16" Cost="4000" IsUnique="true" X="-2" Y="6" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG08;TechG09;TechG14;TechG14Terran</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic5" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile4" Access="Standard" />
+    <Gui>
+      <Title>%TechG16Title</Title>
+      <Description>%TechG16Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG16Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG17" Cost="4000" IsUnique="true" X="-1" Y="6" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG14;TechG14Terran</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile4" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor4" Access="Standard" />
+    <Gui>
+      <Title>%TechG17Title</Title>
+      <Description>%TechG17Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG17Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG18" Cost="4000" IsUnique="true" X="1" Y="6" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG15</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportInvasion2" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield3" Access="Standard" />
+    <Gui>
+      <Title>%TechG18Title</Title>
+      <Description>%TechG18Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG18Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG19" Cost="4000" IsUnique="true" X="2" Y="6" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG12;TechG13;TechG15</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser3" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector5" Access="Standard" />
+    <Gui>
+      <Title>%TechG19Title</Title>
+      <Description>%TechG19Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG19Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 7th circle -->
+  <Technology Name="TechG20" Cost="7500" IsUnique="true" X="-2" Y="7" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG16</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic6" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile5" Access="Standard" />
+    <Gui>
+      <Title>%TechG20Title</Title>
+      <Description>%TechG20Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG20Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechG20Hissho" Cost="7500" IsUnique="true" X="-2" Y="7" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG16</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic6Hissho" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile5" Access="Standard" />
+    <Gui>
+      <Title>%TechG20HisshoTitle</Title>
+      <Description>%TechG20HisshoDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG20HisshoSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG21" Cost="7500" IsUnique="true" X="-1" Y="7" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG17</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile5" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor5" Access="Standard" />
+    <Gui>
+      <Title>%TechG21Title</Title>
+      <Description>%TechG21Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG21Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG27" Cost="7500" IsUnique="true" X="0" Y="7" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG14;TechG14Terran;TechG15</TechnologiesDependencies>
+    <Unlockable Name="LuxuryExploitation4" Access="Fake" />
+    <Unlockable Name="PlanetLuxury13" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury14" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury15" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury16" Access="Hidden" />
+    <Gui>
+      <Title>%TechG27Title</Title>
+      <Description>%TechG27Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG27Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG23" Cost="7500" IsUnique="true" X="1" Y="7" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG18</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportPower3" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield4" Access="Standard" />
+    <Gui>
+      <Title>%TechG23Title</Title>
+      <Description>%TechG23Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG23Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG24" Cost="7500" IsUnique="true" X="2" Y="7" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG19</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser4" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector6" Access="Standard" />
+    <Gui>
+      <Title>%TechG24Title</Title>
+      <Description>%TechG24Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG24Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 8th circle -->
+  <Technology Name="TechG25" Cost="14000" IsUnique="true" X="-2" Y="8" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG20;TechG20Hissho</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic7" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile6" Access="Standard" />
+    <Gui>
+      <Title>%TechG25Title</Title>
+      <Description>%TechG25Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG25Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG26" Cost="14000" IsUnique="true" X="-1" Y="8" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG21</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile6" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor6" Access="Standard" />
+    <Gui>
+      <Title>%TechG26Title</Title>
+      <Description>%TechG26Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG26Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechG26Swarm" Cost="14000" IsUnique="true" X="-1" Y="8" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG21</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile6Swarm" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor6" Access="Standard" />
+    <Gui>
+      <Title>%TechG26SwarmTitle</Title>
+      <Description>%TechG26SwarmDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG26SwarmSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG22" Cost="14000" IsUnique="true" X="0" Y="8" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG27</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementShipQuality3" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementDefense3" Access="Standard" />
+    <Gui>
+      <Title>%TechG22Title</Title>
+      <Description>%TechG22Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG22Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG28" Cost="14000" IsUnique="true" X="1" Y="8" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG23</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportInvasion3" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield5" Access="Standard" />
+    <Gui>
+      <Title>%TechG28Title</Title>
+      <Description>%TechG28Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG28Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechG28Hissho" Cost="14000" IsUnique="true" X="1" Y="8" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG23</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportInvasion3Hissho" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield5" Access="Standard" />
+    <Gui>
+      <Title>%TechG28HisshoTitle</Title>
+      <Description>%TechG28HisshoDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG28HisshoSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG29" Cost="14000" IsUnique="true" X="2" Y="8" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG24</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser5" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector7" Access="Standard" />
+    <Gui>
+      <Title>%TechG29Title</Title>
+      <Description>%TechG29Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG29Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 9th circle -->
+  <Technology Name="TechG30" Cost="25000" IsUnique="true" X="-1.5" Y="9" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG25;TechG26;TechG26Swarm;TechG22</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementShipQuality4" Access="Standard" />
+    <Gui>
+      <Title>%TechG30Title</Title>
+      <Description>%TechG30Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG30Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG38Hissho" Cost="25000" IsUnique="true" X="-0.5" Y="9" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG22</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile8" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor8" Access="Standard" />
+    <Gui>
+      <Title>%TechG38HisshoTitle</Title>
+      <Description>%TechG38HisshoDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG38HisshoSmall"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG45Terran" Cost="25000" IsUnique="true" X="0" Y="9" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG22</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportArmor9" Access="Standard" />
+    <Gui>
+      <Title>%TechG45TerranTitle</Title>
+      <Description>%TechG45TerranDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG45TerranSmall"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG46Swarm" Cost="25000" IsUnique="true" X="0" Y="9" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG22</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportPower6" Access="Standard" />
+    <Gui>
+      <Title>%TechG46SwarmTitle</Title>
+      <Description>%TechG46SwarmDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG46SwarmSmall"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG35Hissho" Cost="25000" IsUnique="true" X="0.5" Y="9" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG22</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportPower4" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield6" Access="Standard" />
+    <Gui>
+      <Title>%TechG35HisshoTitle</Title>
+      <Description>%TechG35HisshoDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG35HisshoSmall"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG31" Cost="25000" IsUnique="true" X="1.5" Y="9" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG22;TechG28;TechG28Hissho;TechG29</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementDefense4" Access="Standard" />
+    <Gui>
+      <Title>%TechG31Title</Title>
+      <Description>%TechG31Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG31Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 10th circle -->
+  <Technology Name="TechG32" Cost="36000" IsUnique="true" X="-2" Y="10" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG30</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic8" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile7" Access="Standard" />
+    <Gui>
+      <Title>%TechG32Title</Title>
+      <Description>%TechG32Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG32Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG33" Cost="36000" IsUnique="true" X="-1" Y="10" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG30</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile7" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor7" Access="Standard" />
+    <Gui>
+      <Title>%TechG33Title</Title>
+      <Description>%TechG33Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG33Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG34" Cost="36000" IsUnique="true" X="0" Y="10" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG30;TechG31</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportInvasion4" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementDefense5" Access="Standard" />
+    <Gui>
+      <Title>%TechG34Title</Title>
+      <Description>%TechG34Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG34Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG35" Cost="36000" IsUnique="true" X="1" Y="10" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG31</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportPower4" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield6" Access="Standard" />
+    <Gui>
+      <Title>%TechG35Title</Title>
+      <Description>%TechG35Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG35Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG36" Cost="36000" IsUnique="true" X="2" Y="10" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG31</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser6" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector8" Access="Standard" />
+    <Gui>
+      <Title>%TechG36Title</Title>
+      <Description>%TechG36Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG36Small"/>
+    </Gui>
+  </Technology>
+
+
+  
+  <!-- 11th circle -->
+  <Technology Name="TechG37" Cost="60000" IsUnique="true" X="-2" Y="11" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG32</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic9" Access="Standard" />
+    <Unlockable Name="ModuleDefenseAntimissile8" Access="Standard" />
+    <Gui>
+      <Title>%TechG37Title</Title>
+      <Description>%TechG37Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG37Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG38" Cost="60000" IsUnique="true" X="-1" Y="11" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG33</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile8" Access="Standard" />
+    <Unlockable Name="ModuleSupportArmor8" Access="Standard" />
+    <Gui>
+      <Title>%TechG38Title</Title>
+      <Description>%TechG38Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG38Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG39" Cost="60000" IsUnique="true" X="0" Y="11" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG34</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportInvasion5" Access="Standard" />
+    <Unlockable Name="ScienceVictoryUnlock3" Access="Standard" />
+    <Gui>
+      <Title>%TechG39Title</Title>
+      <Description>%TechG39Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG39Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechG39Terran" Cost="60000" IsUnique="true" X="0" Y="11" Category="GalacticWarfare" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG34</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportInvasion5Terran" Access="Standard" />
+    <Unlockable Name="ScienceVictoryUnlock3" Access="Standard" />
+    <Gui>
+      <Title>%TechG39TerranTitle</Title>
+      <Description>%TechG39TerranDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG39TerranSmall"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG40" Cost="60000" IsUnique="true" X="1" Y="11" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG35</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportPower5" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield7" Access="Standard" />
+    <Gui>
+      <Title>%TechG40Title</Title>
+      <Description>%TechG40Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG40Small"/>
+    </Gui>
+  </Technology>  
+  <Technology Name="TechG40Hissho" Cost="60000" IsUnique="true" X="1" Y="11" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG31</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportPower5" Access="Standard" />
+    <Unlockable Name="ModuleDefenseShield7" Access="Standard" />
+    <Gui>
+      <Title>%TechG40Title</Title>
+      <Description>%TechG40Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG40Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG41" Cost="60000" IsUnique="true" X="2" Y="11" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG36</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser7" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector9" Access="Standard" />
+    <Gui>
+      <Title>%TechG41Title</Title>
+      <Description>%TechG41Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG41Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 12th circle, part 1 -->
+  <Technology Name="TechG42" Cost="99000" IsUnique="true" X="-2.25" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG37</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponKinetic10" Access="Standard" />
+    <Gui>
+      <Title>%TechG42Title</Title>
+      <Description>%TechG42Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG42Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG43" Cost="99000" IsUnique="true" X="-1.75" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG37</TechnologiesDependencies>
+    <Unlockable Name="ModuleDefenseAntimissile9" Access="Standard" />
+    <Gui>
+      <Title>%TechG43Title</Title>
+      <Description>%TechG43Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG43Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG44" Cost="99000" IsUnique="true" X="-1.25" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG38</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile9" Access="Standard" />
+    <Gui>
+      <Title>%TechG44Title</Title>
+      <Description>%TechG44Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG44Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG44Hissho" Cost="99000" IsUnique="true" X="-1.25" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG33</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponMissile9" Access="Standard" />
+    <Gui>
+      <Title>%TechG44Title</Title>
+      <Description>%TechG44Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG44Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG45" Cost="99000" IsUnique="true" X="-0.75" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinityTerran) and !$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG38</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportArmor9" Access="Standard" />
+    <Gui>
+      <Title>%TechG45Title</Title>
+      <Description>%TechG45Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG45Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG45Hissho" Cost="99000" IsUnique="true" X="-0.75" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG33</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportArmor9" Access="Standard" />
+    <Gui>
+      <Title>%TechG45Title</Title>
+      <Description>%TechG45Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG45Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- 12th circle, part 2 -->
+  <Technology Name="TechG46" Cost="99000" IsUnique="true" X="0.75" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG40;TechG40Hissho</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportPower6" Access="Standard" />
+    <Gui>
+      <Title>%TechG46Title</Title>
+      <Description>%TechG46Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG46Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG47" Cost="99000" IsUnique="true" X="1.25" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG40;TechG40Hissho</TechnologiesDependencies>
+    <Unlockable Name="ModuleDefenseShield8" Access="Standard" />
+    <Gui>
+      <Title>%TechG47Title</Title>
+      <Description>%TechG47Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG47Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechG48" Cost="99000" IsUnique="true" X="1.75" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG41</TechnologiesDependencies>
+    <Unlockable Name="ModuleWeaponLaser8" Access="Standard" />
+    <Gui>
+      <Title>%TechG48Title</Title>
+      <Description>%TechG48Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG48Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechG49" Cost="99000" IsUnique="true" X="2.25" Y="12" Category="GalacticWarfare">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechG41</TechnologiesDependencies>
+    <Unlockable Name="ModuleDefenseDeflector10" Access="Standard" />
+    <Gui>
+      <Title>%TechG49Title</Title>
+      <Description>%TechG49Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyG49Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+</Datatable>

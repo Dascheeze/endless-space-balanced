@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <WeaponModule Name="Module_Missile_Test" Cost="2" Weight="15" MilitaryPower="1">
+    <Simulation DamageMin="10" DamageMax="10"
+                CriticMultiplier="1.0" CriticChance="0.0"
+                InterceptionEvasion="75"
+                NumberPerSalve="1" Accuracy="1.0"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_A"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile1Title</Title>
+      <Description>%ModuleWeaponMissile1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile1Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile1Large"/>
+      <CharCode>1</CharCode>
+    </Gui>
+  </WeaponModule>
+
+
+  
+  
+
+  <!-- =========================================== -->
+  <!-- ========== Module Weapon KINETIC ========== -->
+  <!-- =========================================== -->
+  <WeaponModule Name="ModuleWeaponKinetic1" Cost="3" Weight="7" MilitaryPower="8">
+    <Simulation DamageMin="2" DamageMax="3"
+                CriticMultiplier="2.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="4"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="2"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_01"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_01"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic1Title</Title>
+      <Description>%ModuleWeaponKinetic1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic1Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic1Large"/>
+      <CharCode>1</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic2" Cost="6" Weight="8" MilitaryPower="13">
+    <Simulation DamageMin="2" DamageMax="3"
+                CriticMultiplier="2.0" CriticChance="0.1"
+                InterceptionEvasion="0"
+                NumberPerSalve="6"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="2"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_02"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_02"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic2Title</Title>
+      <Description>%ModuleWeaponKinetic2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic2Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic2Large"/>
+      <CharCode>2</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic3" Cost="10" Weight="9" MilitaryPower="20">
+    <Simulation DamageMin="2" DamageMax="4"
+                CriticMultiplier="2.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="9"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="2"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_03"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_03"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic3Title</Title>
+      <Description>%ModuleWeaponKinetic3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic3Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic3Large"/>
+      <CharCode>3</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic4" Cost="15" Weight="10" MilitaryPower="30">
+    <Simulation DamageMin="2" DamageMax="4"
+                CriticMultiplier="2.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="12"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="3"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_04"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_04"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic4Title</Title>
+      <Description>%ModuleWeaponKinetic4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic4Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic4Large"/>
+      <CharCode>4</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic5" Cost="21" Weight="11" MilitaryPower="45">
+    <Simulation DamageMin="3" DamageMax="4"
+                CriticMultiplier="2.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="15"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="3"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_05"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_05"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic5Title</Title>
+      <Description>%ModuleWeaponKinetic5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic5Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic5Large"/>
+      <CharCode>5</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic6" Cost="28" Weight="12" MilitaryPower="70">
+    <Simulation DamageMin="3" DamageMax="5"
+                CriticMultiplier="2.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="20"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="3"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_06"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_06"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic6Title</Title>
+      <Description>%ModuleWeaponKinetic6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic6Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic6Large"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic6Hissho" Cost="28" Weight="12" MilitaryPower="88">
+    <Simulation DamageMin="3" DamageMax="5"
+                CriticMultiplier="2.0" CriticChance="0.1"
+                InterceptionEvasion="0"
+                NumberPerSalve="24"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="3"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_06"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_06"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic6HisshoTitle</Title>
+      <Description>%ModuleWeaponKinetic6HisshoDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic6HisshoSmall" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic6HisshoLarge"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic7" Cost="36" Weight="14" MilitaryPower="109">
+    <Simulation DamageMin="4" DamageMax="6"
+                CriticMultiplier="2.0" CriticChance="0.05"
+                InterceptionEvasion="0"
+                NumberPerSalve="26"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="4"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_07"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_07"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceOrichalcedon</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleWeaponKinetic7Title</Title>
+      <Description>%ModuleWeaponKinetic7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic7Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic7Large"/>
+      <CharCode>7</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic8" Cost="46" Weight="16" MilitaryPower="126">
+    <Simulation DamageMin="5" DamageMax="7"
+                CriticMultiplier="2.0" CriticChance="0.05"
+                InterceptionEvasion="0"
+                NumberPerSalve="30"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="4"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_08"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_08"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic8Title</Title>
+      <Description>%ModuleWeaponKinetic8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic8Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic8Large"/>
+      <CharCode>8</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic9" Cost="58" Weight="18" MilitaryPower="163">
+    <Simulation DamageMin="6" DamageMax="8"
+                CriticMultiplier="2.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="35"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="4"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_09"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_09"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceOrichalcedon</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleWeaponKinetic9Title</Title>
+      <Description>%ModuleWeaponKinetic9Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic9Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic9Large"/>
+      <CharCode>9</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponKinetic10" Cost="75" Weight="20" MilitaryPower="210">
+    <Simulation DamageMin="6" DamageMax="8"
+                CriticMultiplier="2.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="42"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1800"
+                RateOfFire="20" NumberOfProjectilesPerSalvo="4"
+                Priority="50"
+                BoardSideMaxDuration="2"
+                BoardSideFireDelay="0.3">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Kinetic_Level_10"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Kinetic_Src_Level_10"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponKinetic10Title</Title>
+      <Description>%ModuleWeaponKinetic10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic10Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponKinetic10Large"/>
+      <CharCode>10</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  
+  
+  
+  
+  <!-- =========================================== -->
+  <!-- ========== Module Weapon MISSILE ========== -->
+  <!-- =========================================== -->
+  <WeaponModule Name="ModuleWeaponMissile1" Cost="6" Weight="8" MilitaryPower="13">
+    <Simulation DamageMin="35" DamageMax="50"
+                CriticMultiplier="3.0" CriticChance="0.1"
+                InterceptionEvasion="10"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_01"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceTitanium</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleWeaponMissile1Title</Title>
+      <Description>%ModuleWeaponMissile1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile1Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile1Large"/>
+      <CharCode>1</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile2" Cost="10" Weight="9" MilitaryPower="20">
+    <Simulation DamageMin="50" DamageMax="65"
+                CriticMultiplier="3.0" CriticChance="0.2"
+                InterceptionEvasion="15"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_02"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile2Title</Title>
+      <Description>%ModuleWeaponMissile2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile2Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile2Large"/>
+      <CharCode>2</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile3" Cost="15" Weight="10" MilitaryPower="30">
+    <Simulation DamageMin="60" DamageMax="100"
+                CriticMultiplier="3.0" CriticChance="0.25"
+                InterceptionEvasion="25"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_03"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile3Title</Title>
+      <Description>%ModuleWeaponMissile3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile3Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile3Large"/>
+      <CharCode>3</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile4" Cost="21" Weight="11" MilitaryPower="45">
+    <Simulation DamageMin="120" DamageMax="180"
+                CriticMultiplier="3.0" CriticChance="0.1"
+                InterceptionEvasion="40"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_04"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile4Title</Title>
+      <Description>%ModuleWeaponMissile4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile4Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile4Large"/>
+      <CharCode>4</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile5" Cost="28" Weight="12" MilitaryPower="70">
+    <Simulation DamageMin="160" DamageMax="240"
+                CriticMultiplier="3.0" CriticChance="0.2"
+                InterceptionEvasion="60"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_05"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile5Title</Title>
+      <Description>%ModuleWeaponMissile5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile5Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile5Large"/>
+      <CharCode>5</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile6" Cost="36" Weight="14" MilitaryPower="88">
+    <Simulation DamageMin="200" DamageMax="300"
+                CriticMultiplier="3.0" CriticChance="0.2"
+                InterceptionEvasion="90"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_06"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile6Title</Title>
+      <Description>%ModuleWeaponMissile6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile6Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile6Large"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile6Swarm" Cost="36" Weight="14" MilitaryPower="100">
+    <Simulation DamageMin="200" DamageMax="300"
+                CriticMultiplier="3.0" CriticChance="0.2"
+                InterceptionEvasion="200"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_06"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile6SwarmTitle</Title>
+      <Description>%ModuleWeaponMissile6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile6SwarmSmall" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile6SwarmLarge"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile7" Cost="46" Weight="16" MilitaryPower="126">
+    <Simulation DamageMin="300" DamageMax="420"
+                CriticMultiplier="3.0" CriticChance="0.2"
+                InterceptionEvasion="135"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_07"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile7Title</Title>
+      <Description>%ModuleWeaponMissile7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile7Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile7Large"/>
+      <CharCode>7</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile8" Cost="58" Weight="18" MilitaryPower="163">
+    <Simulation DamageMin="300" DamageMax="1000"
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="190"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_08"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceQuadrinite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleWeaponMissile8Title</Title>
+      <Description>%ModuleWeaponMissile8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile8Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile8Large"/>
+      <CharCode>8</CharCode>
+    </Gui>
+  </WeaponModule>
+
+  <WeaponModule Name="ModuleWeaponMissile9" Cost="75" Weight="20" MilitaryPower="210">
+    <Simulation DamageMin="500" DamageMax="620"
+                CriticMultiplier="3.0" CriticChance="0.25"
+                InterceptionEvasion="250"
+                NumberPerSalve="1"
+                TurnBeforeReach="3" TurnToReload="3">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection Speed="400"
+                Priority="100"
+                BoardSideMaxDuration="1.5"
+                BoardSideFireDelay="0.1">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Missile_Level_09"/>
+      </Projectiles-Prefabs>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponMissile9Title</Title>
+      <Description>%ModuleWeaponMissile9Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile9Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponMissile9Large"/>
+      <CharCode>9</CharCode>
+    </Gui>
+  </WeaponModule>
+
+
+  
+  
+
+<!-- =========================================== -->
+<!-- =========== Module Weapon LASER =========== -->
+<!-- =========================================== -->
+  <WeaponModule Name="ModuleWeaponLaser1" Cost="10" Weight="9" MilitaryPower="20">
+    <Simulation DamageMin="10" DamageMax="20" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1000"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.8">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_A_Level1"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_A_Level1_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceHyperium</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleWeaponLaser1Title</Title>
+      <Description>%ModuleWeaponLaser1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser1Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser1Large"/>
+      <CharCode>1</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+  <WeaponModule Name="ModuleWeaponLaser2" Cost="15" Weight="10" MilitaryPower="30">
+    <Simulation DamageMin="20" DamageMax="25" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="1.0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1000"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.8">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_A_Level2"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_A_Level2_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src_Level2"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponLaser2Title</Title>
+      <Description>%ModuleWeaponLaser2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser2Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser2Large"/>
+      <CharCode>2</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+  <WeaponModule Name="ModuleWeaponLaser3" Cost="21" Weight="11" MilitaryPower="45">
+    <Simulation DamageMin="25" DamageMax="40" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="1.0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1000"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.2">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_B_Level3"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_B_Level3_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src_Level3"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponLaser3Title</Title>
+      <Description>%ModuleWeaponLaser3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser3Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser3Large"/>
+      <CharCode>3</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+  <WeaponModule Name="ModuleWeaponLaser4" Cost="28" Weight="12" MilitaryPower="70">
+    <Simulation DamageMin="42" DamageMax="50" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="1.0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1000"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.2">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_B_Level4"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_B_Level4_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src_Level4"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponLaser4Title</Title>
+      <Description>%ModuleWeaponLaser4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser4Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser4Large"/>
+      <CharCode>4</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+  <WeaponModule Name="ModuleWeaponLaser5" Cost="36" Weight="14" MilitaryPower="88">
+    <Simulation DamageMin="60" DamageMax="80" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="1.0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1000"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.2">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_C_Level5"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_C_Level5_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src_Level5"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponLaser5Title</Title>
+      <Description>%ModuleWeaponLaser5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser5Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser5Large"/>
+      <CharCode>5</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+  <WeaponModule Name="ModuleWeaponLaser6" Cost="46" Weight="16" MilitaryPower="126">
+    <Simulation DamageMin="80" DamageMax="128" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="1.0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1300"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.2">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_C_Level6"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_C_Level6_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src_Level6"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponLaser6Title</Title>
+      <Description>%ModuleWeaponLaser6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser6Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser6Large"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+  <WeaponModule Name="ModuleWeaponLaser7" Cost="58" Weight="18" MilitaryPower="163">
+    <Simulation DamageMin="125" DamageMax="160" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="1.0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1000"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.2">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_C_Level7"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_C_Level7_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src_Level7"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceSiderite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleWeaponLaser7Title</Title>
+      <Description>%ModuleWeaponLaser7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser7Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser7Large"/>
+      <CharCode>7</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+  <WeaponModule Name="ModuleWeaponLaser8" Cost="75" Weight="20" MilitaryPower="210">
+    <Simulation DamageMin="175" DamageMax="220" 
+                CriticMultiplier="3.0" CriticChance="0.0"
+                InterceptionEvasion="1.0"
+                NumberPerSalve="1"
+                TurnBeforeReach="0" TurnToReload="0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection Speed="1000"
+                Priority="75"
+                BoardSideMaxDuration="2.5"
+                BoardSideFireDelay="0.2">
+      <Projectiles-Prefabs>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_D_Level8"/>
+        <Prefab Path="Prefabs/Projectiles/PR_Laser_D_Level8_Boost" Name="Alt1"/>
+      </Projectiles-Prefabs>
+      <MuzzleFlash-Prefab Path="Graph/Effects/Prefabs/Weapons/FX_Laser_A_Src_Level8"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleWeaponLaser8Title</Title>
+      <Description>%ModuleWeaponLaser8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser8Small" Large="Gui/DynamicBitmaps/Modules/ModuleWeaponLaser8Large"/>
+      <CharCode>8</CharCode>
+    </Gui>
+  </WeaponModule>
+  
+</Datatable>

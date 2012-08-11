@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <ShipLevel Name="ShipLevel0" Level="0" XPGain="0">
+    <Descriptors>ShipLevel0</Descriptors>
+  </ShipLevel>
+  
+  <ShipLevel Name="ShipLevel1" Level="1" XPGain="4">
+    <Descriptors>ShipLevel1</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel2" Level="2" XPGain="10">
+    <Descriptors>ShipLevel2</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel3" Level="3" XPGain="18">
+    <Descriptors>ShipLevel3</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel4" Level="4" XPGain="28">
+    <Descriptors>ShipLevel4</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel5" Level="5" XPGain="40">
+    <Descriptors>ShipLevel5</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel6" Level="6" XPGain="54">
+    <Descriptors>ShipLevel6</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel7" Level="7" XPGain="70">
+    <Descriptors>ShipLevel7</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel8" Level="8" XPGain="88">
+    <Descriptors>ShipLevel8</Descriptors>
+  </ShipLevel>
+
+  <ShipLevel Name="ShipLevel9" Level="9" XPGain="100">
+    <Descriptors>ShipLevel9</Descriptors>
+  </ShipLevel>
+
+
+</Datatable>

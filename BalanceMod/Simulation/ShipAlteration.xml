@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Alteration Name="Alteration_Default"  Prefab="" Priority="10">
+	</Alteration>
+  <Alteration Name="Alteration_Engine" Prefab="Prefabs/Alteration/Arrival" Priority="2">
+  </Alteration>
+	<Alteration Name="Alteration_Arrival" Prefab="Prefabs/Alteration/Arrival" Priority="1">
+	</Alteration>
+    <Alteration Name="Alteration_Illusion" Prefab="Prefabs/Alteration/Illusion" Priority="0">
+		<!--<IncompatibleAlteration Name="Alteration_Arrival"/>
+		<IncompatibleAlteration Name="Alteration_Engineering"/> -->
+    </Alteration>
+	<Alteration Name="Alteration_Sabotage" Prefab="" Priority="2">
+	</Alteration>
+    <Alteration Name="Alteration_Engineering" Prefab="" Priority="2">
+		<IncompatibleAlteration Name="Alteration_Arrival"/>
+		<IncompatibleAlteration Name="Alteration_Destroy"/>
+		<!--<IncompatibleAlteration Name="Alteration_Illusion"/>  -->       
+		<AnnulationAlteration Name="Alteration_Sabotage"/>
+    </Alteration>
+    <Alteration Name="Alteration_Retreat" Prefab="Prefabs/Alteration/Retreat" Priority="0">
+    </Alteration>
+</Datatable>

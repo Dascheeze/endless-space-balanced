@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- PLAYER START -->
+  <Technology Name="TechPlayerStart" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ColonizeTerran" Access="Standard" />
+    <Unlockable Name="ColonizeJungle" Access="Standard" />
+    <Unlockable Name="ColonizeOcean" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementColonyBase" Access="Standard" />
+    <Unlockable Name="MovementWarp1" Access="Standard" />
+    <Unlockable Name="MovementFreeMove0" Access="Standard" />
+    <!-- RETREAT action hidden for now -->
+    <Unlockable Name="BattleTechAction0" Access="Standard" />
+    
+    <Unlockable Name="BattleTechAction1" Access="Standard" /> <!-- Weapon Overclock -->
+    <Unlockable Name="BattleTechAction5" Access="Standard" /> <!-- Nano repair systems -->
+    <Unlockable Name="BattleTechAction8" Access="Standard" /> <!-- Short-circuit -->
+    <Unlockable Name="BattleTechAction9" Access="Standard" /> <!-- Magnetic Field -->
+    <Unlockable Name="BattleTechAction13" Access="Standard" /> <!-- Adaptative Strategy -->
+	<!-- Hero Action -->
+	<Unlockable Name="BattleHeroAction1" Access="Standard" />
+	<Unlockable Name="BattleHeroAction2" Access="Standard" />
+	<Unlockable Name="BattleHeroAction3" Access="Standard" />
+	<Unlockable Name="BattleHeroAction4" Access="Standard" />
+	<Unlockable Name="BattleHeroAction5" Access="Standard" />
+	<Unlockable Name="BattleHeroAction6" Access="Standard" />
+	<Unlockable Name="BattleHeroAction7" Access="Standard" />
+	<Unlockable Name="BattleHeroAction8" Access="Standard" />
+	<Unlockable Name="BattleHeroAction9" Access="Standard" />
+	
+    <Unlockable Name="ModuleWeaponKinetic1" Access="Standard" />
+    <Unlockable Name="ModuleDefenseDeflector1" Access="Standard" />
+    <Unlockable Name="ModuleColonization" Access="Standard" />
+    <Unlockable Name="PlanetaryImprovementFood1" Access="Standard" />
+    <Unlockable Name="PlanetaryImprovementIndustry1" Access="Standard" />
+    <Unlockable Name="PlanetaryImprovementMoney1" Access="Standard" />
+    <Unlockable Name="PlanetaryImprovementScience1" Access="Standard" />
+	<Unlockable Name="ModuleSupportPower1" Access="Standard" />
+	<Unlockable Name="ModuleSupportArmor1" Access="Standard" />
+	<Unlockable Name="ModuleSupportEngine1" Access="Standard" />
+	<Unlockable Name="ModuleSupportScout1" Access="Standard" />
+	<Unlockable Name="ModuleSupportRepair1" Access="Standard" />
+
+    <Unlockable Name="StarSystemConversionIndustryToScience" Access="Standard" />
+    <Unlockable Name="StarSystemConversionIndustryToDust" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartTerran" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Terran" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationTerran" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartSwarm" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySwarm)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Swarm" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationSwarm" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartSophon" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Sophon" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationSophon" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartHoratio" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHoratio)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Horatio" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationHoratio" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartHissho" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHissho)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Hissho" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationHissho" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartSower" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySower)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Sower" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationSower" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechPlayerStartTolerant" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(TraitScience03Default)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ColonizeArid" Access="Standard" />
+    <Unlockable Name="ColonizeTundra" Access="Standard" />
+    <Unlockable Name="ColonizeDesert" Access="Standard" />
+    <Unlockable Name="ColonizeArctic" Access="Standard" />
+    <Unlockable Name="ColonizeLava" Access="Standard" />
+    <Unlockable Name="ColonizeBarren" Access="Standard" />
+    <Unlockable Name="ColonizeAsteroids" Access="Standard" />
+    <Unlockable Name="ColonizeGasHydrogen" Access="Standard" />
+    <Unlockable Name="ColonizeGasHelium" Access="Standard" />
+    <Unlockable Name="ColonizeGasMethane" Access="Standard" />
+    <Unlockable Name="ColonizeTerranWithColonizeTraitScience03" Access="Hidden" />
+    <Unlockable Name="ColonizeJungleWithColonizeTraitScience03" Access="Hidden" />
+    <Unlockable Name="ColonizeOceanWithColonizeTraitScience03" Access="Hidden" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartAmoeba" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityAmoeba)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Amoeba" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationAmoeba" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartResistance" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityResistance)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Resistance" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationResistance" Access="Standard" />
+    <Unlockable Name="StarSystemEvacuation" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechPlayerStartPirates" Cost="0" IsUnique="true" X="0" Y="0" Hidden="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityPirates)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="ShipClassSmall1Pirates" Access="Standard" />
+    <Unlockable Name="ShipClassSmall2Pirates" Access="Standard" />
+    <Unlockable Name="ShipClassMedium1Pirates" Access="Standard" />
+    <Unlockable Name="ShipClassMedium2Pirates" Access="Standard" />
+    <Unlockable Name="ShipClassColonizationPirates" Access="Standard" />
+    <Gui>
+      <Title>%TechPlayerStartTitle</Title>
+      <Description>%TechPlayerStartDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyStart" />
+    </Gui>
+  </Technology>
+
+</Datatable>

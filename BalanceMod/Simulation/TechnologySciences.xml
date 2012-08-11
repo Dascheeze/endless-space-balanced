@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- SCIENCES DOMAIN -->
+  
+  <!-- 1st circle -->
+  <!-- Isolation Shields -->
+  <Technology Name="TechA01" Cost="40" IsUnique="true" X="-1.8" Y="1" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementScience1" Access="Standard" />
+    <Gui>
+      <Title>%TechA01Title</Title>
+      <Description>%TechA01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA01Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- N-way Fusion Plants -->
+  <Technology Name="TechA02" Cost="40" IsUnique="true" X="1.8" Y="1" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies></TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementIndustry1" Access="Standard" />
+    <Unlockable Name="PlanetStrategicResourceTitanium" Access="Standard" />
+    <Gui>
+      <Title>%TechA02Title</Title>
+      <Description>%TechA02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA02Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 2nd circle -->
+  <!-- High-energy Accelerators -->
+  <Technology Name="TechA03" Cost="130" IsUnique="true" X="-2.3" Y="2" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA01</TechnologiesDependencies>
+    <Unlockable Name="PlanetaryImprovementScience2" Access="Standard" />
+    <Unlockable Name="ModuleSupportEngine2" Access="Standard" />
+    <Gui>
+      <Title>%TechA03Title</Title>
+      <Description>%TechA03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA03Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Neural Robotics -->
+  <Technology Name="TechA04" Cost="130" IsUnique="true" X="0" Y="2" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA01;TechA02</TechnologiesDependencies>
+    <Unlockable Name="BattleTechAction3" Access="Standard" />
+    <Unlockable Name="ModuleSupportRepair2" Access="Standard" />
+    <Gui>
+      <Title>%TechA04Title</Title>
+      <Description>%TechA04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA04Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Core Mining -->
+  <Technology Name="TechA05" Cost="130" IsUnique="true" X="2.3" Y="2" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA02</TechnologiesDependencies>
+    <Unlockable Name="PlanetStrategicResourceHyperium" Access="Standard" />
+    <Unlockable Name="PlanetaryImprovementIndustry2" Access="Standard" />
+    <Gui>
+      <Title>%TechA05Title</Title>
+      <Description>%TechA05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA05Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 3rd circle -->
+  <!-- Photon Distortion Fields -->
+  <Technology Name="TechA06" Cost="300" IsUnique="true" X="-2.5" Y="3" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA03;TechA04</TechnologiesDependencies>
+    <Unlockable Name="BattleTechAction4" Access="Standard" />
+    <!-- TODO : AI handling of Retreat options-->
+    <Unlockable Name="BattleTechAction6" Access="Standard" />
+
+    <Gui>
+      <Title>%TechA06Title</Title>
+      <Description>%TechA06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA06Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- High-energy Magnetics -->
+  <Technology Name="TechA07" Cost="300" IsUnique="true" X="2.5" Y="3" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA04;TechA05</TechnologiesDependencies>
+    <Unlockable Name="PlanetStrategicResourceAnti-Matter" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementIndustry2" Access="Standard" />
+    <Gui>
+      <Title>%TechA07Title</Title>
+      <Description>%TechA07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA07Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- Between 3rd and 4th circle -->
+  <!-- Nonbaryonic Particle Manipulation -->
+  <Technology Name="TechA08" Cost="680" IsUnique="true" X="-1" Y="3.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA04;TechA06</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementScience2" Access="Standard" />
+    <Unlockable Name="LuxuryExploitation3" Access="Fake" />
+    <Unlockable Name="PlanetLuxury9" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury10" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury11" Access="Hidden" />
+    <Unlockable Name="PlanetLuxury12" Access="Hidden" />
+    <Gui>
+      <Title>%TechA08Title</Title>
+      <Description>%TechA08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA08Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Extreme Metallurgy -->
+  <Technology Name="TechA09" Cost="680" IsUnique="true" X="1" Y="3.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA04;TechA07</TechnologiesDependencies>
+    <Unlockable Name="ModMiniaturization1" Access="Standard" />
+    <Unlockable Name="PlanetStrategicResourceHexaferrum" Access="Standard" />
+    <Gui>
+      <Title>%TechA09Title</Title>
+      <Description>%TechA09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA09Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- Between 4th and 5th circle -->
+  <Technology Name="TechA34Horatio" Cost="1800" IsUnique="true" X="0" Y="3.75" Category="Sciences" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityHoratio)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA08;TechA09</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementUniqueHoratio" Access="Standard" />
+    <Gui>
+      <Title>%TechA34HoratioTitle</Title>
+      <Description>%TechA34HoratioDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA34HoratioSmall"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechA22Sower" Cost="1800" IsUnique="true" X="0" Y="3.75" Category="Sciences" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySower)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA08;TechA09</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementIndustry4" Access="Standard" />
+    <Unlockable Name="StarSystemImprovementUniqueSower" Access="Standard" />    
+    <Gui>
+      <Title>%TechA22SowerTitle</Title>
+      <Description>%TechA22SowerDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA22SowerSmall"/>
+    </Gui>
+  </Technology>
+  
+  <!-- Rudimentary Telepathics -->
+  <Technology Name="TechA11" Cost="1800" IsUnique="true" X="-1.5" Y="4.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA08</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportScout2" Access="Standard" />
+    <Unlockable Name="PlanetaryImprovementScience3" Access="Standard" />
+    <Gui>
+      <Title>%TechA11Title</Title>
+      <Description>%TechA11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA11Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechA17Sophon" Cost="1800" IsUnique="true" X="0" Y="3.75" Category="Sciences" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA08;TechA09</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportRepair3" Access="Standard" />
+    <Unlockable Name="PlanetStrategicResourceSiderite" Access="Standard" />
+    <Gui>
+      <Title>%TechA17SophonTitle</Title>
+      <Description>%TechA17SophonDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA17SophonSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- Advanced Simulations -->
+  <Technology Name="TechA12" Cost="1800" IsUnique="true" X="1.5" Y="4.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA09</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportTonnage1" Access="Standard" />
+    <Unlockable Name="BattleTechAction14" Access="Standard" />
+    <Gui>
+      <Title>%TechA12Title</Title>
+      <Description>%TechA12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA12Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 5th circle -->
+  <!-- Tectonic Engineering -->
+  <Technology Name="TechA14" Cost="4000" IsUnique="true" X="0" Y="5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA11;TechA12;TechA17Sophon</TechnologiesDependencies>
+    <Unlockable Name="ModMiniaturization2" Access="Standard" />
+    <Gui>
+      <Title>%TechA14Title</Title>
+      <Description>%TechA14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA14Small"/>
+    </Gui>
+  </Technology>
+
+
+
+  <!-- Between 5th and 6th circle -->
+  <!-- ### TBD ### -->
+  <Technology Name="TechA13" Cost="4000" IsUnique="true" X="-2.5" Y="5.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA11</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementScience3" Access="Standard" />
+    <Unlockable Name="BattleTechAction11" Access="Standard" />
+    <Gui>
+      <Title>%TechA13Title</Title>
+      <Description>%TechA13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA13Small"/>
+    </Gui>
+  </Technology>
+  <Technology Name="TechA13Sophon" Cost="4000" IsUnique="true" X="-2.5" Y="5.5" Category="Sciences" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA11</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementScience3Sophon" Access="Standard" />
+    <Unlockable Name="BattleTechAction11" Access="Standard" />
+    <Gui>
+      <Title>%TechA13SophonTitle</Title>
+      <Description>%TechA13SophonDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA13SophonSmall"/>
+    </Gui>
+  </Technology>
+
+  <!-- ### TBD ### -->
+  <Technology Name="TechA15" Cost="4000" IsUnique="true" X="2.5" Y="5.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA12</TechnologiesDependencies>
+    <Unlockable Name="PlanetaryImprovementIndustry3" Access="Standard" />
+    <Unlockable Name="PlanetStrategicResourceOrichalcedon" Access="Standard" />
+    <Gui>
+      <Title>%TechA15Title</Title>
+      <Description>%TechA15Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA15Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 6th circle -->
+  <!-- Solar Mining -->
+  <Technology Name="TechA16" Cost="7500" IsUnique="true" X="-1" Y="6" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA13;TechA13Sophon;TechA14</TechnologiesDependencies>
+    <Unlockable Name="BattleTechAction12" Access="Standard" />
+    <Unlockable Name="BattleTechAction10" Access="Standard" />
+    <Gui>
+      <Title>%TechA16Title</Title>
+      <Description>%TechA16Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA16Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Infinite Variable Computing -->
+  <Technology Name="TechA18" Cost="7500" IsUnique="true" X="1" Y="6" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA14;TechA15</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementIndustry3" Access="Standard" />
+    <Unlockable Name="ModuleSupportEngine3" Access="Standard" />
+    <Gui>
+      <Title>%TechA18Title</Title>
+      <Description>%TechA18Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA18Small"/>
+    </Gui>
+  </Technology>
+
+  <Technology Name="TechA35Terran" Cost="7500" IsUnique="true" X="2.5" Y="7" Category="Sciences" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinityTerran)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA15</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementUniqueTerran" Access="Standard" />
+    <Gui>
+      <Title>%TechA35TerranTitle</Title>
+      <Description>%TechA35TerranDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA35TerranSmall"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- Between 6th and 7th circle -->
+  <!-- Inorganic Biology -->
+  <Technology Name="TechA17" Cost="7500" IsUnique="true" X="0" Y="6.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA14</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportRepair3" Access="Standard" />
+    <Unlockable Name="PlanetStrategicResourceSiderite" Access="Standard" />
+    <Gui>
+      <Title>%TechA17Title</Title>
+      <Description>%TechA17Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA17Small"/>
+    </Gui>
+  </Technology>
+  
+  <Technology Name="TechA36Sophon" Cost="7500" IsUnique="true" X="0" Y="6.5" Category="Sciences" FactionRelated="true">
+    <Descriptors />
+    <PathsPrerequisites>$(AffinitySophon)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA14</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementUniqueSophon" Access="Standard" />
+    <Gui>
+      <Title>%TechA36SophonTitle</Title>
+      <Description>%TechA36SophonDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA36SophonSmall"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 7th circle -->
+  <!-- Pervasive Etching -->
+  <Technology Name="TechA19" Cost="14000" IsUnique="true" X="-1.5" Y="7" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA16</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementScience4" Access="Standard" />
+    <Gui>
+      <Title>%TechA19Title</Title>
+      <Description>%TechA19Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA19Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Offensive Shielding -->
+  <!-- Persistent Construction -->
+  <Technology Name="TechA22" Cost="14000" IsUnique="true" X="1.5" Y="7" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites>!$(AffinitySower)</PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA18</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementIndustry4" Access="Standard" />
+    <Gui>
+      <Title>%TechA22Title</Title>
+      <Description>%TechA22Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA22Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- 8th circle -->
+  <!-- Self-replicating Architecture -->
+  <Technology Name="TechA20" Cost="14000" IsUnique="true" X="-0.5" Y="7.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA16;TechA17</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportTonnage2" Access="Standard" />
+    <Unlockable Name="ModuleSupportScout3" Access="Standard" />
+    <Gui>
+      <Title>%TechA20Title</Title>
+      <Description>%TechA20Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA20Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- ### TBD ### -->
+  <Technology Name="TechA21" Cost="14000" IsUnique="true" X="0.5" Y="7.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA17;TechA18</TechnologiesDependencies>
+    <Unlockable Name="ModMiniaturization3" Access="Standard" />
+    <Unlockable Name="PlanetStrategicResourceAdamantium" Access="Standard" />
+    <Gui>
+      <Title>%TechA21Title</Title>
+      <Description>%TechA21Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA21Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 9th circle -->
+  
+  <!-- Quantum Devices -->
+  <Technology Name="TechA28" Cost="25000" IsUnique="true" X="-1" Y="8.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA19;TechA20</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportEngine4" Access="Standard" />
+    <Gui>
+      <Title>%TechA28Title</Title>
+      <Description>%TechA28Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA28Small"/>
+    </Gui>
+  </Technology>
+  
+  <!-- Quantum Processing -->
+  <Technology Name="TechA25" Cost="25000" IsUnique="true" X="0" Y="8.25" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA20;TechA20;TechA21</TechnologiesDependencies>
+    <Unlockable Name="ModMiniaturization4" Access="Standard" />
+    <Unlockable Name="PlanetStrategicResourceQuadrinite" Access="Standard" />
+    <Gui>
+      <Title>%TechA25Title</Title>
+      <Description>%TechA25Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA25Small"/>
+    </Gui>
+  </Technology>
+  
+  <!-- Black Hole Mining -->
+  <Technology Name="TechA26" Cost="25000" IsUnique="true" X="1" Y="8.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA21;TechA22</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementIndustry5" Access="Standard" />
+    <Gui>
+      <Title>%TechA26Title</Title>
+      <Description>%TechA26Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA26Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 10th circle ### dead-end tech -->
+  <!-- Quantum robotics -->
+  <Technology Name="TechA29" Cost="36000" IsUnique="true" X="0" Y="9.5" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA25</TechnologiesDependencies>
+    <Unlockable Name="ModMiniaturization5" Access="Standard" />
+    <Gui>
+      <Title>%TechA29Title</Title>
+      <Description>%TechA29Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA29Small"/>
+    </Gui>
+  </Technology>  
+  
+  <!-- 10th circle -->
+  <!-- Persistent Bodies -->
+  <Technology Name="TechA33" Cost="36000" IsUnique="true" X="-1" Y="10" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA25;TechA28</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementScience6" Access="Standard" />
+    <Gui>
+      <Title>%TechA33Title</Title>
+      <Description>%TechA33Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA33Small"/>
+    </Gui>
+  </Technology>
+
+  <!-- Resilient Infrastructures -->
+  <Technology Name="TechA30" Cost="36000" IsUnique="true" X="1" Y="10" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA25;TechA26</TechnologiesDependencies>
+    <Unlockable Name="ModuleSupportRepair4" Access="Standard" />
+    <Gui>
+      <Title>%TechA30Title</Title>
+      <Description>%TechA30Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA30Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 11th circle -->
+  <!-- Virtualization -->
+  <Technology Name="TechA31" Cost="60000" IsUnique="true" X="0" Y="11" Category="Sciences">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA30;TechA33</TechnologiesDependencies>
+    <Unlockable Name="StarSystemImprovementIndustry6" Access="Standard" />
+    <Gui>
+      <Title>%TechA31Title</Title>
+      <Description>%TechA31Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA31Small"/>
+    </Gui>
+  </Technology>
+
+  
+  
+  <!-- 12th circle -->
+  <!-- ### Science Victory ### -->
+  <Technology Name="TechA32" Cost="1212000" IsUnique="true" X="0" Y="12.25" Category="Sciences" VictoryRelated="ScientificVictory">
+    <Descriptors />
+    <PathsPrerequisites></PathsPrerequisites>
+    <TechnologiesPrerequisites></TechnologiesPrerequisites>
+    <TechnologiesDependencies>TechA31</TechnologiesDependencies>
+    <Unlockable Name="ScienceVictory" Access="Standard" />
+    <Gui>
+      <Title>%TechA32Title</Title>
+      <Description>%TechA32Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Technologies/TechnologyA32Small"/>
+    </Gui>
+  </Technology>
+
+</Datatable>

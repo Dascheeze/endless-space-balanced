@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- TERRAFORMATION -->
+
+  <TerraFormation Name="TerraformationToLava" Cost="300" IsUnique="true"
+                  ColonizeDependance="ColonizeLava">
+    <Descriptors>PlanetTypeLava</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeDesert) or $(PlanetTypeArctic) or $(PlanetTypeBarren)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%TerraformationToLavaTitle</Title>
+      <Description>%TerraformationToLavaDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToLavaSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToLavaLarge"/>
+    </Gui>
+  </TerraFormation>-->
+  
+  <TerraFormation Name="TerraformationToBarren" Cost="300" IsUnique="true"
+                  ColonizeDependance="ColonizeBarren">
+    <Descriptors>PlanetTypeBarren</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeDesert) or $(PlanetTypeArctic) or $(PlanetTypeLava)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%TerraformationToBarrenTitle</Title>
+      <Description>%TerraformationToBarrenDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToBarrenSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToBarrenLarge"/>
+    </Gui>
+  </TerraFormation>
+
+  <TerraFormation Name="TerraformationToDesert" Cost="750" IsUnique="true"
+                  ColonizeDependance="ColonizeDesert">
+    <Descriptors>PlanetTypeDesert</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeArid) or $(PlanetTypeTundra) or $(PlanetTypeArctic) or $(PlanetTypeBarren) or $(PlanetTypeLava)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%TerraformationToDesertTitle</Title>
+      <Description>%TerraformationToDesertDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToDesertSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToDesertLarge"/>
+    </Gui>
+  </TerraFormation>
+
+  <TerraFormation Name="TerraformationToArctic" Cost="750" IsUnique="true"
+                  ColonizeDependance="ColonizeArctic">
+    <Descriptors>PlanetTypeArctic</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeArid) or $(PlanetTypeTundra) or $(PlanetTypeDesert) or $(PlanetTypeBarren) or $(PlanetTypeLava)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%TerraformationToArcticTitle</Title>
+      <Description>%TerraformationToArcticDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToArcticSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToArcticLarge"/>
+    </Gui>
+  </TerraFormation>
+
+  <TerraFormation Name="TerraformationToArid" Cost="2000" IsUnique="true"
+                  ColonizeDependance="ColonizeArid">
+    <Descriptors>PlanetTypeArid</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeTerran) or $(PlanetTypeOcean) or $(PlanetTypeJungle) or $(PlanetTypeTundra) or $(PlanetTypeDesert) or $(PlanetTypeArctic)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <ResourcesPrerequisites>PlanetStrategicResourceSiderite</ResourcesPrerequisites>
+    <Gui>
+      <Title>%TerraformationToAridTitle</Title>
+      <Description>%TerraformationToAridDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToAridSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToAridLarge"/>
+    </Gui>
+  </TerraFormation>
+
+  <TerraFormation Name="TerraformationToTundra" Cost="2000" IsUnique="true"
+                  ColonizeDependance="ColonizeTundra">
+    <Descriptors>PlanetTypeTundra</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeTerran) or $(PlanetTypeOcean) or $(PlanetTypeJungle) or $(PlanetTypeArid) or $(PlanetTypeDesert) or $(PlanetTypeArctic)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <ResourcesPrerequisites>PlanetStrategicResourceAdamantium</ResourcesPrerequisites>
+    <Gui>
+      <Title>%TerraformationToTundraTitle</Title>
+      <Description>%TerraformationToTundraDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToTundraSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToTundraLarge"/>
+    </Gui>
+  </TerraFormation>
+  
+  <TerraFormation Name="TerraformationToTerran" Cost="3200" IsUnique="true"
+                  ColonizeDependance="ColonizeTerran">
+    <Descriptors>PlanetTypeTerran</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeOcean) or $(PlanetTypeJungle) or $(PlanetTypeArid) or $(PlanetTypeTundra)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <ResourcesPrerequisites>PlanetStrategicResourceQuadrinite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%TerraformationToTerranTitle</Title>
+      <Description>%TerraformationToTerranDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToTerranSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToTerranLarge"/>
+    </Gui>
+  </TerraFormation>
+
+  <TerraFormation Name="TerraformationToJungle" Cost="3200" IsUnique="true"
+                  ColonizeDependance="ColonizeJungle">
+    <Descriptors>PlanetTypeJungle</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeTerran) or $(PlanetTypeOcean) or $(PlanetTypeArid) or $(PlanetTypeTundra)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <ResourcesPrerequisites>PlanetStrategicResourceQuadrinite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%TerraformationToJungleTitle</Title>
+      <Description>%TerraformationToJungleDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToJungleSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToJungleLarge"/>
+    </Gui>
+  </TerraFormation>
+
+  <TerraFormation Name="TerraformationToOcean" Cost="3200" IsUnique="true"
+                  ColonizeDependance="ColonizeOcean">
+    <Descriptors>PlanetTypeOcean</Descriptors>
+    <PathsPrerequisites>($(PlanetTypeTerran) or $(PlanetTypeJungle) or $(PlanetTypeArid) or $(PlanetTypeTundra)) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <ResourcesPrerequisites>PlanetStrategicResourceQuadrinite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%TerraformationToOceanTitle</Title>
+      <Description>%TerraformationToOceanDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/TerraformationToOceanSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/TerraformationToOceanLarge"/>
+    </Gui>
+  </TerraFormation>
+  
+  
+  
+  
+  
+<!-- ANOMALY REDUCTIONS -->
+
+  <!-- Anomaly Reduction 1 -->
+  <Gui Name="PlanetAnomalyPlaceholderReduction1">
+    <Title>%AnomalyReduction1Title</Title>
+    <Description>%AnomalyReduction1Description</Description>
+    <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+  </Gui>
+  <AnomalyReduction Name="PlanetAnomaly22Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly22Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly22) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly22Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly23Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly23Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly23) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly23Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly26Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly26Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly26) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly26Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly30Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly30Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly30) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly30Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly31Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly31Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly31) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly31Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly33Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly33Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly33) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly33Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly34Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly34Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly34) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly34Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly35Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly35Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly35) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly35Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly36Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly36Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly36) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly36Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly37Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly37Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly37) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly37Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly38Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly38Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly38) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly38Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly39Reduction1" Cost="200" IsUnique="true">
+    <Descriptors>PlanetAnomaly39Reduction1</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly39) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly39Reduction1Title</Title>
+      <Description>%AnomalyReduction1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction1Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+
+  
+
+  <!-- Anomaly Reduction 2 -->
+  <Gui Name="PlanetAnomalyPlaceholderReduction2">
+    <Title>%AnomalyReduction2Title</Title>
+    <Description>%AnomalyReduction2Description</Description>
+    <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+  </Gui>
+  <AnomalyReduction Name="PlanetAnomaly40Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly40Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly40) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly40Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly41Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly41Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly41) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly41Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly42Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly42Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly42) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly42Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly43Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly43Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly43) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly43Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly44Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly44Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly44) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly44Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly45Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly45Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly45) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly45Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly46Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly46Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly46) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly46Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly47Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly47Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly47) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly47Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly48Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly48Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly48) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly48Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly49Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly49Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly49) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly49Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  <AnomalyReduction Name="PlanetAnomaly50Reduction2" Cost="500" IsUnique="true">
+    <Descriptors>PlanetAnomaly50Reduction2</Descriptors>
+    <PathsPrerequisites>$(PlanetAnomaly50) and $(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetAnomaly50Reduction2Title</Title>
+      <Description>%AnomalyReduction2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/AnomalyReduction2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/AnomalyReduction2Large"/>
+	  <Tooltip><Description>%AnomalyReductionTooltipEffect</Description><Description>%AnomalyReductionNoEffectTooltipEffect</Description></Tooltip>
+    </Gui>
+  </AnomalyReduction>
+  
+</Datatable>

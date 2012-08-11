@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PirateDifficulty Name="PiratesDifficultyNoPirates">
+  </PirateDifficulty>
+  <PirateDifficulty Name="PiratesDifficultyNormal">
+    <PirateStep Name="ShipRaiderNormal" Index="0"
+              PercentPerPlayer="0.04"
+              AllowedSpawn="-1"
+              CanMoveOnEmpire="false"
+              CanInvade="false"
+              NumberFleetPerSpawn="1"
+              MoveCoolDown="10"
+              PercentShipPerFleet="0.15"
+              TechnologyGap ="1" >
+      <Condition Name="TechnologyLevel"
+                 LimitMin="3"/>
+
+      <ShipDesignTemplate Name="PirateShipRaider1" Hull="ShipClassSmall2Pirates" FleetWeight="1">
+        <Repartition Name="PirateShipRaider">
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+        </Repartition>
+      </ShipDesignTemplate>
+
+    </PirateStep>
+
+    <PirateStep Name="ShipRaiderUltra" Index="1"
+              PercentPerPlayer="0.04"
+              AllowedSpawn="-1"
+              CanMoveOnEmpire="false"
+              CanInvade="false"
+              NumberFleetPerSpawn="1"
+              MoveCoolDown="10"
+              PercentShipPerFleet="0.3"
+              TechnologyGap ="1" >
+      <Condition Name="TechnologyLevel" LimitMin="4"/>
+      
+
+      <ShipDesignTemplate Name="PirateShipRaider1" Hull="ShipClassSmall2Pirates" FleetWeight="1">
+        <Repartition Name="PirateShipRaider">
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+        </Repartition>
+      </ShipDesignTemplate>
+
+    </PirateStep>
+
+    <PirateStep Name="SystemRaider" Index="2"
+              PercentPerPlayer="0.04"
+              AllowedSpawn="-1"
+              CanMoveOnEmpire="true"
+              CanInvade="false"
+              NumberFleetPerSpawn="1"
+              MoveCoolDown="5"
+              PercentShipPerFleet="0.5"
+              TechnologyGap ="1" >
+
+      <Condition Name="ColonizedSystem" LimitMin="4"/>
+      <Condition Name="TechnologyLevel" LimitMin="4"/>
+      
+      <ShipDesignTemplate Name="PirateSystemRaider1" Hull="ShipClassSmall2Pirates" FleetWeight="1">
+        <Repartition Name="PirateSystemRaider">
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+        </Repartition>
+      </ShipDesignTemplate>
+    </PirateStep>
+
+    <PirateStep Name="SystemConquest" Index="3"
+            PercentPerPlayer="0.04"
+            AllowedSpawn="-1"
+            CanMoveOnEmpire="true"
+            CanInvade="true"
+            NumberFleetPerSpawn="1"
+            MoveCoolDown="5"
+            PercentShipPerFleet="0.7"
+            TechnologyGap ="3" >
+      <Condition Name="BlockadeStarted" LimitMin="10"/>
+      <Condition Name="ColonizedSystem" LimitMin="6"/>
+
+      <ShipDesignTemplate Name="PirateSystemConquest1" Hull="ShipClassSmall2Pirates" FleetWeight="0.5">
+        <Repartition Name="PirateSystemConquestSmall">
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+        </Repartition>
+
+      </ShipDesignTemplate>
+
+      <ShipDesignTemplate Name="PirateSystemConquest1" Hull="ShipClassMediumPirates" FleetWeight="0.5">
+        <Repartition Name="PirateSystemConquestSmall">
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+        </Repartition>
+
+      </ShipDesignTemplate>
+      <!-- 
+    <ShipDesignTemplate Name="PirateSystemConquest1" Hull="ShipClassMedium2Pirates" FleetWeight="0.5">
+      <Repartition Name="PirateSystemConquestMedium">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate> -->
+    </PirateStep>
+
+    <PirateStep Name="Crusade" Index="4"
+          PercentPerPlayer="0.02"
+          AllowedSpawn="1"
+          CanMoveOnEmpire="true"
+          CanInvade="true"
+          NumberFleetPerSpawn="2"
+          MoveCoolDown="3"
+          PercentShipPerFleet="1"
+          TechnologyGap ="4" >
+      <Condition Name="NeutralSystemPercent" LimitMax="0.2"/>
+
+      <ShipDesignTemplate Name="PirateSystemRaider1" Hull="ShipClassMediumPirates" FleetWeight="1">
+        <Repartition Name="PirateSystemRaider">
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+          <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+        </Repartition>
+      </ShipDesignTemplate>
+
+      <!-- 
+    <ShipDesignTemplate Name="PirateCrusade2" Hull="ShipClassMedium2Pirates" FleetWeight="1">
+      <Repartition Name="PirateSystemConquestMedium">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate> -->
+
+    </PirateStep>
+  </PirateDifficulty>
+  <PirateDifficulty Name="PiratesDifficultyInsane">
+  <PirateStep Name="ShipRaiderInsane" Index="0"
+              PercentPerPlayer="0.08"
+              AllowedSpawn="-1"
+              CanMoveOnEmpire="false"
+              CanInvade="false"
+              NumberFleetPerSpawn="1"
+              MoveCoolDown="10"
+              PercentShipPerFleet="0.15"
+              TechnologyGap ="1" >
+    <Condition Name="TechnologyLevel"
+               LimitMin="3"/>
+    
+    <ShipDesignTemplate Name="PirateShipRaider1" Hull="ShipClassSmall2Pirates" FleetWeight="1">
+      <Repartition Name="PirateShipRaider">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate>
+    
+  </PirateStep>
+
+  <PirateStep Name="ShipRaiderUltra" Index="1"
+            PercentPerPlayer="0.08"
+            AllowedSpawn="-1"
+            CanMoveOnEmpire="false"
+            CanInvade="false"
+            NumberFleetPerSpawn="1"
+            MoveCoolDown="10"
+            PercentShipPerFleet="0.3"
+            TechnologyGap ="1" >
+    <Condition Name="TechnologyLevel"
+               LimitMin="4"/>
+
+    <ShipDesignTemplate Name="PirateShipRaider1" Hull="ShipClassSmall2Pirates" FleetWeight="1">
+      <Repartition Name="PirateShipRaider">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate>
+
+  </PirateStep>
+
+  <PirateStep Name="SystemRaider" Index="2" 
+            PercentPerPlayer="0.08"
+            AllowedSpawn="-1"
+            CanMoveOnEmpire="true"
+            CanInvade="false"
+            NumberFleetPerSpawn="1"
+            MoveCoolDown="5"
+            PercentShipPerFleet="0.5" 
+            TechnologyGap ="1" >
+        
+    <Condition Name="ColonizedSystem" LimitMin="4"/>
+    <Condition Name="TechnologyLevel" LimitMin="4"/>
+    
+    <ShipDesignTemplate Name="PirateSystemRaider1" Hull="ShipClassSmall2Pirates" FleetWeight="1">
+      <Repartition Name="PirateSystemRaider">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate>
+  </PirateStep>
+
+  <PirateStep Name="SystemConquest" Index="3"
+          PercentPerPlayer="0.08"
+          AllowedSpawn="-1"
+          CanMoveOnEmpire="true"
+          CanInvade="true"
+          NumberFleetPerSpawn="1"
+          MoveCoolDown="5"
+          PercentShipPerFleet="0.7"
+          TechnologyGap ="3" >
+    <Condition Name="BlockadeStarted" LimitMin="10"/>
+    <Condition Name="ColonizedSystem" LimitMin="6"/>
+    
+    <ShipDesignTemplate Name="PirateSystemConquest1" Hull="ShipClassSmall2Pirates" FleetWeight="0.5">
+      <Repartition Name="PirateSystemConquestSmall">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+      
+    </ShipDesignTemplate>
+
+    <ShipDesignTemplate Name="PirateSystemConquest1" Hull="ShipClassMediumPirates" FleetWeight="0.5">
+      <Repartition Name="PirateSystemConquestSmall">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+
+    </ShipDesignTemplate>
+    <!-- 
+    <ShipDesignTemplate Name="PirateSystemConquest1" Hull="ShipClassMedium2Pirates" FleetWeight="0.5">
+      <Repartition Name="PirateSystemConquestMedium">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate> -->
+  </PirateStep>
+
+  <PirateStep Name="Crusade" Index="4"
+        PercentPerPlayer="0.04"
+        AllowedSpawn="1"
+        CanMoveOnEmpire="true"
+        CanInvade="true"
+        NumberFleetPerSpawn="2"
+        MoveCoolDown="3"
+        PercentShipPerFleet="1"
+        TechnologyGap ="4" >
+    <Condition Name="NeutralSystemPercent"
+               LimitMax="0.2"/>
+
+    <ShipDesignTemplate Name="PirateSystemRaider1" Hull="ShipClassMediumPirates" FleetWeight="1">
+      <Repartition Name="PirateSystemRaider">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate>
+    
+    <!-- 
+    <ShipDesignTemplate Name="PirateCrusade2" Hull="ShipClassMedium2Pirates" FleetWeight="1">
+      <Repartition Name="PirateSystemConquestMedium">
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleLaser" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleKinetic" Weight="0.3"/>
+        <ModuleRepartition ModuleFamily="WeaponModule" ModuleCategory="WeaponModuleMissile" Weight="0.3"/>
+      </Repartition>
+    </ShipDesignTemplate> -->
+    
+  </PirateStep>
+  </PirateDifficulty>
+</Datatable>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- RESOURCES -->
+  <!-- //STRATEGIC RESOURCES -->
+  <Resource Name="PlanetStrategicResourceTitanium" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceTitanium</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus2</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource2Title</Title>
+      <Description>%TechStrategicResource2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery2Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery2Large"/>
+      <CharCode>7802</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceTitaniumTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+  
+  <Resource Name="PlanetStrategicResourceHyperium" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceHyperium</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus1</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource1Title</Title>
+      <Description>%TechStrategicResource1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery1Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery1Large"/>
+      <CharCode>7801</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceHyperiumTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+
+  <Resource Name="PlanetStrategicResourceHexaferrum" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceHexaferrum</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus3</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource4Title</Title>
+      <Description>%TechStrategicResource4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery4Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery4Large"/>
+      <CharCode>7804</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceHexaferrumTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+
+  <Resource Name="PlanetStrategicResourceAnti-Matter" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceAnti-Matter</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus4</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource3Title</Title>
+      <Description>%TechStrategicResource3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery3Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery3Large"/>
+      <CharCode>7803</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceAnti-MatterTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+
+  <Resource Name="PlanetStrategicResourceOrichalcedon" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceOrichalcedon</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus5</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource5Title</Title>
+      <Description>%TechStrategicResource5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery5Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery5Large"/>
+      <CharCode>7805</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceOrichalcedonTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+
+  <Resource Name="PlanetStrategicResourceSiderite" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceSiderite</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus6</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource6Title</Title>
+      <Description>%TechStrategicResource6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery6Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery6Large"/>
+      <CharCode>7806</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceSideriteTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+
+  <Resource Name="PlanetStrategicResourceAdamantium" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceAdamantium</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus7</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource7Title</Title>
+      <Description>%TechStrategicResource7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery7Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery7Large"/>
+      <CharCode>7807</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceAdamantiumTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+
+  <Resource Name="PlanetStrategicResourceQuadrinite" Type="StrategicResource">
+    <Descriptors>PlanetStrategicResourceQuadrinite</Descriptors>
+    <MonopolyDescriptor>StratMonopolyBonus8</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%TechStrategicResource8Title</Title>
+      <Description>%TechStrategicResource8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery8Small" Large="Gui/DynamicBitmaps/Resources/StrategicResourceDiscovery8Large"/>
+      <CharCode>7808</CharCode>
+	  <Tooltip>
+	  <Description>%PlanetStrategicResourceQuadriniteTooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Resource>
+
+  <!-- LUXURY GROUP -->
+  <!-- Animalia -->
+  <Gui Name="LuxuryExploitation1">
+    <Title>%LuxuryExploitation1Title</Title>
+    <Description>%LuxuryExploitation1Description</Description>
+    <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryExploitation1Small" Large="Gui/DynamicBitmaps/Resources/LuxuryExploitation1Large"/>
+  </Gui>
+
+  <Gui Name="LuxuryExploitation2">
+    <Title>%LuxuryExploitation2Title</Title>
+    <Description>%LuxuryExploitation2Description</Description>
+    <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryExploitation2Small" Large="Gui/DynamicBitmaps/Resources/LuxuryExploitation2Large"/>
+  </Gui>
+
+  <Gui Name="LuxuryExploitation3">
+    <Title>%LuxuryExploitation3Title</Title>
+    <Description>%LuxuryExploitation3Description</Description>
+    <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryExploitation3Small" Large="Gui/DynamicBitmaps/Resources/LuxuryExploitation3Large"/>
+  </Gui>
+
+  <Gui Name="LuxuryExploitation4">
+    <Title>%LuxuryExploitation4Title</Title>
+    <Description>%LuxuryExploitation4Description</Description>
+    <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryExploitation4Small" Large="Gui/DynamicBitmaps/Resources/LuxuryExploitation4Large"/>
+  </Gui>
+
+  
+  
+  
+  
+  <!-- //LUXURY RESOURCE -->
+
+  <!-- Xenology / Animalia (diplomacy tech tree) -->
+  <!-- RedSang -->
+  <Resource Name="PlanetLuxury1" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury1</Descriptors>
+    <BonusDescriptor>LuxuryBonus1</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus1</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury1Title</Title>
+      <Description>%PlanetLuxury1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceRedSangSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceRedSangLarge"/>
+      <CharCode>7901</CharCode>
+    </Gui>
+  </Resource>
+  
+  <!-- BluecapMold -->
+  <Resource Name="PlanetLuxury2" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury2</Descriptors>
+    <BonusDescriptor>LuxuryBonus2</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus2</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury2Title</Title>
+      <Description>%PlanetLuxury2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceBluecapMoldSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceBluecapMoldLarge"/>
+      <CharCode>7902</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- Dustwater -->
+  <Resource Name="PlanetLuxury3" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury3</Descriptors>
+    <BonusDescriptor>LuxuryBonus3</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus3</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury3Title</Title>
+      <Description>%PlanetLuxury3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceDustwaterSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceDustwaterLarge"/>
+      <CharCode>7903</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- Hydromiel -->
+  <Resource Name="PlanetLuxury4" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury4</Descriptors>
+    <BonusDescriptor>LuxuryBonus4</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus4</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury4Title</Title>
+      <Description>%PlanetLuxury4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceFruitsofFireSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceFruitsofFireLarge"/>
+      <CharCode>7904</CharCode>
+    </Gui>
+  </Resource>
+
+
+
+  <!-- Xenomineralogy (exploration tech tree) -->
+  <!-- Mercurite -->
+  <Resource Name="PlanetLuxury5" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury5</Descriptors>
+    <BonusDescriptor>LuxuryBonus5</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus5</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury5Title</Title>
+      <Description>%PlanetLuxury5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceMercuriteSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceMercuriteLarge"/>
+      <CharCode>7905</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- VoidStone -->
+  <Resource Name="PlanetLuxury6" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury6</Descriptors>
+    <BonusDescriptor>LuxuryBonus6</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus6</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury6Title</Title>
+      <Description>%PlanetLuxury6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceVoidStoneSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceVoidStoneLarge"/>
+      <CharCode>7906</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- Jadonyx -->
+  <Resource Name="PlanetLuxury7" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury7</Descriptors>
+    <BonusDescriptor>LuxuryBonus7</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus7</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury7Title</Title>
+      <Description>%PlanetLuxury7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceJadonyxSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceJadonyxLarge"/>
+      <CharCode>7907</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- IonicCrystals -->
+  <Resource Name="PlanetLuxury8" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury8</Descriptors>
+    <BonusDescriptor>LuxuryBonus8</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus8</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury8Title</Title>
+      <Description>%PlanetLuxury8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceIonicCrystalsSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceIonicCrystalsLarge"/>
+      <CharCode>7908</CharCode>
+    </Gui>
+  </Resource>
+
+
+
+  <!-- Xenopharmacology (science tech tree) -->
+  <!-- EdenIncense -->
+  <Resource Name="PlanetLuxury9" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury9</Descriptors>
+    <BonusDescriptor>LuxuryBonus9</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus9</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury9Title</Title>
+      <Description>%PlanetLuxury9Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceEdenIncenseSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceEdenIncenseLarge"/>
+      <CharCode>7909</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- MetaEntactogen -->
+  <Resource Name="PlanetLuxury10" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury10</Descriptors>
+    <BonusDescriptor>LuxuryBonus10</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus10</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury10Title</Title>
+      <Description>%PlanetLuxury10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceMetaEntactogenSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceMetaEntactogenLarge"/>
+      <CharCode>7910</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- Transvine -->
+  <Resource Name="PlanetLuxury11" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury11</Descriptors>
+    <BonusDescriptor>LuxuryBonus11</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus11</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury11Title</Title>
+      <Description>%PlanetLuxury11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceTransvineSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceTransvineLarge"/>
+      <CharCode>7911</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- ProtoOrchid -->
+  <Resource Name="PlanetLuxury12" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury12</Descriptors>
+    <BonusDescriptor>LuxuryBonus12</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus12</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury12Title</Title>
+      <Description>%PlanetLuxury12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceProtoOrchidSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceProtoOrchidLarge"/>
+      <CharCode>7912</CharCode>
+    </Gui>
+  </Resource>
+
+
+
+  <!-- Xenoarchaeology (warfare tech tree) -->
+  <!-- ConcreteArtifacts -->
+  <Resource Name="PlanetLuxury13" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury13</Descriptors>
+    <BonusDescriptor>LuxuryBonus13</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus13</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury13Title</Title>
+      <Description>%PlanetLuxury13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceConcreteArtifactsSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceConcreteArtifactsLarge"/>
+      <CharCode>7913</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- VirtualArtifact -->
+  <Resource Name="PlanetLuxury14" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury14</Descriptors>
+    <BonusDescriptor>LuxuryBonus14</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus14</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury14Title</Title>
+      <Description>%PlanetLuxury14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceVirtualArtifactsSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceVirtualArtifactsLarge"/>
+      <CharCode>7914</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- PreSchismArtifacts -->
+  <Resource Name="PlanetLuxury15" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury15</Descriptors>
+    <BonusDescriptor>LuxuryBonus15</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus15</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury15Title</Title>
+      <Description>%PlanetLuxury15Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourcePreSchismArtifactsSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourcePreSchismArtifactsLarge"/>
+      <CharCode>7915</CharCode>
+    </Gui>
+  </Resource>
+
+  <!-- NonPrecursorArtifacts -->
+  <Resource Name="PlanetLuxury16" Type="LuxuryResource">
+    <Descriptors>PlanetLuxury16</Descriptors>
+    <BonusDescriptor>LuxuryBonus16</BonusDescriptor>
+    <MonopolyDescriptor>MonopolyBonus16</MonopolyDescriptor>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetLuxury16Title</Title>
+      <Description>%PlanetLuxury16Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Resources/LuxuryResourceNonPrecursorArtifactsSmall" Large="Gui/DynamicBitmaps/Resources/LuxuryResourceNonPrecursorArtifactsLarge"/>
+      <CharCode>7916</CharCode>
+    </Gui>
+  </Resource>
+
+</Datatable>

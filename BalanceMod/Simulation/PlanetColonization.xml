@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Colonize Name="ColonizeTerran" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeTerran) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeTerranTitle</Title>
+      <Description>%ColonizeTerranDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationTerranSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationTerranLarge"/>
+    </Gui>
+  </Colonize>
+
+  <Colonize Name="ColonizeJungle" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeJungle) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeJungleTitle</Title>
+      <Description>%ColonizeJungleDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationJungleSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationJungleLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <Colonize Name="ColonizeOcean" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeOcean) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeOceanTitle</Title>
+      <Description>%ColonizeOceanDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationOceanSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationOceanLarge"/>
+    </Gui>
+  </Colonize>
+  
+  
+  
+  <Colonize Name="ColonizeArid" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeArid) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeAridTitle</Title>
+      <Description>%ColonizeAridDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationAridSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationAridLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <Colonize Name="ColonizeTundra" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeTundra) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeTundraTitle</Title>
+      <Description>%ColonizeTundraDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationTundraSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationTundraLarge"/>
+    </Gui>
+  </Colonize>
+  
+  
+  
+  <Colonize Name="ColonizeDesert" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeDesert) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeDesertTitle</Title>
+      <Description>%ColonizeDesertDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationDesertSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationDesertLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <Colonize Name="ColonizeArctic" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeArctic) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeArcticTitle</Title>
+      <Description>%ColonizeArcticDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationArcticSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationArcticLarge"/>
+    </Gui>
+  </Colonize>
+  
+  
+  
+  <Colonize Name="ColonizeLava" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeLava) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeLavaTitle</Title>
+      <Description>%ColonizeLavaDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationLavaSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationLavaLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <Colonize Name="ColonizeBarren" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeBarren) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeBarrenTitle</Title>
+      <Description>%ColonizeBarrenDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationBarrenSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationBarrenLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <!--<Colonize Name="ColonizeGasGiant" Cost="70">
+      <Descriptors/>
+	  <PathsPrerequisites />
+	  <Gui>
+        <Title>%ColonizeGasGiantTitle</Title>
+        <Description>%ColonizeGasGiantDescription</Description>
+        <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasMethaneSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasMethaneLarge"/>
+	  </Gui>
+  </Colonize>-->
+  
+  <Colonize Name="ColonizeGasHydrogen" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeGasHydrogen) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeGasHydrogenTitle</Title>
+      <Description>%ColonizeGasHydrogenDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasHydrogenSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasHydrogenLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <Colonize Name="ColonizeGasHelium" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeGasHelium) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeGasHeliumTitle</Title>
+      <Description>%ColonizeGasHeliumDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasHeliumSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasHeliumLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <Colonize Name="ColonizeGasMethane" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeGasMethane) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeGasMethaneTitle</Title>
+      <Description>%ColonizeGasMethaneDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasMethaneSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasMethaneLarge"/>
+    </Gui>
+  </Colonize>
+  
+  <Colonize Name="ColonizeAsteroids" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeAsteroids) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeAsteroidsTitle</Title>
+      <Description>%ColonizeAsteroidsDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationAsteroidsSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationAsteroidsLarge"/>
+    </Gui>
+  </Colonize>
+  
+  
+  
+  <Colonize Name="ColonizeBase" Cost="70" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(PlanetTypeJungle) and !$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeJungleTitle</Title>
+      <Description>%ColonizeJungleDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationBaseSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationBaseLarge"/>
+    </Gui>
+  </Colonize>
+  
+  
+  
+  <MoonSurvey Name="MoonSurvey" Cost="100" IsUnique="true">
+    <Descriptors/>
+    <PathsPrerequisites>$(ClassPlanet/ClassMoon) and $(PlanetStatusColonized) and !$(ClassPlanet/MoonStatusExplored)</PathsPrerequisites>
+    <Gui>
+      <Title>%MoonSurveyTitle</Title>
+      <Description>%MoonSurveyDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/MoonSurveySmall" Large="Gui/DynamicBitmaps/Improvements/Planets/MoonSurveyLarge"/>
+    </Gui>
+  </MoonSurvey>
+</Datatable>

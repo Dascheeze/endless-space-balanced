@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EXPANSION -->
+  <NarrativeEvent Name="FirstColonization">
+    <Gui>
+      <Title>%NarrativeEventsExpansion01Title</Title>
+      <Description>%NarrativeEventsExpansion01Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsExpansion01"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <NarrativeEvent Name="FirstOutpostToColony">
+    <Gui>
+      <Title>%NarrativeEventsExpansion02Title</Title>
+      <Description>%NarrativeEventsExpansion02Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsExpansion02"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!-- 1st Colonizing a Class III or IV planet -->
+  <NarrativeEvent Name="FirstColonizingPlanetClass3or4" Value="3;4">
+    <Gui>
+      <Title>%NarrativeEventsExpansion03Title</Title>
+      <Description>%NarrativeEventsExpansion03Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsExpansion03"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!-- 1st Colonizing a Class V planet -->
+  <NarrativeEvent Name="FirstColonizingPlanetClass5" Value="5">
+    <Gui>
+      <Title>%NarrativeEventsExpansion04Title</Title>
+      <Description>%NarrativeEventsExpansion04Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsExpansion04"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DIPLOMACY -->
+  <NarrativeEvent Name="FirstEncounterWithOtherFaction">
+    <Gui>
+      <Title>%NarrativeEventsDiplomacy01Title</Title>
+      <Description>%NarrativeEventsDiplomacy01Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsDiplomacy01"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EXPLORATION -->
+  <NarrativeEvent Name="KnowingXPercentGalaxyStar" Value="0.5">
+    <Gui>
+      <Title>%NarrativeEventsExploration02Title</Title>
+      <Description>%NarrativeEventsExploration02Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsExploration02"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <NarrativeEvent Name="PossessingXPercentGalaxyStar" Value="0.5">
+    <Gui>
+      <Title>%NarrativeEventsExploration03Title</Title>
+      <Description>%NarrativeEventsExploration03Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsExploration03"/>
+      <Icon Large=""/>
+    </Gui>
+  </NarrativeEvent>
+
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEROES -->
+  <NarrativeEvent Name="FirstHeroLevelX" Value="10">
+    <Gui>
+      <Title>%NarrativeEventsHeroes01Title</Title>
+      <Description>%NarrativeEventsHeroes01Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsHeroes01"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <NarrativeEvent Name="FirstHeroLevelY" Value="20">
+    <Gui>
+      <Title>%NarrativeEventsHeroes02Title</Title>
+      <Description>%NarrativeEventsHeroes02Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsHeroes02"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMPIRE DEATH -->
+  <NarrativeEvent Name="EmpireDeath">
+    <Gui>
+      <Title>%AchievementEmpireDeathTitle</Title>
+      <Description>%AchievementEmpireDeathDescription</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/AchievementEmpireDeath"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TECHNOLOGIES -->
+  <NarrativeEvent Name="TechnoUnlockedWormhole" Value="MovementWormhole1">
+    <Gui>
+      <Title>%NarrativeEventsTechnology01Title</Title>
+      <Description>%NarrativeEventsTechnology01Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsTechnology01"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <NarrativeEvent Name="TechnoUnlockedFreeMove" Value="MovementFreeMove1">
+    <Gui>
+      <Title>%NarrativeEventsTechnology02Title</Title>
+      <Description>%NarrativeEventsTechnology02Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsTechnology02"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PIRATES -->
+  <NarrativeEvent Name="FirstEncounterPirates">
+    <Gui>
+      <Title>%NarrativeEventsPirates01Title</Title>
+      <Description>%NarrativeEventsPirates01Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsPirates01"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SHIPS -->
+  <NarrativeEvent Name="FirstMediumShipCreated">
+    <Gui>
+      <Title>%NarrativeEventsShips01Title</Title>
+      <Description>%NarrativeEventsShips01Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsShips01"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <NarrativeEvent Name="FirstLargeShipCreated">
+    <Gui>
+      <Title>%NarrativeEventsShips02Title</Title>
+      <Description>%NarrativeEventsShips02Description</Description>
+      <Icon Large="Gui/DynamicBitmaps/Events/NarrativeEventsShips02"/>
+    </Gui>
+  </NarrativeEvent>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TUTORIAL -->
+  <Tutorial Name="TutorialWelcome">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialWelcomeTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialWelcome">
+      <Item Index="0" Text="%TutorialWelcomeItem1" />
+    </Frame>
+  </Tutorial>
+  
+  <Tutorial Name="TutorialGalaxyView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialGalaxyViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialGalaxyView">
+      <Item Index="0" Text="%TutorialGalaxyViewItem0"/>
+      <Item Index="1" Text="%TutorialGalaxyViewItem1" X="341" Y="292"/>
+      <Item Index="2" Text="%TutorialGalaxyViewItem2" X="142" Y="54"/>
+      <Item Index="3" Text="%TutorialGalaxyViewItem3" X="320" Y="218"/>
+      <Item Index="4" Text="%TutorialGalaxyViewItem4" X="522" Y="183"/>
+      <Item Index="5" Text="%TutorialGalaxyViewItem5" X="712" Y="428"/>
+      <Item Index="6" Text="%TutorialGalaxyViewItem6" X="707" Y="559"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialSystemView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialSystemViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialSystemView">
+      <Item Index="0" Text="%TutorialSystemViewItem0"/>
+      <Item Index="1" Text="%TutorialSystemViewItem1" X="94" Y="69"/>
+      <Item Index="2" Text="%TutorialSystemViewItem2" X="47" Y="134"/>
+      <Item Index="3" Text="%TutorialSystemViewItem3" X="195" Y="76"/>
+      <Item Index="4" Text="%TutorialSystemViewItem4" X="219" Y="123"/>
+      <Item Index="5" Text="%TutorialSystemViewItem5" X="751" Y="297"/>
+      <Item Index="6" Text="%TutorialSystemViewItem6" X="53" Y="330"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialSystemViewContinued">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialSystemViewContinuedTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialSystemViewContinued">
+      <Item Index="1" Text="%TutorialSystemViewContinuedItem1" X="177" Y="514"/>
+      <Item Index="2" Text="%TutorialSystemViewContinuedItem2" X="397" Y="513"/>
+      <Item Index="3" Text="%TutorialSystemViewContinuedItem3" X="531" Y="548"/>
+      <Item Index="4" Text="%TutorialSystemViewContinuedItem4" X="756" Y="564"/>
+      <Item Index="5" Text="%TutorialSystemViewContinuedItem5" X="330" Y="90"/>
+      <Item Index="6" Text="%TutorialSystemViewContinuedItem6" X="514" Y="96"/>
+      <Item Index="7" Text="%TutorialSystemViewContinuedItem7" X="691" Y="98"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialPlanetView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialPlanetViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialPlanetView">
+      <Item Index="0" Text="%TutorialPlanetViewItem0"/>
+      <Item Index="1" Text="%TutorialPlanetViewItem1" X="457" Y="124"/>
+      <Item Index="2" Text="%TutorialPlanetViewItem2" X="103" Y="169"/>
+      <Item Index="3" Text="%TutorialPlanetViewItem3" X="212" Y="169"/>
+      <Item Index="4" Text="%TutorialPlanetViewItem4" X="140" Y="222"/>
+      <Item Index="5" Text="%TutorialPlanetViewItem5" X="175" Y="285"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialPlanetViewContinued">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialPlanetViewContinuedTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialPlanetViewContinued">
+      <Item Index="0" Text="%TutorialPlanetViewContinuedItem0"/>
+      <Item Index="1" Text="%TutorialPlanetViewContinuedItem1" X="416" Y="205"/>
+      <Item Index="2" Text="%TutorialPlanetViewContinuedItem2" X="213" Y="274"/>
+      <Item Index="3" Text="%TutorialPlanetViewContinuedItem3" X="200" Y="368"/>
+      <Item Index="4" Text="%TutorialPlanetViewContinuedItem4" X="200" Y="449"/>
+      <Item Index="5" Text="%TutorialPlanetViewContinuedItem5" X="399" Y="524"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialFleetControlPanel">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialFleetControlTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialFleetControl">
+      <Item Index="0" Text="%TutorialFleetControlItem0"/>
+      <Item Index="1" Text="%TutorialFleetControlItem1" X="445" Y="256"/>
+      <Item Index="2" Text="%TutorialFleetControlItem2" X="132" Y="490"/>
+      <Item Index="3" Text="%TutorialFleetControlItem3" X="354" Y="524"/>
+      <Item Index="4" Text="%TutorialFleetControlItem4" X="556" Y="313"/>
+      <Item Index="5" Text="%TutorialFleetControlItem5" X="17" Y="439"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialEmpireView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialEmpireViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialEmpireView">
+      <Item Index="0" Text="%TutorialEmpireViewItem0"/>
+      <Item Index="1" Text="%TutorialEmpireViewItem1" X="32" Y="117"/>
+      <Item Index="2" Text="%TutorialEmpireViewItem2" X="212" Y="83"/>
+      <Item Index="3" Text="%TutorialEmpireViewItem3" X="370" Y="83"/>
+      <Item Index="4" Text="%TutorialEmpireViewItem4" X="115" Y="188"/>
+      <Item Index="5" Text="%TutorialEmpireViewItem5" X="163" Y="329"/>
+      <Item Index="6" Text="%TutorialEmpireViewItem6" X="765" Y="329"/>
+      <Item Index="7" Text="%TutorialEmpireViewItem7" X="707" Y="132"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialResearchView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialResearchViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialResearchView">
+      <Item Index="0" Text="%TutorialResearchViewItem0"/>
+      <Item Index="1" Text="%TutorialResearchViewItem1" X="479" Y="573"/>
+      <Item Index="2" Text="%TutorialResearchViewItem2" X="682" Y="417"/>
+      <Item Index="3" Text="%TutorialResearchViewItem3" X="59" Y="418"/>
+      <Item Index="4" Text="%TutorialResearchViewItem4" X="362" Y="61"/>
+      <Item Index="5" Text="%TutorialResearchViewItem5" X="425" Y="472"/>
+      <Item Index="6" Text="%TutorialResearchViewItem6" X="154" Y="531"/>
+      <Item Index="7" Text="%TutorialResearchViewItem7" X="764" Y="233"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialResearchViewContinued">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialResearchViewContinuedTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialResearchViewContinued">
+      <Item Index="0" Text="%TutorialResearchViewContinuedItem0"/>
+      <Item Index="1" Text="%TutorialResearchViewContinuedItem1" X="425" Y="320"/>
+      <Item Index="2" Text="%TutorialResearchViewContinuedItem2" X="672" Y="294"/>
+      <Item Index="3" Text="%TutorialResearchViewContinuedItem3" X="450" Y="249"/>
+      <Item Index="4" Text="%TutorialResearchViewContinuedItem4" X="561" Y="401"/>
+      <Item Index="5" Text="%TutorialResearchViewContinuedItem5" X="365" Y="497"/>
+      <Item Index="6" Text="%TutorialResearchViewContinuedItem6" X="754" Y="554"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialMilitaryView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialMilitaryViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialMilitaryView">
+      <Item Index="0" Text="%TutorialMilitaryViewItem0"/>
+      <Item Index="1" Text="%TutorialMilitaryViewItem1" X="224" Y="58"/>
+      <Item Index="2" Text="%TutorialMilitaryViewItem2" X="384" Y="110"/>
+      <Item Index="3" Text="%TutorialMilitaryViewItem3" X="23" Y="364"/>
+      <Item Index="4" Text="%TutorialMilitaryViewItem4" X="276" Y="364"/>
+      <Item Index="5" Text="%TutorialMilitaryViewItem5" X="374" Y="364"/>
+      <Item Index="6" Text="%TutorialMilitaryViewItem6" X="175" Y="364"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialMilitaryViewContinued">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialMilitaryViewContinuedTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialMilitaryViewContinued">
+      <Item Index="1" Text="%TutorialMilitaryViewContinuedItem1" X="623" Y="57"/>
+      <Item Index="2" Text="%TutorialMilitaryViewContinuedItem2" X="453" Y="114"/>
+      <Item Index="3" Text="%TutorialMilitaryViewContinuedItem3" X="604" Y="120"/>
+      <Item Index="4" Text="%TutorialMilitaryViewContinuedItem4" X="674" Y="194"/>
+      <Item Index="5" Text="%TutorialMilitaryViewContinuedItem5" X="707" Y="240"/>
+      <Item Index="6" Text="%TutorialMilitaryViewContinuedItem6" X="616" Y="320"/>
+      <Item Index="7" Text="%TutorialMilitaryViewContinuedItem7" X="654" Y="572"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialShipDesignView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialShipDesignViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialShipDesignView">
+      <Item Index="0" Text="%TutorialShipDesignViewItem0"/>
+      <Item Index="1" Text="%TutorialShipDesignViewItem1" X="698" Y="127"/>
+      <Item Index="2" Text="%TutorialShipDesignViewItem2" X="619" Y="194"/>
+      <Item Index="3" Text="%TutorialShipDesignViewItem3" X="696" Y="314"/>
+      <Item Index="4" Text="%TutorialShipDesignViewItem4" X="204" Y="398"/>
+      <Item Index="5" Text="%TutorialShipDesignViewItem5" X="197" Y="495"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialShipDesignViewContinued">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialShipDesignViewContinuedTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialShipDesignViewContinued">
+      <Item Index="1" Text="%TutorialShipDesignViewContinuedItem1" X="80" Y="539"/>
+      <Item Index="2" Text="%TutorialShipDesignViewContinuedItem2" X="758" Y="388"/>
+      <Item Index="3" Text="%TutorialShipDesignViewContinuedItem3" X="610" Y="555"/>
+      <Item Index="4" Text="%TutorialShipDesignViewContinuedItem4" X="734" Y="578"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialAcademyView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialAcademyViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialAcademyView">
+      <Item Index="0" Text="%TutorialAcademyViewItem0"/>
+      <Item Index="1" Text="%TutorialAcademyViewItem1" X="422" Y="511"/>
+      <Item Index="2" Text="%TutorialAcademyViewItem2" X="676" Y="401"/>
+      <Item Index="3" Text="%TutorialAcademyViewItem3" X="160" Y="565"/>
+      <Item Index="4" Text="%TutorialAcademyViewItem4" X="367" Y="329"/>
+      <Item Index="5" Text="%TutorialAcademyViewItem5" X="470" Y="407"/>
+      <Item Index="6" Text="%TutorialAcademyViewItem6" X="236" Y="408"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialDiplomacyView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialDiplomacyViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialDiplomacyView">
+      <Item Index="0" Text="%TutorialDiplomacyViewItem0"/>
+      <Item Index="1" Text="%TutorialDiplomacyViewItem1" X="452" Y="200"/>
+      <Item Index="2" Text="%TutorialDiplomacyViewItem2" X="499" Y="410"/>
+      <Item Index="3" Text="%TutorialDiplomacyViewItem3" X="223" Y="536"/>
+      <Item Index="4" Text="%TutorialDiplomacyViewItem4" X="501" Y="287"/>
+      <Item Index="5" Text="%TutorialDiplomacyViewItem5" X="297" Y="285"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialNegotiationView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialNegotiationViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialNegotiationView">
+      <Item Index="0" Text="%TutorialNegotiationViewItem0"/>
+      <Item Index="1" Text="%TutorialNegotiationViewItem1" X="396" Y="284"/>
+      <Item Index="2" Text="%TutorialNegotiationViewItem2" X="93" Y="171"/>
+      <Item Index="3" Text="%TutorialNegotiationViewItem3" X="57" Y="269"/>
+      <Item Index="4" Text="%TutorialNegotiationViewItem4" X="697" Y="260"/>
+      <Item Index="5" Text="%TutorialNegotiationViewItem5" X="552" Y="523"/>
+      <Item Index="6" Text="%TutorialNegotiationViewItem6" X="449" Y="186"/>
+      <Item Index="7" Text="%TutorialNegotiationViewItem7" X="316" Y="531"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialEmpireInformationView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialEmpireInformationViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialEmpireInformationView">
+      <Item Index="0" Text="%TutorialEmpireInformationViewItem0"/>
+      <Item Index="1" Text="%TutorialEmpireInformationViewItem1" X="259" Y="163"/>
+      <Item Index="2" Text="%TutorialEmpireInformationViewItem2" X="291" Y="222"/>
+      <Item Index="3" Text="%TutorialEmpireInformationViewItem3" X="592" Y="162"/>
+      <Item Index="4" Text="%TutorialEmpireInformationViewItem4" X="371" Y="264"/>
+      <Item Index="5" Text="%TutorialEmpireInformationViewItem5" X="696" Y="331"/>
+      <Item Index="6" Text="%TutorialEmpireInformationViewItem6" X="497" Y="332"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialHeroInspectionView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialHeroInspectionViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialHeroInspectionView">
+      <Item Index="0" Text="%TutorialHeroInspectionViewItem0"/>
+      <Item Index="1" Text="%TutorialHeroInspectionViewItem1" X="37" Y="174"/>
+      <Item Index="2" Text="%TutorialHeroInspectionViewItem2" X="117" Y="210"/>
+      <Item Index="3" Text="%TutorialHeroInspectionViewItem3" X="37" Y="233"/>
+      <Item Index="4" Text="%TutorialHeroInspectionViewItem4" X="37" Y="322"/>
+      <Item Index="5" Text="%TutorialHeroInspectionViewItem5" X="258" Y="249"/>
+      <Item Index="6" Text="%TutorialHeroInspectionViewItem6" X="418" Y="428"/>
+      <Item Index="7" Text="%TutorialHeroInspectionViewItem7" X="655" Y="312"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialEncounterPanel">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialEncounterPanelTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialEncounterPanel">
+      <Item Index="1" Text="%TutorialEncounterPanelItem1" X="80" Y="477"/>
+      <Item Index="2" Text="%TutorialEncounterPanelItem2" X="394" Y="180"/>
+      <Item Index="3" Text="%TutorialEncounterPanelItem3" X="274" Y="282"/>
+      <Item Index="4" Text="%TutorialEncounterPanelItem4" X="171" Y="331"/>
+      <Item Index="5" Text="%TutorialEncounterPanelItem5" X="398" Y="232"/>
+      <Item Index="6" Text="%TutorialEncounterPanelItem6" X="399" Y="373"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialBattleView">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialBattleViewTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialBattleView">
+      <Item Index="0" Text="%TutorialBattleViewItem0"/>
+      <Item Index="1" Text="%TutorialBattleViewItem1" X="473" Y="515"/>
+      <Item Index="2" Text="%TutorialBattleViewItem2" X="180" Y="18"/>
+      <Item Index="3" Text="%TutorialBattleViewItem3" X="161" Y="110"/>
+      <Item Index="4" Text="%TutorialBattleViewItem4" X="161" Y="157"/>
+      <Item Index="5" Text="%TutorialBattleViewItem5" X="161" Y="197"/>
+      <Item Index="6" Text="%TutorialBattleViewItem6" X="117" Y="199"/>
+      <Item Index="7" Text="%TutorialBattleViewItem7" X="392" Y="286"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialActionChoicePanel">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialActionChoicePanelTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialActionChoicePanel">
+      <Item Index="0" Text="%TutorialActionChoicePanelItem0"/>
+      <Item Index="1" Text="%TutorialActionChoicePanelItem1" X="385" Y="26"/>
+      <Item Index="2" Text="%TutorialActionChoicePanelItem2" X="414" Y="205"/>
+      <Item Index="3" Text="%TutorialActionChoicePanelItem3" X="709" Y="49"/>
+      <Item Index="4" Text="%TutorialActionChoicePanelItem4" X="83" Y="47"/>
+      <Item Index="5" Text="%TutorialActionChoicePanelItem5" X="201" Y="71"/>
+      <Item Index="6" Text="%TutorialActionChoicePanelItem6" X="579" Y="147"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialEncounterPanelReport">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialEncounterPanelReportTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialEncounterPanelReport">
+      <Item Index="0" Text="%TutorialEncounterPanelReportItem0"/>
+      <Item Index="1" Text="%TutorialEncounterPanelReportItem1" X="274" Y="185"/>
+      <Item Index="2" Text="%TutorialEncounterPanelReportItem2" X="568" Y="213"/>
+      <Item Index="3" Text="%TutorialEncounterPanelReportItem3" X="263" Y="292"/>
+      <Item Index="4" Text="%TutorialEncounterPanelReportItem4" X="199" Y="364"/>
+      <Item Index="5" Text="%TutorialEncounterPanelReportItem5" X="375" Y="364"/>
+      <Item Index="6" Text="%TutorialEncounterPanelReportItem6" X="554" Y="364"/>
+    </Frame>
+  </Tutorial>
+
+  <Tutorial Name="TutorialEmpireExpansion">
+    <Gui>
+      <Title/>
+    </Gui>
+    <Frame Title="%TutorialEmpireExpansionTitle" Text="" Image="Gui/DynamicBitmaps/Tutorial/TutorialEmpireExpansion">
+      <Item Index="0" Text="%TutorialEmpireExpansionItem0"/>
+      <Item Index="1" Text="%TutorialEmpireExpansionItem1" X="519" Y="231"/>
+      <Item Index="2" Text="%TutorialEmpireExpansionItem2" X="197" Y="269"/>
+      <Item Index="3" Text="%TutorialEmpireExpansionItem3" X="559" Y="528"/>
+      <Item Index="4" Text="%TutorialEmpireExpansionItem4" X="185" Y="57"/>
+      <Item Index="5" Text="%TutorialEmpireExpansionItem5" X="680" Y="298"/>
+      <Item Index="6" Text="%TutorialEmpireExpansionItem6" X="554" Y="299"/>
+    </Frame>
+  </Tutorial>
+
+</Datatable>

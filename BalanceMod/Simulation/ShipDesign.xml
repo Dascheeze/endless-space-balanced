@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ### SUMMARY ###
+  LargeFullShow					0x000002a100000001
+  MediumFullShow				0x000002a200000001
+  SmallFullShow					0x000002a300000001
+  
+  LargeFull					    0x0000000100000001
+  Large30Lasers30Missiles		0x0000000200000001
+  MediumFull				    0x0000000300000001
+  
+  LargeTestSD				    0x0000000500000001
+  MediumTestSD				    0x0000000600000001
+  MediumTestSD_B			    0x0000000700000001
+  SmallTestSD				    0x0000000800000001
+  SmallTestSD_B                 0x0000001000000001
+  
+  
+  ColonyShip 				    0x0000000900000001	Shared 
+  Scout						    0x0000000400000001	Shared
+  Defender                		0x0000001200000001  Shared
+  
+  ColonyShipTerran				0x0000021000000001	Shared
+  ScoutTerran					0x0000021100000001	Shared
+  DefenderTerran                0x0000021200000001  Shared
+
+  ColonyShipSwarm				0x0000022000000001	Shared
+  ScoutSwarm					0x0000022100000001	Shared
+  DefenderSwarm					0x0000022200000001	Shared
+
+  ColonyShipSophon				0x0000023000000001	Shared
+  ScoutSophon					0x0000023100000001	Shared
+  DefenderSophon				0x0000023200000001	Shared
+
+  ColonyShipHoratio				0x0000024000000001	Shared
+  ScoutHoratio					0x0000024100000001	Shared
+  DefenderHoratio				0x0000024200000001	Shared
+
+  ColonyShipHissho				0x0000025000000001	Shared
+  ScoutHissho					0x0000025100000001	Shared
+  DefenderHissho				0x0000025200000001	Shared
+
+  ColonyShipSower				0x0000026000000001	Shared
+  ScoutSower					0x0000026100000001	Shared
+  DefenderSower					0x0000026200000001	Shared
+
+  ColonyShipAmoeba				0x0000027000000001	Shared
+  ScoutAmoeba					0x0000027100000001	Shared
+  DefenderAmoeba				0x0000027200000001	Shared
+
+  ColonyShipResistance			0x0000028000000001	Shared
+  ScoutResistance				0x0000028100000001	Shared
+  DefenderResistance			0x0000028200000001	Shared
+  EvacuationResistance			0x0000028300000001
+
+  ScoutPirates				    0x0000029100000001	Shared
+  DefenderPirates			    0x0000029200000001	Shared
+  -->
+
+
+  <ShipDesign Name="LargeFullShow" Serial="0x000002a100000001">
+    <Hull>ShipClassLarge1</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+
+ 
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+
+      <!-- Defenses -->
+
+
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+
+
+
+
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+
+
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="1" />
+      <AIParameter Name="Missile" Value="1" />
+      <AIParameter Name="Kinetic" Value="1" />
+      <AIParameter Name="LaserDefense" Value="0.5" />
+      <AIParameter Name="MissileDefense" Value="0.5" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="1" />
+      <AIParameter Name="Colonization" Value="1" />
+    </AIParameters>
+  </ShipDesign>
+
+
+  <ShipDesign Name="MediumFullShow" Serial="0x000002a200000001">
+    <Hull>ShipClassMedium1</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+
+      <!-- Defenses -->
+   
+
+
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+
+
+ 
+
+
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+
+
+ 
+
+
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="1" />
+      <AIParameter Name="Missile" Value="1" />
+      <AIParameter Name="Kinetic" Value="1" />
+      <AIParameter Name="LaserDefense" Value="0.5" />
+      <AIParameter Name="MissileDefense" Value="0.5" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="1" />
+      <AIParameter Name="Colonization" Value="1" />
+    </AIParameters>
+  </ShipDesign>
+
+
+  <ShipDesign Name="SmallFullShow" Serial="0x000002a300000001">
+    <Hull>ShipClassSmall1</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+     
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+     
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+
+      <!-- Defenses -->
+     
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+
+
+      
+
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+
+
+
+     
+
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+  
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="1" />
+      <AIParameter Name="Missile" Value="1" />
+      <AIParameter Name="Kinetic" Value="1" />
+      <AIParameter Name="LaserDefense" Value="0.5" />
+      <AIParameter Name="MissileDefense" Value="0.5" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="1" />
+      <AIParameter Name="Colonization" Value="1" />
+    </AIParameters>
+  </ShipDesign>
+  
+  
+  
+  <ShipDesign Name="LargeFull" Serial="0x0000000100000001">
+    <Hull>ShipClassLarge1</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+
+      
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+
+      
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+  
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="1" />
+      <AIParameter Name="Missile" Value="1" />
+      <AIParameter Name="Kinetic" Value="1" />
+      <AIParameter Name="LaserDefense" Value="0.5" />
+      <AIParameter Name="MissileDefense" Value="0.5" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="1" />
+      <AIParameter Name="Colonization" Value="1" />  
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="Large30Lasers30Missiles" Serial="0x0000000200000001">
+    <Hull>ShipClassLarge1</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <!-- Defenses -->
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+      
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0.8" />
+      <AIParameter Name="Missile" Value="0.8" />
+      <AIParameter Name="Kinetic" Value="0" />
+      <AIParameter Name="LaserDefense" Value="0.1" />
+      <AIParameter Name="MissileDefense" Value="0.1" />
+      <AIParameter Name="KineticDefense" Value="0.4" />
+      <AIParameter Name="Health" Value="1" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+  
+  <ShipDesign Name="MediumFull" Serial="0x0000000300000001">
+    <Hull>ShipClassMedium1</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      
+      
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      
+      
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+      
+      <Module>ModuleDefenseShield5</Module>
+      <Module>ModuleDefenseShield5</Module>
+
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0.5" />
+      <AIParameter Name="Missile" Value="0.5" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0.3" />
+      <AIParameter Name="KineticDefense" Value="0.3" />
+      <AIParameter Name="Health" Value="0.5" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+  
+  
+<!-- ORIGINAL SHIP DESIGNS (keep for a save compatibility matter ?) -->  
+  <ShipDesign Name="Scout" Serial="0x0000000400000001">
+    <Hull>ShipClassSmall1</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic4</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="Defender" Serial="0x0000001200000001">
+    <Hull>ShipClassSmall1</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+<!-- TERRAN SHIP DESIGNS -->
+  <ShipDesign Name="ScoutTerranDesign" Serial="0x0000021100000001" Affinity="Terran" Shared="true">
+    <Hull>ShipClassSmall1Terran</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderTerranDesign" Serial="0x0000021200000001" Affinity="Terran" Shared="true">
+    <Hull>ShipClassSmall1Terran</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+<!-- SWARM SHIP DESIGNS -->
+  <ShipDesign Name="ScoutSwarmDesign" Serial="0x0000022100000001" Affinity="Swarm" Shared="true">
+    <Hull>ShipClassSmall1Swarm</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector2</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderSwarmDesign" Serial="0x0000022200000001" Affinity="Swarm" Shared="true">
+    <Hull>ShipClassSmall1Swarm</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector2</Module>
+      <Module>ModuleDefenseDeflector2</Module>
+      <Module>ModuleDefenseDeflector2</Module>
+      <Module>ModuleDefenseDeflector2</Module>
+      <Module>ModuleDefenseDeflector2</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+ 
+<!-- SOPHON SHIP DESIGNS -->
+  <ShipDesign Name="ScoutSophonDesign" Serial="0x0000023100000001" Affinity="Sophon" Shared="true">
+    <Hull>ShipClassSmall1Sophon</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine2</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderSophonDesign" Serial="0x0000023200000001" Affinity="Sophon" Shared="true">
+    <Hull>ShipClassSmall1Sophon</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+ 
+<!-- HORATIO SHIP DESIGNS -->
+  <ShipDesign Name="ScoutHoratioDesign" Serial="0x0000024100000001" Affinity="Horatio" Shared="true">
+    <Hull>ShipClassSmall1Horatio</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderHoratioDesign" Serial="0x0000024200000001" Affinity="Horatio" Shared="true">
+    <Hull>ShipClassSmall1Horatio</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+ 
+<!-- HISSHO SHIP DESIGNS -->
+  <ShipDesign Name="ScoutHisshoDesign" Serial="0x0000025100000001" Affinity="Hissho" Shared="true">
+    <Hull>ShipClassSmall1Hissho</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic2</Module>
+      <Module>ModuleWeaponKinetic2</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderHisshoDesign" Serial="0x0000025200000001" Affinity="Hissho" Shared="true">
+    <Hull>ShipClassSmall1Hissho</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic2</Module>
+      <Module>ModuleWeaponKinetic2</Module>
+      <Module>ModuleWeaponKinetic2</Module>
+      <Module>ModuleWeaponKinetic2</Module>
+      <Module>ModuleWeaponKinetic2</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+ 
+<!-- SOWER SHIP DESIGNS -->
+  <ShipDesign Name="ScoutSowerDesign" Serial="0x0000026100000001" Affinity="Sower" Shared="true">
+    <Hull>ShipClassSmall1Sower</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderSowerDesign" Serial="0x0000026200000001" Affinity="Sower" Shared="true">
+    <Hull>ShipClassSmall1Sower</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+ 
+<!-- AMOEBA SHIP DESIGNS -->
+  <ShipDesign Name="ScoutAmoebaDesign" Serial="0x0000027100000001" Affinity="Amoeba" Shared="true">
+    <Hull>ShipClassSmall1Amoeba</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderAmoebaDesign" Serial="0x0000027200000001" Affinity="Amoeba" Shared="true">
+    <Hull>ShipClassSmall1Amoeba</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+ 
+<!-- RESISTANCE SHIP DESIGNS -->
+  <ShipDesign Name="ScoutResistanceDesign" Serial="0x0000028100000001" Affinity="Resistance" Shared="true">
+    <Hull>ShipClassSmall1Resistance</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderResistanceDesign" Serial="0x0000028200000001" Affinity="Resistance" Shared="true">
+    <Hull>ShipClassSmall1Resistance</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+ 
+<!-- PIRATES SHIP DESIGNS -->
+  <ShipDesign Name="ScoutPiratesDesign" Serial="0x0000029100000001" Affinity="Pirates" Shared="true">
+    <Hull>ShipClassSmall1Pirates</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+          
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <!-- Specials -->
+      <Module>ModuleSupportScout1</Module>
+      <Module>ModuleSupportEngine1</Module>
+
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.1" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.1" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="DefenderPiratesDesign" Serial="0x0000029200000001" Affinity="Pirates" Shared="true">
+    <Hull>ShipClassSmall1Pirates</Hull>
+    <Modules>
+      <!-- Weapons -->
+
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+      <Module>ModuleWeaponKinetic1</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0" />
+      <AIParameter Name="Missile" Value="0" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  
+<!-- DEBUT: SHIP DESIGN TEST SOUND DESIGN -->
+  <ShipDesign Name="LargeTestSD" Serial="0x0000000500000001">
+    <Hull>ShipClassLarge1</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <!-- Defenses -->
+      <Module>ModuleDefenseShield1</Module>
+      <Module>ModuleDefenseShield1</Module>
+      <Module>ModuleDefenseShield1</Module>
+      <Module>ModuleDefenseShield1</Module>
+      <Module>ModuleDefenseShield1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="1" />
+      <AIParameter Name="Missile" Value="1" />
+      <AIParameter Name="Kinetic" Value="1" />
+      <AIParameter Name="LaserDefense" Value="0.5" />
+      <AIParameter Name="MissileDefense" Value="0.5" />
+      <AIParameter Name="KineticDefense" Value="0.5" />
+      <AIParameter Name="Health" Value="1" />
+      <AIParameter Name="Colonization" Value="1" />  
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="MediumTestSD" Serial="0x0000000600000001">
+    <Hull>ShipClassMedium1</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0.5" />
+      <AIParameter Name="Missile" Value="0.5" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0.3" />
+      <AIParameter Name="KineticDefense" Value="0.3" />
+      <AIParameter Name="Health" Value="0.5" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="MediumTestSD_B" Serial="0x0000000700000001">
+    <Hull>ShipClassMedium2</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      <Module>ModuleDefenseDeflector1</Module>
+      
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      <Module>ModuleDefenseAntimissile1</Module>
+      
+      <Module>ModuleDefenseShield1</Module>
+      <Module>ModuleDefenseShield1</Module>
+      <Module>ModuleDefenseShield1</Module>
+      
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0.5" />
+      <AIParameter Name="Missile" Value="0.5" />
+      <AIParameter Name="Kinetic" Value="0.5" />
+      <AIParameter Name="LaserDefense" Value="0" />
+      <AIParameter Name="MissileDefense" Value="0.3" />
+      <AIParameter Name="KineticDefense" Value="0.3" />
+      <AIParameter Name="Health" Value="0.5" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="SmallTestSD" Serial="0x0000000800000001">
+    <Hull>ShipClassSmall1</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0.2" />
+      <AIParameter Name="Missile" Value="0.2" />
+      <AIParameter Name="Kinetic" Value="0.2" />
+      <AIParameter Name="LaserDefense" Value="0.5" />
+      <AIParameter Name="MissileDefense" Value="0.1" />
+      <AIParameter Name="KineticDefense" Value="0" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+
+  <ShipDesign Name="SmallTestSD_B" Serial="0x0000001000000001">
+    <Hull>ShipClassSmall2</Hull>
+    <Modules>
+      <!-- Weapons -->
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      <Module>ModuleWeaponLaser3</Module>
+      <Module>ModuleWeaponLaser3</Module>
+      
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+      
+      <Module>ModuleWeaponKinetic4</Module>
+      <Module>ModuleWeaponKinetic4</Module>
+
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+      
+      <Module>ModuleWeaponMissile4</Module>
+      <Module>ModuleWeaponMissile4</Module>
+
+      <!-- Defenses -->
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      <Module>ModuleDefenseDeflector7</Module>
+      
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+      <Module>ModuleDefenseAntimissile8</Module>
+    </Modules>
+    <AIParameters>
+      <AIParameter Name="Military" Value="1" />
+
+      <!-- Ship specific coefficient -->
+      <AIParameter Name="Laser" Value="0.2" />
+      <AIParameter Name="Missile" Value="0.2" />
+      <AIParameter Name="Kinetic" Value="0.2" />
+      <AIParameter Name="LaserDefense" Value="0.5" />
+      <AIParameter Name="MissileDefense" Value="0.1" />
+      <AIParameter Name="KineticDefense" Value="0" />
+      <AIParameter Name="Health" Value="0.2" />
+      <AIParameter Name="Colonization" Value="0" />
+    </AIParameters>
+  </ShipDesign>
+<!-- FIN: SHIP DESIGN TEST SOUND DESIGN -->
+
+
+
+
+
+
+
+
+
+</Datatable>

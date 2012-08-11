@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- ENGINES -->
+  <EmpireImprovement Name="MovementWarp1">
+    <Descriptors>MovementWarp1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementWarp1Title</Title>
+      <Description>%MovementWarp1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementWarp1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementWarp1Large"/>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementWarp2">
+    <Descriptors>MovementWarp2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementWarp2Title</Title>
+      <Description>%MovementWarp2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementWarp2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementWarp2Large"/>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementWarp3">
+    <Descriptors>MovementWarp3</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementWarp3Title</Title>
+      <Description>%MovementWarp3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementWarp3Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementWarp3Large"/>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementWarp4">
+    <Descriptors>MovementWarp4</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementWarp4Title</Title>
+      <Description>%MovementWarp4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementWarp4Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementWarp4Large"/>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementWormhole1">
+    <Descriptors>MovementWormhole1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementWormhole1Title</Title>
+      <Description>%MovementWormhole1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementWormhole1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementWormhole1Large"/>
+	  <Tooltip><Description>%FleetWormholeUnlockTitle</Description></Tooltip>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementWormhole2">
+    <Descriptors>MovementWormhole2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementWormhole2Title</Title>
+      <Description>%MovementWormhole2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementWormhole2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementWormhole2Large"/>
+	  <Tooltip><Description>%FleetWormhole2UnlockTitle</Description></Tooltip>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementFreeMove1">
+    <Descriptors>MovementFreeMove1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementFreeMove1Title</Title>
+      <Description>%MovementFreeMove1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementFreeMove1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementFreeMove1Large"/>
+      <Tooltip>
+        <Description>%FleetFreeMovementUnlockTitle</Description>
+      </Tooltip>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementFreeMove2">
+    <Descriptors>MovementFreeMove2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementFreeMove2Title</Title>
+      <Description>%MovementFreeMove2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementFreeMove2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementFreeMove2Large"/>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="MovementFreeMove3">
+    <Descriptors>MovementFreeMove3</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MovementFreeMove3Title</Title>
+      <Description>%MovementFreeMove3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MovementFreeMove3Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MovementFreeMove3Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+
+  
+  <!-- //FLEET BONUS-->
+  <EmpireImprovement Name="MaxFleetSize1">
+    <Descriptors>MaxFleetSize1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxFleetSize1Title</Title>
+      <Description>%MaxFleetSize1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxFleetSize1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxFleetSize1Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="MaxFleetSize2">
+    <Descriptors>MaxFleetSize2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxFleetSize2Title</Title>
+      <Description>%MaxFleetSize2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxFleetSize2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxFleetSize2Large"/>
+      <Tooltip>
+        <Description>%MaxFleetSize2TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="MaxFleetSize2Swarm">
+    <Descriptors>MaxFleetSize2;ShipClassUnlockedAllCravers</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxFleetSize2SwarmTitle</Title>
+      <Description>%MaxFleetSize2SwarmDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxFleetSize2SwarmSmall" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxFleetSize2SwarmLarge"/>
+      <Tooltip>
+        <Description>%MaxFleetSize2TooltipEffect</Description>
+        <Description>%MaxFleetSize2SwarmTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="MaxFleetSize3">
+    <Descriptors>MaxFleetSize3</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxFleetSize3Title</Title>
+      <Description>%MaxFleetSize3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxFleetSize3Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxFleetSize3Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="MaxFleetSize4">
+    <Descriptors>MaxFleetSize4</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxFleetSize4Title</Title>
+      <Description>%MaxFleetSize4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxFleetSize4Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxFleetSize4Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  
+  <EmpireImprovement Name="ShipClassUnlockedSmall2">
+    <Descriptors>ShipClassUnlockedSmall2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="ShipClassUnlockedMedium1">
+    <Descriptors>ShipClassUnlockedMedium1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="ShipClassUnlockedMedium2">
+    <Descriptors>ShipClassUnlockedMedium2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="ShipClassUnlockedLarge1">
+    <Descriptors>ShipClassUnlockedLarge1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+  </EmpireImprovement>
+
+
+  
+  <!-- HEROES QUANTITY -->
+  <EmpireImprovement Name="MaxHeroQuantity1">
+    <Descriptors>MaxHeroQuantity1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxHeroQuantity1Title</Title>
+      <Description>%MaxHeroQuantity1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxHeroQuantity1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxHeroQuantity1Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="MaxHeroQuantity2">
+    <Descriptors>MaxHeroQuantity2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxHeroQuantity2Title</Title>
+      <Description>%MaxHeroQuantity2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxHeroQuantity2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxHeroQuantity2Large"/>	  
+    </Gui>
+  </EmpireImprovement>
+  <EmpireImprovement Name="MaxHeroQuantity2Horatio">
+    <Descriptors>MaxHeroQuantity2Horatio</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%MaxHeroQuantity2HoratioTitle</Title>
+      <Description>%MaxHeroQuantity2HoratioDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/MaxHeroQuantity2HoratioSmall" Large="Gui/DynamicBitmaps/Improvements/Empire/MaxHeroQuantity2HoratioLarge"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="HeroXPBonus1">
+    <Descriptors>HeroXPBonus1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%HeroXPBonus1Title</Title>
+      <Description>%HeroXPBonus1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/HeroXpBonus1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/HeroXpBonus1Large"/>
+    </Gui>
+  </EmpireImprovement>
+  <EmpireImprovement Name="HeroXPBonus1Resistance">
+    <Descriptors>HeroXPBonus1Resistance</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%HeroXPBonus1ResistanceTitle</Title>
+      <Description>%HeroXPBonus1ResistanceDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/HeroXpBonus1ResistanceSmall" Large="Gui/DynamicBitmaps/Improvements/Empire/HeroXpBonus1ResistanceLarge"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="HeroXPBonus2">
+    <Descriptors>HeroXPBonus2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%HeroXPBonus2Title</Title>
+      <Description>%HeroXPBonus2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/HeroXpBonus2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/HeroXpBonus2Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <!-- Those improvements, delete the maluses applied on planets by the colonization trait (TraitScience03) -->
+  <EmpireImprovementColonization Name="ColonizeTerranWithColonizeTraitScience03">
+    <Descriptors></Descriptors>
+    <PathsPrerequisites>$(PlanetTypeTerran)</PathsPrerequisites>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeJungleWithColonizeTraitScience03">
+    <Descriptors></Descriptors>
+    <PathsPrerequisites>$(PlanetTypeJungle)</PathsPrerequisites>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeOceanWithColonizeTraitScience03">
+    <Descriptors></Descriptors>
+    <PathsPrerequisites>$(PlanetTypeOcean)</PathsPrerequisites>
+  </EmpireImprovementColonization>
+  
+  <EmpireImprovementColonization Name="ColonizeTundraWithColonizeTraitScience03">
+    <Descriptors>TraitScience03TundraDefault;ColonizeTundraWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeTundra)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeTundraSowerTitle</Title>
+      <Description>%ColonizeTundraSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationTundraSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationTundraSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeAridWithColonizeTraitScience03">
+    <Descriptors>TraitScience03AridDefault;ColonizeAridWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeArid)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeAridSowerTitle</Title>
+      <Description>%ColonizeAridSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationAridSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationAridSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeDesertWithColonizeTraitScience03">
+    <Descriptors>TraitScience03DesertDefault;ColonizeDesertWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeDesert)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeDesertSowerTitle</Title>
+      <Description>%ColonizeDesertSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationDesertSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationDesertSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeArcticWithColonizeTraitScience03">
+    <Descriptors>TraitScience03ArcticDefault;ColonizeArcticWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeArctic)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeArcticSowerTitle</Title>
+      <Description>%ColonizeArcticSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationArcticSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationArcticSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeLavaWithColonizeTraitScience03">
+    <Descriptors>TraitScience03LavaDefault;ColonizeLavaWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeLava)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeLavaSowerTitle</Title>
+      <Description>%ColonizeLavaSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationLavaSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationLavaSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeBarrenWithColonizeTraitScience03">
+    <Descriptors>TraitScience03BarrenDefault;ColonizeBarrenWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeBarren)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeBarrenSowerTitle</Title>
+      <Description>%ColonizeBarrenSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationBarrenSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationBarrenSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeAsteroidsWithColonizeTraitScience03">
+    <Descriptors>TraitScience03AsteroidsDefault;ColonizeAsteroidsWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeAsteroids)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeAsteroidsSowerTitle</Title>
+      <Description>%ColonizeAsteroidsSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationAsteroidsSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationAsteroidsSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeGasGiantWithColonizeTraitScience03">
+    <Descriptors>ColonizeGasGiantWithColonizeTraitScience03</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeGasGiantSowerTitle</Title>
+      <Description>%ColonizeGasGiantSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasMethaneSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasMethaneSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeGasHydrogenWithColonizeTraitScience03">
+    <Descriptors>TraitScience03GasHydrogenDefault</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeGasHydrogen)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeGasHydrogenSowerTitle</Title>
+      <Description>%ColonizeGasHydrogenSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasHydrogenSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasHydrogenSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeGasHeliumWithColonizeTraitScience03">
+    <Descriptors>TraitScience03GasHeliumDefault</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeGasHelium)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeGasHeliumSowerTitle</Title>
+      <Description>%ColonizeGasHeliumSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasHeliumSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasHeliumSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+  <EmpireImprovementColonization Name="ColonizeGasMethaneWithColonizeTraitScience03">
+    <Descriptors>TraitScience03GasMethaneDefault</Descriptors>
+    <PathsPrerequisites>$(PlanetTypeGasMethane)</PathsPrerequisites>
+    <Gui>
+      <Title>%ColonizeGasMethaneSowerTitle</Title>
+      <Description>%ColonizeGasMethaneSowerDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/ColonizationGasMethaneSowerSmall" Large="Gui/DynamicBitmaps/Improvements/Planets/ColonizationGasMethaneSowerLarge"/>
+      <Tooltip><Description>%WithColonizeTraitScience03TooltipEffect</Description></Tooltip>
+    </Gui>
+  </EmpireImprovementColonization>
+
+
+  <!-- STORAGE BONUS -->
+  <EmpireImprovement Name="ModMiniaturization1">
+    <Descriptors>ModMiniaturization1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ModMiniaturization1Title</Title>
+      <Description>%ModMiniaturization1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ModMiniaturization1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ModMiniaturization1Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="ModMiniaturization2">
+    <Descriptors>ModMiniaturization2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ModMiniaturization2Title</Title>
+      <Description>%ModMiniaturization2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ModMiniaturization2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ModMiniaturization2Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="ModMiniaturization3">
+    <Descriptors>ModMiniaturization3</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ModMiniaturization3Title</Title>
+      <Description>%ModMiniaturization3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ModMiniaturization3Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ModMiniaturization3Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="ModMiniaturization4">
+    <Descriptors>ModMiniaturization4</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ModMiniaturization4Title</Title>
+      <Description>%ModMiniaturization4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ModMiniaturization4Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ModMiniaturization4Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="ModMiniaturization5">
+    <Descriptors>ModMiniaturization5</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ModMiniaturization5Title</Title>
+      <Description>%ModMiniaturization5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ModMiniaturization5Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ModMiniaturization5Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+
+
+
+  <!-- DIPLOMACY -->
+  <EmpireImprovement Name="DiplomacyBonus1">
+    <Descriptors>DiplomacyBonus1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus1Title</Title>
+      <Description>%DiplomacyBonus1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus1Large"/>
+    </Gui>
+  </EmpireImprovement>
+  <EmpireImprovement Name="DiplomacyBonus1Swarm">
+    <Descriptors>DiplomacyBonus1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus1Title</Title>
+      <Description>%DiplomacyBonus1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus1Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="DiplomacyBonus2">
+    <Descriptors>DiplomacyBonus2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus2Title</Title>
+      <Description>%DiplomacyBonus2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus2Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="DiplomacyBonus3">
+    <Descriptors>DiplomacyBonus3</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus3Title</Title>
+      <Description>%DiplomacyBonus3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus3Small" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus3Large"/>
+    </Gui>
+  </EmpireImprovement>
+  <EmpireImprovement Name="DiplomacyBonus3Resistance">
+    <Descriptors>DiplomacyBonus3Resistance</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus3ResistanceTitle</Title>
+      <Description>%DiplomacyBonus3ResistanceDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus3ResistanceSmall" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus3ResistanceLarge"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="DiplomacyBonus5">
+    <Descriptors>DiplomacyBonus5</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus5Title</Title>
+      <Description>%DiplomacyBonus5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus5Small" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus5Large"/>
+    </Gui>
+  </EmpireImprovement>
+  
+  <EmpireImprovement Name="DiplomacyBonus5Amoeba">
+    <Descriptors>DiplomacyBonus5Amoeba</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus5AmoebaTitle</Title>
+      <Description>%DiplomacyBonus5AmoebaDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus5AmoebaSmall" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus5AmoebaLarge"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="DiplomacyBonus6">
+    <Descriptors>DiplomacyBonus6</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus6Title</Title>
+      <Description>%DiplomacyBonus6Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus6Small" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus6Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="DiplomacyBonus7">
+    <Descriptors>DiplomacyBonus7</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus7Title</Title>
+      <Description>%DiplomacyBonus7Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus7Small" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus7Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="DiplomacyBonus7Amoeba">
+    <Descriptors>DiplomacyBonus7Amoeba</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%DiplomacyBonus7AmoebaTitle</Title>
+      <Description>%DiplomacyBonus7AmoebaDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/DiplomacyBonus7AmoebaSmall" Large="Gui/DynamicBitmaps/Improvements/Empire/DiplomacyBonus7AmoebaLarge"/>
+    </Gui>
+  </EmpireImprovement>
+
+
+  
+  
+
+  <!-- LUXURY BOOST -->
+  <EmpireImprovement Name="LuxuryBoost2">
+    <Descriptors>LuxuryBoost2</Descriptors>
+    <Gui>
+      <Title>%LuxuryBoost2Title</Title>
+      <Description>%LuxuryBoost2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/LuxuryBoost2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/LuxuryBoost2Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="LuxuryBoost5">
+    <Descriptors>LuxuryBoost5</Descriptors>
+    <Gui>
+      <Title>%LuxuryBoost5Title</Title>
+      <Description>%LuxuryBoost5Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/LuxuryBoost5Small" Large="Gui/DynamicBitmaps/Improvements/Empire/LuxuryBoost5Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+
+
+
+
+  <!-- OVERCOLONIZATION MALUS REDUCTION -->
+  <EmpireImprovement Name="Overcolonization1">
+    <Descriptors>Overcolonization1</Descriptors>
+    <Gui>
+      <Title>%Overcolonization1Title</Title>
+      <Description>%Overcolonization1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/Overcolonization1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/Overcolonization1Large"/>
+    </Gui>
+  </EmpireImprovement>
+  <EmpireImprovement Name="Overcolonization2">
+    <Descriptors>Overcolonization2</Descriptors>
+    <Gui>
+      <Title>%Overcolonization2Title</Title>
+      <Description>%Overcolonization2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/Overcolonization2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/Overcolonization2Large"/>
+    </Gui>
+  </EmpireImprovement>
+  <EmpireImprovement Name="Overcolonization3">
+    <Descriptors>Overcolonization3</Descriptors>
+    <Gui>
+      <Title>%Overcolonization3Title</Title>
+      <Description>%Overcolonization3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/Overcolonization3Small" Large="Gui/DynamicBitmaps/Improvements/Empire/Overcolonization3Large"/>
+    </Gui>
+  </EmpireImprovement>
+  <EmpireImprovement Name="Overcolonization4">
+    <Descriptors>Overcolonization4</Descriptors>
+    <Gui>
+      <Title>%Overcolonization4Title</Title>
+      <Description>%Overcolonization4Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/Overcolonization4Small" Large="Gui/DynamicBitmaps/Improvements/Empire/Overcolonization4Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  
+  
+  
+  
+  <!-- MISC -->
+  <EmpireImprovement Name="ScienceVictory">
+    <Descriptors></Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ScienceVictoryTitle</Title>
+      <Description>%ScienceVictoryDescription</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ScienceVictorySmall" Large="Gui/DynamicBitmaps/Improvements/Empire/ScienceVictoryLarge"/>
+    </Gui>
+  </EmpireImprovement>
+  
+  
+  
+
+
+  <EmpireImprovement Name="ScienceVictoryUnlock1">
+    <Descriptors>ScienceVictoryUnlock1</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ScienceVictoryUnlock1Title</Title>
+      <Description>%ScienceVictoryUnlock1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ScienceVictoryUnlock1Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ScienceVictoryUnlock1Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="ScienceVictoryUnlock2">
+    <Descriptors>ScienceVictoryUnlock2</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ScienceVictoryUnlock2Title</Title>
+      <Description>%ScienceVictoryUnlock2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ScienceVictoryUnlock2Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ScienceVictoryUnlock2Large"/>
+    </Gui>
+  </EmpireImprovement>
+
+  <EmpireImprovement Name="ScienceVictoryUnlock3">
+    <Descriptors>ScienceVictoryUnlock3</Descriptors>
+    <PathsPrerequisites></PathsPrerequisites>
+    <Gui>
+      <Title>%ScienceVictoryUnlock3Title</Title>
+      <Description>%ScienceVictoryUnlock3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Empire/ScienceVictoryUnlock3Small" Large="Gui/DynamicBitmaps/Improvements/Empire/ScienceVictoryUnlock3Large"/>
+    </Gui>
+  </EmpireImprovement>
+  
+</Datatable>

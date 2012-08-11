@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <PlanetInfrastructure Name="PlanetaryImprovementFood1" Cost="40" IsUnique="true" ExploitationType="Food" Level="1">
+    <Descriptors>PlanetaryImprovementFood1</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementFood1Title</Title>
+      <Description>%PlanetaryImprovementFood1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementFood1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementFood1Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementFood2" Cost="40" IsUnique="true" ExploitationType="Food" Level="2">
+    <Descriptors>PlanetaryImprovementFood2</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementFood2Title</Title>
+      <Description>%PlanetaryImprovementFood2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementFood2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementFood2Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementFood3" Cost="40" IsUnique="true" ExploitationType="Food" Level="3">
+    <Descriptors>PlanetaryImprovementFood3</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementFood3Title</Title>
+      <Description>%PlanetaryImprovementFood3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementFood3Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementFood3Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+
+  
+  
+  <PlanetInfrastructure Name="PlanetaryImprovementIndustry1" Cost="40" IsUnique="true" ExploitationType="Industry" Level="1">
+    <Descriptors>PlanetaryImprovementIndustry1</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementIndustry1Title</Title>
+      <Description>%PlanetaryImprovementIndustry1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementIndustry1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementIndustry1Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementIndustry2" Cost="40" IsUnique="true" ExploitationType="Industry" Level="2">
+    <Descriptors>PlanetaryImprovementIndustry2</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementIndustry2Title</Title>
+      <Description>%PlanetaryImprovementIndustry2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementIndustry2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementIndustry2Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementIndustry3" Cost="40" IsUnique="true" ExploitationType="Industry" Level="3">
+    <Descriptors>PlanetaryImprovementIndustry3</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementIndustry3Title</Title>
+      <Description>%PlanetaryImprovementIndustry3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementIndustry3Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementIndustry3Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+
+  
+  
+  <PlanetInfrastructure Name="PlanetaryImprovementMoney1" Cost="40" IsUnique="true" ExploitationType="Money" Level="1">
+    <Descriptors>PlanetaryImprovementMoney1</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementMoney1Title</Title>
+      <Description>%PlanetaryImprovementMoney1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementMoney1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementMoney1Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementMoney2" Cost="40" IsUnique="true" ExploitationType="Money" Level="2">
+    <Descriptors>PlanetaryImprovementMoney2</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementMoney2Title</Title>
+      <Description>%PlanetaryImprovementMoney2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementMoney2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementMoney2Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementMoney3" Cost="40" IsUnique="true" ExploitationType="Money" Level="3">
+    <Descriptors>PlanetaryImprovementMoney3</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementMoney3Title</Title>
+      <Description>%PlanetaryImprovementMoney3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementMoney3Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementMoney3Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+
+  
+  
+  <PlanetInfrastructure Name="PlanetaryImprovementScience1" Cost="40" IsUnique="true" ExploitationType="Science" Level="1">
+    <Descriptors>PlanetaryImprovementScience1</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementScience1Title</Title>
+      <Description>%PlanetaryImprovementScience1Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementScience1Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementScience1Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementScience2" Cost="40" IsUnique="true" ExploitationType="Science" Level="2">
+    <Descriptors>PlanetaryImprovementScience2</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementScience2Title</Title>
+      <Description>%PlanetaryImprovementScience2Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementScience2Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementScience2Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+  <PlanetInfrastructure Name="PlanetaryImprovementScience3" Cost="40" IsUnique="true" ExploitationType="Science" Level="3">
+    <Descriptors>PlanetaryImprovementScience3</Descriptors>
+    <PathsPrerequisites>$(PlanetStatusColonized)</PathsPrerequisites>
+    <Gui>
+      <Title>%PlanetaryImprovementScience3Title</Title>
+      <Description>%PlanetaryImprovementScience3Description</Description>
+      <Icon Small="Gui/AtlasedBitmaps/Improvements/Planets/PlanetaryImprovementScience3Small" Large="Gui/DynamicBitmaps/Improvements/Planets/PlanetaryImprovementScience3Large"/>
+    </Gui>
+  </PlanetInfrastructure>
+
+</Datatable>

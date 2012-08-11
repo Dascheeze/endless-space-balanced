@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+
+
+
+  <!-- ============================================== -->
+  <!-- ========== Module Defense DEFLECTOR ========== -->
+  <!-- ============================================== -->
+  <DefenseModule Name="ModuleDefenseDeflector1" Cost="2" Weight="6" MilitaryPower="4">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="3.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector1Title</Title>
+      <Description>%ModuleDefenseDeflector1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector1Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector1Large"/>
+      <CharCode>1</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector2" Cost="3" Weight="7" MilitaryPower="6">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="5.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector2Title</Title>
+      <Description>%ModuleDefenseDeflector2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector2Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector2Large"/>
+      <CharCode>2</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector3" Cost="5" Weight="8" MilitaryPower="10">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="8.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector3Title</Title>
+      <Description>%ModuleDefenseDeflector3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector3Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector3Large"/>
+      <CharCode>3</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector4" Cost="9" Weight="9" MilitaryPower="18">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="11.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector4Title</Title>
+      <Description>%ModuleDefenseDeflector4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector4Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector4Large"/>
+      <CharCode>4</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector5" Cost="14" Weight="10" MilitaryPower="26">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="14.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector5Title</Title>
+      <Description>%ModuleDefenseDeflector5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector5Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector5Large"/>
+      <CharCode>5</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector6" Cost="20" Weight="11" MilitaryPower="38">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="20.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceAnti-Matter</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleDefenseDeflector6Title</Title>
+      <Description>%ModuleDefenseDeflector6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector6Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector6Large"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector7" Cost="26" Weight="12" MilitaryPower="53">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="25.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector7Title</Title>
+      <Description>%ModuleDefenseDeflector7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector7Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector7Large"/>
+      <CharCode>7</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector8" Cost="35" Weight="14" MilitaryPower="72">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="30.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector8Title</Title>
+      <Description>%ModuleDefenseDeflector8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector8Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector8Large"/>
+      <CharCode>8</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector9" Cost="45" Weight="16" MilitaryPower="94">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="36.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceSiderite</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleDefenseDeflector9Title</Title>
+      <Description>%ModuleDefenseDeflector9Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector9Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector9Large"/>
+      <CharCode>9</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseDeflector10" Cost="58" Weight="18" MilitaryPower="125">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="45.0" Absorption="0">
+      <WeaponClass>Kinetic</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Deflector_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseDeflector10Title</Title>
+      <Description>%ModuleDefenseDeflector10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector10Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseDeflector10Large"/>
+      <CharCode>10</CharCode>
+    </Gui>
+  </DefenseModule>
+
+
+
+
+
+  <!-- ============================================== -->
+  <!-- ========= Module Defense ANTIMISSILE ========= -->
+  <!-- ============================================== -->
+  <DefenseModule Name="ModuleDefenseAntimissile1" Cost="3" Weight="7" MilitaryPower="6">
+    <Simulation InterceptionAccuracy="13" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseAntimissile1Title</Title>
+      <Description>%ModuleDefenseAntimissile1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile1Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile1Large"/>
+      <CharCode>1</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile2" Cost="5" Weight="8" MilitaryPower="10">
+    <Simulation InterceptionAccuracy="19" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseAntimissile2Title</Title>
+      <Description>%ModuleDefenseAntimissile2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile2Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile2Large"/>
+      <CharCode>2</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile3" Cost="9" Weight="9" MilitaryPower="18">
+    <Simulation InterceptionAccuracy="32" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseAntimissile3Title</Title>
+      <Description>%ModuleDefenseAntimissile3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile3Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile3Large"/>
+      <CharCode>3</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile4" Cost="14" Weight="10" MilitaryPower="26">
+    <Simulation InterceptionAccuracy="52" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseAntimissile4Title</Title>
+      <Description>%ModuleDefenseAntimissile4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile4Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile4Large"/>
+      <CharCode>4</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile5" Cost="20" Weight="11" MilitaryPower="38">
+    <Simulation InterceptionAccuracy="80" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceHexaferrum</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleDefenseAntimissile5Title</Title>
+      <Description>%ModuleDefenseAntimissile5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile5Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile5Large"/>
+      <CharCode>5</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile6" Cost="26" Weight="12" MilitaryPower="53">
+    <Simulation InterceptionAccuracy="120" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseAntimissile6Title</Title>
+      <Description>%ModuleDefenseAntimissile6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile6Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile6Large"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile7" Cost="35" Weight="14" MilitaryPower="72">
+    <Simulation InterceptionAccuracy="180" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceHexaferrum</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleDefenseAntimissile7Title</Title>
+      <Description>%ModuleDefenseAntimissile7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile7Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile7Large"/>
+      <CharCode>7</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile8" Cost="45" Weight="16" MilitaryPower="94">
+    <Simulation InterceptionAccuracy="255" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseAntimissile8Title</Title>
+      <Description>%ModuleDefenseAntimissile8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile8Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile8Large"/>
+      <CharCode>8</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseAntimissile9" Cost="58" Weight="18" MilitaryPower="125">
+    <Simulation InterceptionAccuracy="340" DeflectionPerTurn="0" Absorption="0">
+      <WeaponClass>Missile</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_FlakCannon_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseAntimissile9Title</Title>
+      <Description>%ModuleDefenseAntimissile9Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile9Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseAntimissile9Large"/>
+      <CharCode>9</CharCode>
+    </Gui>
+  </DefenseModule>
+
+
+
+
+
+  <!-- ============================================= -->
+  <!-- =========== Module Defense SHIELD =========== -->
+  <!-- ============================================= -->
+  <DefenseModule Name="ModuleDefenseShield1" Cost="5" Weight="8" MilitaryPower="10">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="15.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseShield1Title</Title>
+      <Description>%ModuleDefenseShield1Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield1Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield1Large"/>
+      <CharCode>1</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseShield2" Cost="9" Weight="9" MilitaryPower="18">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="25.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseShield2Title</Title>
+      <Description>%ModuleDefenseShield2Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield2Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield2Large"/>
+      <CharCode>2</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseShield3" Cost="14" Weight="10" MilitaryPower="26">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="40.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceAnti-Matter</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleDefenseShield3Title</Title>
+      <Description>%ModuleDefenseShield3Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield3Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield3Large"/>
+      <CharCode>3</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseShield4" Cost="20" Weight="11" MilitaryPower="38">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="57.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseShield4Title</Title>
+      <Description>%ModuleDefenseShield4Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield4Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield4Large"/>
+      <CharCode>4</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseShield5" Cost="26" Weight="12" MilitaryPower="53">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="80.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseShield5Title</Title>
+      <Description>%ModuleDefenseShield5Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield5Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield5Large"/>
+      <CharCode>5</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseShield6" Cost="35" Weight="14" MilitaryPower="72">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="110.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <ResourcesPrerequisites>PlanetStrategicResourceAnti-Matter</ResourcesPrerequisites> <!-- Strategic Resource Prerequisite -->
+    <Gui>
+      <Title>%ModuleDefenseShield6Title</Title>
+      <Description>%ModuleDefenseShield6Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield6Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield6Large"/>
+      <CharCode>6</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseShield7" Cost="45" Weight="16" MilitaryPower="94">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="155.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseShield7Title</Title>
+      <Description>%ModuleDefenseShield7Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield7Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield7Large"/>
+      <CharCode>7</CharCode>
+    </Gui>
+  </DefenseModule>
+
+  <DefenseModule Name="ModuleDefenseShield8" Cost="58" Weight="18" MilitaryPower="125">
+    <Simulation InterceptionAccuracy="0" DeflectionPerTurn="0" Absorption="200.0">
+      <WeaponClass>Laser</WeaponClass>
+    </Simulation>
+    <Reflection>
+      <Prefab Path="Prefabs/Modules/Defenses/DM_Shield_A"/>
+    </Reflection>
+    <Gui>
+      <Title>%ModuleDefenseShield8Title</Title>
+      <Description>%ModuleDefenseShield8Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Modules/ModuleDefenseShield8Small" Large="Gui/DynamicBitmaps/Modules/ModuleDefenseShield8Large"/>
+      <CharCode>8</CharCode>
+    </Gui>
+  </DefenseModule>
+
+
+
+
+
+</Datatable>

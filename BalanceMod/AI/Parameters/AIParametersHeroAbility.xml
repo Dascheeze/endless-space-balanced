@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon01">
+    <AIParameter Name="Administrator" Value="0.1" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Commander" Value="0.5" />
+    <AIParameter Name="Pilot" Value="1" />
+    <AIParameter Name="Adventurer" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon02">
+    <AIParameter Name="Administrator" Value="0.1" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Commander" Value="0.5" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon03">
+    <AIParameter Name="Administrator" Value="0.1" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Commander" Value="0.5" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon04">
+    <AIParameter Name="Administrator" Value="1" />
+    <AIParameter Name="Corporate" Value="1" />
+    <AIParameter Name="Commander" Value="1" />
+    <AIParameter Name="Pilot" Value="1" />
+    <AIParameter Name="Adventurer" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon05">
+    <AIParameter Name="Administrator" Value="2" />
+    <AIParameter Name="Corporate" Value="2" />
+    <AIParameter Name="Commander" Value="2" />
+    <AIParameter Name="Pilot" Value="2" />
+    <AIParameter Name="Adventurer" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon06">
+    <AIParameter Name="Administrator" Value="3" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon07">
+    <AIParameter Name="Administrator" Value="2" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon08">
+    <AIParameter Name="Administrator" Value="1" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon09">
+    <AIParameter Name="Administrator" Value="0.5" />
+    <AIParameter Name="Corporate" Value="3" />
+    <AIParameter Name="Adventurer" Value="0.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon10">
+    <AIParameter Name="Administrator" Value="0.5" />
+    <AIParameter Name="Corporate" Value="2" />
+    <AIParameter Name="Adventurer" Value="0.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon11">
+    <AIParameter Name="Administrator" Value="0.5" />
+    <AIParameter Name="Corporate" Value="2" />
+    <AIParameter Name="Adventurer" Value="0.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon12">
+    <AIParameter Name="Commander" Value="1" />
+    <AIParameter Name="Pilot" Value="1" />
+    <AIParameter Name="Adventurer" Value="0.6" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon13">
+    <AIParameter Name="Commander" Value="1" />
+    <AIParameter Name="Pilot" Value="1" />
+    <AIParameter Name="Adventurer" Value="0.6" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon14">
+    <AIParameter Name="Commander" Value="1.5" />
+    <AIParameter Name="Pilot" Value="1.5" />
+    <AIParameter Name="Adventurer" Value="0.6" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon15">
+    <AIParameter Name="Commander" Value="3" />
+    <AIParameter Name="Pilot" Value="3" />
+    <AIParameter Name="Adventurer" Value="0.6" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon16">
+    <AIParameter Name="Commander" Value="2" />
+    <AIParameter Name="Pilot" Value="2" />
+    <AIParameter Name="Adventurer" Value="0.6" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon17">
+    <AIParameter Name="Commander" Value="1" />
+    <AIParameter Name="Pilot" Value="1" />
+    <AIParameter Name="Adventurer" Value="0.6" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon18">
+    <AIParameter Name="Administrator" Value="0.5" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Commander" Value="1.5" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon19">
+    <AIParameter Name="Administrator" Value="0.5" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Commander" Value="0.5" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon20">
+    <AIParameter Name="Administrator" Value="0.5" />
+    <AIParameter Name="Corporate" Value="0.5" />
+    <AIParameter Name="Commander" Value="0.5" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon21">
+    <AIParameter Name="Commander" Value="0.5" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon25">
+    <AIParameter Name="Corporate" Value="0.1" />
+    <AIParameter Name="Commander" Value="1" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommon26">
+    <AIParameter Name="Commander" Value="0.5" />
+    <AIParameter Name="Pilot" Value="0.5" />
+    <AIParameter Name="Adventurer" Value="0.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator01">
+    <AIParameter Name="Administrator" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator02">
+    <AIParameter Name="Administrator" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator03">
+    <AIParameter Name="Administrator" Value="0.9" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator04">
+    <AIParameter Name="Administrator" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator05">
+    <AIParameter Name="Administrator" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator06">
+    <AIParameter Name="Administrator" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator07">
+    <AIParameter Name="Administrator" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator10">
+    <AIParameter Name="Administrator" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator11">
+    <AIParameter Name="Administrator" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdministrator12">
+    <AIParameter Name="Administrator" Value="0.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate01">
+    <AIParameter Name="Corporate" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate02">
+    <AIParameter Name="Corporate" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate03">
+    <AIParameter Name="Corporate" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate04">
+    <AIParameter Name="Corporate" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate05">
+    <AIParameter Name="Corporate" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate06">
+    <AIParameter Name="Corporate" Value="2.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate07">
+    <AIParameter Name="Corporate" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate10">
+    <AIParameter Name="Corporate" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate11">
+    <AIParameter Name="Corporate" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCorporate12">
+    <AIParameter Name="Corporate" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander01">
+    <AIParameter Name="Commander" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander02">
+    <AIParameter Name="Commander" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander03">
+    <AIParameter Name="Commander" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander05">
+    <AIParameter Name="Commander" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander07">
+    <AIParameter Name="Commander" Value="1.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander08">
+    <AIParameter Name="Commander" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander10">
+    <AIParameter Name="Commander" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander11">
+    <AIParameter Name="Commander" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander12">
+    <AIParameter Name="Commander" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityCommander13">
+    <AIParameter Name="Commander" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot01">
+    <AIParameter Name="Pilot" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot02">
+    <AIParameter Name="Pilot" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot03">
+    <AIParameter Name="Pilot" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot04">
+    <AIParameter Name="Pilot" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot05">
+    <AIParameter Name="Pilot" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot06">
+    <AIParameter Name="Pilot" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot07">
+    <AIParameter Name="Pilot" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot08">
+    <AIParameter Name="Pilot" Value="2" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot09">
+    <AIParameter Name="Pilot" Value="2.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot11">
+    <AIParameter Name="Pilot" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot12">
+    <AIParameter Name="Pilot" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityPilot14">
+    <AIParameter Name="Pilot" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer01">
+    <AIParameter Name="Adventurer" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer02">
+    <AIParameter Name="Adventurer" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer03">
+    <AIParameter Name="Adventurer" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer04">
+    <AIParameter Name="Adventurer" Value="1.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer05">
+    <AIParameter Name="Adventurer" Value="1.1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer06">
+    <AIParameter Name="Adventurer" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer08">
+    <AIParameter Name="Adventurer" Value="1" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer09">
+    <AIParameter Name="Adventurer" Value="2.5" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer10">
+    <AIParameter Name="Adventurer" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer13">
+    <AIParameter Name="Adventurer" Value="3" />
+  </AIParametersDatatableElement>
+  <AIParametersDatatableElement ConstructibleElement="HeroAbilityAdventurer14">
+    <AIParameter Name="Adventurer" Value="3" />
+  </AIParametersDatatableElement>
+</Datatable>

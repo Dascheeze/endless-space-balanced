@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SimulationObjectDescriptor Name="ClassMoon" Type="Class">
+    <SimulationObjectPropertyDescriptors>
+      <SimulationObjectPropertyDescriptor Name="Food" value="0"/>
+      <SimulationObjectPropertyDescriptor Name="Money" value="0"/>
+      <SimulationObjectPropertyDescriptor Name="Science" value="0"/>
+      <SimulationObjectPropertyDescriptor Name="Industry" value="0"/>
+    </SimulationObjectPropertyDescriptors>
+  </SimulationObjectDescriptor>
+
+  <SimulationObjectDescriptor Name="MoonStatusExplored" Type="MoonStatus" Serializable="true"/>
+
+  <SimulationObjectDescriptor Name="MoonStatusExploredWithTemple" Type="MoonStatusExplored" Serializable="true"/>
+
+  <!-- TEMPLE OF THE HOLY HELIX -->
+  <SimulationObjectDescriptor Name="Temple01" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="0.1" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple01Title</Title>
+      <Description>%Temple01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheHolyHelixSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheHolyHelixLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF THE EXTENDED CONSCIOUSNESS -->
+  <SimulationObjectDescriptor Name="Temple02" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Science" Value="1" OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple02Title</Title>
+      <Description>%Temple02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheExtendedConsciousnessSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheExtendedConsciousnessLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>  
+  
+  <!-- TEMPLE OF THE GREAT WATCHMAKER -->
+  <SimulationObjectDescriptor Name="Temple03" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="DetectionRadius" Value="0.20" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple03Title</Title>
+      <Description>%Temple03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheGreatWatchmakerSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheGreatWatchmakerLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF ACCUMULATED KNOWLEDGE -->
+  <SimulationObjectDescriptor Name="Temple04" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerAssignedTurnBonus" Value="0.5" OperationType="Addition" Path="../ClassStarSystem/ClassHero"/>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="XPPerConstructionBonus" Value="0.5" OperationType="Addition" Path="../ClassStarSystem/ClassHero"/>
+    </SimulationObjectPropertyModifierDescriptors>	
+    <Gui>
+      <Title>%Temple04Title</Title>
+      <Description>%Temple04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfAccumulatedKnowledgeSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfAccumulatedKnowledgeLarge"/>
+	  <Tooltip><Description></Description></Tooltip>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF THE ORDER OF ORICHALCIX -->
+  <SimulationObjectDescriptor Name="Temple05" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ShipInitialXP"     Value="10"     OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>	
+    <Gui>
+      <Title>%Temple05Title</Title>
+      <Description>%Temple05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheOrderOfOrichalcixSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheOrderOfOrichalcixLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF THE PERSUASIVE MIND -->
+  <SimulationObjectDescriptor Name="Temple06" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Influence" Value="0.2" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>	
+    <Gui>
+      <Title>%Temple06Title</Title>
+      <Description>%Temple06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfThePersuasiveMindSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfThePersuasiveMindLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF ARCHITECTURAL GLORY -->
+  <SimulationObjectDescriptor Name="Temple07" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="ImprovementCostBonus" Value="-0.2" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple07Title</Title>
+      <Description>%Temple07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfArchitecturalGlorySmall" Large="Gui/DynamicBitmaps/Temples/TempleOfArchitecturalGloryLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE TO THE GREAT SYNCHRONICITY -->
+  <SimulationObjectDescriptor Name="Temple08" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Food" Value="0.1" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple08Title</Title>
+      <Description>%Temple08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheGreatSynchronicitySmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheGreatSynchronicityLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+ <!-- TEMPLE OF THE FIRST PRINCIPLE -->
+  <SimulationObjectDescriptor Name="Temple09" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Defense" Value="10" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>	
+    <Gui>
+      <Title>%Temple09Title</Title>
+      <Description>%Temple09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheFirstPrincipleSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheFirstPrincipleLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF COSMIC DEDICATION -->
+  <SimulationObjectDescriptor Name="Temple10" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="0.1" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple10Title</Title>
+      <Description>%Temple10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfCosmicDedicationSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfCosmicDedicationLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF PERFECTED INFRASTRUCTURE -->
+  <SimulationObjectDescriptor Name="Temple11" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Industry" Value="1" OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple11Title</Title>
+      <Description>%Temple11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfPerfectedInfrastructureSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfPerfectedInfrastructureLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+
+  <!-- TEMPLE OF THE INFINITE TRADEWAYS -->
+  <SimulationObjectDescriptor Name="Temple12" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="TradeRoutesBonuses"   Value="0.20" OperationType="Percent" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>	
+    <Gui>
+      <Title>%Temple12Title</Title>
+      <Description>%Temple12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheInfiniteTradewaysSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheInfiniteTradewaysLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+
+  <!-- TEMPLE OF THE COMMERCE LORDS -->
+  <SimulationObjectDescriptor Name="Temple13" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="MaxTradeRoutes" Value="2" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>	
+    <Gui>
+      <Title>%Temple13Title</Title>
+      <Description>%Temple13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheCommerceLordsSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheCommerceLordsLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+  
+  <!-- TEMPLE OF THE AURA OF GLORY -->
+  <SimulationObjectDescriptor Name="Temple14" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="40" OperationType="Addition" Path="../ClassStarSystem"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple14Title</Title>
+      <Description>%Temple14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfTheAuraOfGlorySmall" Large="Gui/DynamicBitmaps/Temples/TempleOfTheAuraOfGloryLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+
+  <!-- TEMPLE OF APPLIED PSYCHOHISTORICS -->
+  <SimulationObjectDescriptor Name="Temple15" Type="Temple" Serializable="true">
+    <SimulationObjectPropertyModifierDescriptors>
+      <SimulationObjectPropertyModifierDescriptor TargetProperty="Approval" Value="10" OperationType="Addition" Path="../ClassStarSystem/ClassPlanet"/>
+    </SimulationObjectPropertyModifierDescriptors>
+    <Gui>
+      <Title>%Temple15Title</Title>
+      <Description>%Temple15Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/Temples/TempleOfAppliedPsychohistoricsSmall" Large="Gui/DynamicBitmaps/Temples/TempleOfAppliedPsychohistoricsLarge"/>
+    </Gui>
+  </SimulationObjectDescriptor>
+</Datatable>

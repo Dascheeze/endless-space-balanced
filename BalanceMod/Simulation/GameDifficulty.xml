@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- *********************************************** DIFFICULTY 1 - EASY 2 (newcomer : -20% global difficulty) ***********************************************-->
+  <GameDifficulty Name="Easy2" ScoreMultiplierBonus="0">
+    <Gui Name="GameDifficultyEasy2">
+      <Title>%GameDifficultyEasy2Title</Title>
+      <Description>%GameDifficultyEasy2Description</Description>
+    </Gui>
+    <Parameters Target="Human">
+      <Descriptors>OverPopApprovalDifficultyEasy2Human</Descriptors>
+    </Parameters>
+
+    <Parameters Target="AI">
+      <Descriptors>OverPopApprovalDifficultyEasy2AI</Descriptors>
+      <Personality>PersonalityEasy2</Personality>
+    </Parameters>
+  </GameDifficulty>
+  
+  
+  
+  <!-- *********************************************** DIFFICULTY 2 - EASY 1 (explorer : no bonus/malus) ***********************************************-->
+  <GameDifficulty Name="Easy1" ScoreMultiplierBonus="0">
+    <Gui Name="GameDifficultyEasy1">
+      <Title>%GameDifficultyEasy1Title</Title>
+      <Description>%GameDifficultyEasy1Description</Description>
+    </Gui>
+    <Parameters Target="Human">
+      <Descriptors>OverPopApprovalDifficultyEasy1Human</Descriptors>
+    </Parameters>
+    
+    <Parameters Target="AI">
+      <Descriptors>OverPopApprovalDifficultyEasy1AI;UpkeepDifficultyEasy1AI;CostDifficultyEasy1AI;BuyoutDifficultyEasy1AI;WeaponDamageDifficultyEasy1AI;DefenseEfficiencyDifficultyEasy1AI;FIDSDifficultyEasy1AI</Descriptors>
+
+      <RegistryKeys>
+        <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfTheInterior/PopGrowthGameDifficultyAIFactor" Value="-0.05"/>
+      </RegistryKeys>
+      <Personality>PersonalityEasy1</Personality>
+      <AIParameters>
+        <AIParameter Key="" Value="-0.2"/>
+      </AIParameters>
+    </Parameters>
+  </GameDifficulty>
+
+  
+  
+  <!-- *********************************************** DIFFICULTY 3 - NORMAL (governor : +20% global difficulty) ***********************************************-->
+  <GameDifficulty Name="Normal" Default="true" ScoreMultiplierBonus="0">
+    <Gui Name="GameDifficultyNormal">
+      <Title>%GameDifficultyNormalTitle</Title>
+      <Description>%GameDifficultyNormalDescription</Description>
+    </Gui>
+    <Parameters Target="Human">
+      <Descriptors>OverPopApprovalDifficultyNormalHuman</Descriptors>
+    </Parameters>
+      
+    <Parameters Target="AI">
+      <Descriptors>OverPopApprovalDifficultyNormalAI;UpkeepDifficultyNormalAI;CostDifficultyNormalAI;BuyoutDifficultyNormalAI;WeaponDamageDifficultyNormalAI;DefenseEfficiencyDifficultyNormalAI;FIDSDifficultyNormalAI</Descriptors>
+
+      <RegistryKeys>
+        <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfTheInterior/PopGrowthGameDifficultyAIFactor" Value="-0.10"/>
+      </RegistryKeys>
+      <Personality>PersonalityNormal</Personality>
+      <AIParameters>
+        <AIParameter Key="" Value="-0.4"/>
+      </AIParameters>
+    </Parameters>
+  </GameDifficulty>
+
+  
+  
+  <!-- *********************************************** DIFFICULTY 4 - HARD 1 (veteran : +40% global difficulty) ***********************************************-->
+  <GameDifficulty Name="Hard1" ScoreMultiplierBonus="0">
+    <Gui Name="GameDifficultyHard1">
+        <Title>%GameDifficultyHard1Title</Title>
+        <Description>%GameDifficultyHard1Description</Description>
+    </Gui>
+    <Parameters Target="Human">
+        <Descriptors>OverPopApprovalDifficultyHard1Human</Descriptors>
+    </Parameters>
+
+    <Parameters Target="AI">
+      <Descriptors>OverPopApprovalDifficultyHard1AI;UpkeepDifficultyHard1AI;CostDifficultyHard1AI;BuyoutDifficultyHard1AI;WeaponDamageDifficultyHard1AI;DefenseEfficiencyDifficultyHard1AI;FIDSDifficultyHard1AI</Descriptors>
+
+      <RegistryKeys>
+        <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfTheInterior/PopGrowthGameDifficultyAIFactor" Value="-0.15"/>
+      </RegistryKeys>
+      <Personality>PersonalityHard1</Personality>
+        <AIParameters>
+            <AIParameter Key="" Value="-0.6"/>
+        </AIParameters>
+    </Parameters>
+  </GameDifficulty>
+
+  
+  
+  <!-- *********************************************** DIFFICULTY 5 - HARD 2 (elite : +60% global difficulty) ***********************************************-->
+  <GameDifficulty Name="Hard2" ScoreMultiplierBonus="0">
+    <Gui Name="GameDifficultyHard2">
+        <Title>%GameDifficultyHard2Title</Title>
+        <Description>%GameDifficultyHard2Description</Description>
+    </Gui>
+    <Parameters Target="Human">
+      <Descriptors>OverPopApprovalDifficultyHard2Human</Descriptors>
+    </Parameters>
+
+    <Parameters Target="AI">
+      <Descriptors>OverPopApprovalDifficultyHard2AI;UpkeepDifficultyHard2AI;CostDifficultyHard2AI;BuyoutDifficultyHard2AI;WeaponDamageDifficultyHard2AI;DefenseEfficiencyDifficultyHard2AI;FIDSDifficultyHard2AI</Descriptors>
+
+      <RegistryKeys>
+        <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfTheInterior/PopGrowthGameDifficultyAIFactor" Value="-0.20"/>
+      </RegistryKeys>
+      <Personality>PersonalityHard2</Personality>
+      <AIParameters>
+          <AIParameter Key="" Value="-0.8"/>
+      </AIParameters>
+    </Parameters>
+  </GameDifficulty>
+
+  
+  
+  <!-- *********************************************** DIFFICULTY 6 - HARD 3 (dust master : +80% global difficulty) ***********************************************-->
+  <GameDifficulty Name="Hard3" ScoreMultiplierBonus="0">
+    <Gui Name="GameDifficultyHard3">
+      <Title>%GameDifficultyHard3Title</Title>
+      <Description>%GameDifficultyHard3Description</Description>
+    </Gui>
+    <Parameters Target="Human">
+      <Descriptors>OverPopApprovalDifficultyHard3Human</Descriptors>
+    </Parameters>
+
+    <Parameters Target="AI">
+      <Descriptors>OverPopApprovalDifficultyHard3AI;UpkeepDifficultyHard3AI;CostDifficultyHard3AI;BuyoutDifficultyHard3AI;WeaponDamageDifficultyHard3AI;DefenseEfficiencyDifficultyHard3AI;FIDSDifficultyHard3AI</Descriptors>
+
+      <RegistryKeys>
+        <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfTheInterior/PopGrowthGameDifficultyAIFactor" Value="-0.25"/>
+      </RegistryKeys>
+      <Personality>PersonalityHard3</Personality>
+      <AIParameters>
+        <AIParameter Key="" Value="-1.0"/>
+      </AIParameters>
+    </Parameters>
+  </GameDifficulty>
+
+
+
+  <!-- *********************************************** DIFFICULTY 7 - HARD 4 (endless : +99% global difficulty) ***********************************************-->
+  <GameDifficulty Name="Hard4" ScoreMultiplierBonus="0">
+    <Gui Name="GameDifficultyHard4">
+      <Title>%GameDifficultyHard4Title</Title>
+      <Description>%GameDifficultyHard4Description</Description>
+    </Gui>
+    <Parameters Target="Human">
+      <Descriptors>OverPopApprovalDifficultyHard4Human</Descriptors>
+    </Parameters>
+
+    <Parameters Target="AI">
+      <Descriptors>OverPopApprovalDifficultyHard4AI;UpkeepDifficultyHard4AI;CostDifficultyHard4AI;BuyoutDifficultyHard4AI;WeaponDamageDifficultyHard4AI;DefenseEfficiencyDifficultyHard4AI;FIDSDifficultyHard4AI</Descriptors>
+
+      <RegistryKeys>
+        <RegistryKey Path="/Game/Empire/Agencies/DepartmentOfTheInterior/PopGrowthGameDifficultyAIFactor" Value="-0.30"/>
+      </RegistryKeys>
+      <Personality>PersonalityHard4</Personality>
+      <AIParameters>
+        <AIParameter Key="" Value="-1.2"/>
+      </AIParameters>
+    </Parameters>
+  </GameDifficulty>
+
+</Datatable>

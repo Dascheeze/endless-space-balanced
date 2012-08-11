@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GuiInfo Name="AIStarSystemAssignationFood">
+    <Title>%AISystemSettingsFoodTitle</Title>
+    <Description>%AISystemSettingsFoodDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIFood"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationIndustry">
+    <Title>%AISystemSettingsIndustryTitle</Title>
+    <Description>%AISystemSettingsIndustryDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIIndustry"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationMoney">
+    <Title>%AISystemSettingsMoneyTitle</Title>
+    <Description>%AISystemSettingsMoneyDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIMoney"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationScience">
+    <Title>%AISystemSettingsScienceTitle</Title>
+    <Description>%AISystemSettingsScienceDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIScience"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationMilitary">
+    <Title>%AISystemSettingsMilitaryTitle</Title>
+    <Description>%AISystemSettingsMilitaryDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIMilitary"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationDiplomacy">
+    <Title>%AISystemSettingsDiplomacyTitle</Title>
+    <Description>%AISystemSettingsDiplomacyDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIDiplomacy"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationApproval">
+    <Title>%AISystemSettingsApprovalTitle</Title>
+    <Description>%AISystemSettingsApprovalDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIApproval"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationBalanced">
+    <Title>%AISystemSettingsBalancedTitle</Title>
+    <Description>%AISystemSettingsBalancedDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AIBalanced"/>
+  </GuiInfo>
+
+  <GuiInfo Name="AIStarSystemAssignationNone">
+    <Title>%AISystemSettingsNoneTitle</Title>
+    <Description>%AISystemSettingsNoneDescription</Description>
+    <Icon Small="Gui/DynamicBitmaps/Icons/AINone"/>
+  </GuiInfo>
+</Datatable>

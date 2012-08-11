@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Don't forget to add loc key foreach new attitude modifier -->
+  
+  <!-- Positive factors -->
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierPeaceful"                   Value="10"    ValueRange="0:100"   Trend="1.0"   TrendRange="0:2" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierAlliance"                   Value="50"    ValueRange="0:50"    Trend="0"     TrendRange="0:0" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierCommonEnemy"                Value="10"    ValueRange="0:90"    Trend="3"     TrendRange="0:6" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierCommonFriends"              Value="10"    ValueRange="0:20"    Trend="0"     TrendRange="0:0" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierCurrentExchanges"           Value="0"     ValueRange="0:30"    Trend="1"     TrendRange="0:1" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierPastExchanges"              Value="15"    ValueRange="0:50"    Trend="-0.5"  TrendRange="-1:0" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierCooperationAgreementTreaty" Value="0"     ValueRange="0:30"    Trend="1"     TrendRange="0:1" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierOpenBordersTreaty"          Value="10"    ValueRange="0:30"    Trend="1"     TrendRange="0:1 "/>
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierDonations"                  Value="0"     ValueRange="0:50"    Trend="-1"    TrendRange="-2.5:2.5"  ValueWeightingCoef="50"/>
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierMilitaryPowerRespect"       Value="0"     ValueRange="0:50"    Trend="0"     TrendRange="-2:2"   TrendWeightingCoef="2"/>      <!-- FinalTrend = Trend + ((otherMP + MilitaryPowerTreshold / myMP + MilitaryPowerTreshold) - 1) * TrendWeightingCoef -->
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierMilitaryPowerPity"          Value="0"     ValueRange="0:50"    Trend="0"     TrendRange="-2:2"   TrendWeightingCoef="2"/>      <!-- FinalTrend = Trend + ((myMP + MilitaryPowerTreshold / otherMP + MilitaryPowerTreshold) - 1) * TrendWeightingCoef -->
+
+  <!-- Negative factors -->
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierWar"                        Value="-200"  ValueRange="-200:0"  Trend="0"     TrendRange="0:0" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierCeaseFire"                  Value="0"     ValueRange="0:0"     Trend="0"     TrendRange="0:0" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierPastWar"                    Value="-100"  ValueRange="-50:0"   Trend="2"     TrendRange="0:1" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierAnotherAlliance"            Value="-10"   ValueRange="-30:0"   Trend="0"     TrendRange="-2:2" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierBrokenExchange"             Value="-100"  ValueRange="-100:0"  Trend="1"     TrendRange="-2:2"   ValueWeightingCoef="4"/>      <!-- FinalValue = Value + (number of turns since the start of term) * ValueWeightingCoef-->
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierPropositionRefusal"         Value="-5"    ValueRange="-15:0"   Trend="0.5"   TrendRange="-2:2" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierOwningLegitimateTerritory"  Value="-50"   ValueRange="-60:0"   Trend="2"     TrendRange="-2:2" />
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierLivingSpaceTense"           Value="0"     ValueRange="-200:0"  Trend="0"     TrendRange="-2:2"   TrendWeightingCoef="-4"/>     <!-- FinalTrend = Trend + (tensionRatio - tensionTreshold) * TrendWeightingCoef      (tensionTreshold is an registry value) -->
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierScoreTense"                 Value="0"     ValueRange="-80:0"   Trend="0"     TrendRange="-4:4"   TrendWeightingCoef="-1"/>     <!-- FinalTrend = Trend + (myScoreRank - otherScoreRank) * TrendWeightingCoef-->
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierMilitaryPowerWeaknessStress" Value="0"    ValueRange="-50:0"   Trend="0"     TrendRange="-2:2"   TrendWeightingCoef="-2"/>     <!-- FinalTrend = Trend + ((myMP + MilitaryPowerTreshold / otherMP + MilitaryPowerTreshold) - 1) * TrendWeightingCoef -->
+  <SimpleDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierMilitaryPowerTense"         Value="0"     ValueRange="-50:0"   Trend="0"     TrendRange="-2:2"   TrendWeightingCoef="-2"/>     <!-- FinalTrend = Trend + ((otherMP + MilitaryPowerTreshold / myMP + MilitaryPowerTreshold) - 1) * TrendWeightingCoef -->
+
+  <CustomDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierWarpLinkTenseFrontiers" ValueRange="-80:0" TrendRange="-2:2">
+    <ModifierStep StartValue="0" EndValue="-15" MinDuration="15" />
+    <ModifierStep StartValue="-15" EndValue="-15" MinDuration="30" />
+    <ModifierStep StartValue="-15" EndValue="-5" MinDuration="10" />
+  </CustomDiplomaticAttitudeModifier>
+
+  <CustomDiplomaticAttitudeModifier Name="DiplomaticAttitudeModifierWormholeLinkTenseFrontiers" ValueRange="-40:0" TrendRange="-2:2">
+    <ModifierStep StartValue="0" EndValue="-15" MinDuration="15" />
+    <ModifierStep StartValue="-15" EndValue="-15" MinDuration="30" />
+    <ModifierStep StartValue="-15" EndValue="-5" MinDuration="10" />
+  </CustomDiplomaticAttitudeModifier>
+  
+</Datatable>

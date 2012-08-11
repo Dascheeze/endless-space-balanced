@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <DiplomaticAttitude Name="Hatred" Limits="-200;-150" DealApprovalFactor="3.0" ThreatPower="1.5">
+        <Gui>
+            <Title>%DiplomacyAttitudeHatredTitle</Title>
+            <Description>%DiplomacyAttitudeHatredDescription</Description>
+            <Icon Small="Gui/DynamicBitmaps/Diplomacy/Diplomacy_Hatred"/>
+        </Gui>
+    </DiplomaticAttitude>
+
+    <DiplomaticAttitude Name="Hostile" Limits="-150;-100" DealApprovalFactor="2.0" ThreatPower="1.5">
+        <Gui>
+            <Title>%DiplomacyAttitudeHostileTitle</Title>
+            <Description>%DiplomacyAttitudeHostileDescription</Description>
+            <Icon Small="Gui/DynamicBitmaps/Diplomacy/Diplomacy_Hostile"/>
+        </Gui>
+    </DiplomaticAttitude>
+
+    <DiplomaticAttitude Name="Suspicious" Limits="-100;-50" DealApprovalFactor="1.5" ThreatPower="1.2">
+        <Gui>
+            <Title>%DiplomacyAttitudeSuspiciousTitle</Title>
+            <Description>%DiplomacyAttitudeSuspiciousDescription</Description>
+            <Icon Small="Gui/DynamicBitmaps/Diplomacy/Diplomacy_Suspicious"/>
+        </Gui>
+    </DiplomaticAttitude>
+
+    <DiplomaticAttitude Name="Neutral" Limits="-50;50" DealApprovalFactor="1.0" ThreatPower="0.6">
+        <Gui>
+            <Title>%DiplomacyAttitudeNeutralTitle</Title>
+            <Description>%DiplomacyAttitudeNeutralDescription</Description>
+            <Icon Small="Gui/DynamicBitmaps/Diplomacy/Diplomacy_Neutral"/>
+        </Gui>
+    </DiplomaticAttitude>
+
+    <DiplomaticAttitude Name="Friendly" Limits="50;100" DealApprovalFactor="0.9" ThreatPower="0.5">
+        <Gui>
+            <Title>%DiplomacyAttitudeFriendlyTitle</Title>
+            <Description>%DiplomacyAttitudeFriendlyDescription</Description>
+            <Icon Small="Gui/DynamicBitmaps/Diplomacy/Diplomacy_Friendly"/>
+        </Gui>
+    </DiplomaticAttitude>
+
+    <DiplomaticAttitude Name="Warm" Limits="100;150" DealApprovalFactor="0.8" ThreatPower="0.4">
+        <Gui>
+            <Title>%DiplomacyAttitudeWarmTitle</Title>
+            <Description>%DiplomacyAttitudeWarmDescription</Description>
+            <Icon Small="Gui/DynamicBitmaps/Diplomacy/Diplomacy_Warm"/>
+        </Gui>
+    </DiplomaticAttitude>
+
+    <DiplomaticAttitude Name="VeryClose" Limits="150;200" DealApprovalFactor="0.7" ThreatPower="0.3">
+        <Gui>
+            <Title>%DiplomacyAttitudeVeryCloseTitle</Title>
+            <Description>%DiplomacyAttitudeVeryCloseDescription</Description>
+            <Icon Small="Gui/DynamicBitmaps/Diplomacy/Diplomacy_VeryClose"/>
+        </Gui>
+    </DiplomaticAttitude>
+    
+</Datatable>

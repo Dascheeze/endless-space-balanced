@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--  Operators = { Equal, Different, Greater, LessThan, GreaterOrEqual, LessThanOrEqual }  -->
+  <!-- victory are sorted by priority -->
+
+  <Victory Name="SupremacyVictory">
+    <EmpireSimCondition Name="HomeSystemOwnedPercent" Operator="GreaterOrEqual" Value="1" PlayerDisplayTrigger="0.00" DisplayTrigger="0.5"/>
+  </Victory>
+  
+  <Victory Name="ExpansionVictory">
+    <!-- <CustomCondition Name="GalaxyColonizationPercent" Operator="GreaterOrEqual" Value="0.5" PlayerDisplayTrigger="0.10" DisplayTrigger="0.25"/> -->
+    <!-- <EmpireSimCondition Name="PercentageOfSystemsColonized" Operator="GreaterOrEqual" Value="0.75" PlayerDisplayTrigger="0.01" DisplayTrigger="0.5"/> -->
+    <EmpireSimCondition Name="PercentageOfGalaxyColonized" Operator="GreaterOrEqual" Value="0.75" PlayerDisplayTrigger="0.01" DisplayTrigger="0.5"/>
+  </Victory>
+  
+  <Victory Name="ScientificVictory">
+    <EmpireSimCondition Name="ScienceVictoryTechnologyProgress" Operator="GreaterOrEqual" Value="1" PlayerDisplayTrigger="0.01" DisplayTrigger="0.2"/>
+  </Victory>
+  
+  <Victory Name="WonderVictory">
+    <EmpireSimCondition Name="WonderVictoryScore" Operator="GreaterOrEqual" Value="5" PlayerDisplayTrigger="1" DisplayTrigger="1"/>
+  </Victory>
+  
+  <Victory Name="EconomicVictory">
+    <CustomCondition Name="EconomicVictoryProgress" Operator="GreaterOrEqual" Value="1" PlayerDisplayTrigger="0.01" DisplayTrigger="0.5"/>
+  </Victory>
+  
+  <Victory Name="DiplomaticVictory">
+    <CustomCondition Name="DiplomaticVictoryProgress" Operator="GreaterOrEqual" Value="1" PlayerDisplayTrigger="0.01" DisplayTrigger="0.8"/>
+  </Victory>
+
+  <Victory Name="ScoreVictory">
+    <CustomCondition Name="GameTurn" Operator="GreaterOrEqual" Value="300" PlayerDisplayTrigger="1" DisplayTrigger="250"/>
+  </Victory>
+  
+  <Elimination Name="Death">
+    <EmpireSimCondition Name="NumberOfSystem" Operator="Equal" Value="0" />
+  </Elimination>
+  
+</Datatable>

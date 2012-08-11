@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- TREATIES -->
+  <CeaseFireTerm Name="CeaseFireTerm" Category="Treaty" NewStatus="ColdWar" 
+                 TemporaryPeaceStatusDuring="20"
+                 PriceCoef="20"
+                 HyperbolaCoef="-1"
+                 PriceOffset="-10" PriceMin="-10" PriceMax="10">
+      <Gui>
+          <Title>%DiplomacyCeaseFireTermTitle</Title>
+          <Description>%DiplomacyCeaseFireTermDescription</Description>
+          <Icon Small=""/>
+      </Gui>
+      <Prerequisite Name="DiplomaticConditions" Conditions="War"/>
+      <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus1;DiplomacyBonus1Swarm"/>
+  </CeaseFireTerm>
+
+      
+  <CooperationAgreementTerm Name="CooperationAgreementTerm" Category="Treaty"
+                            AttitudeMalusCoef="-10" HyperbolaCoef="40" AttitudeMalusOffset="-150" AttitudeTrendCoef="10"
+                            PriceOffset="-3"  PriceMin="-10" PriceMax="10">
+      <Gui>
+          <Title>%DiplomacyCooperationAgreementTermTitle</Title>
+          <Description>%DiplomacyCooperationAgreementTermDescription</Description>
+          <Icon Small=""/>
+      </Gui>
+      <Prerequisite Name="DiplomaticConditions" Conditions="Peace;Alliance"/>
+      <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus3;DiplomacyBonus3Resistance"/>
+      <CoopAgreementEffect Turn="0"   TradeRoutePercentBonus="-0.5"   Descriptor="CooperationAgreementStep1" />
+      <CoopAgreementEffect Turn="15"  TradeRoutePercentBonus="0"      Descriptor="CooperationAgreementStep2" />
+      <CoopAgreementEffect Turn="30"  TradeRoutePercentBonus="0.25"   Descriptor="CooperationAgreementStep3" />
+  </CooperationAgreementTerm>
+
+  <DeclareWarTerm Name="DeclareWarTerm" Category="Treaty" NewStatus="War" 
+                  OnlyOnLocalPlayerSide="true">
+      <Gui>
+          <Title>%DiplomacyDeclareWarTermTitle</Title>
+          <Description>%DiplomacyDeclareWarTermDescription</Description>
+          <Icon Small=""/>
+      </Gui>
+      <Prerequisite Name="DiplomaticConditions" Conditions="ColdWar;Peace"/>
+  </DeclareWarTerm>
+
+  <InviteToAllianceTerm Name="InviteToAllianceTerm" Category="Treaty" NewStatus="Alliance"
+                        AttitudeMalusCoef="-20" HyperbolaCoef="50" AttitudeMalusOffset="-250" AttitudeTrendCoef="10"
+                        PriceOffset="-7" PriceMin="-15" PriceMax="10">
+      <Gui>
+          <Title>%DiplomacyInviteToAllianceTermTitle</Title>
+          <Description>%DiplomacyInviteToAllianceTermDescription</Description>
+          <Icon Small=""/>
+      </Gui>
+      <Prerequisite Name="DiplomaticConditions" Conditions="Peace"/>
+      <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus3;DiplomacyBonus3Resistance"/>
+  </InviteToAllianceTerm>
+
+  <CreateAllianceTerm Name="CreateAllianceTerm" Category="Treaty" NewStatus="Alliance"
+                      AttitudeMalusCoef="-20" HyperbolaCoef="50" AttitudeMalusOffset="-250" AttitudeTrendCoef="10"
+                      PriceOffset="-7" PriceMin="-15" PriceMax="10">
+    <!--<Factor Duration="" Value="" Maximum=""/>-->
+    <Gui>
+      <Title>%DiplomacyCreateAllianceTermTitle</Title>
+      <Description>%DiplomacyCreateAllianceTermDescription</Description>
+      <Icon Small=""/>
+    </Gui>
+    <Prerequisite Name="DiplomaticConditions" Conditions="Peace"/>
+    <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus3;DiplomacyBonus3Resistance"/>
+  </CreateAllianceTerm>
+  
+  <OpenBordersTerm Name="OpenBordersTerm" Category="Treaty" OnlyOnLocalPlayerSide="true"
+                    AttitudeMalusCoef="-10" HyperbolaCoef="80" AttitudeMalusOffset="-50" AttitudeTrendCoef="10"
+                    PriceOffset="-2.85" PriceMin="-10" PriceMax="10">
+      <Gui>
+          <Title>%DiplomacyOpenBordersTermTitle</Title>
+          <Description>%DiplomacyOpenBordersTermDescription</Description>
+          <Icon Small=""/>
+      </Gui>
+      <Prerequisite Name="DiplomaticConditions" Conditions="Peace"/>
+      <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus2"/>
+  </OpenBordersTerm>
+
+  <PeaceTerm Name="PeaceTerm" Category="Treaty" NewStatus="Peace"
+             AttitudeMalusCoef="-10" HyperbolaCoef="80" AttitudeMalusOffset="-50" AttitudeTrendCoef="10"
+             PriceOffset="-2.85" PriceMin="-10" PriceMax="10">
+      <Gui>
+          <Title>%DiplomacyPeaceTermTitle</Title>
+          <Description>%DiplomacyPeaceTermDescription</Description>
+          <Icon Small=""/>
+      </Gui>
+      <Prerequisite Name="DiplomaticConditions" Conditions="ColdWar"/>
+      <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus1"/>
+      <Prerequisite Name="Path"                 Conditions="!ClassEmpire,DiplomaticStatusEternalWar"/>
+      <Prerequisite Name="TargetPath"           Conditions="!ClassEmpire,DiplomaticStatusEternalWar"/>
+  </PeaceTerm>    
+
+  <LeaveAllianceTerm Name="LeaveAllianceTerm" Category="Treaty" NewStatus="Peace" 
+                      OnlyOnLocalPlayerSide="true">
+      <Gui>
+          <Title>%DiplomacyLeaveAllianceTermTitle</Title>
+          <Description>%DiplomacyLeaveAllianceTermDescription</Description>
+          <Icon Small=""/>
+      </Gui>
+      <Prerequisite Name="DiplomaticConditions" Conditions="Alliance"/>
+      <!-- LL:We have to be able to leave an alliance without having the proper tech unlock -->
+      <!--<Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus4"/>-->
+  </LeaveAllianceTerm>
+
+
+  <!-- EXCHANGES -->
+  <DustInstantaneousTerm Name="DustInstantaneousTerm" Category="Dust" 
+                         DustPerTurnPriceFactor="25" EconomyPowerMinValue="100"
+                         PriceCoef="3"
+                         AttitudeMalusCoef="4" HyperbolaCoef="80" AttitudeMalusOffset="-50" AttitudeTrendCoef="10"
+                         PriceOffset="-1" PriceMin="0" PriceMax="10">
+    <Gui>
+      <Title>%DiplomacyDustInstantaneousTermTitle</Title>
+      <Description>%DiplomacyDustInstantaneousTermDescription</Description>
+      <Icon Small=""/>
+    </Gui>
+    <Prerequisite Name="DiplomaticConditions" Conditions="Peace;Alliance"/>
+    <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus1Swarm;DiplomacyBonus2"/>
+  </DustInstantaneousTerm>
+
+  <DustPerTurnTerm Name="DustPerTurnTerm" Category="Dust" 
+                   DustPerTurnPriceFactor="25" EconomyPowerMinValue="100"
+                   PriceCoef="3"
+                   AttitudeMalusCoef="4" HyperbolaCoef="80" AttitudeMalusOffset="-50" AttitudeTrendCoef="10"
+                   PriceOffset="0" PriceMin="0" PriceMax="10">
+    <Gui>
+      <Title>%DiplomacyDustPerTurnTermTitle</Title>
+      <Description>%DiplomacyDustPerTurnTermDescription</Description>
+      <Icon Small=""/>
+    </Gui>
+    <Descriptors>TreatyTermDust</Descriptors>
+    <Prerequisite Name="DiplomaticConditions" Conditions="Peace;Alliance"/>
+    <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus1Swarm;DiplomacyBonus2"/>
+  </DustPerTurnTerm>
+  
+  
+<!-- !!TEMP!! modification car trade techno non fonctionnel -->
+   <TechnologyTerm Name="TechnologyTerm" Category="Tech" 
+                   PercentPriceFactor="1"
+                   PriceCoef="5.5" 
+                   AttitudeMalusCoef="2" HyperbolaCoef="80" AttitudeMalusOffset="-50" AttitudeTrendCoef="10"
+                   PriceOffset="-1.5" PriceMin="0" PriceMax="10" TechnologyCostRatioCoef="0.5">
+<!-- !!TEMP!! modification car trade techno non fonctionnel -->
+    <Gui>
+      <Title>%DiplomacyTechnologyTermTitle</Title>
+      <Description>%%</Description>
+      <Icon Small=""/>
+    </Gui>
+	<!-- Disable trading by changing DiplomaticConditions to an unattainable status. -->
+    <Prerequisite Name="DiplomaticConditions" Conditions="NoTrading"/>
+    <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus1Swarm;DiplomacyBonus2"/>
+  </TechnologyTerm>
+
+  <StarSystemTerm Name="StarSystemTerm" Category="System"
+                  FIDSFactor="10" ResourcesFactor="10" MoonsFactor="4"
+                  PriceCoef="10"
+                  AttitudeMalusCoef="25" HyperbolaCoef="-1" AttitudeMalusOffset="-50" AttitudeTrendCoef="10"
+                  PriceOffset="0" PriceMin="0" PriceMax="10">
+    <Gui>
+      <Title>%DiplomacyStarSystemTermTitle</Title>
+      <Description>%%</Description>
+      <Icon Small=""/>
+    </Gui>
+    <Prerequisite Name="DiplomaticConditions" Conditions="Peace;Alliance"/>
+    <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus1Swarm;DiplomacyBonus2"/>
+  </StarSystemTerm>
+
+  <ResourceTerm Name="ResourceTerm" Category="Resource"
+                StrategicResourceBasePrice="300" StrategicResourceFactor="25" LuxuryBasePrice="150" LuxuryFactor="50"
+                PriceCoef="1"
+                AttitudeMalusCoef="2" HyperbolaCoef="80" AttitudeMalusOffset="-50" AttitudeTrendCoef="10"
+                PriceOffset="0" PriceMin="0" PriceMax="10"
+                LuxuryResourcePrices="2;2;2;6" StrategicResourcePrices="4;2;2;4"> 
+    <Gui>
+      <Title>%DiplomacyResourceTermTitle</Title>
+      <Description>%DiplomacyResourceTermDescription</Description>
+      <Icon Small=""/>
+    </Gui>
+    <Prerequisite Name="DiplomaticConditions" Conditions="Peace;Alliance"/>
+    <Prerequisite Name="UnlockConditions"     Conditions="DiplomacyBonus1Swarm;DiplomacyBonus2"/>
+  </ResourceTerm>
+
+</Datatable>

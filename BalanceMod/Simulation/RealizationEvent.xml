@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <RealizationStack Name="Arrival">
+    <GlobalView Name="ARRIVAL" 
+                GainDelay="Phase"
+                OccurrenceResetDelay="Battle"
+                MaxOccurrence="1"
+                Loss="0"
+                Gain="0"
+                Priority="0"
+                MaxPriority="0"
+                MinPriority="0">
+	  <MainShotName>0626_Arrival</MainShotName>
+      <OtherShotName>Arrival_Attacker</OtherShotName>
+    </GlobalView>
+  </RealizationStack>
+  
+  
+  <RealizationStack Name="Info.LongRange">
+    <UserAction Name="USER ACTION" 
+                GainDelay="Phase"
+                OccurrenceResetDelay="Phase"
+                MaxOccurrence="1"
+                Loss="0"
+                Gain="0"
+                Priority="0"
+                MaxPriority="0"
+                MinPriority="0">
+			
+ 	  <MainShotName>LongRange_1</MainShotName>
+	  <MainShotName>LongRange_2</MainShotName>
+	  <OtherShotName>LongRange_1</OtherShotName>
+	  <OtherShotName>LongRange_2</OtherShotName>
+    </UserAction>
+	
+    <GreatDamage Name="GREAT DAMAGE" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="5"
+                 Loss="2"
+                 Gain="1"
+                 Priority="2"
+                 MaxPriority="1"
+                 MinPriority="5"
+                 Percent="0.2">
+				 
+	  <MainShotName>LongRange_14</MainShotName>
+	  <MainShotName>LongRange_11</MainShotName>
+	  <OtherShotName>LongRange_11</OtherShotName>
+	  <OtherShotName>LongRange_2</OtherShotName>
+    </GreatDamage>
+	
+    <GreatDefense Name="GREAT DEFENSE" 
+                  GainDelay="Phase"
+                  OccurrenceResetDelay="Round"
+                  MaxOccurrence="5"
+                  Loss="1"
+                  Gain="1"
+                  Priority="3"
+                  MaxPriority="1"
+                  MinPriority="4"
+                  Percent="0.6">
+				  
+	  <MainShotName>LongRange_12</MainShotName>
+	  <MainShotName>LongRange_14</MainShotName>	  
+	  <MainShotName>LongRange_15</MainShotName>
+	  <MainShotName>LongRange_5</MainShotName>
+	  <OtherShotName>LongRange_3</OtherShotName>
+	  <OtherShotName>LongRange_3_alt1</OtherShotName>
+	  <OtherShotName>LongRange_9</OtherShotName>
+	  <OtherShotName>LongRange_8</OtherShotName>
+	  <OtherShotName>LongRange_10</OtherShotName>
+    </GreatDefense>
+	
+    <Destruction Name="DESTRUCTION" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="1"
+                 Loss="1"
+                 Gain="1"
+                 Priority="2"
+                 MaxPriority="1"
+                 MinPriority="5">
+				 
+	  <MainShotName>0626_Event_Ship</MainShotName>
+	  <MainShotName>0626_Event_Ship_2</MainShotName>
+	  <MainShotName>0626_Event_Ship_Zoom</MainShotName>
+	  <!-- <MainShotName>LongRange_15</MainShotName>			 
+      <MainShotName>Destruction</MainShotName>
+	  <MainShotName>Destruction_alt1</MainShotName>
+	  <MainShotName>Destruction_alt2</MainShotName>
+	  <MainShotName>Destruction_2</MainShotName>	 -->
+	  <OtherShotName>0626_Event_OtherShip</OtherShotName>
+<!-- 	  <OtherShotName>Destruction</OtherShotName>
+	  <OtherShotName>Destruction_alt1</OtherShotName>
+	  <OtherShotName>Destruction_alt2</OtherShotName>
+	  <OtherShotName>Destruction_2</OtherShotName> -->
+
+      <MassiveDestruction Name="MASSIVE DESTRUCTION" 
+						  GainDelay="Phase"
+                          OccurrenceResetDelay="Round"
+                          MaxOccurrence="12"
+                          Loss="1"
+                          Gain="1"
+                          Priority="1"
+                          MaxPriority="1"
+                          MinPriority="2"
+                          MinDestruction="2"
+                          MaxDestruction="10"
+                          MaxTimeRange="3">
+				 
+<!-- 	  <MainShotName>LongRange_3</MainShotName> --><!-- Ne marche pas du point de vue de l'attaquant -->
+	  <MainShotName>LongRange_15</MainShotName>
+	  <MainShotName>LongRange_17</MainShotName>
+      <OtherShotName>LongRange_7</OtherShotName>
+	  <OtherShotName>LongRange_4</OtherShotName>
+	  <OtherShotName>LongRange_16</OtherShotName>
+	  <OtherShotName>LongRange_16_zoom</OtherShotName>
+	  <OtherShotName>LongRange_4_alt1</OtherShotName>
+	  <OtherShotName>LongRange_4_alt1_zoom</OtherShotName>
+	  <OtherShotName>LongRange_4_alt2</OtherShotName>
+      </MassiveDestruction>	  
+    </Destruction>
+	
+    <Fire Name="FIRE" 
+          GainDelay="Round"
+          OccurrenceResetDelay="Phase"
+          MaxOccurrence="1"
+          Loss="2"
+          Gain="1"
+          Priority="4"
+          MaxPriority="2"
+          MinPriority="5">
+				 
+ 	  <MainShotName>0626_Event_Ship</MainShotName>
+	  <MainShotName>0626_Event_Ship_2</MainShotName>	
+	  <MainShotName>0626_Event_Ship_Zoom</MainShotName>  
+<!-- 	  <MainShotName>LongRange_14</MainShotName>	   -->
+	  <OtherShotName>0626_Event_OtherShip</OtherShotName>
+<!-- 	  <OtherShotName>Fire</OtherShotName> -->
+    </Fire>
+  </RealizationStack>
+
+  <RealizationStack Name="Info.MediumRange">
+    <UserAction Name="USER ACTION" 
+                GainDelay="Phase"
+                OccurrenceResetDelay="Phase"
+                MaxOccurrence="1"
+                Loss="0"
+                Gain="0"
+                Priority="0"
+                MaxPriority="0"
+                MinPriority="0">
+			
+	  <!--<MainShotName>MediumRange_1</MainShotName>--><!-- top shot-->
+	  <!--<MainShotName>MediumRange_1_alt1</MainShotName>--><!-- top shot-->
+	  <MainShotName>MediumRange_2</MainShotName>
+	  <!--<OtherShotName>MediumRange_1</OtherShotName>--><!-- top shot-->
+	  <!--<OtherShotName>MediumRange_1_alt1</OtherShotName>--><!-- top shot-->
+	  <OtherShotName>MediumRange_2</OtherShotName>
+    </UserAction>
+	
+    <GreatDamage Name="GREAT DAMAGE" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="5"
+                 Loss="2"
+                 Gain="1"
+                 Priority="2"
+                 MaxPriority="1"
+                 MinPriority="5"
+                 Percent="0.2">
+			
+	  <MainShotName>MediumRange_1</MainShotName>
+	  <MainShotName>MediumRange_1_alt1</MainShotName>
+	  <MainShotName>MediumRange_2</MainShotName>
+	  <OtherShotName>MediumRange_1</OtherShotName>
+	  <OtherShotName>MediumRange_1_alt1</OtherShotName>
+	  <OtherShotName>MediumRange_2</OtherShotName>
+    </GreatDamage>
+	
+    <GreatDefense Name="GREAT DEFENSE" 
+                  GainDelay="Phase"
+                  OccurrenceResetDelay="Round"
+                  MaxOccurrence="5"
+                  Loss="1"
+                  Gain="1"
+                  Priority="3"
+                  MaxPriority="1"
+                  MinPriority="4"
+                  Percent="0.6">
+			
+	  <!--<MainShotName>MediumRange_1</MainShotName>--><!-- top shot-->
+	  <!--<MainShotName>MediumRange_1_alt1</MainShotName>--><!-- top shot-->
+	  <MainShotName>MediumRange_2</MainShotName>
+	  <MainShotName>MediumRange_4</MainShotName>
+	  <MainShotName>MediumRange_6</MainShotName>
+	  <MainShotName>MediumRange_6_alt1</MainShotName>
+	  <!--<OtherShotName>MediumRange_1</OtherShotName>--><!-- top shot-->
+	  <!--<OtherShotName>MediumRange_1_alt1</OtherShotName>--><!-- top shot-->
+	  <OtherShotName>MediumRange_2</OtherShotName>
+	  <OtherShotName>MediumRange_3</OtherShotName>
+	  <OtherShotName>MediumRange_5</OtherShotName>
+	  <OtherShotName>MediumRange_6</OtherShotName>
+    </GreatDefense>
+	
+    <Destruction Name="DESTRUCTION" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="1"
+                 Loss="1"
+                 Gain="1"
+                 Priority="1"
+                 MaxPriority="1"
+                 MinPriority="2">
+				 
+	  <MainShotName>0626_Event_Ship</MainShotName>
+	  <MainShotName>0626_Event_Ship_2</MainShotName>
+	  <!-- <MainShotName>Destruction</MainShotName>
+	  <MainShotName>Destruction_alt1</MainShotName>
+	  <MainShotName>Destruction_alt2</MainShotName>
+	  <MainShotName>Destruction_2</MainShotName> -->
+	  <OtherShotName>0626_Event_OtherShip</OtherShotName>
+<!-- 	  <OtherShotName>Destruction</OtherShotName>
+	  <OtherShotName>Destruction_alt1</OtherShotName>
+	  <OtherShotName>Destruction_alt2</OtherShotName>
+	  <OtherShotName>Destruction_2</OtherShotName> -->
+
+      <MassiveDestruction Name="MASSIVE DESTRUCTION" 
+						  GainDelay="Phase"
+                          OccurrenceResetDelay="Round"
+                          MaxOccurrence="12"
+                          Loss="1"
+                          Gain="1"
+                          Priority="1"
+                          MaxPriority="1"
+                          MinPriority="2"
+                          MinDestruction="2"
+                          MaxDestruction="8"
+                          MaxTimeRange="1">
+				 
+	  <!--<MainShotName>MediumRange_1</MainShotName>--><!-- top shot-->
+	  <!--<MainShotName>MediumRange_1_alt1</MainShotName>--><!-- top shot-->
+	  <MainShotName>MediumRange_2</MainShotName>
+	  <MainShotName>MediumRange_4</MainShotName>
+	  <MainShotName>MediumRange_6</MainShotName>
+	  <!--<OtherShotName>MediumRange_1</OtherShotName>--><!-- top shot-->
+	  <!--<OtherShotName>MediumRange_1_alt1</OtherShotName>--><!-- top shot-->
+	  <OtherShotName>MediumRange_2</OtherShotName>
+	  <OtherShotName>MediumRange_3</OtherShotName>
+	  <OtherShotName>MediumRange_5</OtherShotName>
+	  <OtherShotName>MediumRange_6_alt1</OtherShotName>
+      </MassiveDestruction>	  
+    </Destruction>
+	
+    <Fire Name="FIRE" 
+          GainDelay="Round"
+          OccurrenceResetDelay="Phase"
+          MaxOccurrence="1"
+          Loss="2"
+          Gain="1"
+          Priority="2"
+          MaxPriority="1"
+          MinPriority="5">
+				 
+ 	  <MainShotName>0626_Event_Ship</MainShotName>
+	  <MainShotName>0626_Event_Ship_2</MainShotName>
+	  <MainShotName>0626_Event_Ship_Zoom</MainShotName>  
+<!-- 	  <MainShotName>Fire_3</MainShotName>
+	  <MainShotName>Fire_4</MainShotName> -->
+	  <OtherShotName>0626_Event_OtherShip</OtherShotName>
+<!-- 	  <OtherShotName>Fire_1</OtherShotName>
+	  <OtherShotName>Fire_2</OtherShotName>
+	  <OtherShotName>Fire_3</OtherShotName>
+	  <OtherShotName>Fire_4</OtherShotName> -->
+    </Fire>
+  </RealizationStack>
+
+  <RealizationStack Name="Info.ShortRange">
+    <UserAction Name="USER ACTION" 
+                GainDelay="Phase"
+                OccurrenceResetDelay="Phase"
+                MaxOccurrence="1"
+                Loss="0"
+                Gain="0"
+                Priority="0"
+                MaxPriority="0"
+                MinPriority="0">
+			
+	  <MainShotName>ShortRange_2</MainShotName>
+	  <MainShotName>ShortRange_3</MainShotName>
+	  <MainShotName>ShortRange_4</MainShotName>
+	  <OtherShotName>ShortRange_2</OtherShotName>
+	  <OtherShotName>ShortRange_4</OtherShotName>
+	  <OtherShotName>ShortRange_6</OtherShotName>
+    </UserAction>
+	
+    <GreatDamage Name="GREAT DAMAGE" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="5"
+                 Loss="2"
+                 Gain="1"
+                 Priority="2"
+                 MaxPriority="1"
+                 MinPriority="5"
+                 Percent="0.2">
+				 
+	  <MainShotName>ShortRange_1</MainShotName>
+	  <MainShotName>ShortRange_2</MainShotName>
+	  <MainShotName>ShortRange_3</MainShotName>
+	  <OtherShotName>ShortRange_1</OtherShotName>
+	  <OtherShotName>ShortRange_2</OtherShotName>
+	  <OtherShotName>ShortRange_6</OtherShotName>
+    </GreatDamage>
+	
+    <GreatDefense Name="GREAT DEFENSE" 
+                  GainDelay="Phase"
+                  OccurrenceResetDelay="Round"
+                  MaxOccurrence="5"
+                  Loss="1"
+                  Gain="1"
+                  Priority="3"
+                  MaxPriority="1"
+                  MinPriority="4"
+                  Percent="0.6">
+				  
+	  <MainShotName>ShortRange_1</MainShotName>
+	  <MainShotName>ShortRange_2</MainShotName>
+	  <MainShotName>ShortRange_4</MainShotName>
+	  <OtherShotName>ShortRange_1</OtherShotName>
+	  <OtherShotName>ShortRange_2</OtherShotName>
+	  <OtherShotName>ShortRange_4</OtherShotName>
+    </GreatDefense>
+	
+    <Destruction Name="DESTRUCTION" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="1"
+                 Loss="1"
+                 Gain="1"
+                 Priority="1"
+                 MaxPriority="1"
+                 MinPriority="2">
+				 
+	  <MainShotName>0626_Event_Ship</MainShotName>
+	  <MainShotName>0626_Event_Ship_2</MainShotName>
+	  <!-- <MainShotName>Destruction</MainShotName>
+	  <MainShotName>Destruction_alt1</MainShotName>
+	  <MainShotName>Destruction_alt2</MainShotName>
+	  <MainShotName>Destruction_2</MainShotName> -->
+	  <OtherShotName>0626_Event_OtherShip</OtherShotName>
+<!-- 	  <OtherShotName>Destruction</OtherShotName>
+	  <OtherShotName>Destruction_alt1</OtherShotName>
+	  <OtherShotName>Destruction_alt2</OtherShotName>
+	  <OtherShotName>Destruction_2</OtherShotName> -->
+
+      <MassiveDestruction Name="MASSIVE DESTRUCTION" 
+						  GainDelay="Phase"
+                          OccurrenceResetDelay="Round"
+                          MaxOccurrence="12"
+                          Loss="1"
+                          Gain="1"
+                          Priority="1"
+                          MaxPriority="1"
+                          MinPriority="2"
+                          MinDestruction="2"
+                          MaxDestruction="8"
+                          MaxTimeRange="1">
+						  
+	  <MainShotName>ShortRange_1</MainShotName>
+	  <MainShotName>ShortRange_2</MainShotName>
+	  <MainShotName>ShortRange_4</MainShotName>
+	  <MainShotName>ShortRange_6</MainShotName>
+	  <OtherShotName>ShortRange_1</OtherShotName>
+	  <OtherShotName>ShortRange_2</OtherShotName>
+	  <OtherShotName>ShortRange_4</OtherShotName>
+	  <OtherShotName>ShortRange_6</OtherShotName>
+      </MassiveDestruction>	  
+    </Destruction>
+	
+    <Fire Name="FIRE" 
+          GainDelay="Round"
+          OccurrenceResetDelay="Phase"
+          MaxOccurrence="1"
+          Loss="2"
+          Gain="1"
+          Priority="2"
+          MaxPriority="1"
+          MinPriority="5">
+
+	  <MainShotName>0626_Event_Ship</MainShotName>
+	  <MainShotName>0626_Event_Ship_2</MainShotName>
+	  <MainShotName>0626_Event_Ship_Zoom</MainShotName>  
+	  <OtherShotName>0626_Event_OtherShip</OtherShotName>
+<!-- 	  <OtherShotName>Fire_1</OtherShotName>
+	  <OtherShotName>Fire_2</OtherShotName>
+	  <OtherShotName>Fire_3</OtherShotName>
+	  <OtherShotName>Fire_4</OtherShotName> -->
+    </Fire>
+  </RealizationStack>
+
+  <!-- 10/02 : A TESTER SI TOUJOURS UTILISE
+  <RealizationStack Name="Info.Fire">
+    <UserAction Name="USER ACTION" 
+                GainDelay="Phase"
+                OccurrenceResetDelay="Phase"
+                MaxOccurrence="0"
+                Loss="9"
+                Gain="0"
+                Priority="9"
+                MaxPriority="9"
+                MinPriority="9">
+			
+	  <MainShotName>LongRange</MainShotName>
+	  <OtherShotName>LongRange</OtherShotName>
+    </UserAction>
+	
+    <GreatDamage Name="GREAT DAMAGE" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="5"
+                 Loss="2"
+                 Gain="1"
+                 Priority="2"
+                 MaxPriority="1"
+                 MinPriority="5"
+                 Percent="0.2">
+				 
+	  <MainShotName>GreatDamage_MyFleet</MainShotName>
+	  <OtherShotName>GreatDamage_OtherShip</OtherShotName>
+    </GreatDamage>
+	
+    <GreatDefense Name="GREAT DEFENSE" 
+                  GainDelay="Phase"
+                  OccurrenceResetDelay="Round"
+                  MaxOccurrence="5"
+                  Loss="1"
+                  Gain="1"
+                  Priority="3"
+                  MaxPriority="1"
+                  MinPriority="4"
+                  Percent="0.6">
+				  
+	  <MainShotName>TEST_Position1</MainShotName>
+	  <MainShotName>TEST_Position2</MainShotName>
+	  <OtherShotName>GreatDefense_OtherShip</OtherShotName>
+    </GreatDefense>
+	
+    <Destruction Name="DESTRUCTION" 
+                 GainDelay="Phase"
+                 OccurrenceResetDelay="Round"
+                 MaxOccurrence="12"
+                 Loss="1"
+                 Gain="1"
+                 Priority="1"
+                 MaxPriority="1"
+                 MinPriority="2">
+				 
+	  <MainShotName>Destruction_MyShip</MainShotName>
+	  <OtherShotName>Destruction_OtherShip</OtherShotName>
+
+      <MassiveDestruction Name="MASSIVE DESTRUCTION" 
+						  GainDelay="Phase"
+                          OccurrenceResetDelay="Round"
+                          MaxOccurrence="12"
+                          Loss="1"
+                          Gain="1"
+                          Priority="1"
+                          MaxPriority="1"
+                          MinPriority="2"
+                          MinDestruction="2"
+                          MaxDestruction="8"
+                          MaxTimeRange="1">
+				 
+	  <MainShotName>MassDestruction</MainShotName>
+	  <OtherShotName>MassDestruction</OtherShotName>
+      </MassiveDestruction>	  
+    </Destruction>
+	
+    <Fire Name="FIRE" 
+          GainDelay="Round"
+          OccurrenceResetDelay="Phase"
+          MaxOccurrence="99"
+          Loss="0"
+          Gain="1"
+          Priority="0"
+          MaxPriority="0"
+          MinPriority="0">
+				 
+	  <MainShotName>Fire</MainShotName>
+	  <OtherShotName>Fire</OtherShotName>
+    </Fire>
+  </RealizationStack>
+  -->
+ 
+  <RealizationStack Name="Deco.LongRange">
+    <GlobalView Name="GLOBAL VIEW" 
+                GainDelay="Round"
+                OccurrenceResetDelay="Battle"
+                MaxOccurrence="-1"
+                Loss="0"
+                Gain="0"
+                Priority="3"
+                MaxPriority="2"
+                MinPriority="4">
+
+	  <MainShotName>LongRange_1</MainShotName>
+	  <MainShotName>MediumRange_4</MainShotName>
+	  <OtherShotName>LongRange_3</OtherShotName>
+	  <OtherShotName>LongRange_4</OtherShotName>
+    </GlobalView>
+  </RealizationStack>
+  
+  <RealizationStack Name="Deco.MediumRange">
+    <GlobalView Name="GLOBAL VIEW" 
+                GainDelay="Round"
+                OccurrenceResetDelay="Battle"
+                MaxOccurrence="-1"
+                Loss="0"
+                Gain="0"
+                Priority="3"
+                MaxPriority="2"
+                MinPriority="4">
+
+	  <!--<MainShotName>MediumRange_1</MainShotName>--><!-- top shot-->
+	  <MainShotName>MediumRange_2</MainShotName>
+	  <MainShotName>MediumRange_3</MainShotName>
+	  <MainShotName>MediumRange_6</MainShotName>
+	  <!--<OtherShotName>MediumRange_1</OtherShotName>--><!-- top shot-->
+	  <OtherShotName>MediumRange_2</OtherShotName>
+	  <OtherShotName>MediumRange_4</OtherShotName>
+	  <OtherShotName>MediumRange_6</OtherShotName>
+    </GlobalView>
+  </RealizationStack>
+  
+  <RealizationStack Name="Deco.ShortRange">
+    <GlobalView Name="GLOBAL VIEW" 
+                GainDelay="Round"
+                OccurrenceResetDelay="Battle"
+                MaxOccurrence="2"
+                Loss="0"
+                Gain="0"
+                Priority="3"
+                MaxPriority="2"
+                MinPriority="4">
+
+	  <MainShotName>ShortRange_1</MainShotName>
+	  <MainShotName>ShortRange_2</MainShotName>
+	  <MainShotName>ShortRange_3</MainShotName>
+	  <MainShotName>ShortRange_4</MainShotName>
+	  <MainShotName>ShortRange_5</MainShotName>
+	  <MainShotName>ShortRange_6</MainShotName>
+	  <OtherShotName>ShortRange_1</OtherShotName>
+	  <OtherShotName>ShortRange_2</OtherShotName>
+	  <OtherShotName>ShortRange_3</OtherShotName>
+	  <OtherShotName>ShortRange_4</OtherShotName>
+	  <OtherShotName>ShortRange_5</OtherShotName>
+	  <OtherShotName>ShortRange_6</OtherShotName>
+    </GlobalView>
+  </RealizationStack>
+  
+  <RealizationStack Name="Deco.Report">
+    <GlobalView Name="GLOBAL VIEW" 
+                GainDelay="Round"
+                OccurrenceResetDelay="Battle"
+                MaxOccurrence="-1"
+                Loss="0"
+                Gain="0"
+                Priority="3"
+                MaxPriority="2"
+                MinPriority="4">
+
+	  <MainShotName>Report</MainShotName>
+	  <OtherShotName>Report</OtherShotName><!-- To Do -->
+	  <OtherShotName>Report_alt1</OtherShotName><!-- To Do -->
+    </GlobalView>
+  </RealizationStack>
+  
+  <RealizationStack Name="DecoHack">
+    <GlobalView Name="GLOBAL VIEW" 
+                GainDelay="Round"
+                OccurrenceResetDelay="Battle"
+                MaxOccurrence="-1"
+                Loss="0"
+                Gain="0"
+                Priority="3"
+                MaxPriority="2"
+                MinPriority="4">
+
+	  <MainShotName>MyGlobalView_v4_6s</MainShotName>
+	  <MainShotName>MyGlobalView_v3_6s</MainShotName>
+	  <OtherShotName>TEST_Position1_Others_6sec</OtherShotName><!-- To Do -->
+	  <OtherShotName>TEST_Position2_Others_6sec</OtherShotName><!-- To Do -->
+    </GlobalView>
+  </RealizationStack>
+</Datatable>

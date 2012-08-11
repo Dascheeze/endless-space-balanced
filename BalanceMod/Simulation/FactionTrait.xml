@@ -1,0 +1,2219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- EXAMPLES -->
+  <!--
+  <Trait Name="Trait011" Family="TraitExample" Level="1" Cost="5">
+    <Descriptors>Trait011</Descriptors>
+    <Gui>
+      <Title>%Trait011Title</Title>
+      <Description>%Trait011Description</Description>
+      <Icon/>
+    </Gui>
+  </Trait>
+  -->
+
+  <!-- ########################################################################## -->
+  <!-- ############################  FLEETS  #################################### -->
+  <!-- ########################################################################## -->
+
+  <Trait Name="TraitCreateFleetColonizer" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShip"/>
+    <Gui>
+      <Title>%TraitCreateFleetColonizerTitle</Title>
+      <Description>%TraitCreateFleetColonizerDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitCreateFleetColonizers" Family="TraitStartingShip" Level="1" Cost="10" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShip;ColonyShip;ColonyShip;ColonyShip;ColonyShip;ColonyShip;ColonyShip;ColonyShip;ColonyShip;ColonyShip"/>
+    <Gui>
+      <Title>[TEST] Colonization Fleet</Title>
+      <Description>Gives the player a Fleet with 10 Colonization ships</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitCreateFleetBattle" Family="TraitStartingShip" Level="1" Cost="66" Hidden="true">
+    <Command Name="CreateFleet" Arguments="LargeFull;LargeFull;MediumFull;MediumFull;MediumFull;MediumFull;MediumFull;Scout;Scout;Scout;Scout;Scout;Scout;Scout;Scout;Scout"/>
+    <Gui>
+      <Title>%TraitCreateFleetBattleTitle</Title>
+      <Description>%TraitCreateFleetBattleDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScout" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="Scout"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutTerran" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutTerranDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutSwarm" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutSwarmDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutSophon" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutSophonDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutHoratio" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutHoratioDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutHissho" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutHisshoDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutSower" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutSowerDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutAmoeba" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutAmoebaDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipScoutResistance" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ScoutResistanceDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonization" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShip"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationTerran" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipTerranDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationSwarm" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipSwarmDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationSophon" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipSophonDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationHoratio" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipHoratioDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationHissho" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipHisshoDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationSower" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipSowerDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationAmoeba" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipAmoebaDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitStartingShipColonizationResistance" Family="TraitStartingShip" Level="1" Cost="0" Hidden="true">
+    <Command Name="CreateFleet" Arguments="ColonyShipResistanceDesign"/>
+    <Gui>
+      <Title>%TraitStartingFleetTitle</Title>
+      <Description>%TraitStartingFleetDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+
+  <!-- ################################################################################# -->
+  <!-- ############################  Technology Unlocks   ############################## -->
+  <!-- ################################################################################# -->
+
+  <!-- ### 1st circle techs ###-->
+
+  <!-- Isolation Shields : Science 1-->
+  <Trait Name="TraitTechA01" Root="TraitTechA01" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechA01"/>
+    <Descriptors>TraitTechA01</Descriptors>
+    <Gui>
+      <Title>%TraitTechA01NormTitle</Title>
+      <Description>%TraitTechA01NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechA01NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- N-way Fusion Plants : System Industry 1 + Strategic Resource 1-->
+  <Trait Name="TraitTechA02" Root="TraitTechA02" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechA02"/>
+    <Descriptors>TraitTechA02</Descriptors>
+    <Gui>
+      <Title>%TraitTechA02NormTitle</Title>
+      <Description>%TraitTechA02NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechA02NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Arid Epigenetics : Colonize Arid-->
+  <Trait Name="TraitTechE01" Root="TraitTechE01" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechE01;TechE01WithColonizeTraitScience03"/>
+    <Descriptors>TraitTechE01</Descriptors>
+    <Gui>
+      <Title>%TraitTechE01NormTitle</Title>
+      <Description>%TraitTechE01NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechE01NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Xenobotany : Colonize Tundra-->
+  <Trait Name="TraitTechE27" Root="TraitTechE27" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechE27;TechE27WithColonizeTraitScience03"/>
+    <Descriptors>TraitTechE27</Descriptors>
+    <Gui>
+      <Title>%TraitTechE27NormTitle</Title>
+      <Description>%TraitTechE27NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechE27NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Soil Xenobiology : System Food 1 + Planetary Food 1-->
+  <Trait Name="TraitTechT01" Root="TraitTechT01" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechT01"/>
+    <Descriptors>TraitTechT01</Descriptors>
+    <Gui>
+      <Title>%TraitTechT01NormTitle</Title>
+      <Description>%TraitTechT01NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechT01NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Xenology : Luxury 1 + System Dust 1-->
+  <Trait Name="TraitTechT02" Root="TraitTechT02" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechT02"/>
+    <Descriptors>TraitTechT02</Descriptors>
+    <Gui>
+      <Title>%TraitTechT02NormTitle</Title>
+      <Description>%TraitTechT02NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechT02NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Isotope Fabrication : Kinetic 2 + AM 1-->
+  <Trait Name="TraitTechG01" Root="TraitTechG01" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechG01"/>
+    <Descriptors>TraitTechG01</Descriptors>
+    <Gui>
+      <Title>%TraitTechG01NormTitle</Title>
+      <Description>%TraitTechG01NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechG01NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Advanced Machining : Missile 1 + Deflect 2-->
+  <Trait Name="TraitTechG02" Root="TraitTechG02" Family="TraitTechnology" Level="1" Cost="10">
+    <Command Name="UnlockTechnologies" Arguments="TechG02"/>
+    <Descriptors>TraitTechG02</Descriptors>
+    <Gui>
+      <Title>%TraitTechG02NormTitle</Title>
+      <Description>%TraitTechG02NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechG02NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- ### 2nd circle techs ###-->
+  <!-- Pev-scale Accelerators : Planet Science 2 + Engine mod 2-->
+  <Trait Name="TraitTechA03" Root="TraitTechA03" Family="TraitTechnology" Level="1" Cost="15">
+    <Command Name="UnlockTechnologies" Arguments="TechA03"/>
+    <Descriptors>TraitTechA03</Descriptors>
+    <Prerequisites>TraitTechA01</Prerequisites>
+    <Gui>
+      <Title>%TraitTechA03NormTitle</Title>
+      <Description>%TraitTechA03NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechA03NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Neural Robotics : Battle card Weapon Disruption + Repair mod 2 -->
+  <Trait Name="TraitTechA04" Root="TraitTechA04" Family="TraitTechnology" Level="1" Cost="15" ValidWithAtLeastOnePrerequisite="true">
+    <Command Name="UnlockTechnologies" Arguments="TechA04"/>
+    <Descriptors>TraitTechA04</Descriptors>
+    <Prerequisites>TraitTechA01,TraitTechA02</Prerequisites>
+    <Gui>
+      <Title>%TraitTechA04NormTitle</Title>
+      <Description>%TraitTechA04NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechA04NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Core Mining : Strategic Resource 2 + Planet Industry 2 -->
+  <Trait Name="TraitTechA05" Root="TraitTechA05" Family="TraitTechnology" Level="1" Cost="15">
+    <Command Name="UnlockTechnologies" Arguments="TechA05"/>
+    <Descriptors>TraitTechA05</Descriptors>
+    <Prerequisites>TraitTechA02</Prerequisites>
+    <Gui>
+      <Title>%TraitTechA05NormTitle</Title>
+      <Description>%TraitTechA05NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechA05NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Sustainability : colo Desert -->
+  <Trait Name="TraitTechE02" Root="TraitTechE02" Family="TraitTechnology" Level="1" Cost="15">
+    <Command Name="UnlockTechnologies" Arguments="TechE02;TechE02WithColonizeTraitScience03"/>
+    <Descriptors>TraitTechE02</Descriptors>
+    <Prerequisites>TraitTechE01</Prerequisites>
+    <Gui>
+      <Title>%TraitTechE02NormTitle</Title>
+      <Description>%TraitTechE02NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechE02NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Compact Fusion Reactors : move warp 2 + colo arctic -->
+  <Trait Name="TraitTechE03" Root="TraitTechE03" Family="TraitTechnology" Level="1" Cost="15" ValidWithAtLeastOnePrerequisite="true">
+    <Command Name="UnlockTechnologies" Arguments="TechE03;TechE03WithColonizeTraitScience03"/>
+    <Descriptors>TraitTechE03</Descriptors>
+    <Prerequisites>TraitTechE01,TraitTechE27</Prerequisites>
+    <Gui>
+      <Title>%TraitTechE03NormTitle</Title>
+      <Description>%TraitTechE03NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechE03NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Efficient Shielding -->
+  <!-- TO DO: Choisir ce trait permet de débloquer uniquement la technologie E04 de sa faction -->
+  <!--
+  <Trait Name="TraitTechE04" Family="TraitTechnology" Level="1" Cost="15">
+    <Command Name="UnlockTechnologies" Arguments="TechE04"/>
+    <Descriptors>TraitTechE04</Descriptors>
+    <Gui>
+      <Title>%TraitTechE04NormTitle</Title>
+      <Description>%TraitTechE04NormDescription</Description>
+      <Icon />
+    <Tooltip>
+      <Description>%TraitTechE04NormTooltipEffect</Description>
+    </Tooltip>
+    </Gui>
+  </Trait>-->
+
+  <!-- Particle Scanning -->
+  <Trait Name="TraitTechT03" Root="TraitTechT03" Family="TraitTechnology" Level="1" Cost="15">
+    <Command Name="UnlockTechnologies" Arguments="TechT03"/>
+    <Descriptors>TraitTechT03</Descriptors>
+    <Prerequisites>TraitTechT01</Prerequisites>
+    <Gui>
+      <Title>%TraitTechT03NormTitle</Title>
+      <Description>%TraitTechT03NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechT03NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Relativistic Economics -->
+  <Trait Name="TraitTechT04" Root="TraitTechT04" Family="TraitTechnology" Level="1" Cost="15">
+    <Command Name="UnlockTechnologies" Arguments="TechT04"/>
+    <Descriptors>TraitTechT04</Descriptors>
+    <Prerequisites>TraitTechT02</Prerequisites>
+    <Gui>
+      <Title>%TraitTechT04NormTitle</Title>
+      <Description>%TraitTechT04NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechT04NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- ShipQuality1 + GroundDefense1 -->
+  <Trait Name="TraitTechG03" Root="TraitTechG03" Family="TraitTechnology" Level="1" Cost="15" ValidWithAtLeastOnePrerequisite="true">
+    <Command Name="UnlockTechnologies" Arguments="TechG03"/>
+    <Descriptors>TraitTechG03</Descriptors>
+    <Prerequisites>TraitTechG01,TraitTechG02</Prerequisites>
+    <Gui>
+      <Title>%TraitTechG03NormTitle</Title>
+      <Description>%TraitTechG03NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitTechG03NormTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################# -->
+  <!-- ############################   AFFINITIES    #################################### -->
+  <!-- ################################################################################# -->
+
+  <Affinity Name="AffinityTerran" Family="Affinity" Hidden="false" Cost="65">
+    <Descriptors>AffinityTerran;AffinityMappingTerran</Descriptors>
+	<SubTraits>TraitStartingShipScoutTerran,TraitStartingShipColonizationTerran</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartTerran"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalityUnitedEmpire</Personality>
+    <!-- personalities here -->
+
+    <Gui>
+      <Title>%AffinityTerranTitle</Title>
+      <Description>%AffinityTerranDescription</Description>
+      <Tooltip>
+        <Description>%AffinityTerranTooltipEffect</Description>
+      </Tooltip>
+      <Icon Small="Gui/DynamicBitmaps/Factions/terranLeaderSmall" Large="Gui/DynamicBitmaps/Factions/terranLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/terranDescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinityEmperor" Family="Affinity" Hidden="false" Cost="65">
+    <Descriptors>AffinityTerran;AffinityMappingEmperor</Descriptors>
+	<SubTraits>TraitStartingShipScoutTerran,TraitStartingShipColonizationTerran</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartTerran"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalityUnitedEmpire</Personality>
+    <!-- personalities here -->
+
+    <Gui>
+      <Title>%AffinityEmperorTitle</Title>
+      <Description>%AffinityEmperorDescription</Description>
+      <Tooltip>
+        <Description>%AffinityEmperorTooltipEffect</Description>
+      </Tooltip>
+      <Icon Small="Gui/DynamicBitmaps/Factions/terranLeaderSmall" Large="Gui/DynamicBitmaps/Factions/terranLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/terranDescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinitySwarm" Family="Affinity" Hidden="false" Cost="65">
+    <Descriptors>AffinitySwarm;AffinityMappingSwarm</Descriptors>
+	<SubTraits>TraitStartingShipScoutSwarm,TraitStartingShipColonizationSwarm</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartSwarm"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalityCravers</Personality>
+    <Gui>
+      <Title>%AffinitySwarmTitle</Title>
+      <Description>%AffinitySwarmDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Factions/swarmLeaderSmall" Large="Gui/DynamicBitmaps/Factions/swarmLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/swarmDescriptionWide"/>
+      <Tooltip>
+        <Description>%AffinitySwarmTooltipEffect1</Description>
+        <Description>%AffinitySwarmTooltipEffect2</Description>
+      </Tooltip>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinityAmoeba" Family="Affinity" Hidden="false" Cost="60">
+    <Descriptors>AffinityAmoeba;AffinityMappingAmoeba</Descriptors>
+	<SubTraits>TraitStartingShipScoutAmoeba,TraitStartingShipColonizationAmoeba</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartAmoeba"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="DiscoverGalaxy" Arguments=""/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalityAmoeba</Personality>
+    <Gui>
+      <Title>%AffinityAmoebaTitle</Title>
+      <Description>%AffinityAmoebaDescription</Description>
+      <Tooltip>
+        <Description>%AffinityAmoebaTooltipEffect</Description>
+      </Tooltip>
+      <Icon Small="Gui/DynamicBitmaps/Factions/amoebaLeaderSmall" Large="Gui/DynamicBitmaps/Factions/amoebaLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/amoebaDescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinitySophon" Family="Affinity" Hidden="false" Cost="65">
+    <Descriptors>AffinitySophon;AffinityMappingSophon</Descriptors>
+	<SubTraits>TraitStartingShipScoutSophon,TraitStartingShipColonizationSophon</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartSophon"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalitySophon</Personality>
+    <Gui>
+      <Title>%AffinitySophonTitle</Title>
+      <Description>%AffinitySophonDescription</Description>
+    <Tooltip>
+        <Description>%AffinitySophonTooltipEffect</Description>
+    </Tooltip>
+      <Icon Small="Gui/DynamicBitmaps/Factions/sophonLeaderSmall" Large="Gui/DynamicBitmaps/Factions/sophonLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/sophonDescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinityResistance" Family="Affinity" Hidden="false" Cost="65">
+    <Descriptors>AffinityResistance;AffinityMappingResistance</Descriptors>
+	<SubTraits>TraitStartingShipScoutResistance,TraitStartingShipColonizationResistance</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartResistance"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalityPilgrims</Personality>
+    <Gui>
+      <Title>%AffinityResistanceTitle</Title>
+      <Description>%AffinityResistanceDescription</Description>
+      <Tooltip>
+        <Description>%AffinityResistanceTooltipEffect</Description>
+      </Tooltip>
+      <Icon Small="Gui/DynamicBitmaps/Factions/resistanceLeaderSmall" Large="Gui/DynamicBitmaps/Factions/resistanceLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/resistanceDescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinityHoratio" Family="Affinity" Hidden="false" Cost="65">
+    <Descriptors>AffinityHoratio;AffinityMappingHoratio</Descriptors>
+	<SubTraits>TraitStartingShipScoutHoratio,TraitStartingShipColonizationHoratio</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartHoratio"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalityHoratio</Personality>
+    <Gui>
+      <Title>%AffinityHoratioTitle</Title>
+      <Description>%AffinityHoratioDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Factions/horatioLeaderSmall" Large="Gui/DynamicBitmaps/Factions/horatioLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/horatioDescriptionWide"/>
+	  <Tooltip>
+        <Description>%AffinityHoratioTooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinitySower" Family="Affinity" Hidden="false" Cost="60">
+    <Descriptors>AffinitySower;AffinityMappingSower</Descriptors>
+	<SubTraits>TraitStartingShipScoutSower,TraitStartingShipColonizationSower</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartSower"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalitySowers</Personality>
+    <Gui>
+      <Title>%AffinitySowerTitle</Title>
+      <Description>%AffinitySowerDescription</Description>
+      <Tooltip>
+        <Description>%AffinitySowerTooltipEffect1</Description>
+        <Description>%AffinitySowerTooltipEffect2</Description>
+      </Tooltip>
+      <Icon Small="Gui/DynamicBitmaps/Factions/sowerLeaderSmall" Large="Gui/DynamicBitmaps/Factions/sowerLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/sowerDescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinityHissho" Family="Affinity" Hidden="false" Cost="65">
+    <Descriptors>AffinityHissho;AffinityMappingHissho</Descriptors>
+	<SubTraits>TraitStartingShipScoutHissho,TraitStartingShipColonizationHissho</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartHissho"/>
+    <Command Name="ColonizeHomeSystem" Arguments="dummy"/>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Personality>PersonalityHissho</Personality>
+    <Gui>
+      <Title>%AffinityHisshoTitle</Title>
+      <Description>%AffinityHisshoDescription</Description>
+      <Tooltip>
+        <Description>%AffinityHisshoTooltipEffect1</Description>
+        <Description>%AffinityHisshoTooltipEffect2</Description>
+        <Description>%AffinityHisshoTooltipEffect3</Description>
+        <Description> </Description>
+        <Description>%AffinityHisshoTooltipEffect4</Description>
+      </Tooltip>
+      <Icon Small="Gui/DynamicBitmaps/Factions/hisshoLeaderSmall"  Large="Gui/DynamicBitmaps/Factions/hisshoLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/hisshoDescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+  <Affinity Name="AffinityPirates" Family="Affinity" Hidden="true" >
+    <Descriptors>AffinityPirates;AffinityMappingPirates</Descriptors>
+	<SubTraits>TraitStartingShipScoutPirates,TraitStartingShipColonizationPirates</SubTraits>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStart"/>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartPirates"/>
+    <Gui>
+      <Title>%AffinityPiratesTitle</Title>
+      <Description>%AffinityPiratesDescription</Description>
+      <Icon Small="Gui/DynamicBitmaps/Factions/piratesLeaderSmall" Large="Gui/DynamicBitmaps/Factions/piratesLeaderLarge" Wide="Gui/DynamicBitmaps/Factions/[Temp]DescriptionWide"/>
+    </Gui>
+  </Affinity>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- ############################ ALIGNMENT TRAITS #################################### -->
+  <!-- ################################################################################## -->
+
+  <Trait Name="TraitAlignmentGood" Family="TraitAlignment" Cost="0" Hidden="true">
+    <Descriptors>TraitAlignmentGood</Descriptors>
+    <Prerequisites>!TraitAlignmentNeutral,!TraitAlignmentEvil</Prerequisites>
+    <Gui>
+      <Title>%TraitAlignmentGoodTitle</Title>
+      <Description>%TraitAlignmentGoodDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitAlignmentNeutral" Family="TraitAlignment" Cost="0" Hidden="true">
+    <Descriptors>TraitAlignmentNeutral</Descriptors>
+    <Prerequisites>!TraitAlignmentGood,!TraitAlignmentEvil</Prerequisites>
+    <Gui>
+      <Title>%TraitAlignmentNeutralTitle</Title>
+      <Description>%TraitAlignmentNeutralDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <Trait Name="TraitAlignmentEvil" Family="TraitAlignment" Cost="0" Hidden="true">
+    <Descriptors>TraitAlignmentEvil</Descriptors>
+    <Prerequisites>!TraitAlignmentGood,!TraitAlignmentNeutral</Prerequisites>
+    <Gui>
+      <Title>%TraitAlignmentEvilTitle</Title>
+      <Description>%TraitAlignmentEvilDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- ################################################################################## -->
+  <!-- ############################  ECONOMY TRAITS  #################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Businessmen* -->
+ 
+  <Trait Name="TraitEconomy01Norm1" Root="TraitEconomy01Norm" Family="TraitEconomy" Level="1" Cost="10">
+    <Descriptors>TraitEconomy01Norm1</Descriptors>
+    <Prerequisites>!TraitEconomy01Alt1,!TraitEconomy01Alt2,!TraitEconomy01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy01NormTitle</Title>
+      <Description>%TraitEconomy01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitEconomy01Norm2" Root="TraitEconomy01Norm" Family="TraitEconomy" Level="2" Cost="20">
+    <Descriptors>TraitEconomy01Norm2</Descriptors>
+    <Prerequisites>!TraitEconomy01Alt1,!TraitEconomy01Alt2,!TraitEconomy01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy01NormTitle</Title>
+      <Description>%TraitEconomy01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitEconomy01Norm3" Root="TraitEconomy01Norm" Family="TraitEconomy" Level="3" Cost="35">
+    <Descriptors>TraitEconomy01Norm3</Descriptors>
+    <Prerequisites>!TraitEconomy01Alt1,!TraitEconomy01Alt2,!TraitEconomy01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy01NormTitle</Title>
+      <Description>%TraitEconomy01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <!-- *Spendthrifts -->
+  <Trait Name="TraitEconomy01Alt1" Root="TraitEconomy01Alt" Family="TraitEconomy" Level="1" Cost="-5">
+    <Descriptors>TraitEconomy01Alt1</Descriptors>
+    <Prerequisites>!TraitEconomy01Norm1,!TraitEconomy01Norm2,!TraitEconomy01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy01AltTitle</Title>
+      <Description>%TraitEconomy01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitEconomy01Alt2" Root="TraitEconomy01Alt" Family="TraitEconomy" Level="2" Cost="-10">
+    <Descriptors>TraitEconomy01Alt2</Descriptors>
+    <Prerequisites>!TraitEconomy01Norm1,!TraitEconomy01Norm2,!TraitEconomy01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy01AltTitle</Title>
+      <Description>%TraitEconomy01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitEconomy01Alt3" Root="TraitEconomy01Alt" Family="TraitEconomy" Level="3" Cost="-16">
+    <Descriptors>TraitEconomy01Alt3</Descriptors>
+    <Prerequisites>!TraitEconomy01Norm1,!TraitEconomy01Norm2,!TraitEconomy01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy01AltTitle</Title>
+      <Description>%TraitEconomy01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  
+  <!-- Merchants* -->
+  <Trait Name="TraitEconomy02Norm1" Root="TraitEconomy02Norm" Family="TraitEconomy" Level="1" Cost="8">
+    <Descriptors>TraitEconomy02Norm1</Descriptors>
+    <Prerequisites>!TraitEconomy02Alt1</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy02NormTitle</Title>
+      <Description>%TraitEconomy02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitEconomy02Norm2" Root="TraitEconomy02Norm" Family="TraitEconomy" Level="2" Cost="16">
+    <Descriptors>TraitEconomy02Norm2</Descriptors>
+    <Prerequisites>!TraitEconomy02Alt1</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy02NormTitle</Title>
+      <Description>%TraitEconomy02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <!--
+  <Trait Name="TraitEconomy02Alt1" Root="TraitEconomy02Alt" Family="TraitEconomy" Level="1" Cost="-4">
+    <Descriptors>TraitEconomy02Alt1</Descriptors>
+    <Prerequisites>!TraitEconomy02Norm1,!TraitEconomy02Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitEconomy02AltTitle</Title>
+      <Description>%TraitEconomy02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  -->
+
+  <!-- Blockade Breakers -->
+  <Trait Name="TraitEconomy07Norm1" Root="TraitEconomy07Norm" Family="TraitEconomy" Level="1" Cost="15">
+    <Descriptors>TraitEconomy07Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitEconomy07NormTitle</Title>
+      <Description>%TraitEconomy07NormDescription</Description>
+      <Tooltip>
+        <Description>%TraitEconomy07Norm1TooltipEffect1</Description>
+        <Description>%TraitEconomy07Norm1TooltipEffect2</Description>
+      </Tooltip>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Entrepreneurs -->
+  <Trait Name="TraitEconomy09Norm1" Root="TraitEconomy09Norm" Family="TraitEconomy" Level="1" Cost="20">
+    <Descriptors>TraitEconomy09Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitEconomy09NormTitle</Title>
+      <Description>%TraitEconomy09NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Dust Archaeology  -->
+  <!-- Hard localization: Edit text when modifying value -->
+  <Trait Name="TraitEconomy10Norm1" Root="TraitEconomy10Norm" Family="TraitEconomy" Level="1" Cost="1">
+    <Descriptors>TraitEconomy10Norm1</Descriptors>
+    <Prerequisites>!TraitEconomy10Alt1</Prerequisites>
+    <Command Name="SetInitialMoney" Arguments="10"/>
+    <Gui>
+      <Title>%TraitEconomy10NormTitle</Title>
+      <Description>%TraitEconomy10NormDescription</Description>
+      <Icon />
+	  <Tooltip>
+	    <Description>%TraitEconomy10Norm1TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Trait>
+  <!-- Hard localization: Edit text when modifying value -->
+  <Trait Name="TraitEconomy10Norm2" Root="TraitEconomy10Norm" Family="TraitEconomy" Level="2" Cost="2">
+    <Descriptors>TraitEconomy10Norm2</Descriptors>
+    <Prerequisites>!TraitEconomy10Alt1</Prerequisites>
+    <Command Name="SetInitialMoney" Arguments="32"/>
+    <Gui>
+      <Title>%TraitEconomy10NormTitle</Title>
+      <Description>%TraitEconomy10NormDescription</Description>
+      <Icon />
+	  <Tooltip>
+	    <Description>%TraitEconomy10Norm2TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Trait>
+  <!-- Hard localization: Edit text when modifying value -->
+  <Trait Name="TraitEconomy10Alt1" Root="TraitEconomy10Alt" Family="TraitEconomy" Level="1" Cost="-1">
+    <Descriptors>TraitEconomy10Alt1</Descriptors>
+    <Prerequisites>!TraitEconomy10Norm1,!TraitEconomy10Norm2</Prerequisites>
+    <Command Name="SetInitialMoney" Arguments="-10"/>
+    <Gui>
+      <Title>%TraitEconomy10AltTitle</Title>
+      <Description>%TraitEconomy10AltDescription</Description>
+      <Icon />
+	  <Tooltip>
+	    <Description>%TraitEconomy10Alt1TooltipEffect</Description>
+	  </Tooltip>
+    </Gui>
+  </Trait>
+  
+  
+  
+  <!-- ################################################################################## -->
+  <!-- ############################# ANOMALY TRAITS ##################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Faction anomaly : Random anomaly -->
+  <Trait Name="TraitAnomaly01Norm1" Root="TraitAnomaly01Norm" Family="TraitAnomaly" Level="1" Cost="10">
+    <Descriptors>TraitAnomaly01Norm1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly07;PlanetAnomaly08;PlanetAnomaly14;PlanetAnomaly18;PlanetAnomaly21;PlanetAnomaly24;PlanetAnomaly28"/>
+    <Prerequisites>!TraitAnomaly01Alt1,!TraitAnomaly02Norm1,!TraitAnomaly02Alt1,!TraitAnomaly03Norm1,!TraitAnomaly03Alt1,!TraitAnomaly04Norm1,!TraitAnomaly05Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly01NormTitle</Title>
+      <Description>%TraitAnomaly01NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly01Norm1TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+  <Trait Name="TraitAnomaly01Alt1" Root="TraitAnomaly01Alt" Family="TraitAnomaly" Level="1" Cost="-6">
+    <Descriptors>TraitAnomaly01Alt1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly35;PlanetAnomaly36;PlanetAnomaly37;PlanetAnomaly38;PlanetAnomaly39;PlanetAnomaly40"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly02Norm1,!TraitAnomaly02Alt1,!TraitAnomaly03Norm1,!TraitAnomaly03Alt1,!TraitAnomaly04Norm1,!TraitAnomaly05Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly01AltTitle</Title>
+      <Description>%TraitAnomaly01AltDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly01Alt1TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Faction anomaly : Mineral Rich -->
+  <Trait Name="TraitAnomaly02Norm1" Root="TraitAnomaly02Norm" Family="TraitAnomaly" Level="1" Cost="8">
+    <Descriptors>TraitAnomaly02Norm1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly10"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly01Alt1,!TraitAnomaly02Alt1,!TraitAnomaly03Norm1,!TraitAnomaly03Alt1,!TraitAnomaly04Norm1,!TraitAnomaly05Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly02NormTitle</Title>
+      <Description>%TraitAnomaly02NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly02Norm1TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+  <Trait Name="TraitAnomaly02Alt1" Root="TraitAnomaly02Alt" Family="TraitAnomaly" Level="1" Cost="-5">
+    <Descriptors>TraitAnomaly02Alt1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly45"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly01Alt1,!TraitAnomaly02Norm1,!TraitAnomaly03Norm1,!TraitAnomaly03Alt1,!TraitAnomaly04Norm1,!TraitAnomaly05Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly02AltTitle</Title>
+      <Description>%TraitAnomaly02AltDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly02Alt1TooltipEffect1</Description>
+        <Description>%TraitAnomaly02Alt1TooltipEffect2</Description>
+        <Description>%TraitAnomaly02Alt1TooltipEffect3</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Faction anomaly : Rich Soil -->
+  <Trait Name="TraitAnomaly03Norm1" Root="TraitAnomaly03Norm" Family="TraitAnomaly" Level="1" Cost="8">
+    <Descriptors>TraitAnomaly03Norm1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly09"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly01Alt1,!TraitAnomaly02Norm1,!TraitAnomaly02Alt1,!TraitAnomaly03Alt1,!TraitAnomaly04Norm1,!TraitAnomaly05Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly03NormTitle</Title>
+      <Description>%TraitAnomaly03NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly03Norm1TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+  <Trait Name="TraitAnomaly03Alt1" Root="TraitAnomaly03Alt" Family="TraitAnomaly" Level="1" Cost="-5">
+    <Descriptors>TraitAnomaly03Alt1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly41"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly01Alt1,!TraitAnomaly02Norm1,!TraitAnomaly02Alt1,!TraitAnomaly03Norm1,!TraitAnomaly04Norm1,!TraitAnomaly05Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly03AltTitle</Title>
+      <Description>%TraitAnomaly03AltDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly03Alt1TooltipEffect1</Description>
+        <Description>%TraitAnomaly03Alt1TooltipEffect2</Description>
+        <Description>%TraitAnomaly03Alt1TooltipEffect3</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Faction anomaly : Dust Lode -->
+  <Trait Name="TraitAnomaly04Norm1" Root="TraitAnomaly04Norm" Family="TraitAnomaly" Level="1" Cost="8">
+    <Descriptors>TraitAnomaly04Norm1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly11"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly01Alt1,!TraitAnomaly02Norm1,!TraitAnomaly02Alt1,!TraitAnomaly03Norm1,!TraitAnomaly03Alt1,!TraitAnomaly05Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly04NormTitle</Title>
+      <Description>%TraitAnomaly04NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly04Norm1TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Faction anomaly : Metallic Waters (Sowers) -->
+  <Trait Name="TraitAnomaly05Norm1" Root="TraitAnomaly05Norm" Family="TraitAnomaly" Level="1" Cost="8">
+    <Descriptors>TraitAnomaly05Norm1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly28"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly01Alt1,!TraitAnomaly02Norm1,!TraitAnomaly02Alt1,!TraitAnomaly03Norm1,!TraitAnomaly03Alt1,!TraitAnomaly04Norm1,!TraitAnomaly06Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly05NormTitle</Title>
+      <Description>%TraitAnomaly05NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly05Norm1TooltipEffect1</Description>
+        <Description>%TraitAnomaly05Norm1TooltipEffect2</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+  <!-- Faction anomaly : Huygens Rings (Hissho) -->
+  <Trait Name="TraitAnomaly06Norm1" Root="TraitAnomaly06Norm" Family="TraitAnomaly" Level="1" Cost="5">
+    <Descriptors>TraitAnomaly06Norm1</Descriptors>
+    <Command Name="ApplyAnomalyOnStartingPlanet" Arguments="PlanetAnomaly15"/>
+    <Prerequisites>!TraitAnomaly01Norm1,!TraitAnomaly01Alt1,!TraitAnomaly02Norm1,!TraitAnomaly02Alt1,!TraitAnomaly03Norm1,!TraitAnomaly03Alt1,!TraitAnomaly04Norm1,!TraitAnomaly05Norm1</Prerequisites>
+    <Gui>
+      <Title>%TraitAnomaly06NormTitle</Title>
+      <Description>%TraitAnomaly06NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description>%TraitAnomaly06Norm1TooltipEffect1</Description>
+        <Description>%TraitAnomaly06Norm1TooltipEffect2</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+
+  
+  
+
+  <!-- ################################################################################## -->
+  <!-- ########################### POPULATION TRAITS #################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Cloning* -->
+  <Trait Name="TraitPopulation01Norm1" Root="TraitPopulation01Norm" Family="TraitPopulation" Level="1" Cost="10">
+    <Descriptors>TraitPopulation01Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitPopulation01NormTitle</Title>
+      <Description>%TraitPopulation01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation01Norm2" Root="TraitPopulation01Norm" Family="TraitPopulation" Level="2" Cost="16">
+    <Descriptors>TraitPopulation01Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitPopulation01NormTitle</Title>
+      <Description>%TraitPopulation01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation01Norm3" Root="TraitPopulation01Norm" Family="TraitPopulation" Level="3" Cost="25">
+    <Descriptors>TraitPopulation01Norm3</Descriptors>
+    <Gui>
+      <Title>%TraitPopulation01NormTitle</Title>
+      <Description>%TraitPopulation01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- GrowthPlan* -->
+  
+  <Trait Name="TraitPopulation02Norm1" Root="TraitPopulation02Norm" Family="TraitPopulation" Level="1" Cost="10">
+    <Descriptors>TraitPopulation02Norm1</Descriptors>
+    <Prerequisites>!TraitPopulation02Alt1,!TraitPopulation02Alt2,!TraitPopulation02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation02NormTitle</Title>
+      <Description>%TraitPopulation02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation02Norm2" Root="TraitPopulation02Norm" Family="TraitPopulation" Level="2" Cost="20">
+    <Descriptors>TraitPopulation02Norm2</Descriptors>
+    <Prerequisites>!TraitPopulation02Alt1,!TraitPopulation02Alt2,!TraitPopulation02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation02NormTitle</Title>
+      <Description>%TraitPopulation02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation02Norm3" Root="TraitPopulation02Norm" Family="TraitPopulation" Level="3" Cost="30">
+    <Descriptors>TraitPopulation02Norm3</Descriptors>
+    <Prerequisites>!TraitPopulation02Alt1,!TraitPopulation02Alt2,!TraitPopulation02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation02NormTitle</Title>
+      <Description>%TraitPopulation02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation02Alt1"  Root="TraitPopulation02Alt" Family="TraitPopulation" Level="1" Cost="-5">
+    <Descriptors>TraitPopulation02Alt1</Descriptors>
+    <Prerequisites>!AffinitySower,!TraitPopulation02Norm1,!TraitPopulation02Norm2,!TraitPopulation02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation02AltTitle</Title>
+      <Description>%TraitPopulation02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation02Alt2" Root="TraitPopulation02Alt" Family="TraitPopulation" Level="2" Cost="-10">
+    <Descriptors>TraitPopulation02Alt2</Descriptors>
+    <Prerequisites>!AffinitySower,!TraitPopulation02Norm1,!TraitPopulation02Norm2,!TraitPopulation02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation02AltTitle</Title>
+      <Description>%TraitPopulation02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation02Alt3" Root="TraitPopulation02Alt" Family="TraitPopulation" Level="3" Cost="-15">
+    <Descriptors>TraitPopulation02Alt3</Descriptors>
+    <Prerequisites>!AffinitySower,!TraitPopulation02Norm1,!TraitPopulation02Norm2,!TraitPopulation02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation02AltTitle</Title>
+      <Description>%TraitPopulation02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  
+
+  <!-- Optimistic* -->
+  <Trait Name="TraitPopulation03Norm1" Root="TraitPopulation03Norm" Family="TraitPopulation" Level="1" Cost="8">
+    <Descriptors>TraitPopulation03Norm1</Descriptors>
+    <Prerequisites>!TraitPopulation03Alt1,!TraitPopulation03Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation03NormTitle</Title>
+      <Description>%TraitPopulation03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation03Norm2" Root="TraitPopulation03Norm" Family="TraitPopulation" Level="2" Cost="18">
+    <Descriptors>TraitPopulation03Norm2</Descriptors>
+    <Prerequisites>!TraitPopulation03Alt1,!TraitPopulation03Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation03NormTitle</Title>
+      <Description>%TraitPopulation03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation03Alt1" Root="TraitPopulation03Alt" Family="TraitPopulation" Level="1" Cost="-3">
+    <Descriptors>TraitPopulation03Alt1</Descriptors>
+    <Prerequisites>!TraitPopulation03Norm1,!TraitPopulation03Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation03AltTitle</Title>
+      <Description>%TraitPopulation03AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation03Alt2" Root="TraitPopulation03Alt" Family="TraitPopulation" Level="2" Cost="-8">
+    <Descriptors>TraitPopulation03Alt2</Descriptors>
+    <Prerequisites>!TraitPopulation03Norm1,!TraitPopulation03Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitPopulation03AltTitle</Title>
+      <Description>%TraitPopulation03AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Crowded Planets -->
+  <Trait Name="TraitPopulation04Norm1" Root="TraitPopulation04Norm" Family="TraitPopulation" Level="1" Cost="10">
+    <Descriptors>TraitPopulation04Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitPopulation04NormTitle</Title>
+      <Description>%TraitPopulation04NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitPopulation04Norm2" Root="TraitPopulation04Norm" Family="TraitPopulation" Level="2" Cost="20">
+    <Descriptors>TraitPopulation04Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitPopulation04NormTitle</Title>
+      <Description>%TraitPopulation04NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- ############################  SCIENCE TRAITS  #################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Scientists* -->
+  <Trait Name="TraitScience01Norm1" Root="TraitScience01Norm" Family="TraitScience" Level="1" Cost="10">
+    <Descriptors>TraitScience01Norm1</Descriptors>
+    <Prerequisites>!TraitScience01Alt1,!TraitScience01Alt2,!TraitScience01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitScience01NormTitle</Title>
+      <Description>%TraitScience01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitScience01Norm2" Root="TraitScience01Norm" Family="TraitScience" Level="2" Cost="20">
+    <Descriptors>TraitScience01Norm2</Descriptors>
+    <Prerequisites>!TraitScience01Alt1,!TraitScience01Alt2,!TraitScience01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitScience01NormTitle</Title>
+      <Description>%TraitScience01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitScience01Norm3" Root="TraitScience01Norm" Family="TraitScience" Level="3" Cost="30">
+    <Descriptors>TraitScience01Norm3</Descriptors>
+    <Prerequisites>!TraitScience01Alt1,!TraitScience01Alt2,!TraitScience01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitScience01NormTitle</Title>
+      <Description>%TraitScience01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitScience01Alt1" Root="TraitScience01Alt" Family="TraitScience" Level="1" Cost="-5">
+    <Descriptors>TraitScience01Alt1</Descriptors>
+    <Prerequisites>!TraitScience01Norm1,!TraitScience01Norm2,!TraitScience01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitScience01AltTitle</Title>
+      <Description>%TraitScience01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitScience01Alt2" Root="TraitScience01Alt" Family="TraitScience" Level="2" Cost="-10">
+    <Descriptors>TraitScience01Alt2</Descriptors>
+    <Prerequisites>!TraitScience01Norm1,!TraitScience01Norm2,!TraitScience01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitScience01AltTitle</Title>
+      <Description>%TraitScience01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitScience01Alt3" Root="TraitScience01Alt" Family="TraitScience" Level="3" Cost="-15">
+    <Descriptors>TraitScience01Alt3</Descriptors>
+    <Prerequisites>!TraitScience01Norm1,!TraitScience01Norm2,!TraitScience01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitScience01AltTitle</Title>
+      <Description>%TraitScience01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Tolerant -->
+  <Trait Name="TraitScience03VisibleNorm1" Root="TraitScience03VisibleNorm" Family="TraitScience" Level="1" Cost="20">
+    <Descriptors>TraitScience03VisibleNorm1</Descriptors>
+    <SubTraits>TraitScience03Norm1</SubTraits>
+    <Gui>
+      <Title>%TraitScience03NormTitle</Title>
+      <Description>%TraitScience03NormDescription</Description>
+      <Icon />
+    <Tooltip>
+        <Description>%TraitScience03Norm1TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+  <Trait Name="TraitScience03Norm1"  Family="TraitScience" Level="1" Cost="0" Hidden="true">
+    <Descriptors>TraitScience03Default;TraitScience03TundraNorm1;TraitScience03AridNorm1;TraitScience03DesertNorm1;TraitScience03ArcticNorm1;TraitScience03LavaNorm1;TraitScience03BarrenNorm1;TraitScience03AsteroidsNorm1;TraitScience03GasHydrogenNorm1;TraitScience03GasHeliumNorm1;TraitScience03GasMethaneNorm1</Descriptors>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartTolerant"/>
+    <Gui>
+      <Title>%TraitScience03NormTitle</Title>
+      <Description>%TraitScience03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  
+  <Trait Name="TraitScience03VisibleNorm2" Root="TraitScience03VisibleNorm" Family="TraitScience" Level="2" Cost="40">
+    <Descriptors>TraitScience03VisibleNorm2</Descriptors>
+    <SubTraits>TraitScience03Norm2</SubTraits>
+    <Gui>
+      <Title>%TraitScience03NormTitle</Title>
+      <Description>%TraitScience03NormDescription</Description>
+      <Icon />
+    <Tooltip>
+        <Description>%TraitScience03Norm2TooltipEffect</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+  <Trait Name="TraitScience03Norm2"  Family="TraitScience" Level="2" Cost="0" Hidden="true">
+    <Descriptors>TraitScience03Default;TraitScience03TundraNorm2;TraitScience03AridNorm2;TraitScience03DesertNorm2;TraitScience03ArcticNorm2;TraitScience03LavaNorm2;TraitScience03BarrenNorm2;TraitScience03AsteroidsNorm2;TraitScience03GasHydrogenNorm2;TraitScience03GasHeliumNorm2;TraitScience03GasMethaneNorm2</Descriptors>
+    <Command Name="UnlockTechnologies" Arguments="TechPlayerStartTolerant"/>
+    <Gui>
+      <Title>%TraitScience03NormTitle</Title>
+      <Description>%TraitScience03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- ###########################  BUILDING TRAITS  #################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Builders* -->
+  <Trait Name="TraitBuilding01Norm1" Root="TraitBuilding01Norm" Family="TraitBuilding" Level="1" Cost="8">
+    <Descriptors>TraitBuilding01Norm1</Descriptors>
+    <Prerequisites>!TraitBuilding01Alt1,!TraitBuilding01Alt2,!TraitBuilding01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding01NormTitle</Title>
+      <Description>%TraitBuilding01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding01Norm2" Root="TraitBuilding01Norm" Family="TraitBuilding" Level="2" Cost="16">
+    <Descriptors>TraitBuilding01Norm2</Descriptors>
+    <Prerequisites>!TraitBuilding01Alt1,!TraitBuilding01Alt2,!TraitBuilding01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding01NormTitle</Title>
+      <Description>%TraitBuilding01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding01Norm3" Root="TraitBuilding01Norm" Family="TraitBuilding" Level="3" Cost="24">
+    <Descriptors>TraitBuilding01Norm3</Descriptors>
+    <Prerequisites>!TraitBuilding01Alt1,!TraitBuilding01Alt2,!TraitBuilding01Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding01NormTitle</Title>
+      <Description>%TraitBuilding01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding01Alt1" Root="TraitBuilding01Alt" Family="TraitBuilding" Level="1" Cost="-5">
+    <Descriptors>TraitBuilding01Alt1</Descriptors>
+    <Prerequisites>!TraitBuilding01Norm1,!TraitBuilding01Norm2,!TraitBuilding01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding01AltTitle</Title>
+      <Description>%TraitBuilding01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding01Alt2" Root="TraitBuilding01Alt" Family="TraitBuilding" Level="2" Cost="-10">
+    <Descriptors>TraitBuilding01Alt2</Descriptors>
+    <Prerequisites>!TraitBuilding01Norm1,!TraitBuilding01Norm2,!TraitBuilding01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding01AltTitle</Title>
+      <Description>%TraitBuilding01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding01Alt3" Root="TraitBuilding01Alt" Family="TraitBuilding" Level="3" Cost="-15">
+    <Descriptors>TraitBuilding01Alt3</Descriptors>
+    <Prerequisites>!TraitBuilding01Norm1,!TraitBuilding01Norm2,!TraitBuilding01Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding01AltTitle</Title>
+      <Description>%TraitBuilding01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Militarists* -->
+  <Trait Name="TraitBuilding02Norm1" Root="TraitBuilding02Norm" Family="TraitBuilding" Level="1" Cost="8">
+    <Descriptors>TraitBuilding02Norm1</Descriptors>
+    <Prerequisites>!TraitBuilding02Alt1,!TraitBuilding02Alt2,!TraitBuilding02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding02NormTitle</Title>
+      <Description>%TraitBuilding02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding02Norm2" Root="TraitBuilding02Norm" Family="TraitBuilding" Level="2" Cost="16">
+    <Descriptors>TraitBuilding02Norm2</Descriptors>
+    <Prerequisites>!TraitBuilding02Alt1,!TraitBuilding02Alt2,!TraitBuilding02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding02NormTitle</Title>
+      <Description>%TraitBuilding02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding02Norm3" Root="TraitBuilding02Norm" Family="TraitBuilding" Level="3" Cost="24">
+    <Descriptors>TraitBuilding02Norm3</Descriptors>
+    <Prerequisites>!TraitBuilding02Alt1,!TraitBuilding02Alt2,!TraitBuilding02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding02NormTitle</Title>
+      <Description>%TraitBuilding02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding02Alt1" Root="TraitBuilding02Alt" Family="TraitBuilding" Level="1" Cost="-4">
+    <Descriptors>TraitBuilding02Alt1</Descriptors>
+    <Prerequisites>!TraitBuilding02Norm1,!TraitBuilding02Norm2,!TraitBuilding02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding02AltTitle</Title>
+      <Description>%TraitBuilding02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding02Alt2" Root="TraitBuilding02Alt" Family="TraitBuilding" Level="2" Cost="-8">
+    <Descriptors>TraitBuilding02Alt2</Descriptors>
+    <Prerequisites>!TraitBuilding02Norm1,!TraitBuilding02Norm2,!TraitBuilding02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding02AltTitle</Title>
+      <Description>%TraitBuilding02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding02Alt3" Root="TraitBuilding02Alt" Family="TraitBuilding" Level="3" Cost="-12">
+    <Descriptors>TraitBuilding02Alt3</Descriptors>
+    <Prerequisites>!TraitBuilding02Norm1,!TraitBuilding02Norm2,!TraitBuilding02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitBuilding02AltTitle</Title>
+      <Description>%TraitBuilding02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Masters of Destruction -->
+  <Trait Name="TraitBuilding03Norm1" Root="TraitBuilding03Norm" Family="TraitBuilding" Level="1" Cost="10">
+    <Descriptors>TraitBuilding03Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitBuilding03NormTitle</Title>
+      <Description>%TraitBuilding03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitBuilding03Norm2" Root="TraitBuilding03Norm" Family="TraitBuilding" Level="2" Cost="20">
+    <Descriptors>TraitBuilding03Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitBuilding03NormTitle</Title>
+      <Description>%TraitBuilding03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- ############################   FLEET TRAITS   #################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Fast Travelers* -->
+  <Trait Name="TraitFleet01Norm1" Root="TraitFleet01Norm" Family="TraitFleet" Level="1" Cost="5">
+    <Descriptors>TraitFleet01Norm1</Descriptors>
+    <Prerequisites>!TraitFleet01Alt1,!TraitFleet01Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet01NormTitle</Title>
+      <Description>%TraitFleet01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet01Norm2" Root="TraitFleet01Norm" Family="TraitFleet" Level="2" Cost="10">
+    <Descriptors>TraitFleet01Norm2</Descriptors>
+    <Prerequisites>!TraitFleet01Alt1,!TraitFleet01Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet01NormTitle</Title>
+      <Description>%TraitFleet01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet01Alt1" Root="TraitFleet01Alt" Family="TraitFleet" Level="1" Cost="-3">
+    <Descriptors>TraitFleet01Alt1</Descriptors>
+    <Prerequisites>!TraitFleet01Norm1,!TraitFleet01Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet01AltTitle</Title>
+      <Description>%TraitFleet01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet01Alt2" Root="TraitFleet01Alt" Family="TraitFleet" Level="2" Cost="-6">
+    <Descriptors>TraitFleet01Alt2</Descriptors>
+    <Prerequisites>!TraitFleet01Norm1,!TraitFleet01Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet01AltTitle</Title>
+      <Description>%TraitFleet01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Big Fleets* -->
+  <Trait Name="TraitFleet02Norm1" Root="TraitFleet02Norm" Family="TraitFleet" Level="1" Cost="10">
+    <Descriptors>TraitFleet02Norm1</Descriptors>
+    <Prerequisites>!TraitFleet02Alt1,!TraitFleet02Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet02NormTitle</Title>
+      <Description>%TraitFleet02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet02Norm2" Root="TraitFleet02Norm" Family="TraitFleet" Level="2" Cost="25">
+    <Descriptors>TraitFleet02Norm2</Descriptors>
+    <Prerequisites>!TraitFleet02Alt1,!TraitFleet02Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet02NormTitle</Title>
+      <Description>%TraitFleet02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet02Alt1" Root="TraitFleet02Alt" Family="TraitFleet" Level="1" Cost="-6">
+    <Descriptors>TraitFleet02Alt1</Descriptors>
+    <Prerequisites>!TraitFleet02Norm1,!TraitFleet02Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet02AltTitle</Title>
+      <Description>%TraitFleet02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet02Alt2" Root="TraitFleet02Alt" Family="TraitFleet" Level="2" Cost="-15">
+    <Descriptors>TraitFleet02Alt2</Descriptors>
+    <Prerequisites>!TraitFleet02Norm1,!TraitFleet02Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet02AltTitle</Title>
+      <Description>%TraitFleet02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Omniscient -->
+  <!-- ##### May be removed : too complex to code + its effect is obsolete since detection radius has been implemented #####
+  <Trait Name="TraitFleet03Norm1"  Family="TraitFleet" Level="1" Cost="5">
+    <Descriptors>TraitFleet03Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitFleet03NormTitle</Title>
+      <Description>%TraitFleet03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  -->
+
+  <!-- Strong Alloys* -->
+  <Trait Name="TraitFleet04Norm1" Root="TraitFleet04Norm" Family="TraitFleet" Level="1" Cost="10">
+    <Descriptors>TraitFleet04Norm1</Descriptors>
+    <Prerequisites>!TraitFleet04Alt1,!TraitFleet04Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet04NormTitle</Title>
+      <Description>%TraitFleet04NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet04Norm2" Root="TraitFleet04Norm" Family="TraitFleet" Level="2" Cost="20">
+    <Descriptors>TraitFleet04Norm2</Descriptors>
+    <Prerequisites>!TraitFleet04Alt1,!TraitFleet04Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet04NormTitle</Title>
+      <Description>%TraitFleet04NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet04Alt1" Root="TraitFleet04Alt" Family="TraitFleet" Level="1" Cost="-5">
+    <Descriptors>TraitFleet04Alt1</Descriptors>
+    <Prerequisites>!TraitFleet04Norm1,!TraitFleet04Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet04AltTitle</Title>
+      <Description>%TraitFleet04AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet04Alt2" Root="TraitFleet04Alt" Family="TraitFleet" Level="2" Cost="-10">
+    <Descriptors>TraitFleet04Alt2</Descriptors>
+    <Prerequisites>!TraitFleet04Norm1,!TraitFleet04Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet04AltTitle</Title>
+      <Description>%TraitFleet04AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Optimal Structure* -->
+  <Trait Name="TraitFleet05Norm1" Root="TraitFleet05Norm" Family="TraitFleet" Level="1" Cost="10">
+    <Descriptors>TraitFleet05Norm1</Descriptors>
+    <Prerequisites>!TraitFleet05Alt1,!TraitFleet05Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet05NormTitle</Title>
+      <Description>%TraitFleet05NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet05Norm2" Root="TraitFleet05Norm" Family="TraitFleet" Level="2" Cost="20">
+    <Descriptors>TraitFleet05Norm2</Descriptors>
+    <Prerequisites>!TraitFleet05Alt1,!TraitFleet05Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet05NormTitle</Title>
+      <Description>%TraitFleet05NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet05Alt1" Root="TraitFleet05Alt" Family="TraitFleet" Level="1" Cost="-8">
+    <Descriptors>TraitFleet05Alt1</Descriptors>
+    <Prerequisites>!TraitFleet05Norm1,!TraitFleet05Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet05AltTitle</Title>
+      <Description>%TraitFleet05AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet05Alt2" Root="TraitFleet05Alt" Family="TraitFleet" Level="2" Cost="-16">
+    <Descriptors>TraitFleet05Alt2</Descriptors>
+    <Prerequisites>!TraitFleet05Norm1,!TraitFleet05Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitFleet05AltTitle</Title>
+      <Description>%TraitFleet05AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Masters of Illusion -->
+  <Trait Name="TraitFleet06Norm1" Root="TraitFleet06Norm" Family="TraitFleet" Level="1" Cost="5">
+    <Descriptors>TraitFleet06Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitFleet06NormTitle</Title>
+      <Description>%TraitFleet06NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet06Norm2" Root="TraitFleet06Norm" Family="TraitFleet" Level="2" Cost="10">
+    <Descriptors>TraitFleet06Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitFleet06NormTitle</Title>
+      <Description>%TraitFleet06NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Meticulous information analysis -->
+  <Trait Name="TraitFleet07Norm1" Root="TraitFleet07Norm" Family="TraitFleet" Level="1" Cost="3">
+    <Descriptors>TraitFleet07Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitFleet07NormTitle</Title>
+      <Description>%TraitFleet07NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitFleet07Norm2" Root="TraitFleet07Norm" Family="TraitFleet" Level="2" Cost="6">
+    <Descriptors>TraitFleet07Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitFleet07NormTitle</Title>
+      <Description>%TraitFleet07NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- ########################## SPACE BATTLE TRAITS ################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Dust recyclers -->
+  <Trait Name="TraitSpaceBattle01Norm1" Root="TraitSpaceBattle01Norm" Family="TraitSpaceBattle" Level="1" Cost="5">
+    <Descriptors>TraitSpaceBattle01Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitSpaceBattle01NormTitle</Title>
+      <Description>%TraitSpaceBattle01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle01Norm2" Root="TraitSpaceBattle01Norm" Family="TraitSpaceBattle" Level="2" Cost="10">
+    <Descriptors>TraitSpaceBattle01Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitSpaceBattle01NormTitle</Title>
+      <Description>%TraitSpaceBattle01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Snipers* -->
+  <Trait Name="TraitSpaceBattle02Norm1" Root="TraitSpaceBattle02Norm" Family="TraitSpaceBattle" Level="1" Cost="5">
+    <Descriptors>TraitSpaceBattle02Norm1</Descriptors>
+    <Prerequisites>!TraitSpaceBattle02Alt1,!TraitSpaceBattle02Alt2,!TraitSpaceBattle02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle02NormTitle</Title>
+      <Description>%TraitSpaceBattle02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle02Norm2" Root="TraitSpaceBattle02Norm" Family="TraitSpaceBattle" Level="2" Cost="10">
+    <Descriptors>TraitSpaceBattle02Norm2</Descriptors>
+    <Prerequisites>!TraitSpaceBattle02Alt1,!TraitSpaceBattle02Alt2,!TraitSpaceBattle02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle02NormTitle</Title>
+      <Description>%TraitSpaceBattle02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle02Norm3" Root="TraitSpaceBattle02Norm" Family="TraitSpaceBattle" Level="3" Cost="15">
+    <Descriptors>TraitSpaceBattle02Norm3</Descriptors>
+    <Prerequisites>!TraitSpaceBattle02Alt1,!TraitSpaceBattle02Alt2,!TraitSpaceBattle02Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle02NormTitle</Title>
+      <Description>%TraitSpaceBattle02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle02Alt1" Root="TraitSpaceBattle02Alt" Family="TraitSpaceBattle" Level="1" Cost="-2">
+    <Descriptors>TraitSpaceBattle02Alt1</Descriptors>
+    <Prerequisites>!TraitSpaceBattle02Norm1,!TraitSpaceBattle02Norm2,!TraitSpaceBattle02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle02AltTitle</Title>
+      <Description>%TraitSpaceBattle02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle02Alt2" Root="TraitSpaceBattle02Alt" Family="TraitSpaceBattle" Level="2" Cost="-4">
+    <Descriptors>TraitSpaceBattle02Alt2</Descriptors>
+    <Prerequisites>!TraitSpaceBattle02Norm1,!TraitSpaceBattle02Norm2,!TraitSpaceBattle02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle02AltTitle</Title>
+      <Description>%TraitSpaceBattle02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle02Alt3" Root="TraitSpaceBattle02Alt" Family="TraitSpaceBattle" Level="3" Cost="-7">
+    <Descriptors>TraitSpaceBattle02Alt3</Descriptors>
+    <Prerequisites>!TraitSpaceBattle02Norm1,!TraitSpaceBattle02Norm2,!TraitSpaceBattle02Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle02AltTitle</Title>
+      <Description>%TraitSpaceBattle02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Deadly Weapons* -->
+  <Trait Name="TraitSpaceBattle03Norm1" Root="TraitSpaceBattle03Norm" Family="TraitSpaceBattle" Level="1" Cost="5">
+    <Descriptors>TraitSpaceBattle03Norm1</Descriptors>
+    <Prerequisites>!TraitSpaceBattle03Alt1,!TraitSpaceBattle03Alt2,!TraitSpaceBattle03Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle03NormTitle</Title>
+      <Description>%TraitSpaceBattle03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle03Norm2" Root="TraitSpaceBattle03Norm" Family="TraitSpaceBattle" Level="2" Cost="10">
+    <Descriptors>TraitSpaceBattle03Norm2</Descriptors>
+    <Prerequisites>!TraitSpaceBattle03Alt1,!TraitSpaceBattle03Alt2,!TraitSpaceBattle03Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle03NormTitle</Title>
+      <Description>%TraitSpaceBattle03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle03Norm3" Root="TraitSpaceBattle03Norm" Family="TraitSpaceBattle" Level="3" Cost="15">
+    <Descriptors>TraitSpaceBattle03Norm3</Descriptors>
+    <Prerequisites>!TraitSpaceBattle03Alt1,!TraitSpaceBattle03Alt2,!TraitSpaceBattle03Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle03NormTitle</Title>
+      <Description>%TraitSpaceBattle03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle03Alt1" Root="TraitSpaceBattle03Alt" Family="TraitSpaceBattle" Level="1" Cost="-2">
+    <Descriptors>TraitSpaceBattle03Alt1</Descriptors>
+    <Prerequisites>!TraitSpaceBattle03Norm1,!TraitSpaceBattle03Norm2,!TraitSpaceBattle03Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle03AltTitle</Title>
+      <Description>%TraitSpaceBattle03AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle03Alt2" Root="TraitSpaceBattle03Alt" Family="TraitSpaceBattle" Level="2" Cost="-4">
+    <Descriptors>TraitSpaceBattle03Alt2</Descriptors>
+    <Prerequisites>!TraitSpaceBattle03Norm1,!TraitSpaceBattle03Norm2,!TraitSpaceBattle03Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle03AltTitle</Title>
+      <Description>%TraitSpaceBattle03AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle03Alt3" Root="TraitSpaceBattle03Alt" Family="TraitSpaceBattle" Level="3" Cost="-7">
+    <Descriptors>TraitSpaceBattle03Alt3</Descriptors>
+    <Prerequisites>!TraitSpaceBattle03Norm1,!TraitSpaceBattle03Norm2,!TraitSpaceBattle03Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle03AltTitle</Title>
+      <Description>%TraitSpaceBattle03AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Optimal Defense* -->
+  <Trait Name="TraitSpaceBattle04Norm1" Root="TraitSpaceBattle04Norm" Family="TraitSpaceBattle" Level="1" Cost="5">
+    <Descriptors>TraitSpaceBattle04Norm1</Descriptors>
+    <Prerequisites>!TraitSpaceBattle04Alt1,!TraitSpaceBattle04Alt2,!TraitSpaceBattle04Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle04NormTitle</Title>
+      <Description>%TraitSpaceBattle04NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle04Norm2" Root="TraitSpaceBattle04Norm" Family="TraitSpaceBattle" Level="2" Cost="10">
+    <Descriptors>TraitSpaceBattle04Norm2</Descriptors>
+    <Prerequisites>!TraitSpaceBattle04Alt1,!TraitSpaceBattle04Alt2,!TraitSpaceBattle04Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle04NormTitle</Title>
+      <Description>%TraitSpaceBattle04NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle04Norm3" Root="TraitSpaceBattle04Norm" Family="TraitSpaceBattle" Level="3" Cost="15">
+    <Descriptors>TraitSpaceBattle04Norm3</Descriptors>
+    <Prerequisites>!TraitSpaceBattle04Alt1,!TraitSpaceBattle04Alt2,!TraitSpaceBattle04Alt3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle04NormTitle</Title>
+      <Description>%TraitSpaceBattle04NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle04Alt1" Root="TraitSpaceBattle04Alt" Family="TraitSpaceBattle" Level="1" Cost="-2">
+    <Descriptors>TraitSpaceBattle04Alt1</Descriptors>
+    <Prerequisites>!TraitSpaceBattle04Norm1,!TraitSpaceBattle04Norm2,!TraitSpaceBattle04Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle04AltTitle</Title>
+      <Description>%TraitSpaceBattle04AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle04Alt2" Root="TraitSpaceBattle04Alt" Family="TraitSpaceBattle" Level="2" Cost="-4">
+    <Descriptors>TraitSpaceBattle04Alt2</Descriptors>
+    <Prerequisites>!TraitSpaceBattle04Norm1,!TraitSpaceBattle04Norm2,!TraitSpaceBattle04Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle04AltTitle</Title>
+      <Description>%TraitSpaceBattle04AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle04Alt3" Root="TraitSpaceBattle04Alt" Family="TraitSpaceBattle" Level="3" Cost="-7">
+    <Descriptors>TraitSpaceBattle04Alt3</Descriptors>
+    <Prerequisites>!TraitSpaceBattle04Norm1,!TraitSpaceBattle04Norm2,!TraitSpaceBattle04Norm3</Prerequisites>
+    <Gui>
+      <Title>%TraitSpaceBattle04AltTitle</Title>
+      <Description>%TraitSpaceBattle04AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Mutual Understanding -->
+  <Trait Name="TraitSpaceBattle05Norm1" Root="TraitSpaceBattle05Norm" Family="TraitSpaceBattle" Level="1" Cost="5">
+    <Descriptors>TraitSpaceBattle05Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitSpaceBattle05NormTitle</Title>
+      <Description>%TraitSpaceBattle05NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle05Norm2" Root="TraitSpaceBattle05Norm" Family="TraitSpaceBattle" Level="2" Cost="10">
+    <Descriptors>TraitSpaceBattle05Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitSpaceBattle05NormTitle</Title>
+      <Description>%TraitSpaceBattle05NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Knowledge Gathering -->
+  <Trait Name="TraitSpaceBattle07Norm1" Root="TraitSpaceBattle07Norm" Family="TraitSpaceBattle" Level="1" Cost="5">
+    <Descriptors>TraitSpaceBattle07Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitSpaceBattle07NormTitle</Title>
+      <Description>%TraitSpaceBattle07NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitSpaceBattle07Norm2" Root="TraitSpaceBattle07Norm" Family="TraitSpaceBattle" Level="2" Cost="10">
+    <Descriptors>TraitSpaceBattle07Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitSpaceBattle07NormTitle</Title>
+      <Description>%TraitSpaceBattle07NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- ############################# DEFENSE TRAITS ##################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Fearless Warriors* -->
+  <Trait Name="TraitDefense01Norm1" Root="TraitDefense01Norm" Family="TraitDefense" Level="1" Cost="6">
+    <Descriptors>TraitDefense01Norm1</Descriptors>
+    <Prerequisites>!TraitDefense01Alt1,!TraitDefense01Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense01NormTitle</Title>
+      <Description>%TraitDefense01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense01Norm2" Root="TraitDefense01Norm" Family="TraitDefense" Level="2" Cost="12">
+    <Descriptors>TraitDefense01Norm2</Descriptors>
+    <Prerequisites>!TraitDefense01Alt1,!TraitDefense01Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense01NormTitle</Title>
+      <Description>%TraitDefense01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense01Alt1" Root="TraitDefense01Alt" Family="TraitDefense" Level="1" Cost="-2">
+    <Descriptors>TraitDefense01Alt1</Descriptors>
+    <Prerequisites>!TraitDefense01Norm1,!TraitDefense01Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense01AltTitle</Title>
+      <Description>%TraitDefense01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense01Alt2" Root="TraitDefense01Alt" Family="TraitDefense" Level="2" Cost="-5">
+    <Descriptors>TraitDefense01Alt2</Descriptors>
+    <Prerequisites>!TraitDefense01Norm1,!TraitDefense01Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense01AltTitle</Title>
+      <Description>%TraitDefense01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Rebellion* -->
+  <Trait Name="TraitDefense02Norm1" Root="TraitDefense02Norm" Family="TraitDefense" Level="1" Cost="3">
+    <Descriptors>TraitDefense02Norm1</Descriptors>
+    <Prerequisites>!TraitDefense02Alt1,!TraitDefense02Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense02NormTitle</Title>
+      <Description>%TraitDefense02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense02Norm2" Root="TraitDefense02Norm" Family="TraitDefense" Level="2" Cost="6">
+    <Descriptors>TraitDefense02Norm2</Descriptors>
+    <Prerequisites>!TraitDefense02Alt1,!TraitDefense02Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense02NormTitle</Title>
+      <Description>%TraitDefense02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense02Alt1" Root="TraitDefense02Alt" Family="TraitDefense" Level="1" Cost="-1">
+    <Descriptors>TraitDefense02Alt1</Descriptors>
+    <Prerequisites>!TraitDefense02Norm1,!TraitDefense02Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense02AltTitle</Title>
+      <Description>%TraitDefense02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense02Alt2" Root="TraitDefense02Alt" Family="TraitDefense" Level="2" Cost="-2">
+    <Descriptors>TraitDefense02Alt2</Descriptors>
+    <Prerequisites>!TraitDefense02Norm1,!TraitDefense02Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitDefense02AltTitle</Title>
+      <Description>%TraitDefense02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Stellar guardians -->
+  <Trait Name="TraitDefense03Norm1" Root="TraitDefense03Norm" Family="TraitDefense" Level="1" Cost="5">
+    <Descriptors>TraitDefense03Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitDefense03NormTitle</Title>
+      <Description>%TraitDefense03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense03Norm2" Root="TraitDefense03Norm" Family="TraitDefense" Level="2" Cost="10">
+    <Descriptors>TraitDefense03Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitDefense03NormTitle</Title>
+      <Description>%TraitDefense03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Revenge -->
+  <Trait Name="TraitDefense04Norm1" Root="TraitDefense04Norm" Family="TraitDefense" Level="1" Cost="4">
+    <Descriptors>TraitDefense04Norm1</Descriptors>
+  <Gui>
+      <Title>%TraitDefense04NormTitle</Title>
+      <Description>%TraitDefense04NormDescription</Description>
+      <Tooltip>
+        <Description>%TraitDefense04Norm1TooltipEffect1</Description>
+        <Description>%TraitDefense04Norm1TooltipEffect2</Description>
+        <Description>%TraitDefense04Norm1TooltipEffect3</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDefense04Norm2" Root="TraitDefense04Norm" Family="TraitDefense" Level="2" Cost="8">
+    <Descriptors>TraitDefense04Norm2</Descriptors>
+  <Gui>
+      <Title>%TraitDefense04NormTitle</Title>
+      <Description>%TraitDefense04NormDescription</Description>
+      <Tooltip>
+        <Description>%TraitDefense04Norm2TooltipEffect1</Description>
+        <Description>%TraitDefense04Norm2TooltipEffect2</Description>
+        <Description>%TraitDefense04Norm2TooltipEffect3</Description>
+      </Tooltip>
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- ###########################  DIPLOMACY TRAITS  ################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Diplomats -->
+  <Trait Name="TraitDiplomacy01Norm1" Root="TraitDiplomacy01Norm" Family="TraitDiplomacy" Level="1" Cost="6">
+    <Descriptors>TraitDiplomacy01Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy01NormTitle</Title>
+      <Description>%TraitDiplomacy01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDiplomacy01Norm2" Root="TraitDiplomacy01Norm" Family="TraitDiplomacy" Level="2" Cost="15">
+    <Descriptors>TraitDiplomacy01Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy01NormTitle</Title>
+      <Description>%TraitDiplomacy01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Symbiosis -->
+  <Trait Name="TraitDiplomacy02Norm1" Root="TraitDiplomacy02Norm" Family="TraitDiplomacy" Level="1" Cost="6">
+    <Descriptors>TraitDiplomacy02Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy02NormTitle</Title>
+      <Description>%TraitDiplomacy02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDiplomacy02Norm2" Root="TraitDiplomacy02Norm" Family="TraitDiplomacy" Level="2" Cost="15">
+    <Descriptors>TraitDiplomacy02Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy02NormTitle</Title>
+      <Description>%TraitDiplomacy02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Naive* -->
+  <Trait Name="TraitDiplomacy03Norm1" Root="TraitDiplomacy03Norm" Family="TraitDiplomacy" Level="1" Cost="5">
+    <Descriptors>TraitDiplomacy03Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy03NormTitle</Title>
+      <Description>%TraitDiplomacy03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDiplomacy03Norm2" Root="TraitDiplomacy03Norm" Family="TraitDiplomacy" Level="2" Cost="10">
+    <Descriptors>TraitDiplomacy03Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy03NormTitle</Title>
+      <Description>%TraitDiplomacy03NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <!--
+  <Trait Name="TraitDiplomacy03Alt1"  Family="TraitDiplomacy" Level="1" Cost="-3">
+    <Descriptors>TraitDiplomacy03Alt1</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy03AltTitle</Title>
+      <Description>%TraitDiplomacy03AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitDiplomacy03Alt2"  Family="TraitDiplomacy" Level="2" Cost="-6">
+    <Descriptors>TraitDiplomacy03Alt2</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy03AltTitle</Title>
+      <Description>%TraitDiplomacy03AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  -->
+
+  <!-- Eternal War -->
+  <Trait Name="TraitDiplomacy04Norm1" Family="TraitDiplomacy" Level="1" Cost="-10">
+    <Descriptors>DiplomaticStatusEternalWar</Descriptors>
+    <Gui>
+      <Title>%TraitDiplomacy04NormTitle</Title>
+      <Description>%TraitDiplomacy04NormDescription</Description>
+      <Icon />
+      <Tooltip>
+        <Description></Description>
+      </Tooltip>
+      <!-- doesn't work: Type="DiplomaticStatus" -->
+    </Gui>
+  </Trait>
+
+
+
+  <!-- ################################################################################## -->
+  <!-- #############################   HERO TRAITS   #################################### -->
+  <!-- ################################################################################## -->
+
+  <!-- Power Masters* -->
+  <Trait Name="TraitHero01Norm1" Root="TraitHero01Norm" Family="TraitHero" Level="1" Cost="3">
+    <Descriptors>TraitHero01Norm1</Descriptors>
+    <Prerequisites>!TraitHero01Alt1,!TraitHero01Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero01NormTitle</Title>
+      <Description>%TraitHero01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero01Norm2" Root="TraitHero01Norm" Family="TraitHero" Level="2" Cost="6">
+    <Descriptors>TraitHero01Norm2</Descriptors>
+    <Prerequisites>!TraitHero01Alt1,!TraitHero01Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero01NormTitle</Title>
+      <Description>%TraitHero01NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero01Alt1" Root="TraitHero01Alt" Family="TraitHero" Level="1" Cost="-2">
+    <Descriptors>TraitHero01Alt1</Descriptors>
+    <Prerequisites>!TraitHero01Norm1,!TraitHero01Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero01AltTitle</Title>
+      <Description>%TraitHero01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero01Alt2" Root="TraitHero01Alt" Family="TraitHero" Level="2" Cost="-4">
+    <Descriptors>TraitHero01Alt2</Descriptors>
+    <Prerequisites>!TraitHero01Norm1,!TraitHero01Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero01AltTitle</Title>
+      <Description>%TraitHero01AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Heroic Medicine* -->
+  <Trait Name="TraitHero02Norm1" Root="TraitHero02Norm" Family="TraitHero" Level="1" Cost="5">
+    <Descriptors>TraitHero02Norm1</Descriptors>
+    <Prerequisites>!TraitHero02Alt1,!TraitHero02Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero02NormTitle</Title>
+      <Description>%TraitHero02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero02Norm2" Root="TraitHero02Norm" Family="TraitHero" Level="2" Cost="10">
+    <Descriptors>TraitHero02Norm2</Descriptors>
+    <Prerequisites>!TraitHero02Alt1,!TraitHero02Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero02NormTitle</Title>
+      <Description>%TraitHero02NormDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero02Alt1" Root="TraitHero02Alt" Family="TraitHero" Level="1" Cost="-3">
+    <Descriptors>TraitHero02Alt1</Descriptors>
+    <Prerequisites>!TraitHero02Norm1,!TraitHero02Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero02AltTitle</Title>
+      <Description>%TraitHero02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero02Alt2" Root="TraitHero02Alt" Family="TraitHero" Level="2" Cost="-6">
+    <Descriptors>TraitHero02Alt2</Descriptors>
+    <Prerequisites>!TraitHero02Norm1,!TraitHero02Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero02AltTitle</Title>
+      <Description>%TraitHero02AltDescription</Description>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Legendary Heroes -->
+  <Trait Name="TraitHero03Norm1" Root="TraitHero03Norm" Family="TraitHero" Level="1" Cost="8">
+    <Descriptors>TraitHero03Norm1</Descriptors>
+    <Prerequisites>!TraitHero03Alt1,!TraitHero03Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero03NormTitle</Title>
+      <Description>%TraitHero03NormDescription</Description>
+      <Tooltip>
+        <Description>%TraitHero03Norm1TooltipEffect</Description>
+      </Tooltip>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero03Norm2" Root="TraitHero03Norm" Family="TraitHero" Level="2" Cost="16">
+    <Descriptors>TraitHero03Norm2</Descriptors>
+    <Prerequisites>!TraitHero03Alt1,!TraitHero03Alt2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero03NormTitle</Title>
+      <Description>%TraitHero03NormDescription</Description>
+      <Tooltip>
+        <Description>%TraitHero03Norm2TooltipEffect</Description>
+      </Tooltip>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero03Alt1" Root="TraitHero03Alt" Family="TraitHero" Level="1" Cost="-6">
+    <Descriptors>TraitHero03Alt1</Descriptors>
+    <Prerequisites>!TraitHero03Norm1,!TraitHero03Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero03AltTitle</Title>
+      <Description>%TraitHero03AltDescription</Description>
+      <Tooltip>
+        <Description>%TraitHero03Alt1TooltipEffect</Description>
+      </Tooltip>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero03Alt2" Root="TraitHero03Alt" Family="TraitHero" Level="2" Cost="-12">
+    <Descriptors>TraitHero03Alt2</Descriptors>
+    <Prerequisites>!TraitHero03Norm1,!TraitHero03Norm2</Prerequisites>
+    <Gui>
+      <Title>%TraitHero03AltTitle</Title>
+      <Description>%TraitHero03AltDescription</Description>
+      <Tooltip>
+        <Description>%TraitHero03Alt2TooltipEffect</Description>
+      </Tooltip>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!-- Death Before Dishonor -->
+  <Trait Name="TraitHero04Norm1" Root="TraitHero04Norm" Family="TraitHero" Level="1" Cost="5">
+    <Descriptors>TraitHero04Norm1</Descriptors>
+    <Gui>
+      <Title>%TraitHero04NormTitle</Title>
+      <Description>%TraitHero04NormDescription</Description>
+      <Tooltip>
+        <Description>%TraitHero04Norm1TooltipEffect</Description>
+      </Tooltip>
+      <Icon />
+    </Gui>
+  </Trait>
+  <Trait Name="TraitHero04Norm2" Root="TraitHero04Norm" Family="TraitHero" Level="2" Cost="10">
+    <Descriptors>TraitHero04Norm2</Descriptors>
+    <Gui>
+      <Title>%TraitHero04NormTitle</Title>
+      <Description>%TraitHero04NormDescription</Description>
+      <Tooltip>
+        <Description>%TraitHero04Norm2TooltipEffect</Description>
+      </Tooltip>
+      <Icon />
+    </Gui>
+  </Trait>
+
+  <!--
+      Trait occasional effects : List of all temporary trait effects that will be activated by game events (battle ending, invasion success, system lost)
+      Available tags : 
+        - ResetTurns : If an active effect is launched another time, we reset its remaining turns
+        - Accumulate : If an active effect is launched another time, we apply its descriptors again
+  -->
+  <!-- Applied if the player has the trait TraitDefense04Norm1 after loosing a system -->
+  <TraitOccasionalEffect Name="TraitDefense04Norm1SystemLost" TurnDuration="20">
+    <Descriptors>TraitDefense04Norm1SystemLost</Descriptors>
+    <Tags>ResetTurns</Tags>
+  </TraitOccasionalEffect>
+  <!-- Applied if the player has the trait TraitDefense04Norm2 after loosing a system -->
+  <TraitOccasionalEffect Name="TraitDefense04Norm2SystemLost" TurnDuration="20">
+    <Descriptors>TraitDefense04Norm2SystemLost</Descriptors>
+    <Tags>ResetTurns</Tags>
+  </TraitOccasionalEffect>
+  <!-- Applied if the player has the trait AffinityHissho after succeeding in invading a system -->
+  <TraitOccasionalEffect Name="AffinityHisshoInvasionVictory" TurnDuration="15" OccurrenceMaxCount="4">
+    <Descriptors>AffinityHisshoInvasionVictory</Descriptors>
+    <Tags>ResetTurns;Accumulate</Tags> <!-- test without Accumulate -->
+  </TraitOccasionalEffect>
+  <!-- Applied if the player has the trait AffinityHissho after winning a battle -->
+  <TraitOccasionalEffect Name="AffinityHisshoBattleVictory" TurnDuration="15" OccurrenceMaxCount="4">
+    <Descriptors>AffinityHisshoBattleVictory</Descriptors>
+    <Tags>ResetTurns;Accumulate</Tags> <!-- test without Accumulate -->
+  </TraitOccasionalEffect>
+
+</Datatable>

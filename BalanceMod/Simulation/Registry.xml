@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Registry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Audio/>
+  <Game>
+    <VictoryConditions>
+      <ScienceVictoryUnlockTarget>ScienceVictory</ScienceVictoryUnlockTarget>       <!-- science unlockable to win science victory -->
+      <!-- Diplomatic victory coefs-->
+      <FixedPeacePointTarget>800</FixedPeacePointTarget>
+      <EmpireCountPeacePointCoef>160</EmpireCountPeacePointCoef>
+      <SystemCountPeacePointCoef>100</SystemCountPeacePointCoef>
+      <RatioPeacePointCoef>120</RatioPeacePointCoef>
+      <!-- Economic victory coefs -->
+      <FixedEconomicPointTarget>500000</FixedEconomicPointTarget>
+      <SystemCountEconomicPointCoef>5000</SystemCountEconomicPointCoef>
+      <EmpireCountEconomicPointCoef>-40000</EmpireCountEconomicPointCoef>
+      <!-- Speed factors -->
+      <TimeVictorySpeedFactor>0.0</TimeVictorySpeedFactor>
+      <EconomicVictorySpeedFactor>0.0</EconomicVictorySpeedFactor>
+      <DiplomaticVictorySpeedFactor>0.0</DiplomaticVictorySpeedFactor>
+      <PopulationVictorySpeedFactor>0.0</PopulationVictorySpeedFactor>
+    </VictoryConditions>
+    <Empire>
+      <Agencies>
+        <DepartmentOfScience>
+          <OverProductionAmountCoef>1.0</OverProductionAmountCoef>
+        </DepartmentOfScience>
+        <DepartmentOfCommerce>
+          <ResourceMonopoly>4</ResourceMonopoly>
+          <UnlockableBonus>LuxuryBoost1</UnlockableBonus>
+          <UnlockableMonopoly>LuxuryBoost2</UnlockableMonopoly>
+          <ResourceProductionBonus>
+            <DepositSizeLimit>0;1;2;3;4</DepositSizeLimit>
+            <ProductionPercentBonus>0;-0.1;-0.2;-0.3;-0.6</ProductionPercentBonus>
+          </ResourceProductionBonus>
+          <TradeRoutes>
+            <TradeRouteDistanceBonusMultiplier>2.0</TradeRouteDistanceBonusMultiplier>
+            <TradeRouteDistanceBonusAdditiveValue>1.0</TradeRouteDistanceBonusAdditiveValue>
+            <TradeRouteDustToScienceRatio>2</TradeRouteDustToScienceRatio>
+          </TradeRoutes>
+        </DepartmentOfCommerce>
+        <DepartmentOfDefense>
+          <Encounters>
+            <Countdown>30</Countdown>
+          </Encounters>
+          <FleetWaitDuration>1</FleetWaitDuration>
+          <FleetParsecPerSecond>10</FleetParsecPerSecond>
+          <FleetNameMaxIndex>24</FleetNameMaxIndex>
+          <MaximumNumberOfAvailableShipDesigns>10</MaximumNumberOfAvailableShipDesigns>
+        </DepartmentOfDefense>
+        <DepartmentOfEducation>
+          <MaxHeroesToRecruitmentPool>3</MaxHeroesToRecruitmentPool>
+          <NewHeroRemainingTurns>50</NewHeroRemainingTurns>
+          <RecoveredHeroTurnsBeforeLeave>2</RecoveredHeroTurnsBeforeLeave>
+          <FixedHeroRecruitmentCost>20</FixedHeroRecruitmentCost>
+          <VariableHeroRecruitmentCost>60</VariableHeroRecruitmentCost>
+          <PowerHeroCountRecruitmentCost>1</PowerHeroCountRecruitmentCost>
+          <HeroHealingCostConstant>5</HeroHealingCostConstant>
+          <HeroHealingCostFatigueCoef>20</HeroHealingCostFatigueCoef>
+        </DepartmentOfEducation>
+        <DepartmentOfForeignAffairs>
+          <BrokenTreaty>25</BrokenTreaty>
+          <PeaceOrAllianceAfterBrokenTreaty>50</PeaceOrAllianceAfterBrokenTreaty>
+          <PeacePointColdWarCoef>0.2</PeacePointColdWarCoef>
+          <PeacePointPeaceCoef>0.6</PeacePointPeaceCoef>
+          <PeacePointAllianceCoef>1.6</PeacePointAllianceCoef>
+        </DepartmentOfForeignAffairs>
+        <DepartmentOfTheInterior>
+          <!-- Food surplus needed for population = (pop ^ PowerSystemPopulation) * MultiplierSystemPopulation -->
+          <PowerSystemPopulation>2.4</PowerSystemPopulation>
+          <PopGrowthGameSpeedFactor>0.0</PopGrowthGameSpeedFactor>
+          <PopGrowthGameDifficultyHumanFactor>0.0</PopGrowthGameDifficultyHumanFactor>
+          <PopGrowthGameDifficultyAIFactor>0.0</PopGrowthGameDifficultyAIFactor>
+          <MultiplierSystemPopulation>4.0</MultiplierSystemPopulation>
+          <Frontiers>
+            <!-- Influence = (system.population * $PopulationWeight + system.output(fims) * $OutputWeight) ^ $Power -->
+            <Power>0.35</Power>
+            <PopulationWeight>1</PopulationWeight>
+            <OutputWeight>0.2</OutputWeight>
+          </Frontiers>
+          <ColonyExpansionLimiters>
+            <UnderMe>ColonyExpansionLimiterUnderMe</UnderMe>
+            <UnderAlly>ColonyExpansionLimiterUnderAlly</UnderAlly>
+            <UnderEnnemy>ColonyExpansionLimiterUnderEnnemy</UnderEnnemy>
+            <Neutral>ColonyExpansionLimiterNeutral</Neutral>
+          </ColonyExpansionLimiters>
+          <PlanetLocustSteps>
+            <Limits>0;40;60</Limits>
+            <Descriptors>PlanetQualityImproved;PlanetQualityDefault;PlanetQualityDepleted</Descriptors>
+          </PlanetLocustSteps>
+        </DepartmentOfTheInterior>
+        <DepartmentOfTheTreasury>
+          <StarSystemApprovalSteps>
+            <Limits>20;40;60;80;100</Limits>
+            <Descriptors>StarSystemApprovalStatusStrike;StarSystemApprovalStatusUnhappy;StarSystemApprovalStatusContent;StarSystemApprovalStatusHappy;StarSystemApprovalStatusEcstatic</Descriptors>
+          </StarSystemApprovalSteps>
+          <EmpireApprovalSteps>
+            <Limits>20;80;100</Limits>
+            <Descriptors>EmpireApprovalStatusRebellion;EmpireApprovalStatusContent;EmpireApprovalStatusFervent</Descriptors>
+          </EmpireApprovalSteps>
+          <TaxSteps>
+            <Limits>0;5;10;15;20;25;30;35;40;45;50;55;60;65;70;75;80;85;90;95;100</Limits>
+            <Descriptors>TaxBonus0;TaxBonus1;TaxBonus2;TaxBonus3;TaxBonus4;TaxBonus5;TaxBonus6;TaxBonus7;TaxBonus8;TaxBonus9;TaxBonus10;TaxBonus11;TaxBonus12;TaxBonus13;TaxBonus14;TaxBonus15;TaxBonus16;TaxBonus17;TaxBonus18;TaxBonus19;TaxBonus20</Descriptors>
+          </TaxSteps>
+          <TaxRate>40</TaxRate>
+        </DepartmentOfTheTreasury>
+        <DepartmentOfIndustry>
+          <DustFundingGameSpeedFactor>0.0</DustFundingGameSpeedFactor>
+          <Construction>
+            <BuyMultiplier>0.75</BuyMultiplier>
+            <BuyExponent>1.25</BuyExponent>
+          </Construction>
+        </DepartmentOfIndustry>
+      </Agencies>
+      <Faction>
+        <AffinityMapping>AffinityMappingTerran</AffinityMapping>
+      </Faction>
+      <HomeStarSystem>
+        <PlanetSize>PlanetSizeMedium</PlanetSize>
+      </HomeStarSystem>
+      <Score>
+        <PopulationCoef>2</PopulationCoef>
+        <BuildingCoef>1</BuildingCoef>
+        <PlanetCoef>3</PlanetCoef>
+        <SystemCoef>10</SystemCoef>
+        <ScienceCoef>0.005</ScienceCoef>        <!-- base cost = 40 -> ScienceCoef = 1/40 = 0.025 -->
+        <TechnologiesCoef>2.5</TechnologiesCoef>  
+        <AchievementCoef>20</AchievementCoef>
+        <MonopolyCoef>20</MonopolyCoef>
+        <CommandPointCoef>2</CommandPointCoef>
+        <ConstellationCoef>40</ConstellationCoef>
+        <HeroLevelCoef>3</HeroLevelCoef>
+        <TempleCoef>5</TempleCoef>
+        <MilitaryPowerCoef>0.005</MilitaryPowerCoef>
+      </Score>
+    </Empire>
+    <Galaxy>
+      <CircleLayer>
+        <Radius>0.65</Radius>
+      </CircleLayer>
+      <PathFinding>
+        <FreeDistanceCoef>2</FreeDistanceCoef>
+        <WarpDistanceCoef>1</WarpDistanceCoef>
+        <WormholeTurnCost>1</WormholeTurnCost>
+      </PathFinding>
+      <StarSystemScaling>
+        <InitialScale>1.0</InitialScale>
+        <MaxScale>1.6</MaxScale>
+        <ScaleAnimationTime>0.1</ScaleAnimationTime>
+      </StarSystemScaling>
+      <StarSystemControl>
+        <ColonizationSystemControl>100</ColonizationSystemControl>
+        <!-- SystemControl start value when player colonize system (%) -->
+        <MinInvasionControlLoss>1.5</MinInvasionControlLoss>
+        <!-- nb of turns -->
+        <MaxInvasionControlLoss>25</MaxInvasionControlLoss>
+        <!-- nb of turns -->
+
+        <OwnershipGain>0.04</OwnershipGain>
+        <!-- ratio -->
+        <OwnershipColonizeValue>1</OwnershipColonizeValue>
+        <!-- ratio -->
+        <RightfullOwnerThreshold>1</RightfullOwnerThreshold>
+        <!-- ratio -->
+        <LosingRightfullOwnerThreshold>0</LosingRightfullOwnerThreshold>
+        <!-- (losing ownership threshold) ratio -->
+
+        <TurnBeforeColonyStart>30</TurnBeforeColonyStart>
+        <!-- nb of turns -->
+        <TurnBeforeColonyMalus>10</TurnBeforeColonyMalus>
+        <!-- nb of turns -->
+      </StarSystemControl>
+    </Galaxy>
+    <AI>
+      <!-- Define the seconds between two AI tick.-->
+      <TickInterval>3</TickInterval>
+      <System>
+        <MaxPopulationColonizationTarget>0.6</MaxPopulationColonizationTarget>
+        <TurnCostWeightingCoef>0.1</TurnCostWeightingCoef>
+        <!-- score = score - TurnCostWeightingCoef * turnCost -->
+        <ColonizationTurnLeftBonusCoef>2</ColonizationTurnLeftBonusCoef>
+        <!-- scoreColo = score + ColonizationTurnLeftBonusCoef * ((turnCost / turnLeft) - 1) - TurnCostWeightingCoef * turnCost -->
+        <SystemSettings>
+          <Default>AIStarSystemAssignationNone</Default>
+          <None>AIStarSystemAssignationNone</None>
+          <Modifiers>
+            <Food>1</Food>
+            <Industry>1</Industry>
+            <Money>1</Money>
+            <Science>1</Science>
+            <Approval>1</Approval>
+            <Military>1</Military>
+            <Diplomacy>1</Diplomacy>
+          </Modifiers>
+        </SystemSettings>
+        <Layer_Population>
+          <!-- Growth target from food value-->
+          <SystemGrowthTargets>
+            <Limits>0.33;0.66;1</Limits>
+            <Values>0;0.1;0.2</Values>
+          </SystemGrowthTargets>
+          <StrategicResourceBonus>
+            <Limits>0;2;3;4</Limits>
+            <Values>4;1;4;0</Values>
+          </StrategicResourceBonus>
+          <LuxuryBonus>
+            <Limits>0;2;3;4</Limits>
+            <Values>1;2;4;0</Values>
+          </LuxuryBonus>
+        </Layer_Population>
+        <Layer_Production>
+          <ApprovalLimit>50</ApprovalLimit>
+          <ApprovalUnderLimitMultiplier>2</ApprovalUnderLimitMultiplier>
+          <TradeRouteWhenNoTraderMultiplier>-5</TradeRouteWhenNoTraderMultiplier>
+        </Layer_Production>
+      </System>
+      <Empire>
+        <Layer_Science>
+          <!-- technoPriority = score - (TurnCostWeightingCoef * turncost) + technoPrioritySpreadingCoef * childrenPrioritiesSum / nbChildren -->
+          <TurnCostWeightingCoef>3</TurnCostWeightingCoef>
+          
+          <!-- as this value was not used in code (wrong spelling), I reset it to the "code default" value which was 0.5f. Instead of 0.75 from Francois...-->
+          <TechnoPrioritySpreadingCoef>0.5</TechnoPrioritySpreadingCoef> 
+          
+          <!-- (target - growth) * GrowthAlertBoostCoef  + X to the global food need (for science, construction etc...)-->
+          <GrowthAlertBoostCoef>20</GrowthAlertBoostCoef>
+          
+          <ColonizationAlertMaxBonus>1</ColonizationAlertMaxBonus>
+          
+          <!-- bonus to Expand AI parameter if can't colonize -->
+          <ExpandAlertMaxBonus>1.2</ExpandAlertMaxBonus>
+          
+          <!-- Context -->
+          <Food>1</Food>
+          <Industry>1</Industry>
+          <Money>1</Money>
+          <Science>1</Science>
+          <Diplomacy>1</Diplomacy>
+          <Approval>1</Approval>
+          <Expand>1</Expand>
+          <Military>1</Military>
+          <DefenseModuleLaser>1</DefenseModuleLaser>
+          <DefenseModuleKinetic>1</DefenseModuleKinetic>
+          <DefenseModuleMissile>1</DefenseModuleMissile>
+          <WeaponModuleLaser>1</WeaponModuleLaser>
+          <WeaponModuleKinetic>1</WeaponModuleKinetic>
+          <WeaponModuleMissile>1</WeaponModuleMissile>
+          <PlanetTypeArid>1</PlanetTypeArid>
+          <PlanetTypeTundra>1</PlanetTypeTundra>
+          <PlanetTypeDesert>1</PlanetTypeDesert>
+          <PlanetTypeArctic>1</PlanetTypeArctic>
+          <PlanetTypeLava>1</PlanetTypeLava>
+          <PlanetTypeBarren>1</PlanetTypeBarren>
+          <PlanetTypeAsteroids>1</PlanetTypeAsteroids>
+          <PlanetTypeGasHydrogen>1</PlanetTypeGasHydrogen>
+          <PlanetTypeGasHelium>1</PlanetTypeGasHelium>
+          <PlanetTypeGasMethane>1</PlanetTypeGasMethane>
+          <Movement>1</Movement>
+        </Layer_Science>
+        <Layer_Income>
+          <StarSystemAssignations>
+            <None>AIStarSystemAssignationNone</None>
+            <Balanced>AIStarSystemAssignationBalanced</Balanced>
+            <Military>AIStarSystemAssignationMilitary</Military>
+            <Food>AIStarSystemAssignationFood</Food>
+            <Industry>AIStarSystemAssignationIndustry</Industry>
+            <Money>AIStarSystemAssignationMoney</Money>
+            <Science>AIStarSystemAssignationScience</Science>
+        </StarSystemAssignations>
+          <PopulationPercentMin>0.5</PopulationPercentMin>
+          <DevelopmentPercentMin>0.5</DevelopmentPercentMin>
+          <Science>
+            <OrientedSystemPercent>0.25</OrientedSystemPercent>
+            <TargetMinTurn>5</TargetMinTurn>
+            <TargetMaxTurn>7</TargetMaxTurn>
+            <BuildingBoost>
+              <NumberOfSystemWellDevLimit>0.5</NumberOfSystemWellDevLimit>
+              <BoostParameters>Food;Money;Industry;Science;Approval</BoostParameters>
+              <BoostValues>0.5;0.5;0.5;0.5;0.5</BoostValues>
+            </BuildingBoost>
+          </Science>
+          <Industry>
+            <OrientedSystemPercent>0.25</OrientedSystemPercent>
+          </Industry>
+          <Money>
+            <OrientedSystemPercent>0.25</OrientedSystemPercent>
+            <TargetMinGain>0.05</TargetMinGain>
+            <TargetMaxGain>0.15</TargetMaxGain>
+            <UnderApprovalPercent>0.2</UnderApprovalPercent>
+            <SystemApprovalMin>40</SystemApprovalMin>
+            <EmpireApprovalMin>30</EmpireApprovalMin>
+            <FISFactor>1</FISFactor>
+            <TaxMinLimit>20</TaxMinLimit>
+            <FIMSEcartType>1</FIMSEcartType>
+            <MinimalOwnershipForTaxPurpose>0.9</MinimalOwnershipForTaxPurpose>
+          </Money>
+          <Military>
+            <OrientedSystemPercent>0.3</OrientedSystemPercent>
+          </Military>
+        </Layer_Income>
+        <Layer_Attitude>
+          <NonAgressionDelayForPeaceful>10</NonAgressionDelayForPeaceful>
+          <TensionTreshold>0.6</TensionTreshold>
+          <MilitaryPowerTreshold>800</MilitaryPowerTreshold>
+        </Layer_Attitude>
+        <Layer_ShipDesign>
+          <WeaponEfficiencyMin>0.5</WeaponEfficiencyMin>
+          <DefenseEfficiencyMin>0.8</DefenseEfficiencyMin>
+          
+          <WeaponBonusMax>2</WeaponBonusMax>
+          <DefenseBonusMax>2</DefenseBonusMax>
+
+          <WeaponBonusLossPerTurn>0.1</WeaponBonusLossPerTurn>
+          <DefenseBonusLossPerTurn>0.1</DefenseBonusLossPerTurn>
+
+          <FirstWeaponChoiceBonus>2</FirstWeaponChoiceBonus>
+
+          <BattleEfficiencyAllDestroyed>-0.1</BattleEfficiencyAllDestroyed>
+          <BattleEfficiencyLimit>0.5</BattleEfficiencyLimit>
+        </Layer_ShipDesign>
+      </Empire>
+      <Ministers>
+        <MilitaryMinister>
+          <!-- Define how many military power an AI will attribute to a neutral system. -->
+          <NeutralSystemThreat>1</NeutralSystemThreat>
+          <ThreatFactors>
+            <!-- The threat factor are used by AI to determine a multiplicator to compute the threat from neighbouring systems.-->
+            <!-- Default is 0.1. this is used for unknown empire. -->
+            <Default>0.1</Default>
+            <!-- While the AI is preparing a war against the neighbor, it will consider the target empire power as 1.5 -->
+            <PrepareWar>1.1</PrepareWar>
+            <!-- The more further a system is, the less it influence the threat. 
+                 Distance are turn based. -->
+            <DistanceThreshold>2;5;10</DistanceThreshold>
+            <!-- This is the factor for the distance specified just before. -->
+            <DistanceFactors>1;0.75;0.25</DistanceFactors>
+          </ThreatFactors>
+          <!-- Wait for 5 turn before declaring any war.-->
+          <TurnBeforeDeclareWar>10</TurnBeforeDeclareWar>
+          <!-- Define how many attack a defense zone can start.-->
+          <AttackPerZone>5</AttackPerZone>
+          <Attack>
+            <!-- This will describe the several parameter for an attack. -->
+
+            <!-- Base value to determine the "MilitaryPower" for an ennemy system.-->
+            <StarSystemDefenseDefault>100</StarSystemDefenseDefault>
+            <!-- Factor which multiply the Invader need to compute the Attack fleet power needed.-->
+            <StarSystemDefenseFactor>1.5</StarSystemDefenseFactor>
+            <!-- Define how the AI consider the ennemy power for attack. 
+                 This will determine how many power the attack need to gather before it can be launched.-->
+            <TargetMilitaryPowerFactor>0.8</TargetMilitaryPowerFactor>
+            <!-- Based on EnnemyPower, the attack can ask until "1.2 * EnnemyPower" as reinforcement. -->
+            <ReinforcementFactor>1.2</ReinforcementFactor>
+            <!-- Define how many military power percent must be let in the defense zone after the requisition.-->
+            <DefenseRatioAfterRequisition>0.2</DefenseRatioAfterRequisition>
+            <DefenseRatioAfterRequisitionWhilePreparingWar>0</DefenseRatioAfterRequisitionWhilePreparingWar>
+
+            <!-- As long as the defense as enought military power, the attack can requisition 1.2 * "AskedPower". -->
+            <RequisitionMaxFactor>2</RequisitionMaxFactor>
+            <!-- Define the base priority of a Attack requisition.-->
+            <RequisitionPriority>0.8</RequisitionPriority>
+            <!-- Define the base priority of a Attack reinforcement requisition.-->
+            <ReinforcementRequisitionPriority>0.7</ReinforcementRequisitionPriority>
+          </Attack>
+          <Interception>
+            <!-- Define how the AI consider the ennemy power for attack. 
+                 This will determine how many power the attack need to gather before it can be launched.-->
+            <EnnemyPowerFactor>0.7</EnnemyPowerFactor>
+
+            <!-- As long as the defense as enought military power, the attack can requisition 1.2 * "AskedPower". -->
+            <RequisitionMaxFactor>2</RequisitionMaxFactor>
+            <!-- Define the base priority of a Interception requisition.-->
+            <RequisitionPriority>1</RequisitionPriority>
+            <!-- Define how many military power percent must be let in the defense zone after the requisition.-->
+            <DefenseRatioAfterRequisition>0</DefenseRatioAfterRequisition>
+          </Interception>
+          <Commando>
+            <!-- Base value to determine the "MilitaryPower" for an ennemy system.-->
+            <StarSystemDefenseDefault>100</StarSystemDefenseDefault>
+            <!-- Factor which multiply the Invader need to compute the Attack fleet power needed.-->
+            <StarSystemDefenseFactor>1.5</StarSystemDefenseFactor>
+            
+            <!-- Define how the AI consider the ennemy power for attack. 
+                 This will determine how many power the attack need to gather before it can be launched.-->
+            <TargetMilitaryPowerFactor>0.8</TargetMilitaryPowerFactor>
+            <!-- Based on EnnemyPower, the attack can ask until "1.2 * EnnemyPower" as reinforcement. -->
+            <ReinforcementFactor>2</ReinforcementFactor>
+            <!-- Define how many military power percent must be let in the defense zone after the requisition.-->
+            <DefenseRatioAfterRequisition>0.2</DefenseRatioAfterRequisition>
+
+            <!-- As long as the defense as enought military power, the attack can requisition 1.2 * "AskedPower". -->
+            <RequisitionMaxFactor>1.2</RequisitionMaxFactor>
+            <!-- Define the base priority of a Attack requisition.-->
+            <RequisitionPriority>0.9</RequisitionPriority>
+            <!-- Define the base priority of a Attack reinforcement requisition.-->
+            <ReinforcementRequisitionPriority>0.8</ReinforcementRequisitionPriority>
+          </Commando>
+          <ShipRequests>
+            <!-- Ship request priority when the empire MP is over the needed MP -->
+            <MilitaryShipPriorityDefault>0.2</MilitaryShipPriorityDefault>
+            <!-- Ship request priority when the empire MP is under the minimal MP -->
+            <MilitaryShipPriorityUnderMin>1.1</MilitaryShipPriorityUnderMin>
+            <!-- Ship request priority when the empire MP is under the Higher ennemy MP -->
+            <MilitaryShipPriorityUnderEnnemy>0.7</MilitaryShipPriorityUnderEnnemy>
+
+            <!-- Ship production percentage when the empire MP is over the needed MP -->
+            <MilitaryProductionPercentDefault>0.2</MilitaryProductionPercentDefault>
+            <!-- Ship production percentage when the empire MP is under the minimal MP -->
+            <MilitaryProductionPercentUnderMin>0.8</MilitaryProductionPercentUnderMin>
+            <!-- Ship production percentage when the empire MP is under the Higher ennemy MP -->
+            <MilitaryProductionPercentUnderEnnemy>0.5</MilitaryProductionPercentUnderEnnemy>
+
+            <!-- Minimal MP max limit -->
+            <MinMilitaryPowerLimit>50000</MinMilitaryPowerLimit>
+            <!-- minimalMP = pow(EmpirePopulation, MinMilitaryPowerPopulationPower) * MinMilitaryPowerPopulationFactor + MinMilitaryPowerPopulationConstante-->
+            <MinMilitaryPowerPopulationPower>2</MinMilitaryPowerPopulationPower>
+            <MinMilitaryPowerPopulationFactor>1</MinMilitaryPowerPopulationFactor>
+            <MinMilitaryPowerPopulationConstante>100</MinMilitaryPowerPopulationConstante>
+
+            <MilitaryScienceBonusDefault>0</MilitaryScienceBonusDefault>
+            <MilitaryScienceBonusUnderEnnemy>0.25</MilitaryScienceBonusUnderEnnemy>
+            <MilitaryScienceBonusUnderMin>0.6</MilitaryScienceBonusUnderMin>
+
+            <MilitaryPowerEarlyGameFactor>1</MilitaryPowerEarlyGameFactor>
+            <MilitaryPowerEarlyGameTurnLimit>0</MilitaryPowerEarlyGameTurnLimit>
+            
+            <MaxEnnemyPowerThreatFactor>1</MaxEnnemyPowerThreatFactor>
+          </ShipRequests>
+        </MilitaryMinister>
+        <DiplomacyMinister>
+          <!-- When no treaty are needed, the science bonus must have a default value.-->
+          <DefaultDiplomacyScienceBonus>0.2</DefaultDiplomacyScienceBonus>
+          <!-- When a treaty is needed, but the science have not already research it, add this value to the default.-->
+          <PerWantedTermScienceBonus>1</PerWantedTermScienceBonus>
+          <!-- When no threat or no neighbor around, the military science bonus must have a default value.-->
+          <DefaultMilitaryScienceBonus>1</DefaultMilitaryScienceBonus>
+          <!-- This is the default "war" bonus.
+               While peace, the bonus = (1 - (AttitudeScore / AttitudeRange)) * MaxBonus. -->
+          <MaxMilitaryScienceBonus>10</MaxMilitaryScienceBonus>
+          <!-- When loosing the war, we need to boost the military science bonus.-->
+          <LoosingWarScienceBonus>20</LoosingWarScienceBonus>
+          
+          <!-- War fatigue compute -->
+          <WarFatigueMaxValue>1000</WarFatigueMaxValue>
+          <WarFatigueInvasionWin>40</WarFatigueInvasionWin>
+          <WarFatigueInvasionLost>70</WarFatigueInvasionLost>
+          <WarFatigueEcounterWin>10</WarFatigueEcounterWin>
+          <WarFatigueEcounterLost>15</WarFatigueEcounterLost>
+          <WarFatigueTurn>3</WarFatigueTurn>
+          
+          <MinPeriodRequest>5</MinPeriodRequest>                          <!-- Minimum number of turns between two propositions -->
+          <MaxPeriodRequest>15</MaxPeriodRequest>                         <!-- Maximum number of turns between two propositions -->
+          <MinDealPriceProposition>-0.3</MinDealPriceProposition>            <!-- Minimum Deal price value for a contract built by an AI -->
+          <MaxDealPriceProposition>0.3</MaxDealPriceProposition>         <!-- Maximum Deal price value for a contract built by an AI -->
+          <ContractAcceptationTreshlod>-0.025</ContractAcceptationTreshlod>    <!-- Deal price threshold for AI acceptation -->
+          <ScoreSpreadingCoef>5</ScoreSpreadingCoef>                      <!-- The AI Deal price is divided by this value to spread the contract value -->
+          
+          <TradableBankAccountRatio>0.5</TradableBankAccountRatio>
+          <TradableMoneyNetRatio>0.5</TradableMoneyNetRatio>
+          <ReserveRevenueRatio>0.1</ReserveRevenueRatio>
+          <NeededResourceBonus>2</NeededResourceBonus>
+          <NeededMissingResourceBonus>5</NeededMissingResourceBonus>
+
+          <!-- Deal price conversion matrix (by terms category) -->
+          <TreatyTermsPriceCoefs>0;0.5;0.5;1;0.25</TreatyTermsPriceCoefs>
+          <DustTermsPriceCoefs>0.2;0;0.4;0.2;0.8</DustTermsPriceCoefs>
+          <TechTermsPriceCoefs>0.5;0.5;0;0.1;1</TechTermsPriceCoefs>
+          <SystemTermsPriceCoefs>1;0;0;0;0</SystemTermsPriceCoefs>
+          <ResourceTermsPriceCoefs>0.25;1.5;1;0.1;1</ResourceTermsPriceCoefs>
+        </DiplomacyMinister>
+        <EconomyMinister>
+          <NewHeroUpkeepFactor>10</NewHeroUpkeepFactor>
+          <NewHeroUpkeepAddition>10</NewHeroUpkeepAddition>
+          <EngagedHeroUpkeepFactor>10</EngagedHeroUpkeepFactor>
+          <EngagedHeroUpkeepAddition>10</EngagedHeroUpkeepAddition>
+
+          <MoneyScienceBonus>5</MoneyScienceBonus>
+          <NeedBoostMoneyBankAccountFactor>0.05</NeedBoostMoneyBankAccountFactor>
+          
+          <PeaceReserveFactor>3</PeaceReserveFactor>
+          <!-- Define a limit which say "I'm really ready to build ship, pick me when you have some non urgent ship to do".-->
+          <DevelopmentPercentLimit>0.6</DevelopmentPercentLimit>
+
+          <RetrofitMilitaryPowerLimitAtWar>1</RetrofitMilitaryPowerLimitAtWar>
+          <RetrofitMilitaryPowerLimitAtPeace>1.5</RetrofitMilitaryPowerLimitAtPeace>
+        
+      </EconomyMinister>
+        <EducationMinister>
+          <WaitBeforeForceAdmiral>5</WaitBeforeForceAdmiral>
+          <WaitBeforeForceAdministrator>10</WaitBeforeForceAdministrator>
+          <AdministratorPeaceFactor>1</AdministratorPeaceFactor>
+          <AdministratorNeutralFactor>0.75</AdministratorNeutralFactor>
+          <AdministratorWarFactor>0.25</AdministratorWarFactor>
+          <AdministratorDefaultFactor>0.5</AdministratorDefaultFactor>
+        </EducationMinister>
+        <ExpansionMinister>
+          <!-- Define the limit of still neutral system in the galaxy to allow the expansion to search one step further for expansion target.-->
+          <NeutralRatioLimitForExtendedExpansion>0.5</NeutralRatioLimitForExtendedExpansion>
+          <LimitExpansionFleets>2</LimitExpansionFleets>
+          
+          <!-- Define when to stop searching in the list for outpost to invade.-->
+          <RankLimitForCommando>5</RankLimitForCommando>
+
+          <ShipPriorityBonusEarlyGame>0.3</ShipPriorityBonusEarlyGame>
+          <EarlyGameBonusTurnLimit>40</EarlyGameBonusTurnLimit>
+        </ExpansionMinister>
+        <ExplorationMinister>
+          <MaxMovementScienceBonus>1</MaxMovementScienceBonus>
+        </ExplorationMinister>
+      </Ministers>
+      <AIStarSystemSettings>
+        <TurnToReachNeighbours>2</TurnToReachNeighbours>
+        <ScoreFimsFactor>1.5</ScoreFimsFactor>
+        <ScoreLinkToEmpireFactor>2</ScoreLinkToEmpireFactor>
+        <!-- ScoreOwnershipFactor is a multiplier for the score used when the system is under our rightful ownership but invade by some other guys. -->
+        <ScoreOwnershipFactor>2</ScoreOwnershipFactor>
+        <!-- ScoreNeutralFactor is a multiplier for the score used when the system is owned by no one. -->
+        <ScoreNeutralFactor>2</ScoreNeutralFactor>
+        <!-- ScoreNeutralZoneFactor is a multiplier for the score used when the system constellation has no home system inside. -->
+        <ScoreNeutralZoneFactor>1.5</ScoreNeutralZoneFactor>
+        <ScoreEnnemyFactor>0.5</ScoreEnnemyFactor>
+        <ScoreTurnToReachLimits>4;10;20</ScoreTurnToReachLimits>
+        <ScoreTurnToReachValues>0.75;0.5;0.25</ScoreTurnToReachValues>
+        <ApprovalFactor>0.2</ApprovalFactor>
+      </AIStarSystemSettings>
+    </AI>
+    <RandomEventFactors>
+        <GlobalRandomEventNumbersMin>4</GlobalRandomEventNumbersMin>
+        <GlobalRandomEventNumbersMax>6</GlobalRandomEventNumbersMax>
+        <FactionRandomEventNumbersMin>2</FactionRandomEventNumbersMin>
+        <FactionRandomEventNumbersMax>4</FactionRandomEventNumbersMax>
+        <!-- When we generated the random events, the registry isn't still modified by the game speed factors, that's why we have these 3 following values below.-->
+        <AdditiveValue_Slow>1</AdditiveValue_Slow> 
+        <AdditiveValue_Normal>2</AdditiveValue_Normal>
+        <AdditiveValue_Fast>3</AdditiveValue_Fast>
+        <MinimumTurn>20</MinimumTurn> <!-- We cannot generated events before this value -->
+        <MaximumTurnLimit>50</MaximumTurnLimit> <!-- This value is soutracted to the time victory turn. -->
+        <EventDuration>20</EventDuration> <!-- Global event and negative faction event will be active during this value -->
+    </RandomEventFactors>
+    <BattleManager>
+      <TerritoryDescriptors>
+        <Neutral>BattleTerritoryNeutral</Neutral>
+        <Allied>BattleTerritoryAllied</Allied>
+        <Hostile>BattleTerritoryHostile</Hostile>
+      </TerritoryDescriptors>
+    </BattleManager>
+  </Game>
+  <View>
+    <Environment/>
+    <Gui>
+      <ToolTips>
+        <Filters>
+          <ClassShip>Health;Movement</ClassShip>
+          <ClassFleet>Health;Movement</ClassFleet>
+          <ClassPlanet>Approval;Food;Industry;Science;Money;Population;MaxPopulation;Upkeep</ClassPlanet>
+          <ClassModule>MilitaryPower;InterceptionAccuracy;DeflectionPerTurn;Absorption;DamageMin;DamageMax;CriticMultiplier;CriticChance;InterceptionEvasion;NumberPerSalve;Accuracy;TurnBeforeReach;TurnToReload</ClassModule>
+        </Filters>
+      </ToolTips>
+      <Panels>
+        <DevelopmentPanel>
+        </DevelopmentPanel>
+        <DesignOverviewPanel>
+          <ModuleCategories>ModuleCategoryLaser;ModuleCategoryKinetic;ModuleCategoryMissile;ModuleCategoryShield;ModuleCategoryDeflector;ModuleCategoryFlak;ModuleCategoryArmor;ModuleCategorySupport;ModuleCategoryEngine</ModuleCategories>
+          <ModuleCategoryLaser>
+            <SimulationModuleCategories>WeaponModuleLaser</SimulationModuleCategories>
+            <ModuleLocationIndex>3</ModuleLocationIndex>
+            <ShipDummy>WeaponModuleLaser</ShipDummy>
+          </ModuleCategoryLaser>
+          <ModuleCategoryKinetic>
+            <SimulationModuleCategories>WeaponModuleKinetic</SimulationModuleCategories>
+            <ModuleLocationIndex>4</ModuleLocationIndex>
+            <ShipDummy>WeaponModuleKinetic</ShipDummy>
+          </ModuleCategoryKinetic>
+          <ModuleCategoryMissile>
+            <SimulationModuleCategories>WeaponModuleMissile</SimulationModuleCategories>
+            <ModuleLocationIndex>5</ModuleLocationIndex>
+            <ShipDummy>WeaponModuleMissile</ShipDummy>
+          </ModuleCategoryMissile>
+          <ModuleCategoryShield>
+            <SimulationModuleCategories>DefenseModuleLaser</SimulationModuleCategories>
+            <ModuleLocationIndex>0</ModuleLocationIndex>
+            <ShipDummy>DefenseModuleLaser</ShipDummy>
+          </ModuleCategoryShield>
+          <ModuleCategoryDeflector>
+            <SimulationModuleCategories>DefenseModuleKinetic</SimulationModuleCategories>
+            <ModuleLocationIndex>1</ModuleLocationIndex>
+            <ShipDummy>DefenseModuleKinetic</ShipDummy>
+          </ModuleCategoryDeflector>
+          <ModuleCategoryFlak>
+            <SimulationModuleCategories>DefenseModuleMissile</SimulationModuleCategories>
+            <ModuleLocationIndex>2</ModuleLocationIndex>
+            <ShipDummy>DefenseModuleMissile</ShipDummy>
+          </ModuleCategoryFlak>
+          <ModuleCategoryArmor>
+            <SimulationModuleCategories>SupportModuleArmor</SimulationModuleCategories>
+            <ModuleLocationIndex>8</ModuleLocationIndex>
+            <ShipDummy>ArmorModule</ShipDummy>
+          </ModuleCategoryArmor>
+          <ModuleCategorySupport>
+            <SimulationModuleCategories>SupportModulePower;SupportModuleInvasion;SupportModuleEngine;SupportModuleScout;SupportModuleTonnage;SupportModuleRepair</SimulationModuleCategories>
+            <ModuleLocationIndex>6</ModuleLocationIndex>
+            <ShipDummy>SupportModule</ShipDummy>
+          </ModuleCategorySupport>
+          <ModuleCategoryEngine>
+            <SimulationModuleCategories/>
+            <ModuleLocationIndex>7</ModuleLocationIndex>
+            <ShipDummy>EngineModule</ShipDummy>
+          </ModuleCategoryEngine>
+        </DesignOverviewPanel>
+      </Panels>
+      <Screens>
+        <GalaxyScreen/>
+        <SystemScreen>
+          <OutputProperties>FoodSurplus;Production;ScienceNet;MoneyNet</OutputProperties>
+        </SystemScreen>
+        <PlanetScreen>
+          <OutputProperties>Food;Industry;Science;Money</OutputProperties>
+        </PlanetScreen>
+      </Screens>
+    </Gui>
+    <Views>
+      <BattleView>
+        <BattleFormation>
+          <FormationSortingProperty>Health</FormationSortingProperty>
+        </BattleFormation>
+        <BattleSimulation>
+          <DefenderSortingProperty>Health</DefenderSortingProperty>
+          <DefenderSortingAscending>true</DefenderSortingAscending>
+          <AttackerSortingProperty>Health</AttackerSortingProperty>
+          <AttackerSortingAscending>true</AttackerSortingAscending>
+        </BattleSimulation>
+        <BattleShipSinkingProbability>
+          <!-- Set a value between 0 and 1-->
+          <ShipSizeLarge>0.6</ShipSizeLarge>
+          <ShipSizeMedium>0.3</ShipSizeMedium>
+          <ShipSizeSmall>0.05</ShipSizeSmall>
+        </BattleShipSinkingProbability>
+      </BattleView>
+      <GalaxyView>
+        <GalaxySunScale>0.00444444</GalaxySunScale>
+        <FleetMaxDetectionRadius>20.0</FleetMaxDetectionRadius>
+        <ReferenceDistanceToFade>0.65</ReferenceDistanceToFade>
+        <FrontierVisualFactor>1.15</FrontierVisualFactor> <!-- This value is used to multiply the frontiers and visibilies of the systems in order to match with the real influence value. -->
+        <!-- Value we had when our galaxies' bounds were 2 units in Unity. (0.65 = 1.3 / 2) -->
+        <CameraController>
+          <KeyboardHorizontalPanningSpeed>15</KeyboardHorizontalPanningSpeed>
+          <KeyboardVerticalPanningSpeed>15</KeyboardVerticalPanningSpeed>
+        </CameraController>
+        <Stacking>
+            <MaximumParsecsDetection>0.8</MaximumParsecsDetection> <!-- We create a stack if at least 2 fleet are less than this value in distance.-->
+            <OffsetBetweenFleet>0.3</OffsetBetweenFleet> <!-- Offset that separte each fleet when the stack is spreaded out.-->
+            <OpenStackingDuration>0.4</OpenStackingDuration>
+            <CloseStackingDuration>0.2</CloseStackingDuration>
+            <MaxFleetPerColumn>4</MaxFleetPerColumn>
+            <PercentBoxExpansion>1.15</PercentBoxExpansion> <!-- We multiply the scale of the box by this value. -->
+            <EncompassingBoxPrefabPath>Graph/Views/GalaxyView/GL_Box_Stacking_01</EncompassingBoxPrefabPath>
+            <FxStackPrefabPath>Graph/Views/GalaxyView/StackInfo</FxStackPrefabPath>
+        </Stacking>
+      </GalaxyView>
+      <StarSystemView>
+          <PopulationSteps>4.0</PopulationSteps>
+          <FactorSpaceStation>2</FactorSpaceStation> <!-- This factor multiplies the current population's step of the planet.-->
+          <ColonizationPodDummyName>Dummy_Pod</ColonizationPodDummyName> <!-- Dummy's name for the colonization pod. -->
+          <SpaceStationDummyName>Dummy_SpaceStation</SpaceStationDummyName> <!-- Dummy's name for the space station. -->
+          <AnomalyDummyName>Dummy_Anomaly</AnomalyDummyName>
+          <!-- Dummy's name for the space station. -->
+          <!-- Max population according to planet's size.-->
+          <PlanetSizeTiny>7</PlanetSizeTiny>
+          <PlanetSizeSmall>8</PlanetSizeSmall>
+          <PlanetSizeMedium>9</PlanetSizeMedium>
+          <PlanetSizeLarge>11</PlanetSizeLarge>
+          <PlanetSizeHuge>13</PlanetSizeHuge>
+      </StarSystemView>
+      <ShipDesignView>
+          <DistanceCameraToShipSizeSmall>350.0</DistanceCameraToShipSizeSmall>
+          <DistanceCameraToShipSizeMedium>500.0</DistanceCameraToShipSizeMedium>
+          <DistanceCameraToShipSizeLarge>700.0</DistanceCameraToShipSizeLarge>
+      </ShipDesignView>
+    </Views>
+  </View>
+</Registry>

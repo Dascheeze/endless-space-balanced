@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Hero Name="Hero01" LastName="%Hero01LastName" FirstName="%Hero01FirstName1;%Hero01FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero01Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sophonHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/sophonHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sophonHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Corporate</Descriptors>
+    <Attributes>Labor=6;Wit=6;Melee=3;Offense=0;Defense=0</Attributes>
+  </Hero>
+
+  <Hero Name="Hero02" LastName="%Hero02LastName" FirstName="%Hero02FirstName1;%Hero02FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero02Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sophonHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/sophonHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sophonHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Corporate</Descriptors>
+    <Attributes>Labor=5;Wit=9;Melee=1;Offense=0;Defense=0</Attributes>
+  </Hero>
+
+  <Hero Name="Hero03" LastName="%Hero03LastName" FirstName="%Hero03FirstName1;%Hero03FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero03Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Corporate</Descriptors>
+    <Attributes>Labor=7;Wit=3;Melee=5;Offense=0;Defense=0</Attributes>
+  </Hero>
+
+  <Hero Name="Hero04" LastName="%Hero04LastName" FirstName="%Hero04FirstName1;%Hero04FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero04Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Commander</Descriptors>
+    <Attributes>Labor=5;Wit=0;Melee=1;Offense=3;Defense=6</Attributes>
+  </Hero>
+
+  <Hero Name="Hero05" LastName="%Hero05LastName" FirstName="%Hero05FirstName1;%Hero05FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero05Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Commander</Descriptors>
+    <Attributes>Labor=9;Wit=0;Melee=1;Offense=2;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero06" LastName="%Hero06LastName" FirstName="%Hero06FirstName1;%Hero06FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero06Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero06Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero06Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero06Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Commander</Descriptors>
+    <Attributes>Labor=4;Wit=0;Melee=1;Offense=7;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero07" LastName="%Hero07LastName" FirstName="%Hero07FirstName1;%Hero07FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero07Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Pilot</Descriptors>
+    <Attributes>Labor=6;Wit=0;Melee=1;Offense=5;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero08" LastName="%Hero08LastName" FirstName="%Hero08FirstName1;%Hero08FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero08Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Pilot</Descriptors>
+    <Attributes>Labor=4;Wit=0;Melee=4;Offense=4;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero09" LastName="%Hero09LastName" FirstName="%Hero09FirstName1;%Hero09FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero09Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Pilot</Descriptors>
+    <Attributes>Labor=5;Wit=0;Melee=1;Offense=4;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero10" LastName="%Hero10LastName" FirstName="%Hero10FirstName1;%Hero10FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero10Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Adventurer</Descriptors>
+    <Attributes>Labor=5;Wit=0;Melee=5;Offense=1;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero11" LastName="%Hero11LastName" FirstName="%Hero11FirstName1;%Hero11FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero11Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero05Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero05Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero05Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Adventurer</Descriptors>
+    <Attributes>Labor=4;Wit=0;Melee=2;Offense=4;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero12" LastName="%Hero12LastName" FirstName="%Hero12FirstName1;%Hero12FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero12Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Adventurer</Descriptors>
+    <Attributes>Labor=7;Wit=0;Melee=3;Offense=2;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero13" LastName="%Hero13LastName" FirstName="%Hero13FirstName1;%Hero13FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero13Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sophonHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/sophonHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sophonHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Commander</Descriptors>
+    <Attributes>Labor=0;Wit=6;Melee=3;Offense=3;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero14" LastName="%Hero14LastName" FirstName="%Hero14FirstName1;%Hero14FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero14Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Commander</Descriptors>
+    <Attributes>Labor=0;Wit=8;Melee=2;Offense=2;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero15" LastName="%Hero15LastName" FirstName="%Hero15FirstName1;%Hero15FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero15Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/amoebaHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/amoebaHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/amoebaHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Commander</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=1;Offense=5;Defense=5</Attributes>
+  </Hero>
+
+  <Hero Name="Hero16" LastName="%Hero16LastName" FirstName="%Hero16FirstName1;%Hero16FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero16Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=4;Offense=4;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero17" LastName="%Hero17LastName" FirstName="%Hero17FirstName1;%Hero17FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero17Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=7;Melee=4;Offense=3;Defense=1</Attributes>
+  </Hero>
+
+  <Hero Name="Hero18" LastName="%Hero18LastName" FirstName="%Hero18FirstName1;%Hero18FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero18Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/amoebaHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/amoebaHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/amoebaHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=2;Offense=6;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero19" LastName="%Hero19LastName" FirstName="%Hero19FirstName1;%Hero19FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero19Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=5;Melee=3;Offense=3;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero20" LastName="%Hero20LastName" FirstName="%Hero20FirstName1;%Hero20FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero20Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=8;Offense=1;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero21" LastName="%Hero21LastName" FirstName="%Hero21FirstName1;%Hero21FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero21Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=3;Offense=1;Defense=7</Attributes>
+  </Hero>
+
+  <Hero Name="Hero22" LastName="%Hero22LastName" FirstName="%Hero22FirstName1;%Hero22FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero22Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=6;Defense=6</Attributes>
+  </Hero>
+
+  <Hero Name="Hero23" LastName="%Hero23LastName" FirstName="%Hero23FirstName1;%Hero23FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero23Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=1;Offense=9;Defense=5</Attributes>
+  </Hero>
+
+  <Hero Name="Hero24" LastName="%Hero24LastName" FirstName="%Hero24FirstName1;%Hero24FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero24Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Pilot</Descriptors>
+    <Attributes>Labor=2;Wit=0;Melee=4;Offense=5;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero25" LastName="%Hero25LastName" FirstName="%Hero25FirstName1;%Hero25FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero25Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=5;Defense=7</Attributes>
+  </Hero>
+
+  <Hero Name="Hero26" LastName="%Hero26LastName" FirstName="%Hero26FirstName1;%Hero26FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero26Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=2;Offense=4;Defense=9</Attributes>
+  </Hero>
+
+  <Hero Name="Hero27" LastName="%Hero27LastName" FirstName="%Hero27FirstName1;%Hero27FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero27Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=2;Melee=4;Offense=3;Defense=6</Attributes>
+  </Hero>
+
+  <Hero Name="Hero28" LastName="%Hero28LastName" FirstName="%Hero28FirstName1;%Hero28FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero28Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Pilot;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=5;Offense=5;Defense=5</Attributes>
+  </Hero>
+
+  <Hero Name="Hero29" LastName="%Hero29LastName" FirstName="%Hero29FirstName1;%Hero29FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero29Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/amoebaHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/amoebaHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/amoebaHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Pilot;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=8;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero30" LastName="%Hero30LastName" FirstName="%Hero30FirstName1;%Hero30FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero30Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Pilot;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=4;Defense=8</Attributes>
+  </Hero>
+
+
+
+  <Hero Name="Hero31" LastName="%Hero31LastName" FirstName="%Hero31FirstName1;%Hero31FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero31Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sophonHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/sophonHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sophonHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Corporate</Descriptors>
+    <Attributes>Labor=6;Wit=6;Melee=3;Offense=0;Defense=0</Attributes>
+  </Hero>
+
+  <Hero Name="Hero32" LastName="%Hero32LastName" FirstName="%Hero32FirstName1;%Hero32FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero32Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sophonHero05Small" Large="Gui/DynamicBitmaps/HeroPortraits/sophonHero05Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sophonHero05Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Corporate</Descriptors>
+    <Attributes>Labor=5;Wit=9;Melee=1;Offense=0;Defense=0</Attributes>
+  </Hero>
+
+  <Hero Name="Hero33" LastName="%Hero33LastName" FirstName="%Hero33FirstName1;%Hero33FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero33Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Corporate</Descriptors>
+    <Attributes>Labor=7;Wit=3;Melee=5;Offense=0;Defense=0</Attributes>
+  </Hero>
+
+  <Hero Name="Hero34" LastName="%Hero34LastName" FirstName="%Hero34FirstName1;%Hero34FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero34Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Commander</Descriptors>
+    <Attributes>Labor=5;Wit=0;Melee=1;Offense=3;Defense=6</Attributes>
+  </Hero>
+
+  <Hero Name="Hero35" LastName="%Hero35LastName" FirstName="%Hero35FirstName1;%Hero35FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero35Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Commander</Descriptors>
+    <Attributes>Labor=9;Wit=0;Melee=1;Offense=2;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero36" LastName="%Hero36LastName" FirstName="%Hero36FirstName1;%Hero36FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero36Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Commander</Descriptors>
+    <Attributes>Labor=4;Wit=0;Melee=1;Offense=7;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero37" LastName="%Hero37LastName" FirstName="%Hero37FirstName1;%Hero37FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero37Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Pilot</Descriptors>
+    <Attributes>Labor=6;Wit=0;Melee=1;Offense=5;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero38" LastName="%Hero38LastName" FirstName="%Hero38FirstName1;%Hero38FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero38Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Pilot</Descriptors>
+    <Attributes>Labor=4;Wit=0;Melee=4;Offense=4;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero39" LastName="%Hero39LastName" FirstName="%Hero39FirstName1;%Hero39FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero39Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero07Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero07Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero07Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Pilot</Descriptors>
+    <Attributes>Labor=5;Wit=0;Melee=1;Offense=4;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero40" LastName="%Hero40LastName" FirstName="%Hero40FirstName1;%Hero40FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero40Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Adventurer</Descriptors>
+    <Attributes>Labor=5;Wit=0;Melee=5;Offense=1;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero41" LastName="%Hero41LastName" FirstName="%Hero41FirstName1;%Hero41FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero41Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Adventurer</Descriptors>
+    <Attributes>Labor=4;Wit=0;Melee=2;Offense=4;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero42" LastName="%Hero42LastName" FirstName="%Hero42FirstName1;%Hero42FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero42Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Administrator;Adventurer</Descriptors>
+    <Attributes>Labor=7;Wit=0;Melee=3;Offense=2;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero43" LastName="%Hero43LastName" FirstName="%Hero43FirstName1;%Hero43FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero43Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sophonHero06Small" Large="Gui/DynamicBitmaps/HeroPortraits/sophonHero06Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sophonHero06Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Commander</Descriptors>
+    <Attributes>Labor=0;Wit=6;Melee=3;Offense=3;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero44" LastName="%Hero44LastName" FirstName="%Hero44FirstName1;%Hero44FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero44Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero06Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero06Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero06Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Commander</Descriptors>
+    <Attributes>Labor=0;Wit=8;Melee=2;Offense=2;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero45" LastName="%Hero45LastName" FirstName="%Hero45FirstName1;%Hero45FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero45Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/amoebaHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/amoebaHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/amoebaHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Commander</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=1;Offense=5;Defense=5</Attributes>
+  </Hero>
+
+  <Hero Name="Hero46" LastName="%Hero46LastName" FirstName="%Hero46FirstName1;%Hero46FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero46Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=4;Offense=4;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero47" LastName="%Hero47LastName" FirstName="%Hero47FirstName1;%Hero47FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero47Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=7;Melee=4;Offense=3;Defense=1</Attributes>
+  </Hero>
+
+  <Hero Name="Hero48" LastName="%Hero48LastName" FirstName="%Hero48FirstName1;%Hero48FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero48Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/amoebaHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/amoebaHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/amoebaHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=2;Offense=6;Defense=3</Attributes>
+  </Hero>
+
+  <Hero Name="Hero49" LastName="%Hero49LastName" FirstName="%Hero49FirstName1;%Hero49FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero49Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero02Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero02Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero02Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=5;Melee=3;Offense=3;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero50" LastName="%Hero50LastName" FirstName="%Hero50FirstName1;%Hero50FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero50Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=8;Offense=1;Defense=2</Attributes>
+  </Hero>
+
+  <Hero Name="Hero51" LastName="%Hero51LastName" FirstName="%Hero51FirstName1;%Hero51FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero51Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=4;Melee=3;Offense=1;Defense=7</Attributes>
+  </Hero>
+
+  <Hero Name="Hero52" LastName="%Hero52LastName" FirstName="%Hero52FirstName1;%Hero52FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero52Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/hisshoHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/hisshoHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/hisshoHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=6;Defense=6</Attributes>
+  </Hero>
+
+  <Hero Name="Hero53" LastName="%Hero53LastName" FirstName="%Hero53FirstName1;%Hero53FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero53Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Pilot</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=1;Offense=9;Defense=5</Attributes>
+  </Hero>
+
+  <Hero Name="Hero54" LastName="%Hero54LastName" FirstName="%Hero54FirstName1;%Hero54FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero54Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/swarmHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/swarmHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/swarmHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Pilot</Descriptors>
+    <Attributes>Labor=2;Wit=0;Melee=4;Offense=5;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero55" LastName="%Hero55LastName" FirstName="%Hero55FirstName1;%Hero55FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero55Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=5;Defense=7</Attributes>
+  </Hero>
+
+  <Hero Name="Hero56" LastName="%Hero56LastName" FirstName="%Hero56FirstName1;%Hero56FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero56Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/terranHero08Small" Large="Gui/DynamicBitmaps/HeroPortraits/terranHero08Large" Wide="Gui/DynamicBitmaps/HeroPortraits/terranHero08Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=2;Offense=4;Defense=9</Attributes>
+  </Hero>
+
+  <Hero Name="Hero57" LastName="%Hero57LastName" FirstName="%Hero57FirstName1;%Hero57FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero57Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/resistanceHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/resistanceHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/resistanceHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Commander;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=2;Melee=4;Offense=3;Defense=6</Attributes>
+  </Hero>
+
+  <Hero Name="Hero58" LastName="%Hero58LastName" FirstName="%Hero58FirstName1;%Hero58FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero58Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/sowerHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/sowerHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/sowerHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Pilot;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=5;Offense=5;Defense=5</Attributes>
+  </Hero>
+
+  <Hero Name="Hero59" LastName="%Hero59LastName" FirstName="%Hero59FirstName1;%Hero59FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero59Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/amoebaHero03Small" Large="Gui/DynamicBitmaps/HeroPortraits/amoebaHero03Large" Wide="Gui/DynamicBitmaps/HeroPortraits/amoebaHero03Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Pilot;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=8;Defense=4</Attributes>
+  </Hero>
+
+  <Hero Name="Hero60" LastName="%Hero60LastName" FirstName="%Hero60FirstName1;%Hero60FirstName2">
+    <Gui>
+      <Title/>
+      <Description>%Hero60Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/horatioHero04Small" Large="Gui/DynamicBitmaps/HeroPortraits/horatioHero04Large" Wide="Gui/DynamicBitmaps/HeroPortraits/horatioHero04Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Pilot;Adventurer</Descriptors>
+    <Attributes>Labor=0;Wit=0;Melee=3;Offense=4;Defense=8</Attributes>
+  </Hero>
+
+  <Hero Name="Hero61" LastName="%Hero61LastName" FirstName="%Hero61FirstName1;%Hero61FirstName1">
+    <Gui>
+      <Title/>
+      <Description>%Hero61Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/endlessHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/endlessHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/endlessHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=5;Wit=5;Melee=0;Offense=5;Defense=5</Attributes>
+  </Hero>
+
+  <Hero Name="Hero62" LastName="%Hero61LastName" FirstName="%Hero61FirstName1;%Hero61FirstName1">
+    <Gui>
+      <Title/>
+      <Description>%Hero61Description</Description>
+      <Icon Small="Gui/DynamicBitmaps/HeroPortraits/endlessHero01Small" Large="Gui/DynamicBitmaps/HeroPortraits/endlessHero01Large" Wide="Gui/DynamicBitmaps/HeroPortraits/endlessHero01Wide"/>
+    </Gui>
+    <Level>1</Level>
+    <Descriptors>Corporate;Adventurer</Descriptors>
+    <Attributes>Labor=5;Wit=5;Melee=0;Offense=5;Defense=5</Attributes>
+  </Hero>
+  
+  <!-- Hero classes -->
+  <HeroClass Name="Administrator">
+    <Gui>
+      <Title>%HeroClassAdministratorTitle</Title>
+      <Description>%HeroClassAdministratorDescription</Description>
+      <Icon Small="AdministratorSmall" Large="AdministratorLarge"/>
+    </Gui>
+  </HeroClass>
+
+  <HeroClass Name="Adventurer">
+    <Gui>
+      <Title>%HeroClassAdventurerTitle</Title>
+      <Description>%HeroClassAdventurerDescription</Description>
+      <Icon Small="AdventurerSmall" Large="AdventurerLarge"/>
+    </Gui>
+  </HeroClass>
+
+  <HeroClass Name="Corporate">
+    <Gui>
+      <Title>%HeroClassCorporateTitle</Title>
+      <Description>%HeroClassCorporateDescription</Description>
+      <Icon Small="CorporateSmall" Large="CorporateLarge"/>
+    </Gui>
+  </HeroClass>
+
+  <HeroClass Name="Commander">
+    <Gui>
+      <Title>%HeroClassCommanderTitle</Title>
+      <Description>%HeroClassCommanderDescription</Description>
+      <Icon Small="CommanderSmall" Large="CommanderLarge"/>
+    </Gui>
+  </HeroClass>
+
+  <HeroClass Name="Pilot">
+    <Gui>
+      <Title>%HeroClassPilotTitle</Title>
+      <Description>%HeroClassPilotDescription</Description>
+      <Icon Small="PilotSmall" Large="PilotLarge"/>
+    </Gui>
+  </HeroClass>
+
+
+  <!-- Hero Leveling -->
+  <HeroLeveling Name="Level1"   Level="1"  Xp="10"/> <!-- total needed for next level up (lvl 1 to lvl 2) -->
+  <HeroLeveling Name="Level2"   Level="2"  Xp="20"/>
+  <HeroLeveling Name="Level3"   Level="3"  Xp="40"/>
+  <HeroLeveling Name="Level4"   Level="4"  Xp="80"/>
+  <HeroLeveling Name="Level5"   Level="5"  Xp="120"/>
+  <HeroLeveling Name="Level6"   Level="6"  Xp="160"/>
+  <HeroLeveling Name="Level7"   Level="7"  Xp="200"/>
+  <HeroLeveling Name="Level8"   Level="8"  Xp="250"/>
+  <HeroLeveling Name="Level9"   Level="9"  Xp="300"/>
+  <HeroLeveling Name="Level10"  Level="10" Xp="360"/>
+  <HeroLeveling Name="Level11"  Level="11" Xp="420"/>
+  <HeroLeveling Name="Level12"  Level="12" Xp="500"/>
+  <HeroLeveling Name="Level13"  Level="13" Xp="600"/>
+  <HeroLeveling Name="Level14"  Level="14" Xp="700"/>
+  <HeroLeveling Name="Level15"  Level="15" Xp="800"/>
+  <HeroLeveling Name="Level16"  Level="16" Xp="900"/>
+  <HeroLeveling Name="Level17"  Level="17" Xp="1000"/>
+  <HeroLeveling Name="Level18"  Level="18" Xp="1100"/>
+  <HeroLeveling Name="Level19"  Level="19" Xp="1200"/>
+  <HeroLeveling Name="Level20"  Level="20" Xp="1400"/> <!-- level 20 should be the maximum at end-game -->
+
+</Datatable>
