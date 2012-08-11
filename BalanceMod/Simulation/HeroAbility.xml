@@ -312,7 +312,6 @@
     </Gui>
   </HeroAbility>
   
-    <!-- Added two more ranks of Civil Engineer -->
   <HeroAbility Name="HeroAbilityAdministrator13" ClassHero="Administrator" IsActive="false">
     <!-- Civil Engineer 2 -->
     <Descriptors>HeroAbilityAdministrator13</Descriptors>
@@ -325,7 +324,6 @@
     </Gui>
   </HeroAbility>
 
-  <!-- Added two more ranks of Civil Engineer -->
   <HeroAbility Name="HeroAbilityAdministrator14" ClassHero="Administrator" IsActive="false">
     <!-- Civil Engineer 3 -->
     <Descriptors>HeroAbilityAdministrator14</Descriptors>
