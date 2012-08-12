@@ -18,13 +18,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -43,10 +43,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -65,13 +65,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -90,10 +90,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -112,13 +112,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -137,10 +137,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -159,13 +159,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -184,10 +184,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -206,13 +206,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -231,10 +231,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -253,13 +253,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -278,10 +278,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -300,13 +300,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -325,10 +325,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -347,13 +347,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -372,10 +372,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -394,13 +394,13 @@
       </HomePlanet>
       <OtherPlanets>
         <OverrideType Probability="1">
-          <Type Name="PlanetTypeArid" Weight="1"/>
-          <Type Name="PlanetTypeTundra" Weight="1"/>
+          <Type Name="PlanetTypeArid" Weight="2"/>
+          <Type Name="PlanetTypeTundra" Weight="2"/>
           <Type Name="PlanetTypeDesert" Weight="3"/>
           <Type Name="PlanetTypeArctic" Weight="3"/>
-          <Type Name="PlanetTypeBarren" Weight="3"/>
+          <Type Name="PlanetTypeBarren" Weight="2"/>
           <Type Name="PlanetTypeAsteroids" Weight="3"/>
-          <Type Name="PlanetTypeLava" Weight="3"/>
+          <Type Name="PlanetTypeLava" Weight="1"/>
           <Type Name="PlanetTypeGasHydrogen" Weight="1"/>
           <Type Name="PlanetTypeGasHelium" Weight="1"/>
           <Type Name="PlanetTypeGasMethane" Weight="1"/>
@@ -419,10 +419,10 @@
           <StarType Name="StarTypeDouble"/>
         </OverrideStarType-->
         <OverridePlanetsInSystem>
-          <Quantity Name="3" Weight="3"/>
-          <Quantity Name="4" Weight="3"/>
-          <Quantity Name="5" Weight="1"/>
-          <Quantity Name="6" Weight="1"/>
+          <Quantity Name="3" Weight="0"/>
+          <Quantity Name="4" Weight="1"/>
+          <Quantity Name="5" Weight="3"/>
+          <Quantity Name="6" Weight="4"/>
         </OverridePlanetsInSystem>
       </HomeStar>
     </Trait>
@@ -578,6 +578,15 @@
         <PlanetNumberProbability Number="3" Probability="1"/>
         <PlanetNumberProbability Number="4" Probability="1"/>
         <PlanetNumberProbability Number="5" Probability="1"/>
+        <PlanetNumberProbability Number="6" Probability="1"/>
+      </PlanetsPerSystem>
+	  <PlanetsPerSystem Name="PlanetsPerSystemBalance">
+        <PlanetNumberProbability Number="0" Probability="0"/>
+        <PlanetNumberProbability Number="1" Probability="0"/>
+        <PlanetNumberProbability Number="2" Probability="1"/>
+        <PlanetNumberProbability Number="3" Probability="3"/>
+        <PlanetNumberProbability Number="4" Probability="4"/>
+        <PlanetNumberProbability Number="5" Probability="3"/>
         <PlanetNumberProbability Number="6" Probability="1"/>
       </PlanetsPerSystem>
     </PlanetsPerSystems>

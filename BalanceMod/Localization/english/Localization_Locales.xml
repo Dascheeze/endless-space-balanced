@@ -269,6 +269,8 @@ DEFAULT</LocalizationPair>
   <LocalizationPair Name="%PlanetsPerSystemManyDescription">Four to six planets per star system</LocalizationPair>
   <LocalizationPair Name="%PlanetsPerSystemRandomTitle">Random</LocalizationPair>
   <LocalizationPair Name="%PlanetsPerSystemRandomDescription">The number of planets per system is randomized from one to six.</LocalizationPair>
+  <LocalizationPair Name="%PlanetsPerSystemBalanceTitle">Balance</LocalizationPair>
+  <LocalizationPair Name="%PlanetsPerSystemBalanceDescription">The number of planets per system follows a standard deviation around a mean of four.</LocalizationPair>
   <LocalizationPair Name="%PlanetsSizeFactorTitle">Planet size</LocalizationPair>
   <LocalizationPair Name="%PlanetsSizeFactorDescription">The average planet size of star systems</LocalizationPair>
   <LocalizationPair Name="%PlanetsSizeFactorSmallerTitle">Smaller</LocalizationPair>
