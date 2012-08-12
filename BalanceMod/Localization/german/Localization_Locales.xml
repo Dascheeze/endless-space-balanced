@@ -179,6 +179,10 @@ ZURÜCKSETZEN</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeLargeDescription">64 Sternensysteme, verstreut auf eine Galaxieausdehnung von 100 Parsec</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeHugeTitle">Riesig</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeHugeDescription">80 Sternensysteme, verstreut auf eine Galaxieausdehnung von 111 Parsec</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeMammothTitle">Mammoth</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeMammothDescription">100 Sternensysteme, verstreut auf eine Galaxieausdehnung von 120 Parsec</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeLudicrousTitle">Ludicrous</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeLudicrousDescription">150 Sternensysteme, verstreut auf eine Galaxieausdehnung von 135 Parsec</LocalizationPair>
   <LocalizationPair Name="%EmpiresNumberTitle">Imperien</LocalizationPair>
   <LocalizationPair Name="%EmpiresNumberDescription">Die Anzahl der Gegner</LocalizationPair>
   <LocalizationPair Name="%2Title">2</LocalizationPair>

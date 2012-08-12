@@ -442,11 +442,13 @@
     </GalaxyShapes>
 
     <GalaxySizes Default="GalaxySizeMedium">
-      <GalaxySize Name="GalaxySizeTiny"   NumStars="16"  Width="50" NominalPlayers="2" StrategicResourceNumberPerType="6"   LuxuryResourceTypes="4"/>
-      <GalaxySize Name="GalaxySizeSmall"  NumStars="32"  Width="70" NominalPlayers="4" StrategicResourceNumberPerType="12"   LuxuryResourceTypes="8"/>
-      <GalaxySize Name="GalaxySizeMedium" NumStars="48"  Width="86" NominalPlayers="6" StrategicResourceNumberPerType="18"  LuxuryResourceTypes="12"/>
-      <GalaxySize Name="GalaxySizeLarge"  NumStars="64"  Width="100" NominalPlayers="8" StrategicResourceNumberPerType="24"  LuxuryResourceTypes="16"/>
-      <GalaxySize Name="GalaxySizeHuge"   NumStars="80" Width="111" NominalPlayers="8" StrategicResourceNumberPerType="30"  LuxuryResourceTypes="16"/>
+	  <GalaxySize Name="GalaxySizeMammoth"    NumStars="100" Width="120" NominalPlayers="8" StrategicResourceNumberPerType="32"  LuxuryResourceTypes="18"/>
+	  <GalaxySize Name="GalaxySizeLudicrous"  NumStars="150" Width="135" NominalPlayers="8" StrategicResourceNumberPerType="36"  LuxuryResourceTypes="20"/>
+      <GalaxySize Name="GalaxySizeTiny"       NumStars="16"  Width="50"  NominalPlayers="2" StrategicResourceNumberPerType="6"   LuxuryResourceTypes="4"/>
+      <GalaxySize Name="GalaxySizeSmall"      NumStars="32"  Width="70"  NominalPlayers="4" StrategicResourceNumberPerType="12"  LuxuryResourceTypes="8"/>
+      <GalaxySize Name="GalaxySizeMedium"     NumStars="48"  Width="86"  NominalPlayers="6" StrategicResourceNumberPerType="18"  LuxuryResourceTypes="12"/>
+      <GalaxySize Name="GalaxySizeLarge"      NumStars="64"  Width="100" NominalPlayers="8" StrategicResourceNumberPerType="24"  LuxuryResourceTypes="16"/>
+      <GalaxySize Name="GalaxySizeHuge"       NumStars="80"  Width="111" NominalPlayers="8" StrategicResourceNumberPerType="30"  LuxuryResourceTypes="16"/>
     </GalaxySizes>
 
     <EmpiresNumbers Default="4">

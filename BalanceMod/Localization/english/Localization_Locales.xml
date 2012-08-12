@@ -179,6 +179,10 @@ DEFAULT</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeLargeDescription">64 star systems scattered in a 100-parsec galaxy</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeHugeTitle">Huge</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeHugeDescription">80 star systems scattered in a 111-parsec galaxy</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeMammothTitle">Mammoth</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeMammothDescription">100 star systems scattered in a 120-parsec galaxy</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeLudicrousTitle">Ludicrous</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeLudicrousDescription">150 star systems scattered in a 135-parsec galaxy</LocalizationPair>
   <LocalizationPair Name="%EmpiresNumberTitle">Empires</LocalizationPair>
   <LocalizationPair Name="%EmpiresNumberDescription">The number of opponents</LocalizationPair>
   <LocalizationPair Name="%2Title">2</LocalizationPair>

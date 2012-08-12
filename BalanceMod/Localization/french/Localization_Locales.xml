@@ -180,6 +180,10 @@ PAR DÉFAUT</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeLargeDescription">64 systèmes stellaires dans une galaxie de 100 parsecs</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeHugeTitle">Gigantesque</LocalizationPair>
   <LocalizationPair Name="%GalaxySizeHugeDescription">80 systèmes stellaires dans une galaxie de 111 parsecs</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeMammothTitle">Mammoth</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeMammothDescription">100 systèmes stellaires dans une galaxie de 120 parsecs</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeLudicrousTitle">Absurde</LocalizationPair>
+  <LocalizationPair Name="%GalaxySizeLudicrousDescription">150 systèmes stellaires dans une galaxie de 135 parsecs</LocalizationPair>
   <LocalizationPair Name="%EmpiresNumberTitle">Empires</LocalizationPair>
   <LocalizationPair Name="%EmpiresNumberDescription">Nombre d'adversaires</LocalizationPair>
   <LocalizationPair Name="%2Title">2</LocalizationPair>
